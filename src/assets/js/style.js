@@ -122,28 +122,58 @@ function displayResults(data) {
 }
 
 
-
-//setting
-document.addEventListener("DOMContentLoaded", function () {
+//Modall
+document.addEventListener("DOMContentLoaded", () => {
+    // Modal ve form elemanları
     const modal = document.getElementById("exampleModal");
-    const openModalButton = document.querySelector(".gradButton");
-    const closeModalButton = document.querySelector(".btn-close");
-  
+    const openModalButton = document.getElementById("gradButton");
+    const closeModalButton = document.getElementById("btnClose");
+    const form = document.getElementById("myForm"); // Formu seç
+
     // Modalı aç
     openModalButton.addEventListener("click", () => {
-      modal.style.display = "flex";
+        modal.style.display = "flex"; // Modalı açmak için display: flex kullanılıyor
     });
-  
-    // Modalı kapa
+
+    // Modalı kapatma
     closeModalButton.addEventListener("click", () => {
-      modal.style.display = "none";
+        modal.style.display = "none"; // Modalı kapatmak için display: none kullanılıyor
     });
-  
-    // Modal dışında bir yere tıklandığında modalı kapat
+
+    // Modal dışına tıklanması durumunda modalı kapatma
     window.addEventListener("click", (event) => {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
+        if (event.target === modal) { // Eğer tıklanan modalın kendisi ise
+            modal.style.display = "none"; // Modalı kapat
+        }
     });
-  });
-  
+
+    // Formun gönderilmesini engellemek için
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Form gönderiminde sayfanın yenilenmesini engelle
+
+        // Tüm input alanlarının doluluğunu kontrol et
+        const inputs = form.querySelectorAll('input'); // Tüm input elemanlarını seç
+        let allFilled = true; // Tüm alanların dolu olduğunu varsayıyoruz
+
+        inputs.forEach(input => {
+            if (!input.value) { // Eğer bir alan boşsa
+                allFilled = false; // Tüm alanlar dolu değil
+            }
+        });
+
+        if (allFilled) {
+            // Tüm alanlar doluysa işlemleri gerçekleştirin
+            this.classList.add('was-validated'); // Bootstrap validasyon sınıfını ekleyin
+            console.log("Form gönderildi!"); // Form gönderim işlemi burada yapılabilir
+            // Burada verileri gönderme işlemleri yapılabilir
+        } else {
+            alert("Lütfen tüm alanları doldurun."); // Boş alan uyarısı
+        }
+    });
+
+    // Telefon numarası inputuna yalnızca rakam girişi için
+    document.getElementById("validationCustom02").addEventListener("input", function () {
+        // Sadece rakamları kabul et
+        this.value = this.value.replace(/[^0-9]/g, ''); // Tüm harfleri ve özel karakterleri kaldır
+    });
+});

@@ -382,6 +382,52 @@ nav #show ul li a {
   object-fit: cover;
 }
 
+.six {
+  max-width: 100%;
+  width: 100%;
+  min-height: 470px;
+  background-image: url("/src/assets/image/home/bgColor.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+}
+.six .branding {
+  width: 90%;
+  margin: 5px auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 30px;
+}
+.six .branding .brand {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.six .branding .brand h5 {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+}
+.six .branding .brand ul li {
+  list-style: disc;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 31px;
+  color: black;
+  opacity: 60%;
+}
+
 #detailSearch {
   max-width: 100%;
   width: 100%;
@@ -400,6 +446,11 @@ nav #show ul li a {
   font-size: 84px;
   font-weight: 800;
   line-height: 109px;
+}
+#detailSearch p {
+  width: 100%;
+  color: rgb(55, 55, 55);
+  opacity: 60%;
 }
 #detailSearch h1 {
   max-width: 870px;
@@ -557,6 +608,50 @@ nav #show ul li a {
   padding-bottom: 5px;
 }
 
+.partners {
+  max-width: 100%;
+  width: 100%;
+  padding: 170px 60px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.partners .guestWeek {
+  padding: 0px;
+}
+.partners .blog {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 84px;
+  font-weight: 800;
+  line-height: 109px;
+}
+.partners p {
+  width: 36%;
+  text-align: center;
+  color: rgb(55, 55, 55);
+  opacity: 60%;
+}
+.partners h1 {
+  max-width: 870px;
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 42px;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+}
+.partners .item-div {
+  width: 94px;
+  height: 4px;
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+}
+
 .take {
   max-width: 100%;
   width: 100%;
@@ -598,12 +693,13 @@ nav #show ul li a {
   max-width: 100%;
   width: 93%;
   min-height: 500px;
-  background: rgb(246, 241, 252);
-  margin: 100px auto;
+  background: rgb(248, 248, 248);
+  margin: 120px auto;
   border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  border: none;
 }
 .setting img {
   width: 28%;
@@ -615,20 +711,84 @@ nav #show ul li a {
   gap: 1px;
 }
 .setting .text h1 {
-  font-size: 60px;
-  font-weight: 600;
-  line-height: 60px;
-  color: black;
-  font-family: "Inter", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: rgb(55, 55, 55);
+  line-height: 56px;
 }
 .setting .text p {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   color: rgb(55, 55, 55);
+  opacity: 60%;
   padding-top: 20px;
-  font-family: "Inter", sans-serif;
+  line-height: 22px;
 }
-.setting .text .gradButton {
+.setting .text .modal {
+  border: none;
+}
+.setting .text .modal .modal-dialog {
+  max-width: 100%;
+  width: 60%;
+  border: none;
+}
+.setting .text .modal .modal-dialog button {
+  color: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+}
+.setting .text .modal .modal-dialog .modal-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.setting .text .modal .modal-dialog .modal-header h1 {
+  font-size: 28px;
+  font-weight: 500;
+  color: black;
+  line-height: 36px;
+}
+.setting .text .modal .modal-dialog .modal-header button {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.setting .text .modal .modal-dialog .modal-header button img {
+  width: 13px;
+  height: 13px;
+}
+.setting .text .modal .modal-dialog .modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.setting .text .modal .modal-dialog .modal-body img {
+  width: 40%;
+}
+.setting .text .modal .modal-dialog .calendar {
+  max-width: 100%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: 1px solid rgba(55, 55, 55, 0.2);
+  padding: 20px;
+}
+.setting .text .modal .modal-dialog .calendar .calendar_img {
+  width: 55px;
+  text-align: start;
+}
+.setting .text .modal .modal-dialog .calendar .text {
+  width: 90%;
+  font-size: 16px;
+}
+.setting .gradButton {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -641,77 +801,16 @@ nav #show ul li a {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='195' height='50' viewBox='0 0 195 50' fill='none'%3E%3Crect width='195' height='50' rx='25' fill='url(%23paint0_linear_16_56)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_16_56' x1='-27.6689' y1='41.1458' x2='202.119' y2='-9.61571' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2353E6FF'/%3E%3Cstop offset='0.457292' stop-color='%23AE69FF'/%3E%3Cstop offset='1' stop-color='%23474AFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") center/cover;
   cursor: pointer;
 }
-.setting .text .gradButton .button-span {
-  font-size: medium;
+.setting form .form-control {
+  height: 52px;
 }
-.setting .text .gradButton svg {
-  margin-left: 10px;
+.setting form .form-control::placeholder {
+  color: black;
+  opacity: 30%;
+  font-size: 16px;
+  font-weight: 500;
 }
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-  height: 100%;
-}
-.modal .modal-dialog {
-  max-width: 100%;
-  width: 60%;
-  height: 90%;
-  padding: 10px 60px 10px 60px;
-  background-color: white;
-}
-.modal .modal-dialog .modal-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.modal .modal-dialog .modal-header .modal-title {
-  font-size: 1.25rem;
-}
-.modal .modal-dialog .modal-header .btn-close {
-  background: none;
-  border: none;
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-.modal .modal-dialog .modal-body {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.modal .modal-dialog .modal-body img {
-  width: 40%;
-}
-.modal .modal-dialog .modal-body form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.modal .modal-dialog .modal-body form .form-control {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.modal .modal-dialog .modal-body form .form-check {
-  display: flex;
-  align-items: center;
-}
-.modal .modal-dialog .modal-body form .form-check .form-check-input {
-  margin-right: 10px;
-}
-.modal .modal-dialog .modal-body form .form-check .form-check-label {
-  font-size: 0.9rem;
-}
-.modal .modal-dialog .modal-body form .gradButtonn {
+.setting form .gradButtonn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -727,22 +826,219 @@ nav #show ul li a {
   cursor: pointer;
   border-radius: none;
 }
-.modal .modal-dialog .calendar {
+
+footer {
   max-width: 100%;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 120px 60px 0px 60px;
+  gap: 60px;
+}
+footer .head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .head p {
+  font-size: 32px;
+  font-weight: 300;
+  color: rgb(55, 55, 55);
+  opacity: 60%;
+  line-height: 42px;
+  text-align: center;
+}
+footer .head h2 {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+}
+footer .foot {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  justify-content: space-between;
+  padding: 30px 0px 40px 0px;
+}
+footer .foot .f-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 17px;
+}
+footer .foot .f-logo img {
+  object-fit: cover;
+  width: 160px;
+  height: 133px;
+}
+footer .foot .f-logo p {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(55, 55, 55);
+  opacity: 60%;
+  line-height: 0px;
+  padding: 0px;
+}
+footer .foot .f-form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 12px;
+}
+footer .foot .f-form h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+  line-height: 32px;
+}
+footer .foot .f-form .input {
+  max-width: 420px;
+  height: 52px;
+  width: 100%;
+  border: 1px solid rgba(55, 55, 55, 0.5);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 10px;
-  border: 1px solid rgba(55, 55, 55, 0.2);
-  padding: 20px;
+  padding: 10px;
+  border-radius: 5px;
 }
-.modal .modal-dialog .calendar img {
-  width: 45px;
-  text-align: start;
-}
-.modal .modal-dialog .calendar .text {
-  width: 90%;
+footer .foot .f-form .input input {
+  border: none;
+  outline: none;
+  background-color: transparent;
   font-size: 16px;
+  color: black;
+  opacity: 60%;
+  line-height: 24px;
+}
+footer .foot .f-form .input input::placeholder {
+  font-size: 16px;
+  color: black;
+  opacity: 60%;
+  line-height: 24px;
+}
+footer .foot .f-form .input img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+footer .foot .f-connect {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 5px;
+}
+footer .foot .f-connect p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: black;
+  opacity: 80%;
+}
+footer .foot .f-connect .icons {
+  display: flex;
+  gap: 15px;
+}
+footer .foot .f-connect .icons .icon {
+  width: 25px;
+  height: 25px;
+  background-image: url("/src/assets/image/home/iconBg.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer .foot .f-connect .link {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+}
+footer .foot .f-connect .link a {
+  color: black;
+  opacity: 60%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+footer .foot .f-connect .link .terms {
+  border-right: 2px solid gray;
+  padding-right: 12px;
+}
+
+.guestWeek {
+  margin: 70px auto;
+  padding: 60px;
+}
+
+.guestWeek .catalogue .container-fluid .logoImg {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guestWeek .catalogue .container-fluid .logoImg img {
+  width: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: 0.25s;
+}
+
+.guestWeek .catalogue .container-fluid .logoImg img:hover {
+  filter: grayscale(0%);
+  opacity: 0.8;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media (min-width: 991px) {
+  .guestWeek .catalogue .container-fluid .row.g-0 > div:nth-child(5) .logoImg {
+    border-bottom: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .guestWeek .catalogue .container-fluid .row.g-0 > div:nth-child(7) .logoImg {
+    border-bottom: none !important;
+  }
+}
+.guestWeek .catalogue .container-fluid a {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px auto;
+}
+
+.guestWeek .catalogue .container-fluid .catalogueTitleBox {
+  margin: 10px auto;
+}
+
+.guestWeek .catalogue .container-fluid .catalogueTitleBox h3 {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  text-align: center;
 }
 
 @media (min-width: 324px) and (max-width: 768px) {
@@ -869,12 +1165,18 @@ nav #show ul li a {
     font-size: 35px;
     line-height: 60px;
   }
+  #detailSearch p {
+    width: 100%;
+  }
   #detailSearch h1 {
     font-size: 20px;
     line-height: 29px;
   }
   #detailSearch .d-search p {
-    font-size: 14px;
+    font-size: 15px;
+  }
+  #detailSearch .enjoy h4 {
+    font-size: 30px;
   }
   #detailSearch .enjoy #threeCards {
     width: 100%;
@@ -883,6 +1185,20 @@ nav #show ul li a {
   }
   #detailSearch .enjoy #threeCards .threeCard {
     width: 100%;
+  }
+  .partners {
+    width: 100%;
+  }
+  .partners .blog {
+    font-size: 35px;
+    line-height: 60px;
+  }
+  .partners p {
+    width: 100%;
+  }
+  .partners h1 {
+    font-size: 20px;
+    line-height: 29px;
   }
   .one .text {
     gap: 15px;
@@ -905,42 +1221,55 @@ nav #show ul li a {
     width: 20px;
     height: 20px;
   }
+  .six {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .six .branding .brand h5 {
+    font-size: 25px;
+  }
+  .six .branding .brand ul li {
+    font-size: 15px;
+  }
   .setting {
-    width: 88%;
     display: flex;
     flex-direction: column;
     padding: 20px;
-  }
-  .setting .text {
-    width: 78%;
-  }
-  .setting .text h1 {
-    font-size: 28px;
-  }
-  .setting .text p {
-    font-size: 16px;
+    top: 20px;
   }
   .setting img {
     width: 78%;
   }
-  .setting .modal {
+  .setting .text {
+    width: 80%;
+  }
+  .setting .text h1 {
+    font-size: 28px;
+  }
+  .setting .text .modal .modal-dialog {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .setting .text .modal .modal-dialog .modal-header h1 {
+    font-size: 25px;
+    opacity: 80%;
+  }
+  .setting .text .modal .modal-dialog form {
     width: 100%;
   }
-  .setting .modal .modal-dialog {
-    width: 100%;
-    height: 100%;
-    padding: 5px;
+  .setting .text .modal .modal-dialog form input {
+    width: 90%;
   }
-  .setting .modal .modal-dialog .modal-header .modal-title p {
-    font-size: 0.3rem;
-  }
-  .setting .modal .modal-dialog .modal-body {
+  .setting .text .modal .modal-dialog .modal-body {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
   }
-  .setting .modal .modal-dialog .modal-body img {
-    width: 70%;
+  .setting p {
+    font-size: 14px;
+  }
+  .guestWeek .catalogue .container-fluid .catalogueTitleBox h3 {
+    font-size: 25px;
   }
   .take {
     height: 100%;
@@ -952,18 +1281,73 @@ nav #show ul li a {
     width: 100%;
   }
   .take .go h1 {
-    font-size: 60px;
-    line-height: 100px;
+    font-size: 50px;
+    line-height: 50px;
   }
   .take .go h4 {
-    font-size: 40px;
+    font-size: 30px;
+    line-height: 40px;
   }
   .take .plane {
+    width: 90%;
+  }
+  footer {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  footer .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .head p {
+    font-size: 23px;
+  }
+  footer .head h2 {
+    font-size: 25px;
+  }
+  footer .foot {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+  footer .foot .f-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .foot .f-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+  footer .foot .f-form h3 {
+    font-size: 21px;
+  }
+  footer .foot .f-connect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+  footer .foot .f-connect .link a {
+    font-size: 14px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   nav .view #search-show #results .searchCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .six {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
   #detailSearch .enjoy #threeCards {
@@ -973,5 +1357,39 @@ nav #show ul li a {
   }
   #detailSearch .enjoy #threeCards .threeCard {
     width: 100%;
+  }
+  #detailSearch p {
+    width: 100%;
+  }
+  .partners p {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  footer .head {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  footer .foot {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+  footer .foot .f-form {
+    width: 90%;
+  }
+  footer .foot .f-connect {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding-bottom: 40px;
   }
 }/*# sourceMappingURL=style.css.map */
