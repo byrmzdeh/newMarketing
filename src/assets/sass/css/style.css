@@ -16,6 +16,7 @@
 
 body {
   font-family: "Manrope", sans-serif;
+  background-color: rgb(251, 251, 251);
 }
 
 nav {
@@ -617,7 +618,7 @@ nav #show ul li a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
 }
 .partners .guestWeek {
   padding: 0px;
@@ -635,7 +636,8 @@ nav #show ul li a {
   width: 36%;
   text-align: center;
   color: rgb(55, 55, 55);
-  opacity: 60%;
+  opacity: 80%;
+  font-size: 16px;
 }
 .partners h1 {
   max-width: 870px;
@@ -643,7 +645,7 @@ nav #show ul li a {
   text-align: center;
   font-size: 32px;
   font-weight: 800;
-  line-height: 42px;
+  line-height: 40px;
   color: rgb(55, 55, 55);
   opacity: 80%;
 }
@@ -651,6 +653,196 @@ nav #show ul li a {
   width: 94px;
   height: 4px;
   background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+}
+
+.business {
+  max-width: 100%;
+  width: 100%;
+  padding: 170px 40px 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.business .guestWeek {
+  padding: 0px;
+}
+.business .blog {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 84px;
+  font-weight: 800;
+  line-height: 109px;
+}
+.business p {
+  width: 36%;
+  text-align: center;
+  color: rgba(55, 55, 55, 0.8);
+  font-size: 24px;
+}
+.business .item-div {
+  width: 94px;
+  height: 4px;
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+}
+
+.filter {
+  max-width: 100%;
+  width: 76%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 85px 0px 150px 0px;
+  gap: 70px;
+}
+.filter .sort {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.filter .sort p {
+  width: 36%;
+  text-align: center;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+  font-size: 24px;
+}
+.filter .sort .item-div {
+  width: 94px;
+  height: 4px;
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+}
+.filter #pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.filter #pagination ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+.filter #pagination ul .page-item {
+  color: #483898;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filter #pagination ul .page-item a {
+  color: rgb(55, 55, 55);
+  opacity: 60%;
+  font-size: 16px;
+  border-right: 0;
+}
+.filter #pagination ul .next a {
+  opacity: 100%;
+}
+.filter #pagination ul li.active a {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 100%;
+}
+.filter .buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.filter .buttons button {
+  width: auto;
+  height: 43px;
+  border-radius: 50px;
+  border: none;
+  background-color: white;
+  box-shadow: 0px 4px 25px 0px rgba(99, 129, 160, 0.15);
+}
+.filter .buttons button span {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(55, 55, 55, 0.8);
+  line-height: 27px;
+  padding: 15px 30px 15px 30px;
+}
+
+.guest {
+  max-width: 100%;
+  width: 100%;
+  min-height: 510px;
+  background-image: url("/src/assets/image/home/bgColor.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.guest .guest-main {
+  width: 76%;
+  min-height: 345px;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 10px;
+}
+.guest .guest-main .play {
+  position: relative;
+}
+.guest .guest-main .play img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.guest .guest-main .play .youtube {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.guest .guest-main .main {
+  width: 100%;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.guest .guest-main .main .month {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+}
+.guest .guest-main .main h4 {
+  color: rgb(19, 19, 19);
+  opacity: 80%;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+}
+.guest .guest-main .main .main-about {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(55, 55, 55);
+  opacity: 60%;
+  line-height: 24px;
 }
 
 .take {
@@ -983,7 +1175,6 @@ footer .foot .f-connect .link .terms {
   margin: 70px auto;
   padding: 40px;
 }
-
 .guestWeek .catalogue .container-fluid .logoImg {
   width: 100%;
   height: 40vh;
@@ -991,7 +1182,6 @@ footer .foot .f-connect .link .terms {
   justify-content: center;
   align-items: center;
 }
-
 .guestWeek .catalogue .container-fluid .logoImg img {
   width: 50%;
   object-fit: cover;
@@ -999,7 +1189,6 @@ footer .foot .f-connect .link .terms {
   opacity: 0.5;
   transition: 0.25s;
 }
-
 .guestWeek .catalogue .container-fluid .logoImg img:hover {
   filter: grayscale(0%);
   opacity: 0.8;
@@ -1146,18 +1335,28 @@ footer .foot .f-connect .link .terms {
     height: 18.5px;
   }
   nav .view #search-show .axtar #search-input {
-    font-size: 19px;
+    font-size: 17px;
   }
   nav .view #search-show .axtar #search-input::placeholder {
-    font-size: 19px;
+    font-size: 17px;
   }
   nav .view #search-show #results .searchCards {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
+    margin: 20px auto;
   }
   nav .view #search-show #results .searchCards .card {
     width: 100%;
+  }
+  nav .view #search-show #results .searchCards .card .name {
+    font-size: 15px;
+  }
+  nav .view #search-show #results .searchCards .card .read span {
+    font-size: 14px;
+  }
+  nav .view #search-show #results #see-all {
+    font-size: 16px;
   }
   #detailSearch {
     width: 100%;
@@ -1201,19 +1400,86 @@ footer .foot .f-connect .link .terms {
     font-size: 20px;
     line-height: 29px;
   }
+  .business {
+    width: 100%;
+  }
+  .business .blog {
+    font-size: 35px;
+    line-height: 60px;
+  }
+  .business p {
+    width: 100%;
+  }
+  .business h1 {
+    font-size: 20px;
+    line-height: 29px;
+  }
+  .guest {
+    max-width: 100%;
+    width: 100%;
+    min-height: 510px;
+    background-image: url("/src/assets/image/home/bgColor.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .guest .guest-main {
+    width: 76%;
+    min-height: 345px;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    border-radius: 10px;
+  }
+  .guest .guest-main .main {
+    width: 100%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .guest .guest-main .main .month {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(55, 55, 55);
+    opacity: 80%;
+  }
+  .guest .guest-main .main h4 {
+    color: rgb(19, 19, 19);
+    opacity: 80%;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 52px;
+  }
+  .guest .guest-main .main .main-about {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(55, 55, 55);
+    opacity: 60%;
+    line-height: 24px;
+  }
+  .one {
+    min-height: 480px;
+  }
   .one .text {
+    display: flex;
+    flex-direction: column;
     gap: 15px;
   }
   .one .text .smart {
-    font-size: 45px;
+    font-size: 35px;
+    line-height: 60px;
   }
   .one .text .market {
-    font-size: 45px;
+    font-size: 35px;
   }
   .one .text .discover {
     max-width: 170px;
     width: 100%;
     height: 50%;
+    padding: 16px 15px 16px 15px;
   }
   .one .text .discover p {
     font-size: 13px;
@@ -1229,11 +1495,26 @@ footer .foot .f-connect .link .terms {
   .six .branding {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .six .branding .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .six .branding .brand h5 {
     font-size: 25px;
   }
+  .six .branding .brand ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .six .branding .brand ul li {
+    list-style: none;
     font-size: 15px;
   }
   .setting {
@@ -1290,7 +1571,7 @@ footer .foot .f-connect .link .terms {
     line-height: 50px;
   }
   .take .go h4 {
-    font-size: 30px;
+    font-size: 27px;
     line-height: 40px;
   }
   .take .plane {
@@ -1309,10 +1590,10 @@ footer .foot .f-connect .link .terms {
     justify-content: center;
   }
   footer .head p {
-    font-size: 23px;
+    font-size: 22px;
   }
   footer .head h2 {
-    font-size: 25px;
+    font-size: 24px;
   }
   footer .foot {
     display: grid;
@@ -1327,15 +1608,27 @@ footer .foot .f-connect .link .terms {
     align-items: center;
     justify-content: center;
   }
+  footer .foot .f-logo p {
+    font-size: 15px;
+  }
   footer .foot .f-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
   }
   footer .foot .f-form h3 {
-    font-size: 21px;
+    font-size: 18px;
+  }
+  footer .foot .f-form .input {
+    width: 70%;
+  }
+  footer .foot .f-form .input input {
+    font-size: 14px;
+  }
+  footer .foot .f-form .input input::placeholder {
+    font-size: 13px;
   }
   footer .foot .f-connect {
     display: flex;
