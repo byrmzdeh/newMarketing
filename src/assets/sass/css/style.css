@@ -1195,17 +1195,110 @@ footer .foot .f-connect .link .terms {
   cursor: pointer;
   transform: scale(1.1);
 }
+.guestWeek .catalogue .container-fluid .img2 {
+  border-right: 1px solid rgb(219, 219, 219);
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+@media (min-width: 324px) and (max-width: 768px) {
+  .guestWeek .catalogue .container-fluid .img2 {
+    border-right: none;
+  }
+}
+.guestWeek .catalogue .container-fluid .img6 {
+  border-right: 1px solid rgb(219, 219, 219);
+  border-bottom: none;
+}
+@media (min-width: 324px) and (max-width: 1000px) {
+  .guestWeek .catalogue .container-fluid .img6 {
+    border-right: none;
+    border-bottom: 1px solid rgb(219, 219, 219);
+  }
+}
+.guestWeek .catalogue .container-fluid .img6p {
+  border-right: 1px solid rgb(219, 219, 219);
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+@media (min-width: 324px) and (max-width: 1000px) {
+  .guestWeek .catalogue .container-fluid .img6p {
+    border-right: none;
+  }
+}
+.guestWeek .catalogue .container-fluid .img7 {
+  border-bottom: 1px solid rgb(219, 219, 219);
+  border-right: 1px solid rgb(219, 219, 219);
+}
+.guestWeek .catalogue .container-fluid .img3 {
+  border-bottom: 1px solid rgb(219, 219, 219);
+  border-right: 1px solid rgb(219, 219, 219);
+}
+@media (min-width: 324px) and (max-width: 768px) {
+  .guestWeek .catalogue .container-fluid .img3 {
+    border-right: 1px solid rgb(219, 219, 219);
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .guestWeek .catalogue .container-fluid .img3 {
+    border-right: none;
+  }
+}
+.guestWeek .catalogue .container-fluid .img4 {
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+@media (min-width: 769px) and (max-width: 1000px) {
+  .guestWeek .catalogue .container-fluid .img4 {
+    border-right: 1px solid rgb(219, 219, 219);
+  }
+}
+.guestWeek .catalogue .container-fluid .img5 {
+  border-right: 1px solid rgb(219, 219, 219);
+}
+@media (min-width: 324px) and (max-width: 1000px) {
+  .guestWeek .catalogue .container-fluid .img5 {
+    border-bottom: 1px solid rgb(219, 219, 219);
+  }
+}
+.guestWeek .catalogue .container-fluid .img5p {
+  border-right: 1px solid rgb(219, 219, 219);
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+@media (min-width: 324px) and (max-width: 1000px) {
+  .guestWeek .catalogue .container-fluid .img5p {
+    border-bottom: 1px solid rgb(219, 219, 219);
+  }
+}
+.guestWeek .catalogue .container-fluid .img8 {
+  border-right: 1px solid rgb(219, 219, 219);
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+@media (min-width: 324px) and (max-width: 768px) {
+  .guestWeek .catalogue .container-fluid .img8 {
+    border-right: none;
+  }
+}
+.guestWeek .catalogue .container-fluid .img9 {
+  border-right: 1px solid rgb(219, 219, 219);
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .guestWeek .catalogue .container-fluid .img9 {
+    border-right: none;
+  }
+}
+.guestWeek .catalogue .container-fluid .img10 {
+  border-right: 1px solid rgb(219, 219, 219);
+}
+@media (min-width: 324px) and (max-width: 768px) {
+  .guestWeek .catalogue .container-fluid .img10 {
+    border-right: none;
+    border-bottom: 1px solid rgb(219, 219, 219);
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .guestWeek .catalogue .container-fluid .img10 {
+    border-bottom: none;
+  }
+}
 
-@media (min-width: 991px) {
-  .guestWeek .catalogue .container-fluid .row.g-0 > div:nth-child(5) .logoImg {
-    border-bottom: none !important;
-  }
-}
-@media (max-width: 768px) {
-  .guestWeek .catalogue .container-fluid .row.g-0 > div:nth-child(7) .logoImg {
-    border-bottom: none !important;
-  }
-}
 .guestWeek .catalogue .container-fluid a {
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
   -webkit-background-clip: text;
@@ -1253,7 +1346,7 @@ footer .foot .f-connect .link .terms {
     height: 13px;
   }
   nav #show ul li a {
-    font-size: 17px;
+    font-size: 15px;
   }
   nav .view {
     width: 100%;
@@ -1390,7 +1483,7 @@ footer .foot .f-connect .link .terms {
     width: 100%;
   }
   .partners .blog {
-    font-size: 35px;
+    font-size: 30px;
     line-height: 60px;
   }
   .partners p {
@@ -1404,7 +1497,7 @@ footer .foot .f-connect .link .terms {
     width: 100%;
   }
   .business .blog {
-    font-size: 35px;
+    font-size: 30px;
     line-height: 60px;
   }
   .business p {
@@ -1469,14 +1562,14 @@ footer .foot .f-connect .link .terms {
     gap: 15px;
   }
   .one .text .smart {
-    font-size: 35px;
+    font-size: 40px;
     line-height: 60px;
   }
   .one .text .market {
-    font-size: 35px;
+    font-size: 40px;
   }
   .one .text .discover {
-    max-width: 170px;
+    max-width: 180px;
     width: 100%;
     height: 50%;
     padding: 16px 15px 16px 15px;
@@ -1498,6 +1591,9 @@ footer .foot .f-connect .link .terms {
     align-items: center;
     justify-content: center;
   }
+  .six .branding img {
+    width: 50px;
+  }
   .six .branding .brand {
     display: flex;
     flex-direction: column;
@@ -1505,7 +1601,8 @@ footer .foot .f-connect .link .terms {
     justify-content: center;
   }
   .six .branding .brand h5 {
-    font-size: 25px;
+    font-size: 19px;
+    text-align: center;
   }
   .six .branding .brand ul {
     display: flex;
@@ -1515,7 +1612,7 @@ footer .foot .f-connect .link .terms {
   }
   .six .branding .brand ul li {
     list-style: none;
-    font-size: 15px;
+    font-size: 14px;
   }
   .setting {
     display: flex;
@@ -1530,32 +1627,51 @@ footer .foot .f-connect .link .terms {
     width: 80%;
   }
   .setting .text h1 {
-    font-size: 28px;
+    font-size: 25px;
+    opacity: 80%;
+  }
+  .setting .text p {
+    font-size: 15px;
+  }
+  .setting .text button span {
+    font-size: 15px;
   }
   .setting .text .modal .modal-dialog {
     width: 90%;
     margin: 10px auto;
   }
   .setting .text .modal .modal-dialog .modal-header h1 {
-    font-size: 25px;
+    font-size: 16px;
     opacity: 80%;
   }
   .setting .text .modal .modal-dialog form {
     width: 100%;
   }
+  .setting .text .modal .modal-dialog form button {
+    font-size: 15px;
+  }
   .setting .text .modal .modal-dialog form input {
-    width: 90%;
+    font-size: 15px;
+  }
+  .setting .text .modal .modal-dialog form input::placeholder {
+    font-size: 15px;
+  }
+  .setting .text .modal .modal-dialog form label {
+    font-size: 15px;
   }
   .setting .text .modal .modal-dialog .modal-body {
     display: flex;
     flex-direction: column;
     gap: 25px;
   }
+  .setting .text .modal .modal-dialog .calendar .text {
+    font-size: 15px;
+  }
   .setting p {
     font-size: 14px;
   }
   .guestWeek .catalogue .container-fluid .catalogueTitleBox h3 {
-    font-size: 25px;
+    font-size: 22px;
   }
   .take {
     height: 100%;
@@ -1643,6 +1759,18 @@ footer .foot .f-connect .link .terms {
 @media (min-width: 769px) and (max-width: 1024px) {
   nav .view #search-show #results .searchCards {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .one .text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .one .text .smart {
+    font-size: 65px;
+    line-height: 60px;
+  }
+  .one .text .market {
+    font-size: 65px;
   }
   .six {
     display: grid;

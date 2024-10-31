@@ -501,6 +501,8 @@ nav {
         justify-content: space-between;
         gap: 30px;
 
+
+
         .brand {
             width: 100%;
             display: flex;
@@ -1491,25 +1493,138 @@ footer {
                     }
                 }
             }
+
+            .img2 {
+                border-right: 1px solid rgb(219, 219, 219);
+                border-bottom: 1px solid rgb(219, 219, 219);
+
+                @media (min-width: 324px) and (max-width: 768px) {
+                    border-right: none;
+                }
+
+
+            }
+
+            .img6 {
+                border-right: 1px solid rgb(219, 219, 219);
+                border-bottom: none;
+
+                @media (min-width: 324px) and (max-width: 1000px) {
+                    border-right: none;
+                    border-bottom: 1px solid rgb(219, 219, 219);
+
+                }
+            }
+
+            .img6p {
+                border-right: 1px solid rgb(219, 219, 219);
+                border-bottom: 1px solid rgb(219, 219, 219);
+
+                @media (min-width: 324px) and (max-width: 1000px) {
+                    border-right: none;
+
+
+                }
+            }
+
+            .img7{
+                border-bottom: 1px solid rgb(219, 219, 219);
+                border-right: 1px solid rgb(219, 219, 219);
+
+
+
+            }
+
+            .img3 {
+                border-bottom: 1px solid rgb(219, 219, 219);
+                border-right: 1px solid rgb(219, 219, 219);
+                @media (min-width: 324px) and (max-width: 768px) {
+                    border-right: 1px solid rgb(219, 219, 219);
+                }
+                @media (min-width: 768px) and (max-width: 1000px) {
+                    border-right: none;
+                }
+
+             
+            }
+
+            .img4 {
+                border-bottom: 1px solid rgb(219, 219, 219);
+           
+                @media (min-width: 769px) and (max-width: 1000px) {
+                    border-right: 1px solid rgb(219, 219, 219);
+                }
+
+            }
+
+            .img5 {
+                border-right: 1px solid rgb(219, 219, 219);
+
+                @media (min-width: 324px) and (max-width: 1000px) {
+                    border-bottom: 1px solid rgb(219, 219, 219);
+                }
+            }
+
+            .img5p {
+                border-right: 1px solid rgb(219, 219, 219);
+                border-bottom: 1px solid rgb(219, 219, 219);
+
+
+                @media (min-width: 324px) and (max-width: 1000px) {
+                    border-bottom: 1px solid rgb(219, 219, 219);
+                }
+            }
+
+            .img8{
+                border-right: 1px solid rgb(219, 219, 219);
+                border-bottom: 1px solid rgb(219, 219, 219);
+                @media (min-width: 324px) and (max-width: 768px) {
+                    border-right: none;
+                }
+            
+            }
+
+            .img9 {
+                border-right: 1px solid rgb(219, 219, 219);
+                border-bottom: 1px solid rgb(219, 219, 219);
+
+           
+                @media (min-width: 768px) and (max-width: 1000px) {
+                    border-right: none;
+                }
+               
+             
+            }
+
+            .img10{
+                border-right: 1px solid rgb(219, 219, 219);
+
+
+                @media (min-width: 324px) and (max-width: 768px) {
+                    border-right: none;
+                    border-bottom: 1px solid rgb(219, 219, 219);
+
+                }
+                @media (min-width: 768px) and (max-width: 1000px) {
+                    border-bottom: none;
+                }
+
+            
+            }
+
         }
     }
 
+
+
 }
 
 
 
 
-@media (min-width: 991px) {
-    .guestWeek .catalogue .container-fluid .row.g-0>div:nth-child(5) .logoImg {
-        border-bottom: none !important
-    }
-}
 
-@media (max-width: 768px) {
-    .guestWeek .catalogue .container-fluid .row.g-0>div:nth-child(7) .logoImg {
-        border-bottom: none !important
-    }
-}
+
+
 
 .guestWeek .catalogue .container-fluid a {
     background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -1575,7 +1690,7 @@ footer {
             ul {
                 li {
                     a {
-                        font-size: 17px;
+                        font-size: 15px;
                     }
                 }
             }
@@ -1722,6 +1837,7 @@ footer {
 
                         }
                     }
+
                     #see-all {
                         font-size: 16px;
                     }
@@ -1777,7 +1893,7 @@ footer {
         width: 100%;
 
         .blog {
-            font-size: 35px;
+            font-size: 30px;
             line-height: 60px;
         }
 
@@ -1795,7 +1911,7 @@ footer {
         width: 100%;
 
         .blog {
-            font-size: 35px;
+            font-size: 30px;
             line-height: 60px;
         }
 
@@ -1873,16 +1989,16 @@ footer {
             gap: 15px;
 
             .smart {
-                font-size: 35px;
+                font-size: 40px;
                 line-height: 60px;
             }
 
             .market {
-                font-size: 35px;
+                font-size: 40px;
             }
 
             .discover {
-                max-width: 170px;
+                max-width: 180px;
                 width: 100%;
                 height: 50%;
                 padding: 16px 15px 16px 15px;
@@ -1912,6 +2028,10 @@ footer {
             align-items: center;
             justify-content: center;
 
+            img {
+                width: 50px;
+            }
+
             .brand {
                 display: flex;
                 flex-direction: column;
@@ -1919,7 +2039,8 @@ footer {
                 justify-content: center;
 
                 h5 {
-                    font-size: 25px;
+                    font-size: 19px;
+                    text-align: center;
                 }
 
                 ul {
@@ -1930,7 +2051,7 @@ footer {
 
                     li {
                         list-style: none;
-                        font-size: 15px;
+                        font-size: 14px;
                     }
                 }
             }
@@ -1952,7 +2073,18 @@ footer {
             width: 80%;
 
             h1 {
-                font-size: 28px;
+                font-size: 25px;
+                opacity: 80%;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            button {
+                span {
+                    font-size: 15px;
+                }
             }
 
             .modal {
@@ -1963,7 +2095,7 @@ footer {
 
                     .modal-header {
                         h1 {
-                            font-size: 25px;
+                            font-size: 16px;
                             opacity: 80%;
                         }
                     }
@@ -1972,16 +2104,35 @@ footer {
                     form {
                         width: 100%;
 
-                        input {
-                            width: 90%;
-
+                        button {
+                            font-size: 15px;
                         }
+
+                        input {
+                            font-size: 15px;
+
+                            &::placeholder {
+                                font-size: 15px;
+                            }
+                        }
+
+                        label {
+                            font-size: 15px;
+                        }
+
+
                     }
 
                     .modal-body {
                         display: flex;
                         flex-direction: column;
                         gap: 25px;
+                    }
+
+                    .calendar {
+                        .text {
+                            font-size: 15px;
+                        }
                     }
 
 
@@ -1997,7 +2148,7 @@ footer {
 
 
     .guestWeek .catalogue .container-fluid .catalogueTitleBox h3 {
-        font-size: 25px
+        font-size: 22px
     }
 
 
@@ -2131,6 +2282,26 @@ footer {
                     }
                 }
             }
+        }
+    }
+
+    .one {
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .smart {
+                font-size: 65px;
+                line-height: 60px;
+            }
+
+            .market {
+                font-size: 65px;
+            }
+
+
         }
     }
 
