@@ -21,7 +21,7 @@
 
 body {
     font-family: 'Manrope', sans-serif;
-    background-color: rgb(251, 251, 251);
+    background-color: rgb(249, 249, 249);
 
 }
 
@@ -387,9 +387,19 @@ nav {
 
                 a {
                     color: black;
-                    font-size: 28px;
+                    font-size: 27px;
                     font-weight: 800;
                     font-family: 'Manrope', sans-serif;
+                    transition: 1s;
+
+                    &:hover {
+                        background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        transition: 1s;
+
+                    }
 
                 }
 
@@ -822,7 +832,6 @@ nav {
     max-width: 100%;
     width: 100%;
     padding: 170px 40px 60px 40px;
-    // background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -842,7 +851,7 @@ nav {
         -webkit-text-fill-color: transparent;
         font-size: 84px;
         font-weight: 800;
-        line-height: 109px;
+        line-height: 110px;
     }
 
 
@@ -862,6 +871,8 @@ nav {
     }
 
 
+
+
 }
 
 .filter {
@@ -870,7 +881,7 @@ nav {
     margin: 10px auto;
     display: flex;
     flex-direction: column;
-    padding: 85px 0px 150px 0px;
+    padding: 0px 0px 150px 0px;
     gap: 70px;
 
 
@@ -903,6 +914,38 @@ nav {
 
     }
 
+    .sortBusiness {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding-top: 90px;
+
+
+        p {
+            width: 36%;
+            text-align: center;
+            color: rgba(55, 55, 55, 1);
+            opacity: 80%;
+            font-size: 24px;
+        }
+
+
+        .item-div {
+            width: 94px;
+            height: 4px;
+            background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+
+        }
+
+
+    }
+
+
+
     #pagination {
         width: 100%;
         display: flex;
@@ -918,7 +961,7 @@ nav {
             gap: 10px;
 
 
-            .page-item {
+            li {
                 color: #483898;
                 display: flex;
                 width: 50px;
@@ -928,6 +971,7 @@ nav {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                cursor: pointer;
 
                 a {
                     color: rgba(55, 55, 55, 1);
@@ -966,7 +1010,6 @@ nav {
         flex-wrap: wrap;
         gap: 20px;
 
-
         button {
             width: auto;
             height: 43px;
@@ -974,15 +1017,203 @@ nav {
             border: none;
             background-color: white;
             box-shadow: 0px 4px 25px 0px rgba(99, 129, 160, 0.15);
-
+            cursor: pointer;
+            /* Kursora göstəri verir */
+            position: relative;
+            /* Sərhəd üçün nisbət mütləq mövqeyə ehtiyac var */
 
             span {
                 font-size: 18px;
                 font-weight: 500;
                 color: rgba(55, 55, 55, 0.8);
                 line-height: 27px;
-                padding: 15px 30px 15px 30px;
+                padding: 15px 30px;
             }
+
+            &.active {
+                /* Aktiv düymə üçün sinif */
+                background-color: white;
+                /* Arxa planı ağ */
+                color: white;
+                /* Aktiv düymənin mətn rəngi */
+                box-shadow: none;
+                /* Aktiv düyməyə kölgəni silmək üçün */
+
+                /* Linear gradient sərhədini tətbiq et */
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -1px;
+                    /* Sərhədin ölçüsündən asılı olaraq tənzimləmək */
+                    left: -1px;
+                    /* Sərhədin ölçüsündən asılı olaraq tənzimləmək */
+                    right: -1px;
+                    /* Sərhədin ölçüsündən asılı olaraq tənzimləmək */
+                    bottom: -1px;
+                    /* Sərhədin ölçüsündən asılı olaraq tənzimləmək */
+                    border-radius: 50px;
+                    /* Küncləri yuvarlaqlaşdırır */
+                    background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                    /* Sərhədin gradienti */
+                    z-index: -1;
+                    /* Z-indexi aşağı salaraq düymənin arxasında görünsün */
+                }
+            }
+        }
+    }
+
+
+    #businessCards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin: 10px auto;
+
+        .card {
+            width: 100%;
+            padding: 24px;
+            border-radius: 16px;
+            background-color: white;
+            border: none;
+
+            .month {
+                font-size: 16px;
+                font-weight: 400;
+                color: rgba(55, 55, 55, 1);
+                opacity: 60%;
+                padding-top: 10px;
+            }
+
+            p {
+                font-size: 15px;
+                opacity: 80%;
+            }
+
+            h1 {
+                font-size: 24px;
+                font-weight: 600;
+                // line-height: 30px;
+                color: rgba(19, 19, 19, 1);
+                opacity: 80%;
+            }
+
+            .play {
+                width: 100%;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .youtube {
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%); // Elementi tam mərkəzə çəkir
+
+
+                }
+            }
+
+        }
+    }
+
+    #blogCards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+
+        .card {
+            width: 100%;
+            border: none;
+
+            .result-item {
+                width: 100%;
+                min-height: 370px;
+                height: 100%;
+                padding: 30px;
+                border-radius: 16px;
+                background-color: white;
+                border: none;
+                display: flex;
+
+                img {
+                    width: 35%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+
+                .about {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0px 0px 0px 30px;
+
+
+                    .month {
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: rgba(55, 55, 55, 1);
+                        opacity: 60%;
+
+                    }
+
+                    p {
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: rgba(55, 55, 55, 1);
+                        opacity: 60%;
+
+                    }
+
+                    h1 {
+                        width: 70%;
+                        font-size: 30px;
+                        font-weight: 700;
+                        color: rgba(55, 55, 55, 1);
+                        opacity: 80%;
+                        line-height: 38px;
+
+                    }
+
+                    .read {
+                        max-width: 160px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+
+                        span {
+                            font-size: 18px;
+                            font-weight: 700;
+                            background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            padding: 0px;
+
+                        }
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+            }
+
+
+
+
         }
     }
 
@@ -1527,7 +1758,7 @@ footer {
                 }
             }
 
-            .img7{
+            .img7 {
                 border-bottom: 1px solid rgb(219, 219, 219);
                 border-right: 1px solid rgb(219, 219, 219);
 
@@ -1538,19 +1769,21 @@ footer {
             .img3 {
                 border-bottom: 1px solid rgb(219, 219, 219);
                 border-right: 1px solid rgb(219, 219, 219);
+
                 @media (min-width: 324px) and (max-width: 768px) {
                     border-right: 1px solid rgb(219, 219, 219);
                 }
+
                 @media (min-width: 768px) and (max-width: 1000px) {
                     border-right: none;
                 }
 
-             
+
             }
 
             .img4 {
                 border-bottom: 1px solid rgb(219, 219, 219);
-           
+
                 @media (min-width: 769px) and (max-width: 1000px) {
                     border-right: 1px solid rgb(219, 219, 219);
                 }
@@ -1575,28 +1808,56 @@ footer {
                 }
             }
 
-            .img8{
+            .img8 {
                 border-right: 1px solid rgb(219, 219, 219);
                 border-bottom: 1px solid rgb(219, 219, 219);
+
                 @media (min-width: 324px) and (max-width: 768px) {
                     border-right: none;
                 }
-            
+
+            }
+
+            .img8p {
+                border-bottom: 1px solid rgb(219, 219, 219);
+
+                @media (min-width: 324px) and (max-width: 768px) {
+                    border-right: none;
+                }
+                @media (min-width: 768px) and (max-width: 1000px) {
+                    border-right: 1px solid rgb(219, 219, 219);
+                }
+
             }
 
             .img9 {
                 border-right: 1px solid rgb(219, 219, 219);
                 border-bottom: 1px solid rgb(219, 219, 219);
 
-           
+
                 @media (min-width: 768px) and (max-width: 1000px) {
                     border-right: none;
                 }
-               
-             
             }
 
-            .img10{
+            .img9p {
+                border-right: 1px solid rgb(219, 219, 219);
+
+                @media (min-width: 324px) and (max-width: 768px) {
+                    border-bottom: 1px solid rgb(219, 219, 219);
+
+                }
+
+
+                @media (min-width: 768px) and (max-width: 1000px) {
+                    border-right: none;
+                    border-bottom: 1px solid rgb(219, 219, 219);
+
+                }
+            }
+
+
+            .img10 {
                 border-right: 1px solid rgb(219, 219, 219);
 
 
@@ -1605,11 +1866,12 @@ footer {
                     border-bottom: 1px solid rgb(219, 219, 219);
 
                 }
+
                 @media (min-width: 768px) and (max-width: 1000px) {
                     border-bottom: none;
                 }
 
-            
+
             }
 
         }
@@ -1620,6 +1882,21 @@ footer {
 }
 
 
+
+.services {
+    max-width: 100%;
+    width: 100%;
+    min-height: 510px;
+    background-image: url('/src/assets/image/home/bgColor.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+
+  
+}
 
 
 
@@ -2152,11 +2429,6 @@ footer {
     }
 
 
-
-
-
-
-
     .take {
         height: 100%;
         display: flex;
@@ -2264,6 +2536,124 @@ footer {
         }
     }
 
+    .filter {
+        .buttons {
+            gap: 7px;
+            align-items: center;
+            justify-content: center;
+
+            button {
+                span {
+                    font-size: 12px;
+                    padding: 5px 15px;
+
+                }
+
+            }
+        }
+
+        #businessCards {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 30px;
+
+            .card {
+                h1 {
+                    font-size: 15px;
+                }
+
+                .month {
+                    font-size: 14px;
+                }
+
+                .play {
+                    .youtube {
+                        width: 60px;
+                        height: 60px;
+
+                    }
+                }
+            }
+
+
+        }
+
+        #pagination {
+            ul {
+                li {
+                    width: 40px;
+                    height: 40px;
+
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+        }
+
+        #blogCards {
+            .card {
+                width: 100%;
+
+                .result-item {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .about {
+                        width: 100%;
+                        padding: 0px 0px 0px 0px;
+                        display: flex;
+                        flex-direction: column;
+
+                        .month {
+                            font-size: 14px;
+
+                        }
+
+                        p {
+                            font-size: 13px;
+
+                        }
+
+                        h1 {
+                            width: 100%;
+                            font-size: 19px;
+                            line-height: 25px;
+
+                        }
+
+                        .read {
+                            span {
+                                font-size: 15px;
+                            }
+
+                            img {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+
+                }
+
+
+
+
+            }
+        }
+
+    }
+
+
+
 
 
 }
@@ -2369,6 +2759,46 @@ footer {
                 justify-content: start;
                 padding-bottom: 40px;
             }
+        }
+    }
+
+    .filter {
+        .buttons {
+            gap: 7px;
+            align-items: center;
+            justify-content: center;
+
+            button {
+                span {
+                    font-size: 13px;
+                    padding: 5px 15px;
+
+                }
+
+            }
+        }
+
+        #businessCards {
+
+            .card {
+                h1 {
+                    font-size: 15px;
+                }
+
+                .month {
+                    font-size: 14px;
+                }
+
+                .play {
+                    .youtube {
+                        width: 70px;
+                        height: 70px;
+
+                    }
+                }
+            }
+
+
         }
     }
 

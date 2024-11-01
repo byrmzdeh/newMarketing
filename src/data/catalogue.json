@@ -1,0 +1,214 @@
+[
+    {
+        "id":0,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "site":"Website",
+        "category":"Awards"
+    },
+    {
+        "id":1,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Website design"
+    },
+    {
+        "id":2,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Branding"
+    },
+    {
+        "id":3,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Business"
+    },
+    {
+        "id":4,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Content strategy"
+    },
+    {
+        "id":5,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Design"
+    },
+    {
+        "id":6,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Digital marketing"
+    },
+    {
+        "id":7,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"eCommerce Marketing"
+    },
+    {
+        "id":8,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"E-mail marketing"
+    },
+    {
+        "id":9,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Fashion"
+    },
+    {
+        "id":10,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Social media marketing"
+    },
+    {
+        "id":11,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"SEO"
+    },
+    {
+        "id":12,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"SMM"
+    }, 
+    {
+        "id":13,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Media"
+    }, 
+    {
+        "id":14,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"UX/UI"
+    },
+    {
+        "id":15,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Graphic Design"
+    },
+    {
+        "id":16,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Psychology"
+    },
+    {
+        "id":17,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Website development"
+    },
+    {
+        "id":18,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Awards"
+    },
+    {
+        "id":19,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Business"
+    },
+    {
+        "id":20,
+        "img":"/src/assets/image/catalogue/logo.png",
+        "month":"05.05.2023",
+        "name":"Marketinq.az",
+        "location":"Bakı, Nəsimi rayonu, Cəlil Məmmədquluzadə küçəsi, 20 AZ1000",
+        "phone":"(+994) xx xxx xx xx",
+        "mail":"E-mail",
+        "category":"Business"
+    }
+    
+]
