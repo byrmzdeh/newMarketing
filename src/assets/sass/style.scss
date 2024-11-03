@@ -31,7 +31,7 @@ nav {
     width: 100%;
     position: absolute;
     top: 0px;
-    padding: 40px 40px;
+    padding: 60px 60px;
     z-index: 5;
 
     .view {
@@ -150,7 +150,7 @@ nav {
         #search-show {
             width: 100%;
             min-height: 800px;
-            padding: 40px 40px;
+            padding: 60px 60px;
             background-color: rgb(250, 250, 250);
             position: absolute;
             top: 0px;
@@ -342,7 +342,7 @@ nav {
 
     #show {
         display: none;
-        width: 400px;
+        width: 350px;
         min-height: 630px;
         position: absolute;
         right: 30px;
@@ -387,9 +387,8 @@ nav {
 
                 a {
                     color: black;
-                    font-size: 27px;
+                    font-size: 23px;
                     font-weight: 800;
-                    font-family: 'Manrope', sans-serif;
                     transition: 1s;
 
                     &:hover {
@@ -420,7 +419,7 @@ nav {
     min-height: 110vh;
     height: 100%;
     flex-shrink: 0;
-    padding: 40px;
+    padding: 60px;
     display: flex;
     align-items: center;
 
@@ -497,15 +496,12 @@ nav {
     background-image: url('/src/assets/image/home/bgColor.png');
     background-repeat: no-repeat;
     background-size: cover;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    padding: 60px;
 
     .branding {
-        width: 100%;
-        margin: 5px auto;
         display: flex;
         align-items: start;
         justify-content: space-between;
@@ -546,10 +542,12 @@ nav {
 
 }
 
+
+
 #detailSearch {
     max-width: 100%;
     width: 100%;
-    padding: 170px 40px 60px 40px;
+    padding: 170px 60px 60px 60px;
     // background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
@@ -565,6 +563,7 @@ nav {
         font-size: 84px;
         font-weight: 800;
         line-height: 109px;
+        
     }
 
     p {
@@ -709,7 +708,7 @@ nav {
                 background-color: white;
                 border: none;
                 gap: 10px;
-                padding: 30px 40px 40px 40px;
+                padding: 30px 60px 40px 60px;
 
 
                 .month {
@@ -772,7 +771,7 @@ nav {
 .partners {
     max-width: 100%;
     width: 100%;
-    padding: 170px 40px 60px 40px;
+    padding: 200px 60px 60px 60px;
     // background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
@@ -831,7 +830,7 @@ nav {
 .business {
     max-width: 100%;
     width: 100%;
-    padding: 170px 40px 60px 40px;
+    padding: 200px 60px 60px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1304,6 +1303,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 150px ;
 
     .go {
         width: 34%;
@@ -1344,10 +1344,10 @@ nav {
 
 .setting {
     max-width: 100%;
-    width: 94%;
+    width: 92%;
     min-height: 500px;
-    background: rgba(248, 248, 248, 1);
-    margin: 120px auto;
+    background-color: rgba(246, 241, 252, 1);
+    margin: 70px auto;
     border-radius: 24px;
     display: flex;
     align-items: center;
@@ -1520,7 +1520,7 @@ footer {
     min-height: 500px;
     display: flex;
     flex-direction: column;
-    padding: 120px 40px 0px 40px;
+    padding: 150px 60px 0px 60px;
     gap: 60px;
 
     .head {
@@ -1692,16 +1692,156 @@ footer {
 }
 
 
+.week {
+    max-width: 100%;
+    width: 100%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    margin: 20px auto;
+
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h3 {
+            width: 30%;
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 56px;
+            background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lorem {
+            width: 36%;
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                color: rgba(55, 55, 55, 1);
+                opacity: 60%;
+            }
+
+            a {
+                display: flex;
+                gap: 20px;
+
+                p {
+                    background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 24px;
+
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+        }
+    }
+
+    .title {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 110px;
 
 
+        .sit {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            .right {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 23px;
+                text-align: right;
+                color: rgba(55, 55, 55, 1);
+                opacity: 80%;
+
+            }
+
+            .left {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 23px;
+                text-align: justify;
+                color: rgba(55, 55, 55, 1);
+                opacity: 80%;
+            }
+
+            .name {
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 62px;
+                padding-bottom: 30px;
+            }
+
+            .img {
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                gap: 17px;
+
+                img {
+                    max-width: 82px;
+                    width: 100%;
+                    min-height: 72px;
+                }
+
+                .guest {
+                    max-width: 420px;
+                    min-height: 362px;
+                    width: 100%;
+                    object-fit: cover;
+                    padding: 0px 10px 0px 10px;
+
+
+
+                }
+
+            }
+        }
+    }
+
+
+}
 
 
 .guestWeek {
     margin: 70px auto;
-    padding: 40px;
+    padding: 60px;
+
+    @media (min-width: 324px) and (max-width: 768px) {
+        padding: 20px;
+
+    }
 
     .catalogue {
         .container-fluid {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
             .logoImg {
                 width: 100%;
                 height: 40vh;
@@ -1715,6 +1855,7 @@ footer {
                     filter: grayscale(100%);
                     opacity: .5;
                     transition: .25s;
+
 
                     &:hover {
                         filter: grayscale(0%);
@@ -1824,6 +1965,7 @@ footer {
                 @media (min-width: 324px) and (max-width: 768px) {
                     border-right: none;
                 }
+
                 @media (min-width: 768px) and (max-width: 1000px) {
                     border-right: 1px solid rgb(219, 219, 219);
                 }
@@ -1895,7 +2037,7 @@ footer {
     justify-content: center;
     margin-bottom: 150px;
 
-  
+
 }
 
 
@@ -1910,7 +2052,7 @@ footer {
     -webkit-text-fill-color: transparent;
     font-size: 18px;
     font-weight: 600;
-    margin: 10px auto;
+    padding-top: 50px;
 }
 
 .guestWeek .catalogue .container-fluid .catalogueTitleBox {
@@ -1943,6 +2085,7 @@ footer {
 @media (min-width: 324px) and (max-width: 768px) {
     nav {
         width: 100%;
+        padding: 20px;
 
         #show {
             width: 100%;
@@ -2045,6 +2188,7 @@ footer {
 
             #search-show {
                 width: 100%;
+                padding: 20px;
 
 
                 .axtar {
@@ -2128,6 +2272,7 @@ footer {
 
     #detailSearch {
         width: 100%;
+        padding: 20px;
 
         .blog {
             font-size: 35px;
@@ -2168,6 +2313,8 @@ footer {
 
     .partners {
         width: 100%;
+        padding: 150px 20px 60px 20px;
+
 
         .blog {
             font-size: 30px;
@@ -2186,6 +2333,8 @@ footer {
 
     .business {
         width: 100%;
+        padding: 150px 20px 60px 20px;
+
 
         .blog {
             font-size: 30px;
@@ -2212,9 +2361,10 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 20px;
 
         .guest-main {
-            width: 76%;
+            width: 100%;
             min-height: 345px;
             background-color: rgba(255, 255, 255, 1);
             display: grid;
@@ -2259,6 +2409,7 @@ footer {
 
     .one {
         min-height: 480px;
+        padding: 20px;
 
         .text {
             display: flex;
@@ -2341,6 +2492,7 @@ footer {
         flex-direction: column;
         padding: 20px;
         top: 20px;
+        width: 100%;
 
         img {
             width: 78%;
@@ -2433,7 +2585,9 @@ footer {
         height: 100%;
         display: flex;
         flex-direction: column;
-        padding: 60px;
+        padding: 20px;
+        margin-top: 50px ;
+
 
 
         .go {
@@ -2463,6 +2617,7 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 12px;
+        padding: 20px;
 
         .head {
             display: flex;
@@ -2537,6 +2692,9 @@ footer {
     }
 
     .filter {
+        width: 100%;
+        padding: 20px;
+
         .buttons {
             gap: 7px;
             align-items: center;
@@ -2650,6 +2808,90 @@ footer {
             }
         }
 
+    }
+
+    .week {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+
+        .head {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h3 {
+                width: 100%;
+                font-size: 35px;
+            }
+
+            .lorem {
+                width: 100%;
+
+                p {
+                    font-size: 15px;
+                }
+
+                a {
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                }
+            }
+        }
+
+        .title {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+
+            .sit {
+                .left {
+                    text-align: center;
+                    font-size: 15px;
+                }
+
+                .right {
+                    text-align: center;
+                    font-size: 15px;
+                }
+
+                .name {
+                    font-size: 25px;
+                    line-height: 30px;
+                    padding-bottom: 10px;
+                }
+
+                .img {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    img {
+                        max-width: 52px;
+                        width: 100%;
+                        min-height: 42px;
+                    }
+
+                    .guest {
+                        width: 100%;
+                        padding: 0px;
+
+
+
+                    }
+
+                }
+            }
+        }
     }
 
 
@@ -2799,6 +3041,46 @@ footer {
             }
 
 
+        }
+    }
+
+
+    .week {
+        .title {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+            .sit {
+                width: 77%;
+                gap: 0px;
+
+                .img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: start;
+                    gap: 10px;
+
+                    img {
+                        max-width: 62px;
+                        width: 100%;
+                        min-height: 52px;
+                    }
+
+                    .guest {
+                        max-width: 400px;
+                        min-height: 352px;
+                        width: 100%;
+                        object-fit: cover;
+                        padding: 0px 10px 0px 10px;
+
+
+
+                    }
+
+                }
+            }
         }
     }
 

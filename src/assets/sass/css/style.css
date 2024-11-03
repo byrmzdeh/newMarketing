@@ -25,7 +25,7 @@ nav {
   width: 100%;
   position: absolute;
   top: 0px;
-  padding: 40px 40px;
+  padding: 60px 60px;
   z-index: 5;
 }
 nav .view {
@@ -123,7 +123,7 @@ nav .view .search-menu #menu img {
 nav .view #search-show {
   width: 100%;
   min-height: 800px;
-  padding: 40px 40px;
+  padding: 60px 60px;
   background-color: rgb(250, 250, 250);
   position: absolute;
   top: 0px;
@@ -275,7 +275,7 @@ nav .view #search-show #results .logo {
 }
 nav #show {
   display: none;
-  width: 400px;
+  width: 350px;
   min-height: 630px;
   position: absolute;
   right: 30px;
@@ -315,9 +315,8 @@ nav #show ul li {
 }
 nav #show ul li a {
   color: black;
-  font-size: 27px;
+  font-size: 23px;
   font-weight: 800;
-  font-family: "Manrope", sans-serif;
   transition: 1s;
 }
 nav #show ul li a:hover {
@@ -337,7 +336,7 @@ nav #show ul li a:hover {
   min-height: 110vh;
   height: 100%;
   flex-shrink: 0;
-  padding: 40px;
+  padding: 60px;
   display: flex;
   align-items: center;
 }
@@ -400,15 +399,12 @@ nav #show ul li a:hover {
   background-image: url("/src/assets/image/home/bgColor.png");
   background-repeat: no-repeat;
   background-size: cover;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
+  padding: 60px;
 }
 .six .branding {
-  width: 100%;
-  margin: 5px auto;
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -442,7 +438,7 @@ nav #show ul li a:hover {
 #detailSearch {
   max-width: 100%;
   width: 100%;
-  padding: 170px 40px 60px 40px;
+  padding: 170px 60px 60px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -574,7 +570,7 @@ nav #show ul li a:hover {
   background-color: white;
   border: none;
   gap: 10px;
-  padding: 30px 40px 40px 40px;
+  padding: 30px 60px 40px 60px;
 }
 #detailSearch .enjoy #threeCards .threeCard .month {
   font-size: 16px;
@@ -622,7 +618,7 @@ nav #show ul li a:hover {
 .partners {
   max-width: 100%;
   width: 100%;
-  padding: 170px 40px 60px 40px;
+  padding: 200px 60px 60px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -667,7 +663,7 @@ nav #show ul li a:hover {
 .business {
   max-width: 100%;
   width: 100%;
-  padding: 170px 40px 60px 40px;
+  padding: 200px 60px 60px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1038,6 +1034,7 @@ nav #show ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 150px;
 }
 .take .go {
   width: 34%;
@@ -1068,10 +1065,10 @@ nav #show ul li a:hover {
 
 .setting {
   max-width: 100%;
-  width: 94%;
+  width: 92%;
   min-height: 500px;
-  background: rgb(248, 248, 248);
-  margin: 120px auto;
+  background-color: rgb(246, 241, 252);
+  margin: 70px auto;
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -1210,7 +1207,7 @@ footer {
   min-height: 500px;
   display: flex;
   flex-direction: column;
-  padding: 120px 40px 0px 40px;
+  padding: 150px 60px 0px 60px;
   gap: 60px;
 }
 footer .head {
@@ -1355,9 +1352,127 @@ footer .foot .f-connect .link .terms {
   padding-right: 12px;
 }
 
+.week {
+  max-width: 100%;
+  width: 100%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  margin: 20px auto;
+}
+.week .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.week .head h3 {
+  width: 30%;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 56px;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.week .head .lorem {
+  width: 36%;
+}
+.week .head .lorem p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(55, 55, 55);
+  opacity: 60%;
+}
+.week .head .lorem a {
+  display: flex;
+  gap: 20px;
+}
+.week .head .lorem a p {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.week .head .lorem a img {
+  width: 24px;
+  height: 24px;
+}
+.week .title {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 110px;
+}
+.week .title .sit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.week .title .sit .right {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+  text-align: right;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+}
+.week .title .sit .left {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+  text-align: justify;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+}
+.week .title .sit .name {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 62px;
+  padding-bottom: 30px;
+}
+.week .title .sit .img {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 17px;
+}
+.week .title .sit .img img {
+  max-width: 82px;
+  width: 100%;
+  min-height: 72px;
+}
+.week .title .sit .img .guest {
+  max-width: 420px;
+  min-height: 362px;
+  width: 100%;
+  object-fit: cover;
+  padding: 0px 10px 0px 10px;
+}
+
 .guestWeek {
   margin: 70px auto;
-  padding: 40px;
+  padding: 60px;
+}
+@media (min-width: 324px) and (max-width: 768px) {
+  .guestWeek {
+    padding: 20px;
+  }
+}
+.guestWeek .catalogue .container-fluid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .guestWeek .catalogue .container-fluid .logoImg {
   width: 100%;
@@ -1530,7 +1645,7 @@ footer .foot .f-connect .link .terms {
   -webkit-text-fill-color: transparent;
   font-size: 18px;
   font-weight: 600;
-  margin: 10px auto;
+  padding-top: 50px;
 }
 
 .guestWeek .catalogue .container-fluid .catalogueTitleBox {
@@ -1551,6 +1666,7 @@ footer .foot .f-connect .link .terms {
 @media (min-width: 324px) and (max-width: 768px) {
   nav {
     width: 100%;
+    padding: 20px;
   }
   nav #show {
     width: 100%;
@@ -1626,6 +1742,7 @@ footer .foot .f-connect .link .terms {
   }
   nav .view #search-show {
     width: 100%;
+    padding: 20px;
   }
   nav .view #search-show .axtar {
     width: 100%;
@@ -1677,6 +1794,7 @@ footer .foot .f-connect .link .terms {
   }
   #detailSearch {
     width: 100%;
+    padding: 20px;
   }
   #detailSearch .blog {
     font-size: 35px;
@@ -1705,6 +1823,7 @@ footer .foot .f-connect .link .terms {
   }
   .partners {
     width: 100%;
+    padding: 150px 20px 60px 20px;
   }
   .partners .blog {
     font-size: 30px;
@@ -1719,6 +1838,7 @@ footer .foot .f-connect .link .terms {
   }
   .business {
     width: 100%;
+    padding: 150px 20px 60px 20px;
   }
   .business .blog {
     font-size: 30px;
@@ -1741,9 +1861,10 @@ footer .foot .f-connect .link .terms {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
   }
   .guest .guest-main {
-    width: 76%;
+    width: 100%;
     min-height: 345px;
     background-color: rgb(255, 255, 255);
     display: grid;
@@ -1779,6 +1900,7 @@ footer .foot .f-connect .link .terms {
   }
   .one {
     min-height: 480px;
+    padding: 20px;
   }
   .one .text {
     display: flex;
@@ -1843,6 +1965,7 @@ footer .foot .f-connect .link .terms {
     flex-direction: column;
     padding: 20px;
     top: 20px;
+    width: 100%;
   }
   .setting img {
     width: 78%;
@@ -1901,7 +2024,8 @@ footer .foot .f-connect .link .terms {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 60px;
+    padding: 20px;
+    margin-top: 50px;
   }
   .take .go {
     width: 100%;
@@ -1922,6 +2046,7 @@ footer .foot .f-connect .link .terms {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding: 20px;
   }
   footer .head {
     display: flex;
@@ -1978,6 +2103,10 @@ footer .foot .f-connect .link .terms {
   }
   footer .foot .f-connect .link a {
     font-size: 14px;
+  }
+  .filter {
+    width: 100%;
+    padding: 20px;
   }
   .filter .buttons {
     gap: 7px;
@@ -2046,6 +2175,67 @@ footer .foot .f-connect .link .terms {
   .filter #blogCards .card .result-item .about .read img {
     width: 20px;
     height: 20px;
+  }
+  .week {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .week .head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .week .head h3 {
+    width: 100%;
+    font-size: 35px;
+  }
+  .week .head .lorem {
+    width: 100%;
+  }
+  .week .head .lorem p {
+    font-size: 15px;
+  }
+  .week .head .lorem a p {
+    font-size: 14px;
+  }
+  .week .title {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .week .title .sit .left {
+    text-align: center;
+    font-size: 15px;
+  }
+  .week .title .sit .right {
+    text-align: center;
+    font-size: 15px;
+  }
+  .week .title .sit .name {
+    font-size: 25px;
+    line-height: 30px;
+    padding-bottom: 10px;
+  }
+  .week .title .sit .img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .week .title .sit .img img {
+    max-width: 52px;
+    width: 100%;
+    min-height: 42px;
+  }
+  .week .title .sit .img .guest {
+    width: 100%;
+    padding: 0px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -2128,5 +2318,33 @@ footer .foot .f-connect .link .terms {
   .filter #businessCards .card .play .youtube {
     width: 70px;
     height: 70px;
+  }
+  .week .title {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .week .title .sit {
+    width: 77%;
+    gap: 0px;
+  }
+  .week .title .sit .img {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+  }
+  .week .title .sit .img img {
+    max-width: 62px;
+    width: 100%;
+    min-height: 52px;
+  }
+  .week .title .sit .img .guest {
+    max-width: 400px;
+    min-height: 352px;
+    width: 100%;
+    object-fit: cover;
+    padding: 0px 10px 0px 10px;
   }
 }/*# sourceMappingURL=style.css.map */
