@@ -330,7 +330,7 @@ nav #show ul li a:hover {
 .one {
   max-width: 100%;
   width: 100%;
-  background: url("/src/assets/image/home/light.png") lightgray 0px 0px/100% 100% no-repeat;
+  background: url("/src/assets/image/home/header.png") lightgray 0px 0px/100% 100% no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 110vh;
