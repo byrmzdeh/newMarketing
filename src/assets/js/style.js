@@ -177,3 +177,27 @@ document.addEventListener("DOMContentLoaded", () => {
         this.value = this.value.replace(/[^0-9]/g, ''); // Tüm harfleri ve özel karakterleri kaldır
     });
 });
+
+
+//PartnersSlide
+const SliderCards = document.getElementById('SliderCards')
+fetch('/src/data/business.json')
+    .then(res => res.json())
+    .then(data => {
+        SliderCards.innerHTML = data.map(item => `
+          <swiper-slide >
+        <div class="swiperCard" >
+          <div class="play" >
+            <img src="/src/assets/image/business/card.png" alt="err">
+            <a href="https://www.youtube.com/"> <img class="youtube" src="/src/assets/image/business/youtube.png"
+                alt="err"></a>
+          </div>
+          <p class='month'>${item.month}</p>
+          <h1>${item.name}</h1>
+        </div>
+      </swiper-slide>
+
+    `).join('')
+    })
+
+    .catch(error => console.error('Error fetching data:', error));

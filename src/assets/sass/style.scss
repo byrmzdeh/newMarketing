@@ -1729,8 +1729,11 @@ footer {
             }
 
             a {
+                max-width: 170px;
+                width: 100%;
                 display: flex;
-                gap: 20px;
+                align-items: center;
+                justify-content: space-between;
 
                 p {
                     background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -1740,6 +1743,8 @@ footer {
                     font-size: 18px;
                     font-weight: 600;
                     line-height: 24px;
+                    margin-bottom: 0px;
+
 
                 }
 
@@ -1795,6 +1800,7 @@ footer {
             }
 
             .img {
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: start;
@@ -1804,14 +1810,14 @@ footer {
                     max-width: 82px;
                     width: 100%;
                     min-height: 72px;
+                    object-fit: cover;
                 }
 
                 .guest {
                     max-width: 420px;
-                    min-height: 362px;
                     width: 100%;
+                    min-height: 362px;
                     object-fit: cover;
-                    padding: 0px 10px 0px 10px;
 
 
 
@@ -2125,7 +2131,8 @@ footer {
                 align-items: center;
                 justify-content: space-around;
                 z-index: 2;
-                p{
+
+                p {
                     margin-bottom: 0px;
                     font-size: 18px;
                     font-weight: 600;
@@ -2136,10 +2143,10 @@ footer {
         }
     }
 
-    .row{
+    .row {
         width: 60%;
 
-        
+
         img {
             width: 50%;
             object-fit: cover;
@@ -2155,7 +2162,7 @@ footer {
                 transform: scale(1.1)
             }
         }
-        
+
 
 
         .img6 {
@@ -2169,7 +2176,7 @@ footer {
             }
         }
 
-      
+
 
         .img7 {
             border-bottom: 1px solid rgb(219, 219, 219);
@@ -2185,10 +2192,10 @@ footer {
 
             @media (min-width: 324px) and (max-width: 768px) {
                 border-right: 1px solid rgb(219, 219, 219);
-                
+
             }
 
-         
+
 
 
         }
@@ -2216,7 +2223,7 @@ footer {
             }
         }
 
-      
+
         .img8 {
             border-right: 1px solid rgb(219, 219, 219);
             border-bottom: 1px solid rgb(219, 219, 219);
@@ -2258,6 +2265,154 @@ footer {
     }
 }
 
+
+
+.five {
+    max-width: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 90px 60px;
+    gap: 30px;
+
+
+    .write {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h3 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 60px;
+            background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        a {
+            max-width: 170px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 24px;
+                margin-bottom: 0px;
+
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+
+  
+    swiper-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0px;
+
+   // Swiper.js pagination bullet-ları üçün stil
+   .swiper-pagination-bullet {
+    background: gray; // Normal halda
+    opacity: 0.7; // İstəyə bağlı: opacity ilə daha gözəl görünüş
+  
+    &:active {
+      background: red !important; // Aktiv bullet üçün
+      opacity: 1; // Aktiv olduğu zaman tam görünür
+    }
+  }
+
+
+
+
+        swiper-slide {
+            width: calc(100% / var(--swiper-slides-per-view));
+            height: 100%;
+            min-height: 480px;
+
+
+
+            .swiperCard {
+                min-height: 370px;
+                width: 93%;
+                padding: 24px;
+                border-radius: 16px;
+                background-color: white;
+                border: none;
+
+                .month {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: rgba(55, 55, 55, 1);
+                    opacity: 60%;
+                    padding-top: 10px;
+                }
+
+                p {
+                    font-size: 15px;
+                    opacity: 80%;
+                }
+
+                h1 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    // line-height: 30px;
+                    color: rgba(19, 19, 19, 1);
+                    opacity: 80%;
+                }
+
+                .play {
+                    width: 100%;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                    .youtube {
+                        max-width: 80px;
+                        width: 100%;
+                        max-height: 80px;
+                        height: 100%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%); // Elementi tam mərkəzə çəkir
+
+
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+
+
+
+
+}
 
 
 
@@ -3024,9 +3179,15 @@ footer {
                 }
 
                 a {
+                    width: 27%;
 
                     p {
                         font-size: 14px;
+                    }
+
+                    img {
+                        width: 19px;
+                        height: 19px;
                     }
 
                 }
@@ -3081,7 +3242,7 @@ footer {
         }
     }
 
-    .homePartners{
+    .homePartners {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -3089,29 +3250,98 @@ footer {
         justify-content: center;
         padding: 20px;
         gap: 30px;
-        .write{
+
+        .write {
             width: 100%;
             gap: 10px;
+
             h3 {
                 width: 100%;
                 font-size: 35px;
             }
-            p{
+
+            p {
                 font-size: 15px;
             }
-            button{
+
+            button {
                 width: 90%;
-                a{
+
+                a {
                     width: 80%;
 
-                    p{
+                    p {
                         font-size: 15px;
                     }
                 }
             }
         }
-        .row{
+
+        .row {
             width: 100%;
+        }
+    }
+
+    .five {
+        padding: 20px;
+
+        .write {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            h3 {
+                width: 100%;
+                font-size: 35px;
+            }
+
+            a {
+
+                width: 27%;
+
+
+                p {
+                    font-size: 14px;
+                }
+
+                img {
+                    width: 19px;
+                    height: 19px;
+                }
+
+            }
+
+        }
+
+        swiper-container {
+            width: 100%;
+
+            swiper-slide {
+                width: 100%;
+                min-height: 270px;
+
+
+                .swiperCard {
+                    min-height: 200px;
+
+                    h1 {
+                        font-size: 14px;
+                    }
+
+                    .month {
+                        font-size: 14px;
+                    }
+
+                    .play {
+                        .youtube {
+                            height: 30px;
+                            width: 30px;
+
+                        }
+                    }
+                }
+
+            }
         }
     }
 
@@ -3134,6 +3364,30 @@ footer {
 
                     }
                 }
+            }
+        }
+    }
+
+    .five {
+        swiper-container {
+            swiper-slide {
+                min-height: 330px;
+
+                .swiperCard {
+                    min-height: 260px;
+
+                    h1 {
+                        font-size: 17px;
+                    }
+
+                    .play {
+                        .youtube {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -3301,6 +3555,14 @@ footer {
                     }
 
                 }
+            }
+        }
+    }
+
+    .homePartners {
+        .write {
+            h3 {
+                font-size: 38px;
             }
         }
     }
