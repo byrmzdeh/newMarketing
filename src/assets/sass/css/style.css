@@ -2465,9 +2465,6 @@ footer .foot .f-connect .link .terms {
   .week .head .lorem p {
     font-size: 15px;
   }
-  .week .head .lorem a {
-    width: 27%;
-  }
   .week .head .lorem a p {
     font-size: 14px;
   }
@@ -2553,9 +2550,6 @@ footer .foot .f-connect .link .terms {
     width: 100%;
     font-size: 35px;
   }
-  .five .write a {
-    width: 27%;
-  }
   .five .write a p {
     font-size: 14px;
   }
@@ -2577,7 +2571,7 @@ footer .foot .f-connect .link .terms {
     font-size: 14px;
   }
   .five swiper-container swiper-slide .swiperCard .month {
-    font-size: 14px;
+    font-size: 13px;
   }
   .five swiper-container swiper-slide .swiperCard .play .youtube {
     height: 30px;
