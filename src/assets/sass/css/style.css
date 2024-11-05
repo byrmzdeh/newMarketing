@@ -79,7 +79,7 @@ nav .view .hire-usColor {
   justify-content: center;
 }
 nav .view .hire-usColor p {
-  color: white;
+  color: white !important;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0px;
@@ -122,7 +122,7 @@ nav .view .search-menu #menu img {
 }
 nav .view #search-show {
   width: 100%;
-  min-height: 800px;
+  min-height: 950px;
   padding: 60px 60px;
   background-color: rgb(250, 250, 250);
   position: absolute;
@@ -348,15 +348,17 @@ nav #show ul li a:hover {
 }
 .one .text .smart {
   font-size: 100px;
-  font-weight: 800;
+  font-weight: 700;
   color: #353535;
   -webkit-text-fill-color: initial;
   margin-bottom: -20px;
+  font-family: sans-serif;
 }
 .one .text .market {
   font-size: 100px;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
+  font-family: sans-serif;
   line-height: 1.3em;
   overflow: visible;
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -390,6 +392,144 @@ nav #show ul li a:hover {
   width: 24px;
   height: 24px;
   object-fit: cover;
+}
+
+.two {
+  max-width: 100%;
+  width: 100%;
+  background-image: url("/src/assets/image/home/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+  position: relative;
+}
+.two .twoSlider .twoCard {
+  max-width: 500px;
+  width: 100%;
+  min-height: 305px;
+  height: 100%;
+  background-color: rgb(247, 247, 247);
+  margin: 10px;
+  transition: 0.5s;
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 65px;
+  cursor: pointer;
+}
+.two .twoSlider .twoCard .brand {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: rgb(145, 79, 224);
+}
+.two .twoSlider .twoCard p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(55, 55, 55);
+  opacity: 60%;
+}
+.two .twoSlider .twoCard a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 120px;
+  line-height: 25px;
+  width: 100%;
+  padding-top: 25px;
+}
+.two .twoSlider .twoCard a p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.two .twoSlider .twoCard:hover {
+  background-color: white;
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
+  transform: scale(1.09);
+}
+.two .counts {
+  width: 100%;
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  position: relative;
+}
+.two .counts .one-counts {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  gap: 80px;
+}
+.two .counts .one-counts h4 {
+  font-size: 48px;
+  font-weight: 700;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 52px;
+}
+.two .counts .one-counts p {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+  line-height: 22px;
+}
+.two .counts .one-counts .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.two .counts .one-counts .top p {
+  text-align: end;
+}
+.two .counts .one-counts .very {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.two .counts .one-counts img {
+  max-width: 420px;
+  width: 100%;
+}
+.two .hire-usColor {
+  max-width: 170px;
+  width: 100%;
+  height: 50px;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  border: none;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.two .hire-usColor p {
+  color: white !important;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0px;
 }
 
 .six {
@@ -1035,9 +1175,12 @@ nav #show ul li a:hover {
   align-items: center;
   justify-content: space-evenly;
   margin-top: 150px;
+  position: relative;
 }
 .take .go {
   width: 34%;
+  position: absolute;
+  left: 15%;
 }
 .take .go h1 {
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -1045,20 +1188,24 @@ nav #show ul li a:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 150px;
-  font-weight: 800;
-  line-height: 190px;
+  font-weight: 700;
+  line-height: 220px;
+  font-family: sans-serif;
 }
 .take .go h4 {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 48px;
-  line-height: 52px;
+  line-height: 53px;
+  letter-spacing: -1%;
   color: rgb(55, 55, 55);
 }
 .take .plane {
-  width: 30%;
-  height: 100%;
+  position: absolute;
+  right: 10%;
+  bottom: 0px;
 }
 .take .plane img {
+  max-width: 484px;
   width: 100%;
   object-fit: cover;
 }
@@ -1662,9 +1809,9 @@ footer .foot .f-connect .link .terms {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 38px;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 56px;
   text-align: center;
 }
 
@@ -1815,23 +1962,23 @@ footer .foot .f-connect .link .terms {
   }
 }
 
-.five {
+.three {
   max-width: 100%;
-  min-height: 600px;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  padding: 90px 60px;
+  padding: 0px 60px;
   gap: 30px;
+  margin: 90px auto;
 }
-.five .write {
+.three .write {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.five .write h3 {
+.three .write h3 {
   font-size: 56px;
   font-weight: 800;
   line-height: 60px;
@@ -1840,14 +1987,14 @@ footer .foot .f-connect .link .terms {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.five .write a {
+.three .write a {
   max-width: 170px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.five .write a p {
+.three .write a p {
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
   -webkit-background-clip: text;
   background-clip: text;
@@ -1857,64 +2004,62 @@ footer .foot .f-connect .link .terms {
   line-height: 24px;
   margin-bottom: 0px;
 }
-.five .write a img {
+.three .write a img {
   width: 24px;
   height: 24px;
 }
-.five swiper-container {
+.three swiper-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 0px;
 }
-.five swiper-container .swiper-pagination-bullet {
+.three swiper-container .swiper-pagination-bullet {
   background: gray;
   opacity: 0.7;
 }
-.five swiper-container .swiper-pagination-bullet:active {
+.three swiper-container .swiper-pagination-bullet:active {
   background: red !important;
   opacity: 1;
 }
-.five swiper-container swiper-slide {
+.three swiper-container swiper-slide {
   width: calc(100% / var(--swiper-slides-per-view));
-  height: 100%;
-  min-height: 480px;
 }
-.five swiper-container swiper-slide .swiperCard {
-  min-height: 370px;
+.three swiper-container swiper-slide .swiperCard {
+  max-height: 370px;
   width: 93%;
   padding: 24px;
   border-radius: 16px;
   background-color: white;
   border: none;
+  margin-bottom: 65px;
 }
-.five swiper-container swiper-slide .swiperCard .month {
+.three swiper-container swiper-slide .swiperCard .month {
   font-size: 16px;
   font-weight: 400;
   color: rgb(55, 55, 55);
   opacity: 60%;
   padding-top: 10px;
 }
-.five swiper-container swiper-slide .swiperCard p {
+.three swiper-container swiper-slide .swiperCard p {
   font-size: 15px;
   opacity: 80%;
 }
-.five swiper-container swiper-slide .swiperCard h1 {
+.three swiper-container swiper-slide .swiperCard h1 {
   font-size: 24px;
   font-weight: 600;
   color: rgb(19, 19, 19);
   opacity: 80%;
 }
-.five swiper-container swiper-slide .swiperCard .play {
+.three swiper-container swiper-slide .swiperCard .play {
   width: 100%;
   position: relative;
 }
-.five swiper-container swiper-slide .swiperCard .play img {
+.three swiper-container swiper-slide .swiperCard .play img {
   width: 100%;
   object-fit: cover;
 }
-.five swiper-container swiper-slide .swiperCard .play .youtube {
+.three swiper-container swiper-slide .swiperCard .play .youtube {
   max-width: 80px;
   width: 100%;
   max-height: 80px;
@@ -1923,6 +2068,95 @@ footer .foot .f-connect .link .terms {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.four {
+  max-width: 100%;
+  width: 100%;
+  padding: 60px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin: 60px auto;
+}
+.four .write {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.four .write h3 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 60px;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.four .write p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(55, 55, 55);
+  opacity: 60%;
+}
+.four .write button {
+  max-width: 195px;
+  width: 100%;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  border: none;
+}
+.four .write button p {
+  margin-bottom: 0px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(255, 255, 255) !important;
+  z-index: 2;
+}
+.four .fourSlider {
+  width: 60%;
+}
+.four .fourSlider .fourCard {
+  max-width: 420px;
+  width: 100%;
+  min-height: 451px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
+  margin: 10px;
+  transition: 0.5s;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 65px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.four .fourSlider .fourCard img {
+  max-width: 371px;
+  min-height: 318px;
+  width: 100%;
+  object-fit: cover;
+}
+.four .fourSlider .fourCard p {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+  padding-top: 10px;
+  margin-bottom: 0px;
+}
+.four .fourSlider .fourCard .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(19, 19, 19);
+  opacity: 80%;
 }
 
 @media (min-width: 324px) and (max-width: 768px) {
@@ -2189,6 +2423,61 @@ footer .foot .f-connect .link .terms {
     width: 20px;
     height: 20px;
   }
+  .two {
+    width: 100%;
+    padding: 20px;
+  }
+  .two .twoSlider .twoCard .brand {
+    display: block;
+    font-size: 16px;
+  }
+  .two .twoSlider .twoCard p {
+    font-size: 8px;
+  }
+  .two .twoSlider .twoCard a {
+    display: flex;
+    gap: 10px;
+  }
+  .two .twoSlider .twoCard a p {
+    font-size: 14px;
+  }
+  .two .twoSlider .twoCard a img {
+    width: 19px;
+    height: 19px;
+  }
+  .two .counts {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  .two .counts img {
+    width: 60%;
+    margin: 1px auto;
+  }
+  .two .counts .one-counts {
+    width: 100%;
+    gap: 10px;
+  }
+  .two .counts .one-counts h4 {
+    font-size: 35px;
+  }
+  .two .counts .one-counts p {
+    font-size: 15px;
+  }
+  .two .counts .one-counts .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .two .counts .one-counts .very {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .six {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -2288,9 +2577,12 @@ footer .foot .f-connect .link .terms {
     flex-direction: column;
     padding: 20px;
     margin-top: 50px;
+    gap: 5px;
   }
   .take .go {
-    width: 100%;
+    width: 80%;
+    top: 20px;
+    left: 20px;
   }
   .take .go h1 {
     font-size: 50px;
@@ -2301,7 +2593,12 @@ footer .foot .f-connect .link .terms {
     line-height: 40px;
   }
   .take .plane {
-    width: 90%;
+    top: 30%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+  }
+  .take .plane img {
+    width: 80%;
   }
   footer {
     width: 100%;
@@ -2538,62 +2835,87 @@ footer .foot .f-connect .link .terms {
   .homePartners .row {
     width: 100%;
   }
-  .five {
+  .three {
     padding: 20px;
+    margin: 30px auto;
   }
-  .five .write {
+  .three .write {
     display: flex;
     flex-direction: column;
     align-items: start;
   }
-  .five .write h3 {
+  .three .write h3 {
     width: 100%;
     font-size: 35px;
   }
-  .five .write a p {
+  .three .write a p {
     font-size: 14px;
   }
-  .five .write a img {
+  .three .write a img {
     width: 19px;
     height: 19px;
   }
-  .five swiper-container {
+  .three swiper-container {
     width: 100%;
   }
-  .five swiper-container swiper-slide {
-    width: 100%;
-    min-height: 270px;
-  }
-  .five swiper-container swiper-slide .swiperCard {
-    min-height: 200px;
-  }
-  .five swiper-container swiper-slide .swiperCard h1 {
+  .three swiper-container swiper-slide .swiperCard h1 {
     font-size: 14px;
   }
-  .five swiper-container swiper-slide .swiperCard .month {
+  .three swiper-container swiper-slide .swiperCard .month {
     font-size: 13px;
   }
-  .five swiper-container swiper-slide .swiperCard .play .youtube {
+  .three swiper-container swiper-slide .swiperCard .play .youtube {
     height: 30px;
     width: 30px;
+  }
+  .four {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+  }
+  .four .write {
+    width: 100%;
+    gap: 10px;
+  }
+  .four .write h3 {
+    width: 100%;
+    font-size: 35px;
+  }
+  .four .write p {
+    font-size: 15px;
+  }
+  .four .write button {
+    width: 90%;
+  }
+  .four .write button a {
+    width: 80%;
+  }
+  .four .write button a p {
+    font-size: 15px;
+  }
+  .four .fourSlider {
+    width: 100%;
+  }
+  .four .fourSlider .fourCard {
+    max-width: 320px;
+    width: 100%;
+    min-height: 231px;
+    height: 100%;
+  }
+  .four .fourSlider .fourCard img {
+    max-width: 271px;
+    min-height: 218px;
+    width: 100%;
+    height: 60%;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   nav .view #search-show #results .searchCards {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .five swiper-container swiper-slide {
-    min-height: 330px;
-  }
-  .five swiper-container swiper-slide .swiperCard {
-    min-height: 260px;
-  }
-  .five swiper-container swiper-slide .swiperCard h1 {
-    font-size: 17px;
-  }
-  .five swiper-container swiper-slide .swiperCard .play .youtube {
-    width: 40px;
-    height: 40px;
   }
   .one .text {
     display: flex;
@@ -2606,6 +2928,49 @@ footer .foot .f-connect .link .terms {
   }
   .one .text .market {
     font-size: 65px;
+  }
+  .two .twoSlider .twoCard {
+    margin-bottom: 80px;
+  }
+  .two .counts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .two .counts img {
+    width: 70%;
+    margin: 1px auto;
+  }
+  .two .counts .one-counts {
+    width: 100%;
+    gap: 10px;
+  }
+  .two .counts .one-counts h4 {
+    font-size: 40px;
+  }
+  .two .counts .one-counts p {
+    font-size: 17px;
+  }
+  .two .counts .one-counts .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .two .counts .one-counts .very {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .three swiper-container swiper-slide .swiperCard h1 {
+    font-size: 17px;
+  }
+  .three swiper-container swiper-slide .swiperCard .play .youtube {
+    width: 40px;
+    height: 40px;
   }
   .six {
     display: grid;
@@ -2671,6 +3036,14 @@ footer .foot .f-connect .link .terms {
   .filter #businessCards .card .play .youtube {
     width: 70px;
     height: 70px;
+  }
+  .take .plane {
+    top: -10%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+  }
+  .take .plane img {
+    width: 90%;
   }
   .week .title {
     width: 100%;

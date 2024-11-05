@@ -201,3 +201,77 @@ fetch('/src/data/business.json')
     })
 
     .catch(error => console.error('Error fetching data:', error));
+
+
+
+
+//two Section
+const twoSLiderCards = document.getElementById('twoSLiderCards')
+fetch('/src/data/services.json')
+    .then(res => res.json())
+    .then(data => {
+        twoSLiderCards.innerHTML = data.map(item => `
+    <swiper-slide class="twoCard">
+          <p class='brand'>${item.name}</p>
+          <p>${item.title}</p>
+          <a href="">
+            <p>EXPLORE</p>
+            <img src="/src/assets/image/home/right.png" alt="">
+          </a>
+        </swiper-slide>
+    
+    `).join('')
+    })
+
+    .catch(error => console.error('Error fetching data:', error));
+
+
+
+//Counter
+function animateCounter(counterElement, targetNumber, duration) {
+    let startTime = null;
+
+    function updateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const currentNumber = Math.min((progress / duration) * targetNumber, targetNumber);
+
+        counterElement.textContent = Math.floor(currentNumber) + "+";
+
+        if (currentNumber < targetNumber) {
+            requestAnimationFrame(updateCounter);
+        }
+    }
+
+    requestAnimationFrame(updateCounter);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const targetNumber = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000; // Adjust duration as needed
+        animateCounter(counter, targetNumber, duration);
+    });
+});
+
+
+
+//four Section
+const fourSliderCards = document.getElementById('fourSliderCards')
+fetch('/src/data/portfolio.json')
+    .then(res => res.json())
+    .then(data => {
+        fourSliderCards.innerHTML = data.map(item => `
+
+        <swiper-slide class="fourCard" >
+             <img src="${item.img}" alt="err">
+        <p>${item.name}</p>
+        <p class='title'>${item.title}</p>
+      </swiper-slide>
+    
+    `).join('')
+    })
+
+    .catch(error => console.error('Error fetching data:', error));
+
