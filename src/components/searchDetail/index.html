@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./src/assets/sass/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/assets/sass/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script defer src="/src/components/searchDetail/style.js"></script>
     <script defer src="/src/components/searchDetail/threeCards.js"></script>
 
@@ -66,13 +67,13 @@
     </div>
 
   </nav>
-    <div id="detailSearch">
+    <div id="detailSearch" data-aos="fade-up">
         <h1 class="blog">BLOG</h1>
         <h1 id="item-name"></h1>
         <div class="item-div"></div>
 
 
-        <div class="d-search">
+        <div class="d-search" data-aos='fade-up' >
             <div class="az">
                 <p id="item-month"></p>
                 <p>By Marketinq.az</p>
@@ -88,7 +89,7 @@
             <img id="item-addImage" src="" alt="">
         </div>
 
-        <div class="share">
+        <div class="share" data-aos='fade-up' >
             <h3>SHARE</h3>
             <div class="icons">
                 <a href="https://www.facebook.com/" class="icon"><img src="/src/assets/image/home/facebook.png"
@@ -114,55 +115,62 @@
     </div>
 
 
-    <div class="take">
-        <div class="go">
-          <h1>GO!</h1>
-          <h4>Take your industry by storm!</h4>
-        </div>
-        <div class="plane">
-          <img src="/src/assets/image/home/plane.png" alt="">
-        </div>
-    
+    <div class="take" data-aos="fade-up">
+      <div class="go">
+        <h1 data-aos="fade-up">GO!</h1>
+        <h4 data-aos="fade-up">Take your industry by storm!</h4>
       </div>
-    
-    
-      <footer>
-        <div class="head">
-          <p>City Name . City Name . City Name</p>
-          <h2>Smarter Digital</h2>
+      <div class="plane" data-aos="fade-up">
+        <img src="/src/assets/image/home/plane.png" alt="">
+      </div>
+  
+    </div>
+  
+  
+    <footer data-aos="fade-up">
+      <div class="head" data-aos="fade-up">
+        <p>City Name . City Name . City Name</p>
+        <h2>Smarter Digital</h2>
+      </div>
+      <div class="foot" data-aos="fade-up">
+        <div class="f-logo">
+          <img src="/src/assets/image/home/marketingLogo.png" alt="">
+          <p>© Copyright 2023. Marketinq.az</p>
         </div>
-        <div class="foot">
-          <div class="f-logo">
-            <img src="/src/assets/image/home/marketingLogo.png" alt="">
-            <p>© Copyright 2023. Marketinq.az</p>
+        <div class="f-form">
+          <h3>Get updates and resources</h3>
+          <div class="input">
+            <input type="email" placeholder="YOUR E-MAIL">
+            <img src="/src/assets/image/home/right.png" alt="">
           </div>
-          <div class="f-form">
-            <h3>Get updates and resources</h3>
-            <div class="input">
-              <input type="email" placeholder="YOUR E-MAIL">
-              <img src="/src/assets/image/home/right.png" alt="">
-            </div>
-          </div>
-    
-    
-          <div class="f-connect">
-            <p>CONNECT WITH US</p>
-            <div class="icons">
-              <a href="https://www.facebook.com/" class="icon"><img src="/src/assets/image/home/facebook.png" alt=""></a>
-              <a href="https://www.twitter.com/" class="icon"><img src="/src/assets/image/home/twitter.png" alt=""></a>
-              <a href="https://www.instagram.com/" class="icon"><img src="/src/assets/image/home/instagram.png" alt=""></a>
-              <a href="https://www.linkedin.com/" class="icon"><img src="/src/assets/image/home/in.png" alt=""></a>
-            </div>
-    
-            <div class="link">
-              <a class="terms" href="">TERMS OF USE</a>
-              <a href="">PRIVACY POLICY</a>
-            </div>
-    
-          </div>
-    
         </div>
-      </footer>
+  
+  
+        <div class="f-connect">
+          <p>CONNECT WITH US</p>
+          <div class="icons">
+            <a href="https://www.facebook.com/" class="icon"><img src="/src/assets/image/home/facebook.png" alt=""></a>
+            <a href="https://www.twitter.com/" class="icon"><img src="/src/assets/image/home/twitter.png" alt=""></a>
+            <a href="https://www.instagram.com/" class="icon"><img src="/src/assets/image/home/instagram.png" alt=""></a>
+            <a href="https://www.linkedin.com/" class="icon"><img src="/src/assets/image/home/in.png" alt=""></a>
+          </div>
+  
+          <div class="link">
+            <a class="terms" href="">TERMS OF USE</a>
+            <a href="">PRIVACY POLICY</a>
+          </div>
+  
+        </div>
+  
+      </div>
+    </footer>
+  
+  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
       
 
 

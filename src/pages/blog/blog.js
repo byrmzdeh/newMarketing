@@ -20,7 +20,7 @@ function displayCards(data, page) {
         card.innerHTML = `
               <div class="result-item" data-id="${item.id}">
                 <img class='image' src="${item.img}" alt="err">
-                <div class='about'>
+                <div class='result-about'>
                     <p class='month'>${item.month}</p>
                     <h1 class='name'>${item.name}</h1>
                     <p>${item.title}</p>

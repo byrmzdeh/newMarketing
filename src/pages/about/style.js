@@ -1,3 +1,5 @@
+
+
 //menu
 const menuBtn = document.getElementById('menu')
 const show = document.getElementById('show')
@@ -12,12 +14,6 @@ closeBtn.addEventListener('click', function () {
 
 })
 
-
-
-
-
-
-    
 ///search
 const search = document.getElementById('search');
 const searchShow = document.getElementById('search-show');
@@ -25,6 +21,7 @@ const inputClose = document.getElementById('inputClose');
 const searchInput = document.getElementById('search-input');
 const result = document.getElementById('results');
 
+const apiUrl = '/src/data/people.json';
 
 search.addEventListener('click', function () {
     searchShow.style.display = 'block';
@@ -80,7 +77,7 @@ function displayResults(data) {
 
     limitedResults.forEach(item => {
         cardContent += `
-            <div class="result-item card"  data-id="${item.id}">
+            <div class="result-item card" data-id="${item.id}">
                 <img class='image' src="${item.img}" alt="err">
                 <p class='month'>${item.month}</p>
                 <h3 class='name'>${item.name}</h3>
@@ -128,73 +125,31 @@ function displayResults(data) {
 
 
 
+//Counter
+function animateCounter(counterElement, targetNumber, duration) {
+    let startTime = null;
 
+    function updateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const currentNumber = Math.min((progress / duration) * targetNumber, targetNumber);
 
-//detail
-const itemName = document.getElementById('item-name');
-const itemMonth = document.getElementById('item-month');
-const itemImage = document.getElementById('item-image');
-const itemMore1 = document.getElementById('item-more1');
-const itemMore2 = document.getElementById('item-more2');
-const itemMore3 = document.getElementById('item-more3');
-const itemMore4 = document.getElementById('item-more4');
-const itemMore5 = document.getElementById('item-more5');
-const itemMore6 = document.getElementById('item-more6');
-const itemMore7 = document.getElementById('item-more7');
-const itemAddImg = document.getElementById('item-addImage');
+        counterElement.textContent = Math.floor(currentNumber) + "+";
 
-const apiUrl = '/src/data/people.json';
+        if (currentNumber < targetNumber) {
+            requestAnimationFrame(updateCounter);
+        }
+    }
 
-// URL-dən ID-ni oxuyur
-const params = new URLSearchParams(window.location.search);
-let id = params.get('id');
-
-// Məlumatları göstərmək üçün funksiya
-function displayItemDetails(item) {
-    itemName.textContent = item.name;
-    itemMonth.textContent = item.month;
-    itemImage.setAttribute('src', item.img);
-    itemMore1.textContent = item.more1;
-    itemMore2.textContent = item.more2;
-    itemMore3.textContent = item.more3;
-    itemMore4.textContent = item.more4;
-    itemMore5.textContent = item.more5;
-    itemMore6.textContent = item.more6;
-    itemMore7.textContent = item.more7;
-    itemAddImg.setAttribute('src', item.img1);
+    requestAnimationFrame(updateCounter);
 }
 
-// ID URL-də yoxdursa, `localStorage`-dən yoxla
-if (!id) {
-    // Əvvəl saxlanmış ID-ni `localStorage`-dən oxu
-    id = localStorage.getItem('lastViewedId');
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const targetNumber = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000; // Adjust duration as needed
+        animateCounter(counter, targetNumber, duration);
+    });
+});
 
-// Əgər hələ də ID varsa, məlumatı çək
-if (id) {
-    fetch(apiUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Şəbəkə xətası');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Müvafiq məlumatları tap
-            const item = data.find(person => person.id === id);
-            if (item) {
-                // Məlumatları göstər
-                displayItemDetails(item);
-                // `localStorage`-də son baxılan ID-ni saxla
-                localStorage.setItem('lastViewedId', id);
-            } else {
-                itemName.textContent = 'Heç bir məlumat tapılmadı';
-            }
-        })
-        .catch(error => {
-            console.error('Xəta:', error);
-            itemName.textContent = 'Məlumat yüklənərkən xəta baş verdi';
-        });
-} else {
-    itemName.textContent = 'Heç bir məlumat tapılmadı';
-}

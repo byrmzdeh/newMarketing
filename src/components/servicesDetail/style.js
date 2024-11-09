@@ -1,3 +1,76 @@
+const params = new URLSearchParams(window.location.search);
+let id = params.get('id'); 
+
+const servicesDetail = document.getElementById('servicesDetail'); 
+const api = '/src/data/services.json'; 
+function displayItemDetails(item) {
+    servicesDetail.innerHTML = `
+                <div class="detail-about" data-aos='fade-up'>
+            <div class="development" data-aos='fade-up'>
+                <p data-aos='fade-up' class="dev">WEB DEVELOPMENT & WEBSITE DESIGN</p>
+                <h5 data-aos='fade-up' class="solutions">Web Solutions & Experience Design</h5>
+                <p data-aos='fade-up' class="lorem">Your brand image should influence a perception and create an impression of your
+                    business abilities, and we want you to shine. Storm Brain develops websites and e-commerce platforms
+                    that uniquely communicate who you are, demonstrate why you’re important, create maximum conversions,
+                    drive business growth and profitability, and visually get noticed with mind-boggling design. We
+                    build brand image.</p>
+            </div>
+
+            <div class="plans" data-aos='fade-up'>
+                <h5 data-aos='fade-up' class="solutions">A Plan That’s Built for Your Business</h5>
+                <p data-aos='fade-up' class="lorem">Using a pointed plan that leverages a mix of tactics —from high level messaging to paid
+                    media — we’ll craft a custom strategy that will help you succeed in the ever-changing online space.
+                    With our years of experience in the web design and development industry, we know what it takes to
+                    produce.</p>
+            </div>
+        </div>
+
+        <div class="detail-asset"  data-aos='fade-up'>
+            <div class="write" data-aos='fade-up'>
+                <h5 class='smart'>Smart</h5>
+                <h5 class="web">Web Assets</h5>
+            </div>
+
+            <img data-aos='fade-up' src="/src/assets/image/detail/servicesDetail.png" alt="err">
+            <h2 data-aos='fade-up'>WEB DESIGN & DEVELOPMENT SERVICES</h2>
+            <ul data-aos='fade-up'>
+                <li > User Experience Design (UI / UX)</li>
+                <li > Website Development</li>
+                <li > Content Strategy</li>
+                <li > eCommerce Web Design</li>
+                <li > Mobile Responsive Design</li>
+                <li > Website Maintenance & Management</li>
+                <li > Managed Website Hosting</li>
+                <li > B2B | Corporate | Enterprise</li>
+                <li > Accessibility (ADA) Compliance</li>
+            </ul>
+        </div>
+    `;
+}
+
+if (id) {
+    console.log("Axtarılan ID:", id);
+    fetch(api)
+        .then(res => res.json())
+        .then(data => {
+            const item = data.find(service => service.id === Number(id));
+            if (item) {
+                console.log("Tapılan məlumat:", item);
+                displayItemDetails(item); // Məlumatı göstər
+            } else {
+                console.warn("Müvafiq məlumat tapılmadı");
+            }
+        })
+        .catch(error => {
+            console.error('Xəta:', error);
+        });
+} else {
+    console.warn("ID tapılmadı. URL-də id yoxdur.");
+}
+
+
+
+
 //menu
 const menuBtn = document.getElementById('menu')
 const show = document.getElementById('show')
@@ -12,12 +85,6 @@ closeBtn.addEventListener('click', function () {
 
 })
 
-
-
-
-
-
-    
 ///search
 const search = document.getElementById('search');
 const searchShow = document.getElementById('search-show');
@@ -25,6 +92,7 @@ const inputClose = document.getElementById('inputClose');
 const searchInput = document.getElementById('search-input');
 const result = document.getElementById('results');
 
+const apiUrl = '/src/data/people.json';
 
 search.addEventListener('click', function () {
     searchShow.style.display = 'block';
@@ -80,7 +148,7 @@ function displayResults(data) {
 
     limitedResults.forEach(item => {
         cardContent += `
-            <div class="result-item card"  data-id="${item.id}">
+            <div class="result-item card" data-id="${item.id}">
                 <img class='image' src="${item.img}" alt="err">
                 <p class='month'>${item.month}</p>
                 <h3 class='name'>${item.name}</h3>
@@ -124,77 +192,4 @@ function displayResults(data) {
             window.location.href = '/src/pages/result/index.html';
         });
     }
-}
-
-
-
-
-
-//detail
-const itemName = document.getElementById('item-name');
-const itemMonth = document.getElementById('item-month');
-const itemImage = document.getElementById('item-image');
-const itemMore1 = document.getElementById('item-more1');
-const itemMore2 = document.getElementById('item-more2');
-const itemMore3 = document.getElementById('item-more3');
-const itemMore4 = document.getElementById('item-more4');
-const itemMore5 = document.getElementById('item-more5');
-const itemMore6 = document.getElementById('item-more6');
-const itemMore7 = document.getElementById('item-more7');
-const itemAddImg = document.getElementById('item-addImage');
-
-const apiUrl = '/src/data/people.json';
-
-// URL-dən ID-ni oxuyur
-const params = new URLSearchParams(window.location.search);
-let id = params.get('id');
-
-// Məlumatları göstərmək üçün funksiya
-function displayItemDetails(item) {
-    itemName.textContent = item.name;
-    itemMonth.textContent = item.month;
-    itemImage.setAttribute('src', item.img);
-    itemMore1.textContent = item.more1;
-    itemMore2.textContent = item.more2;
-    itemMore3.textContent = item.more3;
-    itemMore4.textContent = item.more4;
-    itemMore5.textContent = item.more5;
-    itemMore6.textContent = item.more6;
-    itemMore7.textContent = item.more7;
-    itemAddImg.setAttribute('src', item.img1);
-}
-
-// ID URL-də yoxdursa, `localStorage`-dən yoxla
-if (!id) {
-    // Əvvəl saxlanmış ID-ni `localStorage`-dən oxu
-    id = localStorage.getItem('lastViewedId');
-}
-
-// Əgər hələ də ID varsa, məlumatı çək
-if (id) {
-    fetch(apiUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Şəbəkə xətası');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Müvafiq məlumatları tap
-            const item = data.find(person => person.id === id);
-            if (item) {
-                // Məlumatları göstər
-                displayItemDetails(item);
-                // `localStorage`-də son baxılan ID-ni saxla
-                localStorage.setItem('lastViewedId', id);
-            } else {
-                itemName.textContent = 'Heç bir məlumat tapılmadı';
-            }
-        })
-        .catch(error => {
-            console.error('Xəta:', error);
-            itemName.textContent = 'Məlumat yüklənərkən xəta baş verdi';
-        });
-} else {
-    itemName.textContent = 'Heç bir məlumat tapılmadı';
 }

@@ -16,14 +16,14 @@ function displayCards(data, page) {
     currentCards.forEach(item => {
         const card = document.createElement('div');
         card.classList.add('card');
-        card.setAttribute('data-aos', 'fade-up');
+        // card.setAttribute('data-aos', 'fade-up');
         card.innerHTML = `
               <div class="result-item" data-id="${item.id}">
                 <img class='image' src="${item.img}" alt="err">
                 <div class='about'>
                     <p class='month'>${item.month}</p>
                     <h1 class='name'>${item.name}</h1>
-                    <p>${item.title}</p>
+                    <p>${item.category}</p>
                     <a class='read' href="/src/components/catalogueDetail/index.html?id=${item.id}">
                         <span>READ MORE</span>
                         <img src="/src/assets/image/result/right.png" alt="">
