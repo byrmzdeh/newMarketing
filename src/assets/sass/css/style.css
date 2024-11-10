@@ -2471,7 +2471,7 @@ footer .foot .f-connect .link .terms {
     max-width: 100%;
     width: 100%;
     padding: 0px;
-    min-height: 800px;
+    min-height: 780px;
   }
   .innovation h4 {
     padding: 0px 0px;
@@ -2481,8 +2481,11 @@ footer .foot .f-connect .link .terms {
   .innovation img {
     width: 100%;
     padding: 0px 0px;
-    top: 5%;
+    top: 6%;
     padding: 0px 20px;
+  }
+  .innovation .for {
+    max-height: 700px;
   }
   .innovation .for p {
     width: 100%;
