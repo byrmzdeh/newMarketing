@@ -774,8 +774,9 @@ nav #show ul li a:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 84px;
-  font-weight: 800;
-  line-height: 109px;
+  font-weight: 700;
+  line-height: 110px;
+  font-family: sans-serif;
 }
 .partners p {
   width: 36%;
@@ -833,6 +834,17 @@ nav #show ul li a:hover {
   width: 94px;
   height: 4px;
   background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+}
+.business h4 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 57%;
+  margin: auto;
 }
 
 .filter {
@@ -1480,10 +1492,13 @@ footer .foot .f-connect .icons .icon {
 }
 footer .foot .f-connect .link {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 12px;
   padding-top: 12px;
 }
 footer .foot .f-connect .link a {
+  width: 100%;
   color: black;
   opacity: 60%;
   font-size: 16px;
@@ -2300,58 +2315,39 @@ footer .foot .f-connect .link .terms {
   width: 100%;
   display: flex;
   flex-direction: column;
+  min-height: 930px;
   position: relative;
-  min-height: 1000px;
 }
-.innovation .img {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-.innovation .img h4 {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 54px;
-  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.innovation .img img {
-  width: 65%;
-  margin: 0px auto;
-  padding: 10px 0px 0px 0px;
+.innovation img {
+  width: 57%;
+  max-height: 480px;
   position: absolute;
-  top: 42%;
-  /* Vertically center */
+  top: 28%;
   left: 50%;
-  /* Horizontally center */
   transform: translate(-50%, -50%);
-  /* Shift back to center */
   z-index: 5;
 }
 .innovation .for {
   max-width: 100%;
   width: 100%;
-  max-height: 520px;
+  padding: 60px 0px;
+  max-height: 600px;
   height: 100%;
   background: linear-gradient(86.76deg, #efe7f9 -12.48%, #eadef8 41.01%, #d3d4fd 104.49%);
   display: flex;
   flex-direction: column;
   align-items: end;
   justify-content: end;
-  padding: 20px 0px;
   position: absolute;
   bottom: 0px;
 }
 .innovation .for p {
-  width: 65%;
+  width: 57%;
   margin: 5px auto;
-  padding: 10px 0px;
   line-height: 24px;
   color: rgb(55, 55, 55);
   opacity: 60%;
+  padding: 10px 0px;
 }
 
 .about {
@@ -2457,6 +2453,19 @@ footer .foot .f-connect .link .terms {
 .about .counts .one-counts img {
   max-width: 420px;
   width: 100%;
+}
+
+.terms {
+  max-width: 100%;
+  width: 63%;
+  margin: auto;
+}
+.terms p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(55, 55, 55);
+  opacity: 60%;
 }
 
 @media (min-width: 324px) and (max-width: 768px) {
@@ -2646,6 +2655,12 @@ footer .foot .f-connect .link .terms {
   .business h1 {
     font-size: 20px;
     line-height: 29px;
+  }
+  .business h4 {
+    width: 100%;
+    padding: 0px 0px;
+    font-size: 25px;
+    line-height: 33px;
   }
   .guest {
     max-width: 100%;
@@ -3346,37 +3361,35 @@ footer .foot .f-connect .link .terms {
   .innovation {
     max-width: 100%;
     width: 100%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 0px;
+    min-height: 740px;
   }
-  .innovation .img {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-  }
-  .innovation .img h4 {
+  .innovation h4 {
     padding: 0px 0px;
     font-size: 25px;
     line-height: 33px;
   }
-  .innovation .img img {
+  .innovation img {
     width: 100%;
     padding: 0px 0px;
+    top: 17%;
+    padding: 0px 20px;
   }
   .innovation .for {
-    width: 100%;
-    padding: 0px 0px;
-    gap: 10px;
+    min-height: 430px;
   }
   .innovation .for p {
     width: 100%;
     font-size: 14px;
-    padding: 0px 0px;
+    padding: 0px 20px;
+  }
+  .terms {
+    max-width: 100%;
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .terms p {
+    font-size: 14px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -3502,6 +3515,12 @@ footer .foot .f-connect .link .terms {
   .filter #businessCards .card .play .youtube {
     width: 70px;
     height: 70px;
+  }
+  .business h4 {
+    width: 100%;
+    padding: 0px 0px;
+    font-size: 29px;
+    line-height: 40px;
   }
   .week .title {
     width: 100%;
@@ -3668,34 +3687,31 @@ footer .foot .f-connect .link .terms {
   .innovation {
     max-width: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px;
+    padding: 0px;
+    min-height: 740px;
   }
-  .innovation .img {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .innovation h4 {
+    padding: 0px 0px;
+    font-size: 25px;
+    line-height: 33px;
   }
-  .innovation .img img {
+  .innovation img {
     width: 100%;
     padding: 0px 0px;
-  }
-  .innovation .img h4 {
-    padding: 0px 0px;
-    font-size: 29px;
-    line-height: 40px;
-  }
-  .innovation .for {
-    width: 100%;
-    padding: 0px 0px;
-    gap: 10px;
+    top: 26%;
+    padding: 0px 20px;
   }
   .innovation .for p {
     width: 100%;
+    font-size: 14px;
+    padding: 0px 20px;
+  }
+  .terms {
+    max-width: 100%;
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .terms p {
     font-size: 14px;
   }
 }/*# sourceMappingURL=style.css.map */

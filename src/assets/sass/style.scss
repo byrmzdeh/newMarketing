@@ -973,8 +973,9 @@ nav {
         background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 84px;
-        font-weight: 800;
-        line-height: 109px;
+        font-weight: 700;
+        line-height: 110px;
+        font-family: sans-serif;
     }
 
     p {
@@ -1051,6 +1052,19 @@ nav {
         background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
 
     }
+
+    h4 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 58px;
+        background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: 57%;
+        margin: auto;
+    }
+
 
 
 
@@ -1856,10 +1870,13 @@ footer {
 
             .link {
                 display: flex;
+                align-items: center;
+                justify-content: space-between;
                 gap: 12px;
                 padding-top: 12px;
 
                 a {
+                    width: 100%;
                     color: black;
                     opacity: 60%;
                     font-size: 16px;
@@ -2892,68 +2909,50 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: column;
+    min-height: 930px;
     position: relative;
-    min-height: 1000px;
-
-
-    .img {
-        width: 65%;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-
-
-        h4 {
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 54px;
-            background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        img {
-            width: 65%;
-            margin: 0px auto;
-            padding: 10px 0px 0px 0px;
-            position: absolute;
-            top: 42%;
-            /* Vertically center */
-            left: 50%;
-            /* Horizontally center */
-            transform: translate(-50%, -50%);
-            /* Shift back to center */
-            z-index: 5;
 
 
 
-        }
+    img {
+        width: 57%;
+        max-height: 480px;
+        position: absolute;
+        top: 28%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+
 
 
     }
 
+
+
+
     .for {
         max-width: 100%;
         width: 100%;
-        max-height: 520px;
+        padding: 60px 0px;
+        max-height: 600px;
         height: 100%;
         background: linear-gradient(86.76deg, #efe7f9 -12.48%, #eadef8 41.01%, #d3d4fd 104.49%);
         display: flex;
         flex-direction: column;
         align-items: end;
         justify-content: end;
-        padding: 20px 0px;
         position: absolute;
         bottom: 0px;
 
+
         p {
-            width: 65%;
+            width: 57%;
             margin: 5px auto;
-            padding: 10px 0px;
             line-height: 24px;
             color: rgba(55, 55, 55, 1);
             opacity: 60%;
+            padding: 10px 0px;
+
         }
 
 
@@ -3090,6 +3089,21 @@ footer {
     }
 
 
+}
+
+
+.terms{
+    max-width: 100%;
+    width: 63%;
+    margin: auto;
+    // padding: 0px 280px;
+    p{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgba(55, 55, 55, 1);
+        opacity: 60%;
+    }
 }
 
 
@@ -3368,6 +3382,13 @@ footer {
         h1 {
             font-size: 20px;
             line-height: 29px;
+        }
+
+        h4 {
+            width: 100%;
+            padding: 0px 0px;
+            font-size: 25px;
+            line-height: 33px;
         }
     }
 
@@ -4353,46 +4374,46 @@ footer {
     .innovation {
         max-width: 100%;
         width: 100%;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        padding: 0px;
+        min-height: 740px;
 
-        .img {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 20px;
 
-            h4 {
-                padding: 0px 0px;
-                font-size: 25px;
-                line-height: 33px;
-            }
 
-            img {
-                width: 100%;
-                padding: 0px 0px;
 
-            }
+        h4 {
+            padding: 0px 0px;
+            font-size: 25px;
+            line-height: 33px;
         }
 
-        .for {
+        img {
             width: 100%;
             padding: 0px 0px;
-            gap: 10px;
+            top: 17%;
+            padding: 0px 20px;
 
-            p {
+        }
+        .for{
+            min-height: 430px;
+            p{
                 width: 100%;
                 font-size: 14px;
-                padding: 0px 0px;
+                padding: 0px 20px;
             }
+        }
+        
 
 
+     
+    }
 
-
+    .terms{
+        max-width: 100%;
+        width: 100%;
+        padding: 0px 20px;
+        p{
+            font-size: 14px;
+           
         }
     }
 
@@ -4617,8 +4638,14 @@ footer {
         }
     }
 
-
-
+    .business{
+        h4 {
+            width: 100%;
+            padding: 0px 0px;
+            font-size: 29px;
+            line-height: 40px;
+        }
+    }
 
     .week {
         .title {
@@ -4858,48 +4885,50 @@ footer {
     .innovation {
         max-width: 100%;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 60px;
+        padding: 0px;
+        min-height: 740px;
 
-        .img {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            
 
-            img {
-                width: 100%;
-                padding: 0px 0px;
 
-            }
 
-            h4 {
-                padding: 0px 0px;
-                font-size: 29px;
-                line-height: 40px;
-            }
+        h4 {
+            padding: 0px 0px;
+            font-size: 25px;
+            line-height: 33px;
         }
 
-        .for {
+        img {
             width: 100%;
             padding: 0px 0px;
-            gap: 10px;
-
-            p {
-                width: 100%;
-                font-size: 14px;
-
-            }
-
-
-
+            top: 26%;
+            padding: 0px 20px;
 
         }
+        .for{
+            p{
+                width: 100%;
+                font-size: 14px;
+                padding: 0px 20px;
+            }
+        }
+        
+
+
+     
     }
+
+
+    .terms{
+        max-width: 100%;
+        width: 100%;
+        padding: 0px 20px;
+        p{
+            font-size: 14px;
+           
+        }
+    }
+
+
 
 
 }
