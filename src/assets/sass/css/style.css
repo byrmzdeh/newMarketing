@@ -26,7 +26,7 @@ nav {
   position: absolute;
   top: 0px;
   padding: 30px 60px;
-  z-index: 5;
+  z-index: 10;
 }
 nav .view {
   width: 100%;
@@ -409,7 +409,7 @@ nav #show ul li a:hover {
 .two .twoSlider .twoCard {
   max-width: 500px;
   width: 100%;
-  min-height: 305px;
+  max-height: 305px;
   height: 100%;
   background-color: rgb(247, 247, 247);
   margin: 10px;
@@ -441,7 +441,7 @@ nav #show ul li a:hover {
   width: 100%;
   padding-top: 25px;
 }
-.two .twoSlider .twoCard a p {
+.two .twoSlider .twoCard a span {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0px;
@@ -453,7 +453,7 @@ nav #show ul li a:hover {
 .two .twoSlider .twoCard:hover {
   background-color: white;
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
-  transform: scale(1.09);
+  transform: scale(1.08);
 }
 .two .counts {
   width: 100%;
@@ -809,7 +809,7 @@ nav #show ul li a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 1px;
 }
 .business .guestWeek {
   padding: 0px;
@@ -836,15 +836,16 @@ nav #show ul li a:hover {
   background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
 }
 .business h4 {
-  font-size: 45px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 58px;
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 62%;
+  width: 61%;
   margin: auto;
+  padding-top: 30px;
 }
 
 .filter {
@@ -2275,7 +2276,7 @@ footer .foot .f-connect .link .terms {
 .four .fourSlider .fourCard {
   max-width: 420px;
   width: 100%;
-  min-height: 451px;
+  max-height: 451px;
   height: 100%;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
@@ -2290,7 +2291,7 @@ footer .foot .f-connect .link .terms {
 }
 .four .fourSlider .fourCard img {
   max-width: 371px;
-  min-height: 318px;
+  min-height: 300px;
   width: 100%;
   object-fit: cover;
 }
@@ -2316,12 +2317,13 @@ footer .foot .f-connect .link .terms {
   flex-direction: column;
   min-height: 810px;
   position: relative;
+  margin: 30px auto;
 }
 .innovation img {
   width: 57%;
   max-height: 480px;
   position: absolute;
-  top: 28%;
+  top: 26%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
@@ -2466,6 +2468,169 @@ footer .foot .f-connect .link .terms {
   opacity: 60%;
 }
 
+.contact {
+  max-width: 100%;
+  width: 100%;
+}
+.contact .contactCards {
+  width: 100%;
+  min-height: 326px;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  background: linear-gradient(86.76deg, #c7f0f8 -12.48%, #eadcfc 41.01%, #cbccf6 104.49%);
+  gap: 40px;
+}
+.contact .contactCards .contactCard {
+  min-height: 225px;
+  width: 100%;
+  background-color: rgb(249, 249, 249);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.contact .contactCards .contactCard .show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.contact .contactCards .contactCard .show p {
+  font-size: 24px;
+  line-height: 31px;
+  color: rgb(55, 55, 55);
+  opacity: 60%;
+  border-radius: 10px;
+}
+.contact .contactCards .contactCard .show img {
+  width: 68px;
+  height: 68px;
+  object-fit: cover;
+}
+.contact .contactCards .contactCard .opacity {
+  display: none;
+}
+.contact .contactCards .contactCard:hover {
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
+  background-color: rgb(255, 255, 255);
+}
+.contact .contactCards .contactCard:hover .show {
+  display: none;
+}
+.contact .contactCards .contactCard:hover .opacity {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+.contact .contactCards .contactCard:hover .opacity .location {
+  display: flex;
+  gap: 10px;
+}
+.contact .contactCards .contactCard:hover .opacity .location img {
+  width: 24px;
+  height: 24px;
+}
+.contact .contactCards .contactCard:hover .opacity .location span {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(55, 55, 55);
+  opacity: 60%;
+  line-height: 24px;
+}
+.contact .form {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 120px auto;
+}
+.contact .form h4 {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+}
+.contact .form form {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 70px;
+}
+.contact .form form .threeInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact .form form .threeInput input {
+  min-width: 420px;
+  width: 100%;
+  height: 52px;
+  padding: 20px;
+  outline: none;
+  border: 1px solid rgba(55, 55, 55, 0.6);
+  border-radius: 5px;
+}
+.contact .form form .threeInput input::placeholder {
+  color: rgb(55, 55, 55);
+  opacity: 30%;
+}
+.contact .form form .threeInput textarea {
+  max-width: 420px;
+  width: 100%;
+  height: 52px;
+  padding: 20px;
+  outline: none;
+  border: 1px solid rgba(55, 55, 55, 0.6);
+  border-radius: 5px;
+}
+.contact .form form .threeInput textarea::placeholder {
+  color: rgb(55, 55, 55);
+  opacity: 30%;
+}
+.contact .form form .threeInput select {
+  max-width: 420px;
+  width: 100%;
+  padding: 20px;
+  outline: none;
+  border-radius: 5px;
+  color: rgb(55, 55, 55);
+}
+.contact .form form .threeInput select option {
+  color: rgb(55, 55, 55);
+}
+.contact .form form .threeInput select::placeholder {
+  color: rgb(55, 55, 55);
+  opacity: 30%;
+}
+.contact .form form .threeInput button {
+  max-width: 420px;
+  width: 100%;
+  height: 50px;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: sans-serif;
+}
+.contact .form form .threeInput button p {
+  color: white !important;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
 @media (min-width: 324px) and (max-width: 400px) {
   .innovation {
     max-width: 100%;
@@ -2485,7 +2650,7 @@ footer .foot .f-connect .link .terms {
     padding: 0px 20px;
   }
   .innovation .for {
-    max-height: 700px;
+    max-height: 710px;
   }
   .innovation .for p {
     width: 100%;
@@ -2731,7 +2896,6 @@ footer .foot .f-connect .link .terms {
   }
   .business h4 {
     width: 100%;
-    padding: 0px 0px;
     font-size: 25px;
     line-height: 33px;
   }
@@ -2815,23 +2979,30 @@ footer .foot .f-connect .link .terms {
     width: 100%;
     padding: 20px;
   }
+  .two .twoSlider .twoCard {
+    height: 200px;
+  }
   .two .twoSlider .twoCard .brand {
     display: block;
-    font-size: 16px;
+    font-size: 14px;
   }
   .two .twoSlider .twoCard p {
-    font-size: 8px;
+    font-size: 10px;
+  }
+  .two .twoSlider .twoCard .title {
+    display: none;
   }
   .two .twoSlider .twoCard a {
     display: flex;
     gap: 10px;
+    padding-top: 5px;
   }
-  .two .twoSlider .twoCard a p {
-    font-size: 14px;
+  .two .twoSlider .twoCard a span {
+    font-size: 13px;
   }
   .two .twoSlider .twoCard a img {
-    width: 19px;
-    height: 19px;
+    width: 18px;
+    height: 18px;
   }
   .two .counts {
     display: grid;
@@ -3288,16 +3459,21 @@ footer .foot .f-connect .link .terms {
     width: 100%;
   }
   .four .fourSlider .fourCard {
-    max-width: 320px;
+    max-width: 200px;
     width: 100%;
-    min-height: 231px;
-    height: 100%;
+    max-height: 231px;
   }
   .four .fourSlider .fourCard img {
-    max-width: 271px;
-    min-height: 218px;
+    max-width: 151px;
+    min-height: 98px;
     width: 100%;
     height: 60%;
+  }
+  .four .fourSlider .fourCard p {
+    font-size: 15px;
+  }
+  .four .fourSlider .fourCard .title {
+    font-size: 15px;
   }
   .services {
     width: 100%;
@@ -3439,6 +3615,51 @@ footer .foot .f-connect .link .terms {
   .terms p {
     font-size: 14px;
   }
+  .contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contact .contactCards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .contact .contactCards .contactCard {
+    width: 100%;
+  }
+  .contact .contactCards .contactCard .show img {
+    width: 60px;
+    height: 60px;
+  }
+  .contact .contactCards .contactCard .show p {
+    font-size: 15px;
+  }
+  .contact .contactCards .contactCard .opacity span {
+    font-size: 14px;
+  }
+  .contact .form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .contact .form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact .form form .threeInput {
+    width: 100%;
+  }
+  .contact .form form .threeInput input {
+    max-width: 420px;
+    width: 100%;
+  }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   nav .view #search-show #results .searchCards {
@@ -3458,6 +3679,7 @@ footer .foot .f-connect .link .terms {
   }
   .two .twoSlider .twoCard {
     margin-bottom: 80px;
+    min-height: 430px;
   }
   .two .counts {
     display: grid;
@@ -3498,6 +3720,54 @@ footer .foot .f-connect .link .terms {
   .three swiper-container swiper-slide .swiperCard .play .youtube {
     width: 40px;
     height: 40px;
+  }
+  .four {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+  }
+  .four .write {
+    width: 100%;
+    gap: 10px;
+  }
+  .four .write h3 {
+    width: 100%;
+    font-size: 35px;
+  }
+  .four .write p {
+    font-size: 15px;
+  }
+  .four .write button {
+    width: 90%;
+  }
+  .four .write button a {
+    width: 80%;
+  }
+  .four .write button a p {
+    font-size: 15px;
+  }
+  .four .fourSlider {
+    width: 100%;
+  }
+  .four .fourSlider .fourCard {
+    max-width: 300px;
+    width: 100%;
+    max-height: 331px;
+  }
+  .four .fourSlider .fourCard img {
+    min-height: 128px;
+    width: 100%;
+    height: 60%;
+  }
+  .four .fourSlider .fourCard p {
+    font-size: 15px;
+  }
+  .four .fourSlider .fourCard .title {
+    font-size: 15px;
   }
   .six {
     display: grid;
@@ -3566,7 +3836,6 @@ footer .foot .f-connect .link .terms {
   }
   .business h4 {
     width: 100%;
-    padding: 0px 0px;
     font-size: 29px;
     line-height: 40px;
   }
@@ -3761,5 +4030,45 @@ footer .foot .f-connect .link .terms {
   }
   .terms p {
     font-size: 14px;
+  }
+  .contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contact .contactCards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .contact .contactCards .contactCard {
+    width: 100%;
+  }
+  .contact .contactCards .contactCard .show img {
+    width: 60px;
+    height: 60px;
+  }
+  .contact .contactCards .contactCard .show p {
+    font-size: 15px;
+  }
+  .contact .contactCards .contactCard .opacity span {
+    font-size: 14px;
+  }
+  .contact .form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .contact .form form {
+    display: flex;
+  }
+  .contact .form form .threeInput input {
+    min-width: 330px;
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

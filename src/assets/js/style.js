@@ -211,13 +211,13 @@ fetch('/src/data/services.json')
     .then(res => res.json())
     .then(data => {
         twoSLiderCards.innerHTML = data.map(item => `
-    <swiper-slide class="twoCard">
+    <swiper-slide class="twoCard"  data-id=${item.id}>
           <p class='brand'>${item.name}</p>
-          <p>${item.title}</p>
-          <a href="">
-            <p>EXPLORE</p>
-            <img src="/src/assets/image/home/right.png" alt="">
-          </a>
+          <p class='title'>${item.title}</p>
+    <a class='explore' href="/src/components/servicesDetail/index.html?id=${item.id}">
+        <span>EXPLORE</span>
+        <img src="/src/assets/image/result/right.png" alt="">
+    </a>
         </swiper-slide>
     
     `).join('')
