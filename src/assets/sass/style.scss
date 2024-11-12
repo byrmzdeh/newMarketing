@@ -49,6 +49,291 @@ nav {
         }
 
 
+        .hire-us {
+            max-width: 170px;
+            width: 100%;
+            max-height: 50px;
+            height: 100%;
+            background-color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: "Manrope", sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 0px;
+            }
+        }
+
+        .hire-usColor {
+            max-width: 170px;
+            width: 100%;
+            max-height: 50px;
+            height: 100%;
+            background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+            border: none;
+            border-radius: 50px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                color: white !important;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 0px;
+            }
+
+        }
+
+        /* Container and Button Styling */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #d8d4e6;
+        }
+
+
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            border: none;
+
+
+
+
+
+            .modal-content {
+                background-color: white;
+                background-image: url('/src/assets/image/home/hireUsBg.png');
+                border-radius: 8px;
+                width: 50%;
+                position: absolute;
+                right: 0px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                border: none;
+
+                h2 {
+                    margin: 0px auto;
+                    background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 44px;
+                    font-weight: 700;
+                    font-family: sans-serif;
+
+                }
+
+                .tabs {
+                    width: 100%;
+                    height: 79px;
+                    margin: 1px auto;
+                    border-bottom: 1px solid gray;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+
+
+                    span {
+                        cursor: pointer;
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 32px;
+                        color: rgba(55, 55, 55, 1);
+                        opacity: 60%;
+
+                        &.active {
+                            background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            position: relative;
+
+                            // Xətti `::after` pseudo-element ilə yaratmaq
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: -24px; // Yaxınlıq yazıdan
+                                left: 0;
+                                width: 100%;
+                                height: 4px; // Xəttin qalınlığı
+                                background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%); // Gradient rəng xətti
+                            }
+                        }
+                    }
+
+                }
+
+
+                #closeModal {
+                    cursor: pointer;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: none;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 28px 0px 0px 28px;
+
+
+                    img {
+                        width: 15px;
+                        height: 15px;
+                        object-fit: cover;
+                    }
+
+                }
+
+                #addCompanyContent {
+                    width: 100%;
+                    padding: 38px;
+                    width: 100%;
+                    padding: 20px 60px 0px 100px;
+
+                    #addCompanyForm {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        margin: 1px auto;
+                        gap: 10px;
+
+                        .form-group {
+                            width: 100%;
+                            display: flex;
+                            gap: 10px;
+                            padding-top: 15px;
+                            .file-upload {
+                                width: 50%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 10px;
+
+                                select{
+                                    width: 100%;
+                                }
+                            }
+
+                            input,
+                            select {
+                                width: 50%;
+                                flex: 1;
+                                padding: 12px;
+                                border: 1px solid rgba(55, 55, 55, 1);
+                                border-radius: 5px;
+                                font-size: 16px;
+                                outline: none;
+                                max-height: 52px;
+                                &::placeholder{
+                                    color: rgba(55, 55, 55, 1);
+                                    opacity: 30%;
+                                }
+                            }
+
+                            textarea{
+                                width: 50%;
+                                flex: 1;
+                                padding: 12px;
+                                border: 1px solid rgba(55, 55, 55, 1);
+                                border-radius: 5px;
+                                font-size: 16px;
+                                outline: none;
+                                &::placeholder{
+                                    color: rgba(55, 55, 55, 1);
+                                    opacity: 30%;
+                                }
+
+                            }
+                            
+
+                            textarea {
+                                resize: vertical;
+                            }
+
+                        
+
+                            .upload-label {
+                                width: 100%;
+                                display: inline-block;
+                                padding: 10px;
+                                border: 2px dashed rgba(174, 105, 255, 1);
+                                border-radius: 5px;
+                                color: #888;
+                                cursor: pointer;
+                                text-align: center;
+                                width: 100%;
+                                border-style: dashed;
+                            }
+                        }
+
+                        .submit-button {
+                            padding: 10px 20px;
+                            background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                            color: #fff;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            font-size: 18px;
+                            font-weight: 600;
+                            margin-top: 10px;
+                        }
+
+
+                    }
+
+                }
+
+
+
+
+
+            }
+
+
+
+
+            #thankModal {
+                display: none;
+            }
+        }
+
+
+
+
+
+
+
+
 
 
         .hire-us {
@@ -3219,19 +3504,22 @@ footer {
         }
 
         form {
+            width: 60%;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            justify-content: center;
             padding-top: 70px;
+            gap: 10px;
 
             .threeInput {
-                width: 100%;
+                width: 90%;
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 gap: 15px;
 
                 input {
-                    min-width: 420px;
+                    max-width: 420px;
                     width: 100%;
                     height: 52px;
                     padding: 20px;
@@ -3262,7 +3550,7 @@ footer {
 
                 }
 
-                select{
+                select {
                     max-width: 420px;
                     width: 100%;
                     padding: 20px;
@@ -3270,7 +3558,7 @@ footer {
                     border-radius: 5px;
                     color: rgba(55, 55, 55, 1);
 
-                    option{
+                    option {
                         color: rgba(55, 55, 55, 1);
 
 
@@ -3294,19 +3582,155 @@ footer {
                     border-radius: 5px;
                     color: white;
                     font-family: sans-serif;
-        
+
                     p {
                         color: white !important;
                         font-size: 18px;
                         font-weight: 600;
                         margin-bottom: 0px;
                     }
-        
+
                 }
             }
         }
     }
 }
+
+
+
+
+
+
+
+.container {
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        font-size: 24px;
+        color: #9aafe8;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.step {
+    margin-bottom: 20px;
+    position: relative;
+
+    h2 {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .step-number {
+        background: linear-gradient(45deg, #9aafe8, #b0d4fa);
+        color: #fff;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    &.active .step-number {
+        background: linear-gradient(45deg, #6f98e8, #8fbcf0);
+    }
+
+    .option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        font-size: 16px;
+        color: #333;
+    }
+
+    .date-picker {
+        display: flex;
+        align-items: center;
+
+        input[type="text"] {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 8px;
+            margin: 0 5px;
+            width: 100px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        span {
+            font-size: 16px;
+            color: #333;
+        }
+    }
+}
+
+.line {
+    height: 2px;
+    background: #9aafe8;
+    margin: -10px 0 20px 30px;
+}
+
+.contact-info {
+    p {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .agreement {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: #333;
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(45deg, #9aafe8, #b0d4fa);
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background: linear-gradient(45deg, #b0d4fa, #9aafe8);
+    }
+}
+
+
 
 
 
@@ -3427,6 +3851,11 @@ footer {
 
     }
 }
+
+
+
+
+
 
 
 
@@ -3615,6 +4044,198 @@ footer {
 
                 }
             }
+
+
+            .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100%;
+    
+    
+                .modal-content {
+                    width: 100%;
+                    right: 0px;
+                    top: 0px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    min-height: 1000px;
+    
+                    h2 {
+                       font-size: 22px;
+    
+                    }
+    
+                    .tabs {
+                        width: 100%;
+                        height: 70px;
+                        margin: 1px auto;
+                        border-bottom: 1px solid gray;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+    
+    
+    
+                        span {
+                            cursor: pointer;
+                            font-size: 17px;
+                            font-weight: 600;
+                            line-height: 25px;
+                            color: rgba(55, 55, 55, 1);
+                            opacity: 60%;
+    
+                            &.active {
+                                background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                position: relative;
+    
+                                // Xətti `::after` pseudo-element ilə yaratmaq
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: -24px; // Yaxınlıq yazıdan
+                                    left: 0;
+                                    width: 100%;
+                                    height: 4px; // Xəttin qalınlığı
+                                    background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%); // Gradient rəng xətti
+                                }
+                            }
+                        }
+    
+                    }
+    
+    
+                    #closeModal {
+                        cursor: pointer;
+                        width: 50px;
+                        height: 50px;
+                        margin: 20px 0px 0px 20px;
+    
+    
+                        img {
+                            width: 15px;
+                            height: 15px;
+                            object-fit: cover;
+                        }
+    
+                    }
+    
+                    #addCompanyContent {
+                        width: 100%;
+                        padding: 38px;
+                        width: 100%;
+                        padding: 20px 20px 0px 20px;
+    
+                        #addCompanyForm {
+    
+                            .form-group {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                .file-upload {
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    gap: 10px;
+    
+                                    select{
+                                        width: 100%;
+                                    }
+                                }
+    
+                                input,
+                                select {
+                                    width: 100%;
+                                    flex: 1;
+                                    padding: 12px;
+                                    border: 1px solid rgba(55, 55, 55, 1);
+                                    border-radius: 5px;
+                                    font-size: 16px;
+                                    outline: none;
+                                    max-height: 50px;
+                                    &::placeholder{
+                                        color: rgba(55, 55, 55, 1);
+                                        opacity: 30%;
+                                    }
+                                }
+    
+                                textarea{
+                                    width: 100%;
+                                    flex: 1;
+                                    padding: 12px;
+                                    border: 1px solid rgba(55, 55, 55, 1);
+                                    border-radius: 5px;
+                                    font-size: 16px;
+                                    outline: none;
+                                    &::placeholder{
+                                        color: rgba(55, 55, 55, 1);
+                                        opacity: 30%;
+                                    }
+    
+                                }
+                                
+    
+                                textarea {
+                                    resize: vertical;
+                                }
+    
+                            
+    
+                                .upload-label {
+                                    width: 100%;
+                                    display: inline-block;
+                                    padding: 10px;
+                                    border: 1px dashed #888;
+                                    border-radius: 5px;
+                                    color: #888;
+                                    cursor: pointer;
+                                    text-align: center;
+                                    width: 100%;
+                                    border-style: dashed;
+                                }
+                            }
+    
+                            .submit-button {
+                                padding: 10px 20px;
+                                background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                                color: #fff;
+                                border: none;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                font-size: 18px;
+                                font-weight: 600;
+                                margin-top: 10px;
+                            }
+    
+    
+                        }
+    
+                    }
+    
+    
+    
+    
+    
+                }
+    
+    
+    
+    
+                #thankModal {
+                    display: none;
+                }
+            }
+    
+    
 
 
         }
@@ -4751,23 +5372,25 @@ footer {
             }
         }
 
-        .form{
+        .form {
             display: flex;
             flex-direction: column;
             padding: 20px;
-            form{
+
+            form {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-               .threeInput{
-                width: 100%;
-                input{
-                    max-width: 420px;
 
+                .threeInput {
                     width: 100%;
+
+                    input {
+
+                        width: 100%;
+                    }
                 }
-               }
-                
+
             }
         }
     }
@@ -4782,6 +5405,194 @@ footer {
 @media (min-width: 769px) and (max-width: 1024px) {
     nav {
         .view {
+            .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100%;
+    
+    
+                .modal-content {
+                    width: 100%;
+                    right: 0px;
+                    top: 0px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    min-height: 1000px;
+    
+                    h2 {
+                       font-size: 22px;
+    
+                    }
+    
+                    .tabs {
+                        width: 100%;
+                        height: 70px;
+                        margin: 1px auto;
+                        border-bottom: 1px solid gray;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+    
+    
+    
+                        span {
+                            cursor: pointer;
+                            font-size: 17px;
+                            font-weight: 600;
+                            line-height: 25px;
+                            color: rgba(55, 55, 55, 1);
+                            opacity: 60%;
+    
+                            &.active {
+                                background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                position: relative;
+    
+                                // Xətti `::after` pseudo-element ilə yaratmaq
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: -24px; // Yaxınlıq yazıdan
+                                    left: 0;
+                                    width: 100%;
+                                    height: 4px; // Xəttin qalınlığı
+                                    background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%); // Gradient rəng xətti
+                                }
+                            }
+                        }
+    
+                    }
+    
+    
+                    #closeModal {
+                        cursor: pointer;
+                        width: 50px;
+                        height: 50px;
+                        margin: 20px 0px 0px 20px;
+    
+    
+                        img {
+                            width: 15px;
+                            height: 15px;
+                            object-fit: cover;
+                        }
+    
+                    }
+    
+                    #addCompanyContent {
+                        width: 100%;
+                        padding: 38px;
+                        width: 100%;
+                        padding: 20px 20px 0px 20px;
+    
+                        #addCompanyForm {
+    
+                            .form-group {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                .file-upload {
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    gap: 10px;
+    
+                                    select{
+                                        width: 100%;
+                                    }
+                                }
+    
+                                input,
+                                select {
+                                    width: 100%;
+                                    flex: 1;
+                                    padding: 12px;
+                                    border: 1px solid rgba(55, 55, 55, 1);
+                                    border-radius: 5px;
+                                    font-size: 16px;
+                                    outline: none;
+                                    max-height: 50px;
+                                    &::placeholder{
+                                        color: rgba(55, 55, 55, 1);
+                                        opacity: 30%;
+                                    }
+                                }
+    
+                                textarea{
+                                    width: 100%;
+                                    flex: 1;
+                                    padding: 12px;
+                                    border: 1px solid rgba(55, 55, 55, 1);
+                                    border-radius: 5px;
+                                    font-size: 16px;
+                                    outline: none;
+                                    &::placeholder{
+                                        color: rgba(55, 55, 55, 1);
+                                        opacity: 30%;
+                                    }
+    
+                                }
+                                
+    
+                                textarea {
+                                    resize: vertical;
+                                }
+    
+                            
+    
+                                .upload-label {
+                                    width: 100%;
+                                    display: inline-block;
+                                    padding: 10px;
+                                    border: 1px dashed #888;
+                                    border-radius: 5px;
+                                    color: #888;
+                                    cursor: pointer;
+                                    text-align: center;
+                                    width: 100%;
+                                    border-style: dashed;
+                                }
+                            }
+    
+                            .submit-button {
+                                padding: 10px 20px;
+                                background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                                color: #fff;
+                                border: none;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                font-size: 18px;
+                                font-weight: 600;
+                                margin-top: 10px;
+                            }
+    
+    
+                        }
+    
+                    }
+    
+    
+    
+    
+    
+                }
+    
+    
+    
+    
+                #thankModal {
+                    display: none;
+                }
+            }
             #search-show {
                 #results {
                     .searchCards {
@@ -5387,19 +6198,31 @@ footer {
             }
         }
 
-        .form{
+        .form {
+            width: 100%;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            padding: 20px;
-            form{
+
+            form {
+                width: 100%;
                 display: flex;
-                .threeInput{
-                    input{
-                        min-width: 330px;
+
+                .threeInput {
+                    input {
+                        width: 100%;
+
+                    }
+
+                    textarea {
+                        width: 100%;
+                    }
+
+                    button {
                         width: 100%;
                     }
                 }
-                
+
             }
         }
     }

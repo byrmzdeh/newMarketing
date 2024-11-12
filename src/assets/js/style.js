@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const openModalButton = document.getElementById("gradButton");
     const closeModalButton = document.getElementById("btnClose");
     const form = document.getElementById("myForm"); // Formu seç
+    const sifarisBtn = document.getElementById('sifarisBtn')
 
     // Modalı aç
     openModalButton.addEventListener("click", () => {
@@ -146,6 +147,8 @@ document.addEventListener("DOMContentLoaded", () => {
             modal.style.display = "none"; // Modalı kapat
         }
     });
+
+
 
     // Formun gönderilmesini engellemek için
     form.addEventListener("submit", function (e) {
@@ -274,4 +277,107 @@ fetch('/src/data/portfolio.json')
     })
 
     .catch(error => console.error('Error fetching data:', error));
+
+
+
+
+
+//modal hireUs
+// HTML elementləri seçirik
+const hireUsButton = document.getElementById("hireUsButton");
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("closeModal");
+const tabAddCompany = document.getElementById("tabAddCompany");
+const tabContact = document.getElementById("tabContact");
+const addCompanyContent = document.getElementById("addCompanyContent");
+const contactContent = document.getElementById("contactContent");
+const addCompanyForm = document.getElementById("addCompanyForm"); // `id` əlavə olundu
+const contactForm = document.getElementById("contactForm"); // `id` əlavə olundu
+
+const send = document.getElementById('send')
+const thankModal = document.getElementById("thankModal");
+const closeThankModal = document.getElementById("closeThankModal");
+
+// "HIRE US" düyməsinə basıldıqda modalın açılması
+hireUsButton.onclick = function () {
+    modal.style.display = "flex";
+};
+
+// Modalı bağlama düyməsinə basıldıqda modalı bağlama
+closeModal.onclick = function () {
+    modal.style.display = "none";
+};
+
+// Pəncərənin xaricinə basıldıqda modalı bağlama
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+// Tab keçidləri funksiyası
+tabAddCompany.onclick = function () {
+    addCompanyContent.style.display = "block";
+    contactContent.style.display = "none";
+    tabAddCompany.classList.add("active");
+    tabContact.classList.remove("active");
+};
+
+tabContact.onclick = function () {
+    addCompanyContent.style.display = "none";
+    contactContent.style.display = "block";
+    tabContact.classList.add("active");
+    tabAddCompany.classList.remove("active");
+};
+
+const tabs = document.querySelectorAll('.tabs span');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active')); // Əvvəlki aktiv sinifləri silir
+    tab.classList.add('active'); // Klik edilən span-a .active sinifi əlavə edir
+  });
+})
+
+// Formların göndərilmə funksiyası
+addCompanyForm.onsubmit = function (event) {
+    event.preventDefault(); // Formun yenilənməsini qarşısını alır
+    modal.style.display = "none";
+    thankModal.style.display = "flex"; // Teşekkür modalını açır
+};
+
+contactForm.onsubmit = function (event) {
+    event.preventDefault(); // Formun yenilənməsini qarşısını alır
+    modal.style.display = "none";
+    thankModal.style.display = "flex"; // Teşekkür modalını açır
+};
+
+window.onload = function () {
+    thankModal.style.display = "none"; // Səhifə yüklənərkən teşekkür modalını gizlət
+};
+
+
+
+
+// Teşekkür modaldaki "X" düyməsi
+closeThankModal.onclick = function () {
+    thankModal.style.display = "none"; // Teşekkür modalını bağlayır
+};
+
+
+//podcast
+function selectOption(currentStep, nextStepId) {
+    // Mövcud addımı tamamlayır
+    document.getElementById(`step-${currentStep}`).classList.add("active");
+
+    // Növbəti addımı aktiv edir
+    document.getElementById(nextStepId).classList.add("active");
+
+    // Yalnız bir checkbox seçimi etmək üçün digər seçimləri təmizləyir
+    const checkboxes = document.querySelectorAll(`#step-${currentStep} .option input[type="checkbox"]`);
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = false;
+    });
+    event.target.checked = true;
+}
 

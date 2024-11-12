@@ -23,9 +23,139 @@
 
   <nav>
     <div class="view ">
-      <button class="hire-us" data-aos="fade-up">
+      <!-- <div class="container">
+        <button id="hireUsButton" class="button hire-us">HIRE US</button>
+
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>HIRE US</h2>
+
+            <form class="form">
+              <div class="form-group">
+                <input type="text" placeholder="Şirkətin adı" required />
+                <input type="text" placeholder="Ünvan" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="E-poçt" required />
+                <input type="tel" placeholder="Telefon" required />
+              </div>
+              <div class="form-group">
+                <input type="url" placeholder="Vebsayt" />
+                <select required>
+                  <option value="">Kateqoriya seç</option>
+                  <option value="kategoriya1">Kategoriya 1</option>
+                  <option value="kategoriya2">Kategoriya 2</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Məlumat" rows="3"></textarea>
+                <select required>
+                  <option value="">Alt Kateqoriya seç</option>
+                  <option value="alt_kategoriya1">Alt Kategoriya 1</option>
+                  <option value="alt_kategoriya2">Alt Kategoriya 2</option>
+                </select>
+              </div>
+              <div class="form-group file-upload">
+                <label for="upload-logo" class="upload-label">
+                  <input type="file" id="upload-logo" style="display: none;" />
+                  Şirkətin loqosu (PNG)
+                </label>
+              </div>
+              <button type="submit" class="submit-button">GÖNDƏR</button>
+            </form>
+          </div>
+        </div>
+      </div> -->
+
+
+
+      <button id="hireUsButton" class="hire-us" data-aos="fade-up">
         <p>HIRE US</p>
       </button>
+
+      <!-- Modal Pəncərə -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <div id="closeModal" class="close-modal">
+            <img src="/src/assets/image/home/close.png" alt="err">
+          </div>
+          <h2 class="modal-title">HIRE US</h2>
+
+          <!-- Tab Başlıqları -->
+          <div class="tabs">
+            <span id="tabAddCompany" class="tab active">ŞİRKƏT ƏLAVƏ ET</span>
+            <span id="tabContact" class="tab">ƏLAQƏ</span>
+          </div>
+
+          <!-- "Şirkət Əlavə Et" Formu -->
+          <div id="addCompanyContent" class="tab-content">
+            <form id="addCompanyForm"> <!-- Burada `id` əlavə olundu -->
+              <form class="form">
+                <div class="form-group">
+                  <input type="text" placeholder="Şirkətin adı" required />
+                  <input type="text" placeholder="Ünvan" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="E-poçt" required />
+                  <input type="tel" placeholder="Telefon" required />
+                </div>
+                <div class="form-group">
+                  <input type="tex" placeholder="Vebsayt" />
+                  <select required>
+                    <option value="">Kateqoriya seç</option>
+                    <option value="kategoriya1">Kategoriya 1</option>
+                    <option value="kategoriya2">Kategoriya 2</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea placeholder="Məlumat" rows="3"></textarea>
+                  <div class="file-upload">
+                    <select required>
+                      <option value="">Alt Kateqoriya seç</option>
+                      <option value="alt_kategoriya1">Alt Kategoriya 1</option>
+                      <option value="alt_kategoriya2">Alt Kategoriya 2</option>
+                    </select>
+                    <label for="upload-logo" class="upload-label">
+                      <input type="file" id="upload-logo" style="display: none;" />
+                      Şirkətin loqosu (PNG)
+                    </label>
+
+                  </div>
+
+                </div>
+
+                <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
+              </form>
+            </form>
+          </div>
+
+          <!-- "Əlaqə" Formu -->
+          <div id="contactContent" class="tab-content" style="display: none;">
+            <form id="contactForm"> <!-- Burada `id` əlavə olundu -->
+              <input type="text" placeholder="Ad" class="input-field" required />
+              <input type="text" placeholder="Soyad" class="input-field" required />
+              <input type="email" placeholder="E-poçt" class="input-field" required />
+              <input type="text" placeholder="Mövzu" class="input-field" required />
+              <textarea placeholder="Mesajınız" class="input-field"></textarea>
+              <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
+            </form>
+          </div>
+
+
+
+        </div>
+        <!-- Teşekkür Modalı -->
+
+      </div>
+
+      <div id="thankModal" class="thank-modal">
+        <div class="thank-modal-content">
+          <span id="closeThankModal" class="close-modal">x</span>
+          <p>Təşəkkürlər! Mesajınız uğurla göndərildi.</p>
+        </div>
+      </div>
+
       <a data-aos="fade-up" href="/index.html"><img src="/src/assets/image/home/logo.png" alt="err"></a>
       <div class="search-menu" data-aos="fade-up">
         <button id="search"><img src="/src/assets/image/home/search.png" alt="err"></button>
@@ -90,7 +220,8 @@
     </swiper-container>
 
 
-    <button class="hire-usColor " data-aos="fade-up">
+
+    <button id="hireUsButton" class="hire-usColor" data-aos="fade-up">
       <p>HIRE US</p>
     </button>
 
@@ -159,14 +290,14 @@
       <p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. </p>
       <a href="/src/pages/partners/index.html">
-        <button >
+        <button>
           <p>VIEW ALL</p>
           <img src="/src/assets/image/home/whiteRight.png" alt="">
         </button>
       </a>
 
     </div>
-    
+
 
     <swiper-container class="fourSlider" autoplay="true" pagination="true" slides-per-view="2" grab-cursor="true"
       data-aos="fade-up" id="fourSliderCards">
@@ -452,7 +583,8 @@
                     </div>
                   </div>
                 </div>
-                <button class="btn btn-primary gradButtonn" type="submit">SİFARİŞ ET</button>
+                <button class="btn btn-primary gradButtonn" id="sifarisBtn" type="submit">SİFARİŞ ET</button>
+
               </form>
               <img src="/src/assets/image/home/computer.png" alt="">
             </div>
@@ -512,7 +644,7 @@
 
         <div class="link">
           <a class="terms" href="src/pages/terms/index.html">TERMS OF USE</a>
-          <a  href="src/pages/terms/index.html">PRIVACY POLICY</a>
+          <a href="src/pages/terms/index.html">PRIVACY POLICY</a>
         </div>
 
       </div>
