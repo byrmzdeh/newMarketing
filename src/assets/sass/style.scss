@@ -847,7 +847,7 @@ nav {
         width: 100%;
         min-height: 220px;
         background-color: rgb(249, 249, 249);
-        position: absolute;
+        position: fixed;
         z-index: 100;
         top: 50%;
         left: 50%;
@@ -3393,15 +3393,14 @@ footer {
             max-height: 451px;
             height: 100%;
             background-color: rgba(255, 255, 255, 1);
-            box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
             margin: 10px;
             transition: 0.5s;
             border-radius: 16px;
             padding: 24px;
             margin-bottom: 65px;
-            cursor: pointer;
             display: flex;
             flex-direction: column;
+            transition: 0.5s;
 
             img {
                 max-width: 371px;
@@ -3431,6 +3430,9 @@ footer {
                 color: rgba(19, 19, 19, 1);
                 opacity: 80%;
 
+            }
+            &:hover{
+                box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
             }
 
 
@@ -4031,7 +4033,6 @@ footer {
         flex-direction: column;
         background-color: rgba(255, 255, 255, 1);
         transition: 0.5s;
-        cursor: pointer;
 
         .result-item {
             width: 100%;
@@ -4308,7 +4309,7 @@ footer {
     justify-content: center;
     background-color: rgb(251, 251, 251);
     border-radius: 24px;
-    position: absolute;
+    position: fixed; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -5225,7 +5226,7 @@ footer {
             gap: 40px;
 
             img {
-                width: 60%;
+                width: 40%;
                 margin: 1px auto;
             }
 
@@ -5234,11 +5235,11 @@ footer {
                 gap: 10px;
 
                 h4 {
-                    font-size: 35px;
+                    font-size: 33px;
                 }
 
                 p {
-                    font-size: 15px;
+                    font-size: 14px;
                 }
 
                 .top {
@@ -5255,6 +5256,12 @@ footer {
                     align-items: center;
                     justify-content: center;
                 }
+            }
+        }
+        .hire-usColor{
+            width:20%;
+            p{
+                font-size: 13px;
             }
         }
     }
@@ -5280,7 +5287,7 @@ footer {
                 justify-content: center;
 
                 h5 {
-                    font-size: 19px;
+                    font-size: 17px;
                     text-align: center;
                 }
 
@@ -5393,6 +5400,10 @@ footer {
         font-size: 22px
     }
 
+    .guestWeek .catalogue .container-fluid a {
+        font-size: 15px
+    }
+
 
     .take {
         height: 100%;
@@ -5447,11 +5458,11 @@ footer {
             justify-content: center;
 
             p {
-                font-size: 22px;
+                font-size: 20px;
             }
 
             h2 {
-                font-size: 24px;
+                font-size: 22px;
             }
         }
 
@@ -5469,7 +5480,7 @@ footer {
                 justify-content: center;
 
                 p {
-                    font-size: 15px;
+                    font-size: 14px;
                 }
             }
 
@@ -5481,7 +5492,7 @@ footer {
                 width: 100%;
 
                 h3 {
-                    font-size: 18px;
+                    font-size: 16px;
                 }
 
                 .input {
@@ -5502,9 +5513,15 @@ footer {
                 align-items: center;
                 justify-content: center;
                 padding-bottom: 40px;
+                P{
+                    font-size: 14px;
+                }
 
                 .link {
-                    a {
+                    .terms {
+                        font-size: 14px;
+                    }
+                    a{
                         font-size: 14px;
                     }
                 }
@@ -5649,7 +5666,7 @@ footer {
 
             h3 {
                 width: 100%;
-                font-size: 35px;
+                font-size: 28px;
             }
 
             .lorem {
@@ -5682,21 +5699,22 @@ footer {
             .sit {
                 .left {
                     text-align: center;
-                    font-size: 15px;
+                    font-size: 14px;
                 }
 
                 .right {
                     text-align: center;
-                    font-size: 15px;
+                    font-size: 14px;
                 }
 
                 .name {
-                    font-size: 25px;
+                    font-size: 21px;
                     line-height: 30px;
                     padding-bottom: 10px;
                 }
 
                 .img {
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -5737,11 +5755,11 @@ footer {
 
             h3 {
                 width: 100%;
-                font-size: 35px;
+                font-size: 28px;
             }
 
             p {
-                font-size: 15px;
+                font-size: 14px;
             }
 
             button {
@@ -5774,7 +5792,7 @@ footer {
 
             h3 {
                 width: 100%;
-                font-size: 35px;
+                font-size: 28px;
             }
 
             a {
@@ -5837,11 +5855,11 @@ footer {
 
             h3 {
                 width: 100%;
-                font-size: 35px;
+                font-size: 28px;
             }
 
             p {
-                font-size: 15px;
+                font-size: 14px;
             }
 
             button {
@@ -5864,7 +5882,8 @@ footer {
             .fourCard {
                 max-width: 200px;
                 width: 100%;
-                max-height: 231px;
+                line-height: 2px;
+           
 
                 img {
                     max-width: 151px;
@@ -5874,11 +5893,11 @@ footer {
                 }
 
                 p {
-                    font-size: 15px;
+                    font-size: 9px;
                 }
 
                 .title {
-                    font-size: 15px;
+                    font-size: 9px;
                 }
             }
         }
@@ -5950,11 +5969,11 @@ footer {
             }
 
             .dev {
-                font-size: 15px;
+                font-size: 14px;
             }
 
             .lorem {
-                font-size: 15px;
+                font-size: 14px;
             }
 
         }
@@ -6918,6 +6937,7 @@ footer {
             flex-direction: column;
             align-items: start;
             justify-content: start;
+        
 
         }
 

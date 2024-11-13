@@ -665,7 +665,7 @@ nav #show ul li a:hover {
   width: 100%;
   min-height: 220px;
   background-color: rgb(249, 249, 249);
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 50%;
   left: 50%;
@@ -2697,15 +2697,14 @@ footer .foot .f-connect .link .terms {
   max-height: 451px;
   height: 100%;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   margin: 10px;
   transition: 0.5s;
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 65px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
+  transition: 0.5s;
 }
 .four .fourSlider .fourCard img {
   max-width: 371px;
@@ -2726,6 +2725,9 @@ footer .foot .f-connect .link .terms {
   font-weight: 600;
   color: rgb(19, 19, 19);
   opacity: 80%;
+}
+.four .fourSlider .fourCard:hover {
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
 }
 
 .innovation {
@@ -3202,7 +3204,6 @@ footer .foot .f-connect .link .terms {
   flex-direction: column;
   background-color: rgb(255, 255, 255);
   transition: 0.5s;
-  cursor: pointer;
 }
 #catalogueCard .catalogueDetail .result-item {
   width: 100%;
@@ -3429,7 +3430,7 @@ footer .foot .f-connect .link .terms {
   justify-content: center;
   background-color: rgb(251, 251, 251);
   border-radius: 24px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -4082,7 +4083,7 @@ footer .foot .f-connect .link .terms {
     gap: 40px;
   }
   .two .counts img {
-    width: 60%;
+    width: 40%;
     margin: 1px auto;
   }
   .two .counts .one-counts {
@@ -4090,10 +4091,10 @@ footer .foot .f-connect .link .terms {
     gap: 10px;
   }
   .two .counts .one-counts h4 {
-    font-size: 35px;
+    font-size: 33px;
   }
   .two .counts .one-counts p {
-    font-size: 15px;
+    font-size: 14px;
   }
   .two .counts .one-counts .top {
     display: flex;
@@ -4106,6 +4107,12 @@ footer .foot .f-connect .link .terms {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .two .hire-usColor {
+    width: 20%;
+  }
+  .two .hire-usColor p {
+    font-size: 13px;
   }
   .six {
     display: grid;
@@ -4127,7 +4134,7 @@ footer .foot .f-connect .link .terms {
     justify-content: center;
   }
   .six .branding .brand h5 {
-    font-size: 19px;
+    font-size: 17px;
     text-align: center;
   }
   .six .branding .brand ul {
@@ -4200,6 +4207,9 @@ footer .foot .f-connect .link .terms {
   .guestWeek .catalogue .container-fluid .catalogueTitleBox h3 {
     font-size: 22px;
   }
+  .guestWeek .catalogue .container-fluid a {
+    font-size: 15px;
+  }
   .take {
     height: 100%;
     display: flex;
@@ -4242,10 +4252,10 @@ footer .foot .f-connect .link .terms {
     justify-content: center;
   }
   footer .head p {
-    font-size: 22px;
+    font-size: 20px;
   }
   footer .head h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
   footer .foot {
     display: grid;
@@ -4261,7 +4271,7 @@ footer .foot .f-connect .link .terms {
     justify-content: center;
   }
   footer .foot .f-logo p {
-    font-size: 15px;
+    font-size: 14px;
   }
   footer .foot .f-form {
     display: flex;
@@ -4271,7 +4281,7 @@ footer .foot .f-connect .link .terms {
     width: 100%;
   }
   footer .foot .f-form h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
   footer .foot .f-form .input {
     width: 70%;
@@ -4287,6 +4297,12 @@ footer .foot .f-connect .link .terms {
     align-items: center;
     justify-content: center;
     padding-bottom: 40px;
+  }
+  footer .foot .f-connect P {
+    font-size: 14px;
+  }
+  footer .foot .f-connect .link .terms {
+    font-size: 14px;
   }
   footer .foot .f-connect .link a {
     font-size: 14px;
@@ -4382,7 +4398,7 @@ footer .foot .f-connect .link .terms {
   }
   .week .head h3 {
     width: 100%;
-    font-size: 35px;
+    font-size: 28px;
   }
   .week .head .lorem {
     width: 100%;
@@ -4404,18 +4420,19 @@ footer .foot .f-connect .link .terms {
   }
   .week .title .sit .left {
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
   }
   .week .title .sit .right {
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
   }
   .week .title .sit .name {
-    font-size: 25px;
+    font-size: 21px;
     line-height: 30px;
     padding-bottom: 10px;
   }
   .week .title .sit .img {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -4446,10 +4463,10 @@ footer .foot .f-connect .link .terms {
   }
   .homePartners .write h3 {
     width: 100%;
-    font-size: 35px;
+    font-size: 28px;
   }
   .homePartners .write p {
-    font-size: 15px;
+    font-size: 14px;
   }
   .homePartners .write button {
     width: 90%;
@@ -4474,7 +4491,7 @@ footer .foot .f-connect .link .terms {
   }
   .three .write h3 {
     width: 100%;
-    font-size: 35px;
+    font-size: 28px;
   }
   .three .write a p {
     font-size: 14px;
@@ -4511,10 +4528,10 @@ footer .foot .f-connect .link .terms {
   }
   .four .write h3 {
     width: 100%;
-    font-size: 35px;
+    font-size: 28px;
   }
   .four .write p {
-    font-size: 15px;
+    font-size: 14px;
   }
   .four .write button {
     width: 90%;
@@ -4531,7 +4548,7 @@ footer .foot .f-connect .link .terms {
   .four .fourSlider .fourCard {
     max-width: 200px;
     width: 100%;
-    max-height: 231px;
+    line-height: 2px;
   }
   .four .fourSlider .fourCard img {
     max-width: 151px;
@@ -4540,10 +4557,10 @@ footer .foot .f-connect .link .terms {
     height: 60%;
   }
   .four .fourSlider .fourCard p {
-    font-size: 15px;
+    font-size: 9px;
   }
   .four .fourSlider .fourCard .title {
-    font-size: 15px;
+    font-size: 9px;
   }
   .services {
     width: 100%;
@@ -4593,10 +4610,10 @@ footer .foot .f-connect .link .terms {
     font-size: 25px;
   }
   #servicesDetail .detail-about .dev {
-    font-size: 15px;
+    font-size: 14px;
   }
   #servicesDetail .detail-about .lorem {
-    font-size: 15px;
+    font-size: 14px;
   }
   #servicesDetail .detail-asset {
     width: 100%;
