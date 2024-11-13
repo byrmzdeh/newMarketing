@@ -1,4 +1,5 @@
-const apiUrlThree = '/src/data/people.json'
+document.addEventListener('DOMContentLoaded', function(){
+    const apiUrlThree = '/src/data/people.json'
 const threeCards = document.getElementById('threeCards')
 
 fetch(apiUrlThree)
@@ -26,3 +27,4 @@ fetch(apiUrlThree)
     function goToDetail(id) {
         window.location.href = `src/components/searchDetail/index.html?id=${id}`;
     }
+})

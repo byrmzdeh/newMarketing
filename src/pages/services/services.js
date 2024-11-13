@@ -1,4 +1,5 @@
-const servicesCards = document.getElementById('servicesCards')
+document.addEventListener('DOMContentLoaded',function(){
+    const servicesCards = document.getElementById('servicesCards')
 
 fetch("/src/data/services.json")
     .then(res => res.json())
@@ -24,3 +25,4 @@ fetch("/src/data/services.json")
         });
 
     })
+})

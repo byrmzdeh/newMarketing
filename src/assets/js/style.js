@@ -19,6 +19,15 @@ const inputClose = document.getElementById('inputClose');
 const searchInput = document.getElementById('search-input');
 const result = document.getElementById('results');
 
+const value = document.getElementById('value');
+
+searchInput.addEventListener('input', function () {
+    const inputValue = searchInput.value;
+    value.innerHTML = `Search result for : "${inputValue}"`;
+});
+
+
+
 const apiUrl = '/src/data/people.json';
 
 search.addEventListener('click', function () {
@@ -285,6 +294,7 @@ fetch('/src/data/portfolio.json')
 //modal hireUs
 // HTML elementləri seçirik
 const hireUsButton = document.getElementById("hireUsButton");
+const hireUsButtonn = document.getElementById("hireUsButtonn");
 const modal = document.getElementById("modal");
 const closeModal = document.getElementById("closeModal");
 const tabAddCompany = document.getElementById("tabAddCompany");
@@ -296,12 +306,18 @@ const contactForm = document.getElementById("contactForm"); // `id` əlavə olun
 
 const send = document.getElementById('send')
 const thankModal = document.getElementById("thankModal");
+const overlayThank = document.getElementById("overlayThank");
 const closeThankModal = document.getElementById("closeThankModal");
 
 // "HIRE US" düyməsinə basıldıqda modalın açılması
 hireUsButton.onclick = function () {
     modal.style.display = "flex";
 };
+
+hireUsButtonn.onclick = function () {
+    modal.style.display = "flex";
+};
+
 
 // Modalı bağlama düyməsinə basıldıqda modalı bağlama
 closeModal.onclick = function () {
@@ -344,12 +360,15 @@ addCompanyForm.onsubmit = function (event) {
     event.preventDefault(); // Formun yenilənməsini qarşısını alır
     modal.style.display = "none";
     thankModal.style.display = "flex"; // Teşekkür modalını açır
+    overlayThank.style.display='block'
 };
 
 contactForm.onsubmit = function (event) {
     event.preventDefault(); // Formun yenilənməsini qarşısını alır
     modal.style.display = "none";
     thankModal.style.display = "flex"; // Teşekkür modalını açır
+    overlayThank.style.display='block'
+
 };
 
 window.onload = function () {
@@ -362,6 +381,8 @@ window.onload = function () {
 // Teşekkür modaldaki "X" düyməsi
 closeThankModal.onclick = function () {
     thankModal.style.display = "none"; // Teşekkür modalını bağlayır
+    overlayThank.style.display='none'
+
 };
 
 

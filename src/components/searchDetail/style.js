@@ -11,12 +11,6 @@ closeBtn.addEventListener('click', function () {
     show.style.display = 'none'
 
 })
-
-
-
-
-
-
     
 ///search
 const search = document.getElementById('search');
@@ -24,6 +18,13 @@ const searchShow = document.getElementById('search-show');
 const inputClose = document.getElementById('inputClose');
 const searchInput = document.getElementById('search-input');
 const result = document.getElementById('results');
+
+const value = document.getElementById('value');
+
+searchInput.addEventListener('input', function () {
+    const inputValue = searchInput.value;
+    value.innerHTML = `Search result for : "${inputValue}"`;
+});
 
 
 search.addEventListener('click', function () {
@@ -71,6 +72,7 @@ function displayResults(data) {
 
     if (data.length === 0) {
         result.innerHTML = '<img class="logo" src="/src/assets/image/home/showLogo.png" alt="No results">';
+
         return;
     }
 
@@ -197,4 +199,178 @@ if (id) {
         });
 } else {
     itemName.textContent = 'Heç bir məlumat tapılmadı';
+}
+
+
+
+
+// Səhifə məlumatını müəyyən edir
+const currentPage = document.body.getAttribute('data-page');
+
+// Modal və Tab idarə funksiyaları
+function initModal() {
+    const modal = document.getElementById("modal");
+    const hireUsButton = document.getElementById("hireUsButton");
+    const closeModal = document.getElementById("closeModal");
+    const thankModal = document.getElementById("thankModal");
+    const closeThankModal = document.getElementById("closeThankModal");
+
+    if (hireUsButton) {
+        // "HIRE US" düyməsinə basıldıqda modalın açılması
+        hireUsButton.onclick = function () {
+            modal.style.display = "flex";
+        };
+    }
+
+    if (closeModal) {
+        // Modalı bağlama düyməsinə basıldıqda modalı bağlama
+        closeModal.onclick = function () {
+            modal.style.display = "none";
+        };
+    }
+
+    // Pəncərənin xaricinə basıldıqda modalı bağlama
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    // Teşekkür modalını bağlama funksiyası
+    if (closeThankModal) {
+        closeThankModal.onclick = function () {
+            thankModal.style.display = "none";
+            window.location.href='/index.html'
+        };
+    }
+
+    window.onload = function () {
+        if (thankModal) {
+            thankModal.style.display = "none"; // Səhifə yüklənərkən təşəkkür modalını gizlədin
+        }
+    };
+}
+
+// Tab keçid funksiyaları
+function initTabs() {
+    const tabAddCompany = document.getElementById("tabAddCompany");
+    const tabContact = document.getElementById("tabContact");
+    const addCompanyContent = document.getElementById("addCompanyContent");
+    const contactContent = document.getElementById("contactContent");
+
+    if (tabAddCompany && tabContact) {
+        // "Şirkət Əlavə Et" tabına keçid
+        tabAddCompany.onclick = function () {
+            addCompanyContent.style.display = "block";
+            contactContent.style.display = "none";
+            tabAddCompany.classList.add("active");
+            tabContact.classList.remove("active");
+        };
+
+        // "Əlaqə" tabına keçid
+        tabContact.onclick = function () {
+            addCompanyContent.style.display = "none";
+            contactContent.style.display = "block";
+            tabContact.classList.add("active");
+            tabAddCompany.classList.remove("active");
+        };
+    }
+}
+
+// Form göndərmə funksiyaları
+function initForms() {
+    const addCompanyForm = document.getElementById("addCompanyForm");
+    const contactForm = document.getElementById("contactForm");
+    const thankModal = document.getElementById("thankModal");
+    const overlayThank = document.getElementById("overlayThank");
+
+
+    if (addCompanyForm) {
+        addCompanyForm.onsubmit = function (event) {
+            event.preventDefault(); // Formun yenilənməsini qarşısını alır
+            document.getElementById("modal").style.display = "none";
+            overlayThank.style.display = 'block';
+            thankModal.style.display = "flex"; // Teşekkür modalını açır
+        };
+    }
+
+    if (contactForm) {
+        contactForm.onsubmit = function (event) {
+            event.preventDefault(); // Formun yenilənməsini qarşısını alır
+            document.getElementById("modal").style.display = "none";
+            overlayThank.style.display = 'block';
+            thankModal.style.display = "flex"; // Teşekkür modalını açır
+        };
+    }
+}
+
+// Hər səhifə üçün funksiyaları yalnız lazım olduğu səhifədə çağırırıq
+if (currentPage === "home") {
+    initModal();
+    initTabs();
+    initForms();
+} else if (currentPage === "about") {
+    initModal();
+    initTabs();
+    initForms();
+} else if(currentPage==="blog"){
+    initModal();
+    initTabs();
+    initForms();
+} else if(currentPage==="business"){
+    initModal();
+    initTabs();
+    initForms();
+} else if(currentPage==="catalogue"){
+    initModal();
+    initTabs();
+    initForms();
+} else if(currentPage==="contact"){
+    initModal();
+    initTabs();
+    initForms();
+} else if(currentPage==="partners"){
+    initModal();
+    initTabs();
+    initForms();
+} else if(currentPage==="podcast"){
+    initModal();
+    initTabs();
+    initForms();
+} else if(currentPage==="portfolio"){
+    initModal();
+    initTabs();
+    initForms();
+} else if(currentPage==="services"){
+    initModal();
+    initTabs();
+    initForms();
+} else if(currentPage==="telim"){
+    initModal();
+    initTabs();
+    initForms();
+} else if(currentPage==="terms"){
+    initModal();
+    initTabs();
+    initForms();
+}else if(currentPage==="searchDetail"){
+    initModal();
+    initTabs();
+    initForms();
+}else if(currentPage==="catalogueDetail"){
+    initModal();
+    initTabs();
+    initForms();
+}else if(currentPage==="servicesDetail"){
+    initModal();
+    initTabs();
+    initForms();
+}else if(currentPage==="catalogueCategories"){
+    initModal();
+    initTabs();
+    initForms();
+}else if(currentPage==="servicesDetail"){
+    initModal();
+    initTabs();
+    initForms();
 }

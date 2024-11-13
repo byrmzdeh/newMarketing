@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    },
+    {
+        "id": 1,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    },
+    {
+        "id": 2,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    },
+    {
+        "id": 3,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    },
+    {
+        "id": 4,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    },
+    {
+        "id": 5,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    },
+    {
+        "id": 6,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    },
+    {
+        "id": 7,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    },
+    {
+        "id": 8,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    },
+    {
+        "id": 9,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    },
+    {
+        "id": 10,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    },
+    {
+        "id": 11,
+        "name": "Category name",
+        "img": "/src/assets/image/home/right.png"
+    }
+]
