@@ -950,6 +950,7 @@ nav #show ul li a:hover {
   justify-content: start;
 }
 .six .branding .brand h5 {
+  width: 73%;
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
   -webkit-background-clip: text;
   background-clip: text;
@@ -1102,7 +1103,7 @@ nav #show ul li a:hover {
   background-color: white;
   border: none;
   gap: 10px;
-  padding: 30px 60px 40px 60px;
+  padding: 30px;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -1124,18 +1125,18 @@ nav #show ul li a:hover {
 #detailSearch .enjoy #threeCards .threeCard .read {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 25px;
-  margin-top: auto;
+  justify-content: space-between;
+  width: 45%;
+  line-height: 25px;
 }
 #detailSearch .enjoy #threeCards .threeCard .read span {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
+  margin-bottom: 0px;
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 0px;
 }
 #detailSearch .enjoy #threeCards .threeCard .read img {
   width: 24px;
@@ -1499,7 +1500,7 @@ nav #show ul li a:hover {
   line-height: 38px;
 }
 .filter #blogCards .card .result-item .result-about .read {
-  max-width: 160px;
+  max-width: 145px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -1663,14 +1664,13 @@ nav #show ul li a:hover {
 .setting .text h1 {
   font-size: 56px;
   font-weight: 700;
-  color: rgb(55, 55, 55);
+  color: rgba(55, 55, 55, 0.9);
   line-height: 56px;
 }
 .setting .text p {
   font-size: 18px;
   font-weight: 600;
-  color: rgb(55, 55, 55);
-  opacity: 60%;
+  color: rgba(55, 55, 55, 0.6);
   padding-top: 20px;
   line-height: 22px;
 }
@@ -1741,15 +1741,19 @@ nav #show ul li a:hover {
 .setting .gradButton {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 195px;
+  justify-content: space-evenly;
+  max-width: 226px;
+  width: 100%;
   height: 50px;
   border: none;
   border-radius: 25px;
-  color: rgb(255, 255, 255);
-  margin-top: 5vh;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='195' height='50' viewBox='0 0 195 50' fill='none'%3E%3Crect width='195' height='50' rx='25' fill='url(%23paint0_linear_16_56)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_16_56' x1='-27.6689' y1='41.1458' x2='202.119' y2='-9.61571' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2353E6FF'/%3E%3Cstop offset='0.457292' stop-color='%23AE69FF'/%3E%3Cstop offset='1' stop-color='%23474AFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") center/cover;
   cursor: pointer;
+}
+.setting .gradButton .btnP {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 500;
 }
 .setting form .form-control {
   height: 52px;
@@ -1940,6 +1944,7 @@ footer .foot .f-connect .link .terms {
   margin: 20px auto;
 }
 .week .head {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1965,7 +1970,7 @@ footer .foot .f-connect .link .terms {
   opacity: 60%;
 }
 .week .head .lorem a {
-  max-width: 170px;
+  max-width: 150px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -2005,15 +2010,14 @@ footer .foot .f-connect .link .terms {
   font-weight: 600;
   line-height: 23px;
   text-align: right;
-  color: rgb(55, 55, 55);
-  opacity: 80%;
+  color: rgba(55, 55, 55, 0.8);
 }
 .week .title .sit .left {
   font-size: 18px;
   font-weight: 600;
   line-height: 23px;
   text-align: justify;
-  color: rgb(55, 55, 55);
+  color: rgba(55, 55, 55, 0.8);
   opacity: 80%;
 }
 .week .title .sit .name {
@@ -2036,7 +2040,7 @@ footer .foot .f-connect .link .terms {
   object-fit: cover;
 }
 .week .title .sit .img .guest {
-  max-width: 420px;
+  max-width: 100%;
   width: 100%;
   min-height: 362px;
   object-fit: cover;
@@ -2397,7 +2401,7 @@ footer .foot .f-connect .link .terms {
   width: 30%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 .homePartners .write h3 {
   font-size: 56px;
@@ -2422,7 +2426,7 @@ footer .foot .f-connect .link .terms {
   border-radius: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
   border: none;
 }
@@ -2431,14 +2435,14 @@ footer .foot .f-connect .link .terms {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  z-index: 2;
+  color: white !important;
 }
 .homePartners .write button a p {
-  margin-bottom: 0px;
+  color: white !important;
   font-size: 18px;
   font-weight: 600;
-  color: rgb(255, 255, 255) !important;
-  z-index: 2;
+  margin-bottom: 0px;
+  opacity: 100%;
 }
 .homePartners .row {
   width: 60%;
@@ -2557,7 +2561,7 @@ footer .foot .f-connect .link .terms {
   -webkit-text-fill-color: transparent;
 }
 .three .write a {
-  max-width: 170px;
+  max-width: 150px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -2652,7 +2656,7 @@ footer .foot .f-connect .link .terms {
   width: 30%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 .four .write h3 {
   font-size: 56px;
@@ -2681,12 +2685,19 @@ footer .foot .f-connect .link .terms {
   background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
   border: none;
 }
-.four .write button p {
-  margin-bottom: 0px;
+.four .write button a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white !important;
+}
+.four .write button a p {
+  color: white !important;
   font-size: 18px;
   font-weight: 600;
-  color: rgb(255, 255, 255) !important;
-  z-index: 2;
+  margin-bottom: 0px;
+  opacity: 100%;
 }
 .four .fourSlider {
   width: 60%;
@@ -3035,17 +3046,12 @@ footer .foot .f-connect .link .terms {
   opacity: 30%;
 }
 .contact .form form .threeInput button {
-  max-width: 420px;
-  width: 100%;
+  width: 95%;
   height: 50px;
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
   border: none;
   border-radius: 5px;
   color: white;
-  font-family: sans-serif;
-}
-.contact .form form .threeInput button p {
-  color: white !important;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0px;
@@ -3103,7 +3109,6 @@ footer .foot .f-connect .link .terms {
   border-color: rgb(255, 255, 255);
   border: none;
   transition: 0.5s;
-  cursor: pointer;
 }
 #catalogueCards .card .result-item {
   width: 100%;
@@ -3310,12 +3315,10 @@ footer .foot .f-connect .link .terms {
   border: 1px solid #bf88ff;
   background-color: white;
   border-radius: 50px;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  /* İç məzmun ilə sərhəd arasında boşluq */
 }
 #catalogueCard .catalogueDetail .desc button p {
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -3529,10 +3532,6 @@ footer .foot .f-connect .link .terms {
   border: none;
   border-radius: 5px;
   color: white;
-  font-family: sans-serif;
-}
-#messageForm form .threeInput button p {
-  color: white !important;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0px;
@@ -3774,7 +3773,7 @@ footer .foot .f-connect .link .terms {
   }
   nav .view .modal .modal-content .tabs span {
     cursor: pointer;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
     line-height: 25px;
     color: rgb(55, 55, 55);
@@ -3836,7 +3835,7 @@ footer .foot .f-connect .link .terms {
     padding: 12px;
     border: 1px solid rgb(55, 55, 55);
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     outline: none;
     max-height: 50px;
   }
@@ -3851,7 +3850,7 @@ footer .foot .f-connect .link .terms {
     padding: 12px;
     border: 1px solid rgb(55, 55, 55);
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     outline: none;
   }
   nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group textarea::placeholder {
@@ -3872,6 +3871,9 @@ footer .foot .f-connect .link .terms {
     text-align: center;
     width: 100%;
     border-style: dashed;
+    display: flex;
+    align-items: center;
+    gap: 15px;
   }
   nav .view .modal .modal-content #addCompanyContent #addCompanyForm .submit-button {
     padding: 10px 20px;
@@ -3880,12 +3882,32 @@ footer .foot .f-connect .link .terms {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     margin-top: 10px;
   }
   nav .view .modal .modal-content #contactContent {
     padding: 20px 20px 0px 20px;
+  }
+  nav .view .modal .modal-content #contactContent #contactForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1px auto;
+    gap: 10px;
+  }
+  nav .view .modal .modal-content #contactContent #contactForm input,
+  nav .view .modal .modal-content #contactContent #contactForm select {
+    font-size: 14px;
+  }
+  nav .view .modal .modal-content #contactContent #contactForm textarea {
+    font-size: 14px;
+  }
+  nav .view .modal .modal-content #contactContent #contactForm textarea {
+    resize: vertical;
+  }
+  nav .view .modal .modal-content #contactContent #contactForm .submit-button {
+    font-size: 14px;
   }
   #overlayThank {
     padding: 20px;
@@ -3908,7 +3930,6 @@ footer .foot .f-connect .link .terms {
   }
   #detailSearch {
     width: 100%;
-    padding: 20px;
   }
   #detailSearch .blog {
     font-size: 35px;
@@ -3918,14 +3939,14 @@ footer .foot .f-connect .link .terms {
     width: 100%;
   }
   #detailSearch h1 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 29px;
   }
   #detailSearch .d-search p {
-    font-size: 15px;
+    font-size: 14px;
   }
   #detailSearch .enjoy h4 {
-    font-size: 30px;
+    font-size: 20px;
   }
   #detailSearch .enjoy #threeCards {
     width: 100%;
@@ -3934,6 +3955,24 @@ footer .foot .f-connect .link .terms {
   }
   #detailSearch .enjoy #threeCards .threeCard {
     width: 100%;
+    padding: 20px;
+    gap: 2px;
+  }
+  #detailSearch .enjoy #threeCards .threeCard .read {
+    width: 35%;
+  }
+  #detailSearch .enjoy #threeCards .threeCard .read span {
+    font-size: 14px;
+  }
+  #detailSearch .enjoy #threeCards .threeCard .read img {
+    width: 20px;
+    height: 20px;
+  }
+  #detailSearch .enjoy #threeCards .threeCard .month {
+    font-size: 14px;
+  }
+  #detailSearch .enjoy #threeCards .threeCard .name {
+    font-size: 14px;
   }
   .partners {
     width: 100%;
@@ -4006,12 +4045,12 @@ footer .foot .f-connect .link .terms {
   .guest .guest-main .main h4 {
     color: rgb(19, 19, 19);
     opacity: 80%;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 52px;
   }
   .guest .guest-main .main .main-about {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     color: rgb(55, 55, 55);
     opacity: 60%;
@@ -4110,30 +4149,36 @@ footer .foot .f-connect .link .terms {
   }
   .two .hire-usColor {
     width: 20%;
+    height: 40px;
   }
   .two .hire-usColor p {
     font-size: 13px;
   }
   .six {
+    padding: 10px 20px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
   .six .branding {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1px;
   }
   .six .branding img {
     width: 50px;
   }
   .six .branding .brand {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
   .six .branding .brand h5 {
+    width: 100%;
     font-size: 17px;
     text-align: center;
   }
@@ -4158,7 +4203,7 @@ footer .foot .f-connect .link .terms {
     width: 78%;
   }
   .setting .text {
-    width: 80%;
+    width: 100%;
   }
   .setting .text h1 {
     font-size: 25px;
@@ -4200,6 +4245,16 @@ footer .foot .f-connect .link .terms {
   }
   .setting .text .modal .modal-dialog .calendar .text {
     font-size: 15px;
+  }
+  .setting .gradButton {
+    width: 35%;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .setting .gradButton .btnP {
+    font-size: 14px;
   }
   .setting p {
     font-size: 14px;
@@ -4365,18 +4420,18 @@ footer .foot .f-connect .link .terms {
     font-size: 14px;
   }
   .filter #blogCards .card .result-item .result-about p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .filter #blogCards .card .result-item .result-about h1 {
     width: 100%;
-    font-size: 19px;
+    font-size: 18px;
     line-height: 25px;
   }
   .filter #blogCards .card .result-item .result-about .read {
-    width: 85%;
+    width: 27%;
   }
   .filter #blogCards .card .result-item .result-about .read span {
-    font-size: 15px;
+    font-size: 14px;
   }
   .filter #blogCards .card .result-item .result-about .read img {
     width: 20px;
@@ -4406,6 +4461,12 @@ footer .foot .f-connect .link .terms {
   .week .head .lorem p {
     font-size: 15px;
   }
+  .week .head .lorem a {
+    width: 26%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .week .head .lorem a p {
     font-size: 14px;
   }
@@ -4414,9 +4475,15 @@ footer .foot .f-connect .link .terms {
     height: 19px;
   }
   .week .title {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .week .title .sit {
+    width: 100%;
   }
   .week .title .sit .left {
     text-align: center;
@@ -4437,7 +4504,7 @@ footer .foot .f-connect .link .terms {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 7px;
   }
   .week .title .sit .img img {
     max-width: 52px;
@@ -4446,7 +4513,7 @@ footer .foot .f-connect .link .terms {
   }
   .week .title .sit .img .guest {
     width: 100%;
-    padding: 0px;
+    margin: 1px auto;
   }
   .homePartners {
     width: 100%;
@@ -4469,13 +4536,11 @@ footer .foot .f-connect .link .terms {
     font-size: 14px;
   }
   .homePartners .write button {
-    width: 90%;
-  }
-  .homePartners .write button a {
-    width: 80%;
+    width: 29%;
+    height: 40px;
   }
   .homePartners .write button a p {
-    font-size: 15px;
+    font-size: 13px;
   }
   .homePartners .row {
     width: 100%;
@@ -4492,6 +4557,12 @@ footer .foot .f-connect .link .terms {
   .three .write h3 {
     width: 100%;
     font-size: 28px;
+  }
+  .three .write a {
+    width: 26%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .three .write a p {
     font-size: 14px;
@@ -4529,18 +4600,17 @@ footer .foot .f-connect .link .terms {
   .four .write h3 {
     width: 100%;
     font-size: 28px;
+    line-height: 45px;
   }
   .four .write p {
     font-size: 14px;
   }
   .four .write button {
-    width: 90%;
-  }
-  .four .write button a {
-    width: 80%;
+    width: 29%;
+    height: 40px;
   }
   .four .write button a p {
-    font-size: 15px;
+    font-size: 13px;
   }
   .four .fourSlider {
     width: 100%;
@@ -4577,21 +4647,20 @@ footer .foot .f-connect .link .terms {
     min-height: 200px;
   }
   .services #servicesCards .servicesCard h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .services #servicesCards .servicesCard p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .services #servicesCards .servicesCard .explore {
-    max-width: 120px;
-    width: 100%;
+    width: 28%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 0px;
   }
   .services #servicesCards .servicesCard .explore span {
-    font-size: 15px;
+    font-size: 14px;
     padding: 0px;
   }
   .services #servicesCards .servicesCard .explore img {
@@ -4607,7 +4676,7 @@ footer .foot .f-connect .link .terms {
     width: 100%;
   }
   #servicesDetail .detail-about .solutions {
-    font-size: 25px;
+    font-size: 20px;
   }
   #servicesDetail .detail-about .dev {
     font-size: 14px;
@@ -4620,21 +4689,21 @@ footer .foot .f-connect .link .terms {
     padding: 0px;
   }
   #servicesDetail .detail-asset .write .smart {
-    font-size: 25px;
+    font-size: 20px;
   }
   #servicesDetail .detail-asset .write .web {
     font-size: 25px;
   }
   #servicesDetail .detail-asset ul li {
-    font-size: 15px;
+    font-size: 14px;
   }
   #servicesDetail .detail-asset h2 {
-    font-size: 15px;
+    font-size: 18px;
   }
   .about {
     max-width: 100%;
     width: 100%;
-    padding: 20px;
+    padding: 0px 20px;
   }
   .about .about-cards {
     width: 100%;
@@ -4666,10 +4735,10 @@ footer .foot .f-connect .link .terms {
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
   }
   .about .counts img {
-    width: 70%;
+    width: 40%;
     margin: 1px auto;
   }
   .about .counts .one-counts {
@@ -4677,10 +4746,10 @@ footer .foot .f-connect .link .terms {
     gap: 10px;
   }
   .about .counts .one-counts h4 {
-    font-size: 40px;
+    font-size: 33px;
   }
   .about .counts .one-counts p {
-    font-size: 17px;
+    font-size: 14px;
   }
   .about .counts .one-counts .top {
     display: flex;
@@ -4731,14 +4800,40 @@ footer .foot .f-connect .link .terms {
     font-size: 14px;
   }
   .contact .form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 20px;
+    margin: 60px auto;
+  }
+  .contact .form h4 {
+    font-size: 28px;
+    line-height: 30px;
   }
   .contact .form form {
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
+  }
+  .contact .form form .threeInput {
+    width: 100%;
+  }
+  .contact .form form .threeInput input {
+    width: 100%;
+    font-size: 14px;
+  }
+  .contact .form form .threeInput select {
+    width: 100%;
+    font-size: 14px;
+  }
+  .contact .form form .threeInput textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+  .contact .form form .threeInput button {
+    width: 100%;
+    font-size: 14px;
   }
   #catalogueCategories {
     max-width: 100%;
@@ -4759,7 +4854,7 @@ footer .foot .f-connect .link .terms {
   }
   #catalogueCategories .catagoryName a p {
     margin-bottom: 0px;
-    font-size: 15px;
+    font-size: 14px;
   }
   #catalogueCategories .catagoryName a img {
     width: 22px;
@@ -4971,7 +5066,7 @@ footer .foot .f-connect .link .terms {
     font-size: 20px;
   }
   #telimCards .telimCard .cardAbout p {
-    font-size: 13px;
+    font-size: 14px;
   }
   #messageForm {
     padding: 20px;
@@ -5000,13 +5095,13 @@ footer .foot .f-connect .link .terms {
     display: flex;
     flex-direction: column;
   }
-  #messageForm form input {
+  #messageForm form .threeInput input {
     font-size: 14px;
   }
-  #messageForm form select {
+  #messageForm form .threeInput select {
     font-size: 14px;
   }
-  #messageForm form button p {
+  #messageForm form .threeInput button {
     font-size: 14px;
   }
 }
@@ -5333,6 +5428,19 @@ footer .foot .f-connect .link .terms {
     font-size: 29px;
     line-height: 40px;
   }
+  .week .head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .week .head h3 {
+    width: 100%;
+  }
+  .week .head .lorem {
+    width: 100%;
+  }
   .week .title {
     width: 100%;
     display: grid;
@@ -5342,6 +5450,10 @@ footer .foot .f-connect .link .terms {
   .week .title .sit {
     width: 77%;
     gap: 0px;
+  }
+  .week .title .sit .name {
+    width: 100%;
+    font-size: 35px;
   }
   .week .title .sit .img {
     display: flex;
@@ -5361,8 +5473,45 @@ footer .foot .f-connect .link .terms {
     object-fit: cover;
     padding: 0px 10px 0px 10px;
   }
+  .week .title .sit .right {
+    font-size: 16px;
+  }
+  .week .title .sit .left {
+    font-size: 16px;
+  }
+  .homePartners {
+    width: 100%;
+  }
+  .homePartners .write {
+    width: 100%;
+  }
   .homePartners .write h3 {
     font-size: 38px;
+  }
+  .setting {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .setting .text {
+    width: 60%;
+    gap: 10px;
+  }
+  .setting .text h1 {
+    font-size: 24px;
+    opacity: 80%;
+    line-height: 30px;
+  }
+  .setting .text p {
+    font-size: 15px;
+  }
+  .setting .text button span {
+    font-size: 15px;
+  }
+  .setting p {
+    font-size: 16px;
   }
   .services {
     width: 100%;
