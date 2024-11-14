@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             card.classList.add('card');
             card.setAttribute('data-aos', 'fade-up');
             card.innerHTML = `
-            <div  data-id=${item.id}>
+            <div  data-id=${item.id} data-aos='fade-up'>
                      <a class='portfolioCard'  href="/src/components/portfolioDetail/index.html?id=${item.id}">
                            <img class='cardImg' src="${item.img}" alt="err">
                 <p>${item.name}</p>

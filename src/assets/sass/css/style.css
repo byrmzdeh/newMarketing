@@ -229,6 +229,7 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group s
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group textarea {
   width: 50%;
+  min-height: 121px;
   flex: 1;
   padding: 12px;
   border: 1px solid rgba(55, 55, 55, 0.5);
@@ -311,6 +312,7 @@ nav .view .modal .modal-content #contactContent #contactForm select::placeholder
 }
 nav .view .modal .modal-content #contactContent #contactForm textarea {
   width: 100%;
+  min-height: 100px;
   flex: 1;
   padding: 12px;
   border: 1px solid rgb(55, 55, 55);
@@ -969,38 +971,13 @@ nav #show ul li a:hover {
 }
 
 #detailSearch {
-  max-width: 100%;
-  width: 100%;
-  padding: 170px 60px 60px 60px;
+  width: 67%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 15px;
-}
-#detailSearch .blog {
-  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 84px;
-  font-weight: 800;
-  line-height: 109px;
-}
-#detailSearch p {
-  width: 100%;
-  color: rgb(55, 55, 55);
-  opacity: 60%;
-}
-#detailSearch h1 {
-  max-width: 870px;
-  width: 100%;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 42px;
-  color: rgb(55, 55, 55);
-  opacity: 80%;
+  margin: 10px auto;
 }
 #detailSearch .item-div {
   width: 94px;
@@ -1008,7 +985,6 @@ nav #show ul li a:hover {
   background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
 }
 #detailSearch .d-search {
-  max-width: 870px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1232,6 +1208,16 @@ nav #show ul li a:hover {
   width: 94px;
   height: 4px;
   background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+}
+.business h1 {
+  max-width: 870px;
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 42px;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
 }
 .business h4 {
   font-size: 48px;
@@ -1549,7 +1535,6 @@ nav #show ul li a:hover {
   transition: 0.5s;
 }
 .filter #portfolioCards .card .portfolioCard .cardImg {
-  max-height: 314px;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -3067,7 +3052,7 @@ footer .foot .f-connect .link .terms {
 }
 .contact .form form .threeInput textarea {
   width: 95%;
-  height: 52px;
+  min-height: 130px;
   padding: 20px;
   outline: none;
   border: 1px solid rgba(55, 55, 55, 0.6);
@@ -3546,7 +3531,7 @@ footer .foot .f-connect .link .terms {
 }
 #messageForm form .threeInput textarea {
   width: 100%;
-  height: 52px;
+  min-height: 130px;
   padding: 20px;
   outline: none;
   border: 1px solid rgba(55, 55, 55, 0.6);
@@ -3558,6 +3543,7 @@ footer .foot .f-connect .link .terms {
 }
 #messageForm form .threeInput select {
   width: 100%;
+  min-height: 52px;
   padding: 20px;
   outline: none;
   border-radius: 5px;
@@ -3588,6 +3574,7 @@ footer .foot .f-connect .link .terms {
   align-items: center;
   justify-content: center;
   gap: 15px;
+  margin: 5px auto;
 }
 #categoryBtn button {
   width: auto;
@@ -3643,14 +3630,13 @@ footer .foot .f-connect .link .terms {
 }
 #portfolioDetailCards .detailCard img {
   width: 100%;
-  max-height: 335px;
+  min-height: 335px;
   height: 100%;
   object-fit: cover;
 }
 
 .works {
   margin: 100px auto;
-  max-width: 100%;
   width: 76%;
   display: flex;
   flex-direction: column;
@@ -3668,6 +3654,7 @@ footer .foot .f-connect .link .terms {
   -webkit-text-fill-color: transparent;
 }
 .works .smilarCards {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -3686,7 +3673,7 @@ footer .foot .f-connect .link .terms {
 }
 .works .smilarCards .smilar img {
   width: 100%;
-  max-height: 314px;
+  min-height: 314px;
   object-fit: cover;
 }
 .works .smilarCards .smilar P {

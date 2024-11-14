@@ -274,6 +274,7 @@ nav {
 
                             textarea {
                                 width: 50%;
+                                min-height: 121px;
                                 flex: 1;
                                 padding: 12px;
                                 border: 1px solid rgba(55, 55, 55, 0.5);
@@ -379,6 +380,7 @@ nav {
 
                         textarea {
                             width: 100%;
+                            min-height: 100px;
                             flex: 1;
                             padding: 12px;
                             border: 1px solid rgba(55, 55, 55, 1);
@@ -1232,44 +1234,18 @@ nav {
 
 
 #detailSearch {
-    max-width: 100%;
-    width: 100%;
-    padding: 170px 60px 60px 60px;
+    width: 67%;
     // background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
+    margin: 10px auto;
 
-    .blog {
-        background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 84px;
-        font-weight: 800;
-        line-height: 109px;
 
-    }
 
-    p {
-        width: 100%;
-        color: rgba(55, 55, 55, 1);
-        opacity: 60%;
-    }
 
-    h1 {
-        max-width: 870px;
-        width: 100%;
-        text-align: center;
-        font-size: 32px;
-        font-weight: 800;
-        line-height: 42px;
-        color: rgba(55, 55, 55, 1);
-        opacity: 80%;
-
-    }
 
     .item-div {
         width: 94px;
@@ -1280,7 +1256,6 @@ nav {
 
 
     .d-search {
-        max-width: 870px;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1564,6 +1539,19 @@ nav {
         width: 94px;
         height: 4px;
         background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+
+    }
+
+    h1 {
+        max-width: 870px;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 42px;
+        color: rgba(55, 55, 55, 1);
+        opacity: 80%;
+    
 
     }
 
@@ -1969,7 +1957,7 @@ nav {
                 transition: 0.5s;
 
                 .cardImg {
-                    max-height: 314px;
+                    // max-height: 314px;
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
@@ -3861,11 +3849,12 @@ footer {
 
                 textarea {
                     width: 95%;
-                    height: 52px;
+                    min-height: 130px;
                     padding: 20px;
                     outline: none;
                     border: 1px solid rgba(55, 55, 55, 0.6);
                     border-radius: 5px;
+
 
                     &::placeholder {
                         color: rgba(55, 55, 55, 1);
@@ -4452,7 +4441,7 @@ footer {
 
             textarea {
                 width: 100%;
-                height: 52px;
+                min-height: 130px;
                 padding: 20px;
                 outline: none;
                 border: 1px solid rgba(55, 55, 55, 0.6);
@@ -4467,6 +4456,7 @@ footer {
 
             select {
                 width: 100%;
+                min-height: 52px;
                 padding: 20px;
                 outline: none;
                 border-radius: 5px;
@@ -4510,6 +4500,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    margin: 5px auto;
 
     button {
         width: auto;
@@ -4571,7 +4562,7 @@ footer {
 
         img {
             width: 100%;
-            max-height: 335px;
+            min-height: 335px;
             height: 100%;
             object-fit: cover;
         }
@@ -4582,7 +4573,6 @@ footer {
 
 .works {
     margin: 100px auto;
-    max-width: 100%;
     width: 76%;
     display: flex;
     flex-direction: column;
@@ -4601,6 +4591,7 @@ footer {
     }
 
     .smilarCards {
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
@@ -4619,7 +4610,7 @@ footer {
 
             img {
                 width: 100%;
-                max-height: 314px;
+                min-height: 314px;
                 object-fit: cover;
             }
 

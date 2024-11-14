@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
         portfolioDetailCards.innerHTML = `
         <div class='detailCard' data-id="${item.id}">
 
-          <img src="/src/assets/image/portfolio/img1.png" alt="err">
-          <img src="/src/assets/image/portfolio/img2.png" alt="err">
-          <img src="/src/assets/image/portfolio/img3.png" alt="err">
-          <img src="/src/assets/image/portfolio/img4.png" alt="err">
-          <img src="/src/assets/image/portfolio/img5.png" alt="err">
-          <img src="/src/assets/image/portfolio/img6.png" alt="err">
+          <img data-aos='fade-up' src="/src/assets/image/portfolio/img1.png" alt="err">
+          <img data-aos='fade-up' src="/src/assets/image/portfolio/img2.png" alt="err">
+          <img data-aos='fade-up' src="/src/assets/image/portfolio/img3.png" alt="err">
+          <img data-aos='fade-up' src="/src/assets/image/portfolio/img4.png" alt="err">
+          <img data-aos='fade-up' src="/src/assets/image/portfolio/img5.png" alt="err">
+          <img data-aos='fade-up' src="/src/assets/image/portfolio/img6.png" alt="err">
 
 
     </div>

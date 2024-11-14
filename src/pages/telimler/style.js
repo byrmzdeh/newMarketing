@@ -17,44 +17,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const telimCardElements = document.getElementsByClassName('telimCard');
             const messageForm = document.getElementById('messageForm');
-            const close = document.getElementById('closee');
+            const closee = document.getElementById('closee');
             const overlay = document.getElementById('overlay');
             const sendBtn = document.getElementById('sendBtnn');
-            const telimForm=document.getElementById('telimForm')
-
+            const telimForm = document.getElementById('telimForm');
             
             Array.from(telimCardElements).forEach(card => {
                 card.addEventListener('click', function() {
                     messageForm.style.display = 'flex';
-                    overlay.style.display='block'
+                    overlay.style.display = 'block';
                 });
             });
 
-            telimForm.addEventListener('submit', function (event) {
-                event.preventDefault()
-
-                           // close düyməsinə kliklədikdə popup gizlənir
-            close.addEventListener('click', function (event) {
+            // close düyməsinə kliklədikdə popup gizlənir
+            closee.addEventListener('click', function (event) {
                 event.stopPropagation(); // hadisənin yayılmasını dayandırır
                 messageForm.style.display = 'none';
-                overlay.style.display='none';
+                overlay.style.display = 'none';
             });
 
+            // Göndər düyməsinə kliklədikdə ana səhifəyə yönləndirir
             sendBtn.addEventListener('click', function (e) {
-                window.location.href='/index.html'
+                window.location.href = '/index.html';
+            });
 
+            // telimForm submit olunduqda funksiyanı işə salır
+            telimForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                // Əlavə funksionallıq burada ola bilər
             });
 
             // messageForm-un boş yerinə klik edildikdə də gizlənir
             messageForm.addEventListener('click', function (event) {
                 if (event.target === messageForm) { // yalnız xarici divə klik edilərsə
                     messageForm.style.display = 'none';
+                    overlay.style.display = 'none';
                 }
             });
-
-                
-            })
-
- 
         });
 });
