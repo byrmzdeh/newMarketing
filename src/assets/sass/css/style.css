@@ -1468,8 +1468,10 @@ nav #show ul li a:hover {
   transition: 0.5s;
   cursor: pointer;
 }
-.filter #blogCards .card .result-item img {
-  width: 35%;
+.filter #blogCards .card .result-item .image {
+  max-width: 390px;
+  width: 100%;
+  min-height: 300px;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
