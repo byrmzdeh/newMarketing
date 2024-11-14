@@ -10,12 +10,54 @@
         "id": 1,
         "name": "Branding",
         "title": "AzFiberNet branding ",
+        "img":"/src/assets/image/portfolio/img1.png",
+        "category":"Awards"
+    },
+    {
+        "id": 2,
+        "name": "Branding",
+        "title": "AzFiberNet branding ",
+        "img":"/src/assets/image/portfolio/img1.png",
+        "category":"Awards"
+    },
+    {
+        "id": 3,
+        "name": "Branding",
+        "title": "AzFiberNet branding ",
+        "img":"/src/assets/image/portfolio/img1.png",
+        "category":"Awards"
+    },
+    {
+        "id": 4,
+        "name": "Branding",
+        "title": "AzFiberNet branding ",
+        "img":"/src/assets/image/portfolio/img1.png",
+        "category":"Awards"
+    },
+    {
+        "id": 5,
+        "name": "Branding",
+        "title": "AzFiberNet branding ",
+        "img":"/src/assets/image/portfolio/img1.png",
+        "category":"Awards"
+    },
+    {
+        "id": 6,
+        "name": "Branding",
+        "title": "AzFiberNet branding ",
+        "img":"/src/assets/image/portfolio/img1.png",
+        "category":"Awards"
+    },
+    {
+        "id": 7,
+        "name": "Branding",
+        "title": "AzFiberNet branding ",
         "img":"/src/assets/image/portfolio/img2.png",
         "category":"Business"
 
     },
     {
-        "id": 2,
+        "id": 8,
         "name": "Branding",
         "title": "AzFiberNet branding ",
         "img":"/src/assets/image/portfolio/img3.png",
@@ -23,7 +65,7 @@
 
     },
     {
-        "id": 3,
+        "id": 9,
         "name": "Branding",
         "title": "AzFiberNet branding ",
         "img":"/src/assets/image/portfolio/img4.png",
@@ -31,7 +73,7 @@
 
     },
     {
-        "id": 4,
+        "id": 10,
         "name": "Branding",
         "title": "AzFiberNet branding ",
         "img":"/src/assets/image/portfolio/img5.png",
@@ -39,7 +81,7 @@
 
     },
     {
-        "id": 5,
+        "id": 11,
         "name": "Branding",
         "title": "AzFiberNet branding ",
         "img":"/src/assets/image/portfolio/img6.png",

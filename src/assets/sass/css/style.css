@@ -1090,7 +1090,7 @@ nav #show ul li a:hover {
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   margin: 50px auto;
-  gap: 35px;
+  gap: 30px;
 }
 #detailSearch .enjoy #threeCards .threeCard {
   width: 100%;
@@ -1408,13 +1408,14 @@ nav #show ul li a:hover {
   border: none;
   cursor: pointer;
   transition: 0.5s;
+  gap: 5px;
 }
 .filter #businessCards .card .month {
   font-size: 16px;
   font-weight: 400;
   color: rgb(55, 55, 55);
   opacity: 60%;
-  padding-top: 10px;
+  margin-bottom: 0px;
 }
 .filter #businessCards .card p {
   font-size: 15px;
@@ -1523,6 +1524,50 @@ nav #show ul li a:hover {
 .filter #blogCards .card .result-item:hover {
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
 }
+.filter #portfolioCards {
+  max-width: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.filter #portfolioCards .card {
+  width: 100%;
+  border: none;
+}
+.filter #portfolioCards .card .portfolioCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 16px;
+  border: none;
+  gap: 5px;
+  background-color: white;
+  transition: 0.5s;
+}
+.filter #portfolioCards .card .portfolioCard .cardImg {
+  max-height: 314px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.filter #portfolioCards .card .portfolioCard p {
+  font-size: 16px;
+  color: Black;
+  opacity: 80%;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+.filter #portfolioCards .card .portfolioCard h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(19, 19, 19);
+  opacity: 80%;
+}
+.filter #portfolioCards .card .portfolioCard:hover {
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
+}
 
 .guest {
   max-width: 100%;
@@ -1601,7 +1646,6 @@ nav #show ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 50px;
   position: relative;
 }
 .take .go {
@@ -3339,7 +3383,7 @@ footer .foot .f-connect .link .terms {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 60px 0px 130px 0px;
+  margin: 60px 0px 100px 0px;
 }
 .shareCatologue h3 {
   font-size: 18px;
@@ -3535,6 +3579,130 @@ footer .foot .f-connect .link .terms {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0px;
+}
+
+#categoryBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+#categoryBtn button {
+  width: auto;
+  height: 43px;
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  font-weight: bold;
+  overflow: hidden;
+  cursor: default;
+}
+#categoryBtn button p {
+  position: relative;
+  z-index: 1;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#categoryBtn button::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  right: 1px;
+  bottom: 1px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 50px;
+  /* Daxili rəngi sərhədlə uyğunlaşdırır */
+  z-index: 0;
+}
+
+#portfolioDetailCards {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+}
+#portfolioDetailCards .detailCard {
+  width: 76%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+#portfolioDetailCards .detailCard img {
+  width: 100%;
+  max-height: 335px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.works {
+  margin: 100px auto;
+  max-width: 100%;
+  width: 76%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.works h4 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.works .smilarCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.works .smilarCards .smilar {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  padding: 24px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.works .smilarCards .smilar img {
+  width: 100%;
+  max-height: 314px;
+  object-fit: cover;
+}
+.works .smilarCards .smilar P {
+  margin-bottom: 0px;
+  color: Black;
+  opacity: 80%;
+  font-size: 16px;
+  font-weight: 400;
+}
+.works .smilarCards .smilar h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31px;
+  color: rgb(19, 19, 19);
+  opacity: 80%;
+}
+.works .smilarCards .smilar:hover {
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
 }
 
 @media (min-width: 324px) and (max-width: 400px) {
@@ -3952,6 +4120,7 @@ footer .foot .f-connect .link .terms {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
+    margin: 20px auto;
   }
   #detailSearch .enjoy #threeCards .threeCard {
     width: 100%;
@@ -4270,7 +4439,6 @@ footer .foot .f-connect .link .terms {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    margin-top: 50px;
     gap: 5px;
   }
   .take .go {
@@ -4279,19 +4447,24 @@ footer .foot .f-connect .link .terms {
     left: 20px;
   }
   .take .go h1 {
-    font-size: 50px;
+    font-size: 45px;
     line-height: 50px;
   }
   .take .go h4 {
-    font-size: 27px;
+    font-size: 25px;
     line-height: 40px;
   }
   .take .plane {
-    width: 100%;
+    width: 90%;
+    margin: 1px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .take .plane img {
     margin: 5px auto;
     width: 70%;
+    transform: translateY(0px);
   }
   footer {
     width: 100%;
@@ -4436,6 +4609,21 @@ footer .foot .f-connect .link .terms {
   .filter #blogCards .card .result-item .result-about .read img {
     width: 20px;
     height: 20px;
+  }
+  .filter #portfolioCards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  .filter #portfolioCards .card .portfolioCard h1 {
+    font-size: 15px;
+  }
+  .filter #portfolioCards .card .portfolioCard p {
+    font-size: 14px;
+  }
+  .shareCatologue {
+    margin: 30px 0px 30px 0px;
   }
   .week {
     display: flex;
@@ -5104,6 +5292,55 @@ footer .foot .f-connect .link .terms {
   #messageForm form .threeInput button {
     font-size: 14px;
   }
+  #categoryBtn {
+    display: flex;
+  }
+  #categoryBtn button {
+    height: 40px;
+  }
+  #categoryBtn button p {
+    font-size: 14px;
+  }
+  #portfolioDetailCards {
+    width: 100%;
+    padding: 20px;
+    margin: 15px auto;
+  }
+  #portfolioDetailCards .detailCard {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .works {
+    width: 100%;
+    padding: 20px;
+    margin: 30px auto;
+    gap: 15px;
+  }
+  .works h4 {
+    font-size: 30px;
+  }
+  .works .smilarCards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .works .smilarCards .smilar {
+    width: 100%;
+  }
+  .works .smilarCards .smilar img {
+    object-fit: cover;
+  }
+  .works .smilarCards .smilar P {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .works .smilarCards .smilar h1 {
+    font-size: 18px;
+  }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   nav .view .modal {
@@ -5423,6 +5660,12 @@ footer .foot .f-connect .link .terms {
     width: 70px;
     height: 70px;
   }
+  .filter #portfolioCards .card .portfolioCard h1 {
+    font-size: 15px;
+  }
+  .filter #portfolioCards .card .portfolioCard .p {
+    font-size: 14px;
+  }
   .business h4 {
     width: 100%;
     font-size: 29px;
@@ -5730,5 +5973,37 @@ footer .foot .f-connect .link .terms {
   }
   #telimCards .telimCard .cardAbout p {
     font-size: 15px;
+  }
+  .works h4 {
+    font-size: 35px;
+  }
+  .works .smilarCards .smilar {
+    width: 100%;
+  }
+  .works .smilarCards .smilar img {
+    object-fit: cover;
+  }
+  .works .smilarCards .smilar P {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .works .smilarCards .smilar h1 {
+    font-size: 18px;
+  }
+  .take .go {
+    width: 34%;
+    left: 15%;
+  }
+  .take .go h1 {
+    font-size: 100px;
+  }
+  .take .go h4 {
+    font-size: 40px;
+  }
+  .take .plane img {
+    max-width: 380px;
+    width: 100%;
+    object-fit: cover;
+    transform: translateY(0px);
   }
 }/*# sourceMappingURL=style.css.map */

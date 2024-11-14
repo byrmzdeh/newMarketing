@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
               <p class='month'>${item.month}</p>
               <h1>${item.name}</h1>
-              <p>${item.category}</p>
           `;
           businessCards.appendChild(card);
       });

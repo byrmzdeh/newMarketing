@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const messageForm = document.getElementById('messageForm');
             const close = document.getElementById('closee');
             const overlay = document.getElementById('overlay');
-            const sendBtn = document.getElementById('sendBtn');
+            const sendBtn = document.getElementById('sendBtnn');
+            const telimForm=document.getElementById('telimForm')
 
             
             Array.from(telimCardElements).forEach(card => {
@@ -29,14 +30,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
 
-            // close düyməsinə kliklədikdə popup gizlənir
+            telimForm.addEventListener('submit', function (event) {
+                event.preventDefault()
+
+                           // close düyməsinə kliklədikdə popup gizlənir
             close.addEventListener('click', function (event) {
                 event.stopPropagation(); // hadisənin yayılmasını dayandırır
                 messageForm.style.display = 'none';
                 overlay.style.display='none';
             });
 
-            sendBtn.addEventListener('click', function () {
+            sendBtn.addEventListener('click', function (e) {
                 window.location.href='/index.html'
 
             });
@@ -47,5 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     messageForm.style.display = 'none';
                 }
             });
+
+                
+            })
+
+ 
         });
 });

@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/assets/sass/css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script defer src="/src/components/searchDetail/style.js"></script>
+    <script type="module" defer src="/src/components/searchDetail/style.js"></script>
+    <script type="module" defer src="/src/pages/contact/style.js"></script>
 
 </head>
 
@@ -232,14 +233,14 @@
 
         <div class="form">
             <h4 data-aos="fade-up">How can we help you?</h4>
-            <form action="" data-aos="fade-up">
-                <div class="threeInput">
+            <form  id="contactFormm" data-aos="fade-up">
+                <div class="threeInput" data-aos="fade-up">
                     <input type="text" placeholder="Name" required>
                     <input type="email" placeholder="E-mail" required>
                     <textarea name="Your message" id="" placeholder="Your message"></textarea>
                 </div>
 
-                <div class="threeInput">
+                <div class="threeInput" data-aos="fade-up">
                     <input type="text" placeholder="Surname" required>
                     <input type="phone" placeholder="Phone number    (__) __ ___ __ __">
                     <select name="dfghjkl;" id="" aria-placeholder="fghjk">
@@ -247,7 +248,7 @@
                         <option value="1">Topic1</option>
                         <option value="1">Topic2</option>
                     </select>
-                    <button type="submit">SUBMIT</button>
+                    <button id="submitBtn" type="submit">SUBMIT</button>
                 </div>
             </form>
         </div>
