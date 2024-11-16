@@ -1551,7 +1551,7 @@ nav {
         line-height: 42px;
         color: rgba(55, 55, 55, 1);
         opacity: 80%;
-    
+
 
     }
 
@@ -2084,6 +2084,7 @@ nav {
     align-items: center;
     justify-content: space-evenly;
     position: relative;
+    margin: 90px 0px 0px 0px;
 
     .go {
         width: 34%;
@@ -2356,6 +2357,7 @@ footer {
         padding: 30px 0px 40px 0px;
 
         .f-logo {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: start;
@@ -2379,6 +2381,7 @@ footer {
         }
 
         .f-form {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: start;
@@ -2432,10 +2435,11 @@ footer {
         }
 
         .f-connect {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: end;
-            gap: 5px;
+            gap: 7px;
 
             p {
                 font-size: 16px;
@@ -2462,24 +2466,22 @@ footer {
                 }
             }
 
-            .link {
-                display: flex;
-                align-items: center;
-                gap: 12px;
+            .links {
                 padding-top: 12px;
 
                 a {
-                    width: 100%;
+
                     color: black;
                     opacity: 60%;
                     font-size: 16px;
                     font-weight: 500;
                     line-height: 24px;
+                    padding-left: 10px;
                 }
 
                 .terms {
                     border-right: 2px solid gray;
-                    padding-right: 12px;
+                    padding-right: 10px;
                 }
             }
 
@@ -4209,25 +4211,41 @@ footer {
 
             button {
                 width: auto;
-                min-height: 43px;
-                height: 100%;
-                border: 1px solid #bf88ff;
-                background-color: white;
+                height: 43px;
+                position: relative;
+                padding: 10px 20px;
+                border: none;
                 border-radius: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 10px;
+                background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                font-weight: bold;
+                overflow: hidden;
+                cursor: default;
 
                 p {
+                    position: relative;
+                    z-index: 1;
                     background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
                     -webkit-background-clip: text;
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
                     font-size: 18px;
                     font-weight: 500;
-                    line-height: 27px;
-                    margin-bottom: 0px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 1px;
+                    left: 2px;
+                    right: 1px;
+                    bottom: 1px;
+                    background-color: rgb(249, 249, 249);
+                    border-radius: 50px;
+                    /* Daxili rəngi sərhədlə uyğunlaşdırır */
+                    z-index: 0;
                 }
             }
 
@@ -4479,7 +4497,7 @@ footer {
             }
 
             button {
-                max-width: 420px;
+
                 width: 100%;
                 height: 50px;
                 background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -4644,6 +4662,869 @@ footer {
 
 
 
+.DesignButtons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    button {
+        width: auto;
+        height: 43px;
+        position: relative;
+        padding: 10px 17px;
+        border: none;
+        border-radius: 50px;
+        font-weight: bold;
+        overflow: hidden;
+        cursor: pointer; // default deyil, pointer olmalı ki, istifadəçiyə kliklənə bilən olduğunu göstərə bilsin
+
+        p {
+            position: relative;
+            z-index: 1;
+            color: rgba(55, 55, 55, 1);
+            opacity: 80%;
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            background-color: rgb(249, 249, 249);
+            border-radius: 50px;
+            z-index: 0;
+        }
+
+        &:active {
+            background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); // Kliklənmə effekti əlavə etmək üçün
+
+            p {
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 500;
+            }
+        }
+
+        &.active {
+            background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+            color: white; // Aktiv butonun mətnini ağ edir
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); // Aktiv butonun içindəki kölgə effekti
+
+            p {
+                background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}
+
+
+#websitePage {
+    max-width: 100%;
+    width: 67%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+
+
+
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+
+        .purpose {
+            width: 100%;
+            display: flex;
+            min-height: 130px;
+            gap: 30px;
+
+
+
+
+
+            .numberBtn {
+                width: 56px;
+                height: 56px;
+                position: relative;
+                padding: 10px 17px;
+                border: none;
+                border-radius: 50px;
+                background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                font-weight: bold;
+                overflow: hidden;
+                cursor: default;
+
+                p {
+                    position: relative;
+                    z-index: 1;
+                    background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-family: sans-serif;
+                    font-size: 32px;
+                    font-weight: 500;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 1px;
+                    left: 1px;
+                    right: 1px;
+                    bottom: 1px;
+                    background-color: rgb(249, 249, 249);
+                    border-radius: 50px;
+                    /* Daxili rəngi sərhədlə uyğunlaşdırır */
+                    z-index: 0;
+                }
+            }
+
+            .eleven {
+                padding: 10px 8px;
+            }
+
+            .head {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+
+                .name {
+                    display: flex;
+                    gap: 15px;
+                    align-items: start;
+
+                    h2 {
+                        color: rgba(19, 19, 19, 1);
+                        opacity: 80%;
+                        font-size: 28px;
+                        line-height: 36px;
+                    }
+
+                    .star {
+                        background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-size: 28px
+                    }
+
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-bottom: 0px;
+                }
+
+                .inputDesc {
+                    width: 100%;
+                    max-height: 163px;
+                    outline: none;
+                    padding: 0px 0px 95px 20px; // Placeholder-i yuxarıya gətirmək üçün padding əlavə et
+                    text-align: left; // Placeholder-ı sola, başa yerləşdirir
+                    border: 1px solid rgba(55, 55, 55, 0.5);
+                    margin-top: 20px;
+                    background-color: transparent;
+
+                    &::placeholder {
+                        text-align: left; // Placeholder mətni sola yerləşir
+                        font-size: 16px;
+                    }
+                }
+
+                .typeBtns {
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    justify-content: space-between;
+                    gap: 17px;
+
+                    .typeBtn {
+                        width: auto;
+                        height: 43px;
+                        position: relative;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 50px;
+                        font-weight: bold;
+                        overflow: hidden;
+                        cursor: pointer; // default deyil, pointer olmalı ki, istifadəçiyə kliklənə bilən olduğunu göstərə bilsin
+                        background-color: white;
+                        background: none;
+                        box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
+                        outline: none;
+
+                        p {
+                            position: relative;
+                            z-index: 1;
+                            color: rgba(55, 55, 55, 1);
+                            opacity: 80%;
+                            font-family: sans-serif;
+                            font-size: 18px;
+                            font-weight: 500;
+
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 1px;
+                            left: 1px;
+                            right: 1px;
+                            bottom: 1px;
+                            background-color: rgb(249, 249, 249);
+                            border-radius: 50px;
+                            z-index: 0;
+                        }
+
+                        &:active {
+                            background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                            box-shadow: 0px 4px 25px 0px rgba(99, 129, 160, 0.15);
+
+
+                            p {
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                font-weight: 500;
+                            }
+                        }
+
+                        &.active {
+                            background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                            color: white; // Aktiv butonun mətnini ağ edir
+                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); // Aktiv butonun içindəki kölgə effekti
+
+                            p {
+                                background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+                    }
+                }
+
+                .funcBtns {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    justify-content: space-between;
+                    gap: 17px;
+                    margin-top: 20px;
+
+                    .funcBtn {
+                        width: auto;
+                        height: 43px;
+                        position: relative;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 50px;
+                        font-weight: bold;
+                        border: none;
+                        overflow: hidden;
+                        cursor: pointer; // default deyil, pointer olmalı ki, istifadəçiyə kliklənə bilən olduğunu göstərə bilsin
+                        background-color: white;
+                        background: none;
+                        box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
+
+
+                        p {
+                            position: relative;
+                            z-index: 1;
+                            color: rgba(55, 55, 55, 1);
+                            opacity: 80%;
+                            font-family: sans-serif;
+                            font-size: 18px;
+                            font-weight: 500;
+
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 1px;
+                            left: 1px;
+                            right: 1px;
+                            bottom: 1px;
+                            background-color: rgb(249, 249, 249);
+                            border-radius: 50px;
+                            z-index: 0;
+                        }
+
+                        &:active {
+                            background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                            box-shadow: 0px 4px 25px 0px rgba(99, 129, 160, 0.15);
+
+
+                            p {
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                font-weight: 500;
+                            }
+                        }
+
+                        &.active {
+                            background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                            color: white; // Aktiv butonun mətnini ağ edir
+                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); // Aktiv butonun içindəki kölgə effekti
+
+                            p {
+                                background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+                    }
+                }
+
+                .saytInputs {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-top: 20px;
+
+                    .inputDiv {
+                        max-width: 420px;
+                        min-height: 52px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        background-color: transparent;
+                        border: 1px solid rgba(55, 55, 55, 0.5);
+                        border-radius: 5px;
+                        padding: 10px 15px;
+
+                        img {
+                            width: 21px;
+                            height: 18px;
+                        }
+
+                        .input {
+                            width: 90%;
+                            outline: none;
+                            border: none;
+                            background-color: transparent;
+                        }
+                    }
+
+                }
+
+
+                .privateInputs {
+                    width: 100%;
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 20px;
+
+                    input {
+                        width: 100%;
+                        min-height: 52px;
+                        padding: 0px 20px 0px 20px;
+                        text-align: left;
+                        border: 1px solid rgba(55, 55, 55, 0.5);
+                        outline: none;
+                        background-color: transparent;
+                    }
+
+                }
+
+
+
+            }
+        }
+
+        .contact {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+
+            .main {
+                width: 100%;
+                min-height: 81px;
+                display: flex;
+                align-items: center;
+                border: 1px solid rgba(55, 55, 55, 0.2);
+                padding: 10px 20px;
+                gap: 30px;
+                border-radius: 10px;
+
+                img {
+                    width: 31px;
+                    height: 31px;
+                }
+
+                .title {
+                    line-height: 14px;
+
+                    p {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: rgba(55, 55, 55, 1);
+                    }
+
+                    .num {
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: rgba(55, 55, 55, 1);
+                    }
+                }
+
+
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 50px;
+            background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+            border: none;
+            font-family: 'Manrope', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+
+            p {
+                color: white;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 0px;
+            }
+
+        }
+    }
+
+}
+
+
+
+#brandingPage {
+    max-width: 100%;
+    width: 67%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+
+
+
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+
+        .purpose {
+            width: 100%;
+            display: flex;
+            min-height: 130px;
+            gap: 30px;
+
+
+
+
+
+            .numberBtn {
+                width: 56px;
+                height: 56px;
+                position: relative;
+                padding: 10px 17px;
+                border: none;
+                border-radius: 50px;
+                background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                font-weight: bold;
+                overflow: hidden;
+                cursor: default;
+
+                p {
+                    position: relative;
+                    z-index: 1;
+                    background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-family: sans-serif;
+                    font-size: 32px;
+                    font-weight: 500;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 1px;
+                    left: 1px;
+                    right: 1px;
+                    bottom: 1px;
+                    background-color: rgb(249, 249, 249);
+                    border-radius: 50px;
+                    /* Daxili rəngi sərhədlə uyğunlaşdırır */
+                    z-index: 0;
+                }
+            }
+
+            .eleven {
+                padding: 10px 8px;
+            }
+
+            .head {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+
+                .name {
+                    display: flex;
+                    gap: 15px;
+                    align-items: start;
+
+                    h2 {
+                        color: rgba(19, 19, 19, 1);
+                        opacity: 80%;
+                        font-size: 28px;
+                        line-height: 36px;
+                    }
+
+                    .star {
+                        background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-size: 28px
+                    }
+
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-bottom: 0px;
+                }
+
+                .inputDesc {
+                    width: 100%;
+                    max-height: 163px;
+                    outline: none;
+                    padding: 0px 0px 95px 20px; // Placeholder-i yuxarıya gətirmək üçün padding əlavə et
+                    text-align: left; // Placeholder-ı sola, başa yerləşdirir
+                    border: 1px solid rgba(55, 55, 55, 0.5);
+                    margin-top: 20px;
+                    background-color: transparent;
+
+                    &::placeholder {
+                        text-align: left; // Placeholder mətni sola yerləşir
+                        font-size: 16px;
+                    }
+                }
+
+                .typeBtnss {
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    justify-content: space-between;
+                    gap: 17px;
+
+                    .typeBtnn {
+                        width: auto;
+                        height: 42px;
+                        position: relative;
+                        padding: 9px 20px;
+                        border: none;
+                        border-radius: 50px;
+                        font-weight: bold;
+                        overflow: hidden;
+                        cursor: pointer; // default deyil, pointer olmalı ki, istifadəçiyə kliklənə bilən olduğunu göstərə bilsin
+                        background-color: white;
+                        background: none;
+                        box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
+                        outline: none;
+
+                        p {
+                            position: relative;
+                            z-index: 1;
+                            color: rgba(55, 55, 55, 1);
+                            opacity: 80%;
+                            font-family: sans-serif;
+                            font-size: 18px;
+                            font-weight: 500;
+
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 1px;
+                            left: 1px;
+                            right: 1px;
+                            bottom: 1px;
+                            background-color: rgb(249, 249, 249);
+                            border-radius: 50px;
+                            z-index: 0;
+                        }
+
+                        &:active {
+                            background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                            box-shadow: 0px 4px 25px 0px rgba(99, 129, 160, 0.15);
+
+
+                            p {
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                font-weight: 500;
+                            }
+                        }
+
+                        &.active {
+                            background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                            color: white; // Aktiv butonun mətnini ağ edir
+                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); // Aktiv butonun içindəki kölgə effekti
+
+                            p {
+                                background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+                    }
+                }
+
+
+
+                .saytInputs {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-top: 20px;
+
+                    .inputDiv {
+                        max-width: 420px;
+                        min-height: 52px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        background-color: rgba(255, 255, 255, 1);
+                        border: 1px solid rgba(55, 55, 55, 0.5);
+                        border-radius: 5px;
+                        padding: 10px 15px;
+                        background-color: transparent;
+
+                        img {
+                            width: 21px;
+                            height: 18px;
+                        }
+
+                        .input {
+                            width: 90%;
+                            outline: none;
+                            border: none;
+                            background-color: transparent;
+                        }
+                    }
+
+                }
+
+
+                .privateInputs {
+                    width: 100%;
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 20px;
+
+                    input {
+                        width: 100%;
+                        min-height: 52px;
+                        padding: 0px 20px 0px 20px;
+                        text-align: left;
+                        border: 1px solid rgba(55, 55, 55, 0.5);
+                        outline: none;
+                        background-color: transparent;
+
+                    }
+
+                }
+
+                .options {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 40px ;
+
+                    .option {
+                        max-width: 188px;
+                        max-height: 163px;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: center;
+                        border: 1px solid rgba(174, 105, 255, 1);
+                        border-radius: 5px;
+                        padding: 8px;
+                        background-color: rgb(249, 249, 249);
+                        gap: 10px;
+
+                        .checkbox {
+                            width: 20px;
+                            height: 20px;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                            border: 1px solid rgba(174, 105, 255, 1);
+                            /* Default border rəngi */
+                            border-radius: 30%;
+                            cursor: pointer;
+                            outline: none;
+                            transition: all 0.3s ease;
+                            position: relative;
+                            background-color: transparent;
+
+                            &:checked {
+                                border-color:rgba(174, 105, 255, 1); /* Seçildikdə sərhəd rəngi */
+                            
+
+                                &::after {
+                                  content: "✔"; /* Checkbox-un daxilindəki işarə */
+                                  color: rgba(174, 105, 255, 1);
+                                  font-size: 14px;
+                                  position: absolute;
+                                  top: 50%;
+                                  left: 50%;
+                                  transform: translate(-50%, -50%);
+                                }
+                              }
+                        
+
+                        }
+
+
+                        .word {
+                            display: flex;
+                            flex-direction: column;
+                            cursor: pointer;
+                            border: 2px solid transparent;
+                            padding: 10px;
+                            border-radius: 8px;
+                            transition: all 0.3s ease;
+
+                            img {
+                                max-width: 100px;
+                                min-height: 60px;
+                                margin: 1px auto;
+                            }
+                        }
+
+                    }
+                }
+
+
+
+            }
+        }
+
+        .contact {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+
+            .main {
+                width: 100%;
+                min-height: 81px;
+                display: flex;
+                align-items: center;
+                border: 1px solid rgba(55, 55, 55, 0.2);
+                padding: 10px 20px;
+                gap: 30px;
+                border-radius: 10px;
+
+                img {
+                    width: 31px;
+                    height: 31px;
+                }
+
+                .title {
+                    line-height: 14px;
+
+                    p {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: rgba(55, 55, 55, 1);
+                    }
+
+                    .num {
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: rgba(55, 55, 55, 1);
+                    }
+                }
+
+
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 50px;
+            background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+            border: none;
+            font-family: 'Manrope', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+
+            p {
+                color: white;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 0px;
+            }
+
+        }
+    }
+
+}
+
+
 
 
 
@@ -4766,7 +5647,6 @@ footer {
 
     }
 }
-
 
 
 
@@ -5228,6 +6108,7 @@ footer {
 
     #detailSearch {
         width: 100%;
+        padding: 20px;
 
         .blog {
             font-size: 35px;
@@ -6833,7 +7714,6 @@ footer {
     }
 
     #messageForm {
-        padding: 20px;
         width: 90%;
 
         .info {
@@ -6917,7 +7797,7 @@ footer {
         gap: 15px;
 
 
-        h4{
+        h4 {
             font-size: 30px;
         }
 
@@ -6952,6 +7832,312 @@ footer {
         }
     }
 
+    .DesignButtons {
+        button {
+            height: 40px;
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    #websitePage {
+        width: 100%;
+        padding: 20px;
+
+        form {
+            width: 100%;
+            gap: 15px;
+
+            .purpose {
+                width: 100%;
+                gap: 20px;
+
+                .numberBtn {
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px 13px;
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+
+                .eleven {
+                    padding: 10px 0px 10px 5px;
+                }
+
+                .head {
+                    .name {
+                        gap: 10px;
+
+                        h2 {
+                            font-size: 15px;
+                        }
+
+                        .star {
+                            font-size: 15px;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    .inputDesc {
+                        width: 100%;
+                        height: 80px;
+                        padding: 20px;
+                        margin-top: 0px;
+                        font-size: 13px;
+                        margin-top: 10px;
+
+                        &::placeholder {
+                            font-size: 13px;
+                        }
+                    }
+
+                    .typeBtns {
+                        display: grid;
+                        gap: 8px;
+                        grid-template-columns: repeat(2, 1fr);
+
+                        .typeBtn {
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .funcBtns {
+                        display: grid;
+                        gap: 8px;
+                        grid-template-columns: repeat(2, 1fr);
+
+                        .funcBtn {
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .saytInputs {
+                        .inputDiv {
+                            .input {
+                                font-size: 13px;
+
+                                &::placeholder {
+                                    font-size: 13px;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .privateInputs {
+                        font-size: 13px;
+
+                        &::placeholder {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+            }
+
+            .contact {
+                .main {
+                    img {
+                        width: 25px;
+                        height: 25px;
+                    }
+
+                    .title {
+                        p {
+                            font-size: 15px;
+                        }
+
+                        .num {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            button {
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+
+    #brandingPage {
+        width: 100%;
+        padding: 20px;
+
+        form {
+            width: 100%;
+            gap: 15px;
+
+            .purpose {
+                width: 100%;
+                gap: 20px;
+
+                .numberBtn {
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px 13px;
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+
+                .eleven {
+                    padding: 10px 0px 10px 5px;
+                }
+
+                .head {
+                    .name {
+                        gap: 10px;
+
+                        h2 {
+                            font-size: 15px;
+                        }
+
+                        .star {
+                            font-size: 15px;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    .inputDesc {
+                        width: 100%;
+                        height: 80px;
+                        padding: 20px;
+                        margin-top: 0px;
+                        font-size: 13px;
+                        margin-top: 10px;
+
+                        &::placeholder {
+                            font-size: 13px;
+                        }
+
+                   
+                    }
+
+                    .typeBtnss {
+                        display: grid;
+                        gap: 8px;
+                        grid-template-columns: repeat(2, 1fr);
+
+                        .typeBtnn {
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+
+                    .saytInputs {
+                        .inputDiv {
+                            .input {
+                                font-size: 13px;
+
+                                &::placeholder {
+                                    font-size: 13px;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .privateInputs {
+                        font-size: 13px;
+
+                        &::placeholder {
+                            font-size: 13px;
+                        }
+                    }
+
+                    .options {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 40px ;
+    
+                        .option {
+                            max-width: 188px;
+                            max-height: 163px;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                            justify-content: center;
+                            border: 1px solid rgba(174, 105, 255, 1);
+                            border-radius: 5px;
+                            padding: 8px;
+                            background-color: rgb(249, 249, 249);
+                            gap: 10px;
+    
+    
+    
+                            .word {
+                                display: flex;
+                                flex-direction: column;
+                                cursor: pointer;
+                                border: 2px solid transparent;
+                                padding: 10px;
+                                border-radius: 8px;
+                                transition: all 0.3s ease;
+    
+                                img {
+                                    max-width: 100px;
+                                    min-height: 60px;
+                                    margin: 1px auto;
+                                }
+                            }
+    
+                        }
+                    }
+                }
+
+            }
+
+            .contact {
+                .main {
+                    img {
+                        width: 25px;
+                        height: 25px;
+                    }
+
+                    .title {
+                        p {
+                            font-size: 15px;
+                        }
+
+                        .num {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            button {
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
 
 
 
@@ -7447,6 +8633,10 @@ footer {
     }
 
     .business {
+        .blog {
+            font-size: 60px;
+        }
+
         h4 {
             width: 100%;
             font-size: 29px;
@@ -7900,59 +9090,357 @@ footer {
 
 
     .works {
-        h4{
+        h4 {
             font-size: 35px;
         }
-      .smilarCards{
-        .smilar {
-            width: 100%;
 
-            img {
-                object-fit: cover;
-            }
+        .smilarCards {
+            .smilar {
+                width: 100%;
 
-            P {
-                font-size: 14px;
-                font-weight: 400;
-            }
+                img {
+                    object-fit: cover;
+                }
 
-            h1 {
-                font-size: 18px;
+                P {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
 
+                h1 {
+                    font-size: 18px;
+
+                }
             }
         }
-      }
     }
 
     .take {
         .go {
             width: 34%;
             left: 15%;
-    
+
             h1 {
                 font-size: 100px;
             }
-    
+
             h4 {
                 font-size: 40px;
             }
-    
+
         }
-    
+
         .plane {
-    
+
 
             img {
                 max-width: 380px;
                 width: 100%;
                 object-fit: cover;
                 transform: translateY(0px);
-    
-    
+
+
             }
         }
     }
 
+    .DesignButtons {
+        button {
+            height: 40px;
+
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+
+    #websitePage {
+        width: 100%;
+        padding: 20px;
+
+        form {
+            width: 100%;
+            gap: 15px;
+
+            .purpose {
+                width: 100%;
+                gap: 20px;
+
+                .numberBtn {
+                    width: 45px;
+                    height: 45px;
+                    padding: 10px 15px;
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+
+                .eleven {
+                    padding: 10px 0px 10px 8px;
+                }
+
+                .head {
+                    .name {
+                        gap: 10px;
+
+                        h2 {
+                            font-size: 21px;
+                        }
+
+                        .star {
+                            font-size: 21px;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    .inputDesc {
+                        width: 100%;
+                        height: 80px;
+                        padding: 20px;
+                        margin-top: 0px;
+                        font-size: 16px;
+                        margin-top: 10px;
+
+                        &::placeholder {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .typeBtns {
+                        display: grid;
+                        gap: 15px;
+                        grid-template-columns: repeat(3, 1fr);
+
+                        .typeBtn {
+                            p {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+
+                    .funcBtns {
+                        display: grid;
+                        gap: 8px;
+                        grid-template-columns: repeat(3, 1fr);
+
+                        .funcBtn {
+                            p {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+
+                    .saytInputs {
+                        .inputDiv {
+                            .input {
+                                font-size: 16px;
+
+                                &::placeholder {
+                                    font-size: 16px;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .privateInputs {
+                        font-size: 16px;
+
+                        &::placeholder {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+            }
+
+            .contact {
+                .main {
+
+                    .title {
+                        p {
+                            font-size: 17px;
+                        }
+
+                        .num {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+
+            button {
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+
+    #brandingPage {
+        width: 100%;
+        padding: 20px;
+
+        form {
+            width: 100%;
+            gap: 15px;
+
+            .purpose {
+                width: 100%;
+                gap: 20px;
+
+                .numberBtn {
+                    width: 45px;
+                    height: 45px;
+                    padding: 10px 15px;
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+
+                .eleven {
+                    padding: 10px 0px 10px 8px;
+                }
+
+                .head {
+                    .name {
+                        gap: 10px;
+
+                        h2 {
+                            font-size: 21px;
+                        }
+
+                        .star {
+                            font-size: 21px;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    .inputDesc {
+                        width: 100%;
+                        height: 80px;
+                        padding: 20px;
+                        margin-top: 0px;
+                        font-size: 16px;
+                        margin-top: 10px;
+
+                        &::placeholder {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .typeBtns {
+                        display: grid;
+                        gap: 15px;
+                        grid-template-columns: repeat(3, 1fr);
+
+                        .typeBtn {
+                            p {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+
+
+                   .options {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 40px ;
+                        gap: 10px;
+    
+                        .option {
+                            max-width: 188px;
+                            max-height: 163px;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                            justify-content: center;
+                            border: 1px solid rgba(174, 105, 255, 1);
+                            border-radius: 5px;
+                            padding: 8px;
+                            background-color: rgb(249, 249, 249);
+                            gap: 10px;
+    
+    
+    
+                            .word {
+                                display: flex;
+                                flex-direction: column;
+                                cursor: pointer;
+                                border: 2px solid transparent;
+                                padding: 10px;
+                                border-radius: 8px;
+                                transition: all 0.3s ease;
+    
+                                img {
+                                    max-width: 100px;
+                                    min-height: 60px;
+                                    margin: 1px auto;
+                                }
+                            }
+    
+                        }
+                    }
+
+                    .saytInputs {
+                        .inputDiv {
+                            .input {
+                                font-size: 16px;
+
+                                &::placeholder {
+                                    font-size: 16px;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .privateInputs {
+                        font-size: 16px;
+
+                        &::placeholder {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+            }
+
+            .contact {
+                .main {
+
+                    .title {
+                        p {
+                            font-size: 17px;
+                        }
+
+                        .num {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+
+            button {
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 
 
 

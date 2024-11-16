@@ -373,4 +373,8 @@ if (currentPage === "home") {
     initModal();
     initTabs();
     initForms();
+}else if(currentPage==="design"){
+    initModal();
+    initTabs();
+    initForms();
 }

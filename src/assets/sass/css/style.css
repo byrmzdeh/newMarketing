@@ -1634,6 +1634,7 @@ nav #show ul li a:hover {
   align-items: center;
   justify-content: space-evenly;
   position: relative;
+  margin: 90px 0px 0px 0px;
 }
 .take .go {
   width: 34%;
@@ -1855,6 +1856,7 @@ footer .foot {
   padding: 30px 0px 40px 0px;
 }
 footer .foot .f-logo {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -1875,6 +1877,7 @@ footer .foot .f-logo p {
   padding: 0px;
 }
 footer .foot .f-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -1920,10 +1923,11 @@ footer .foot .f-form .input img {
   object-fit: cover;
 }
 footer .foot .f-connect {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: end;
-  gap: 5px;
+  gap: 7px;
 }
 footer .foot .f-connect p {
   font-size: 16px;
@@ -1946,23 +1950,20 @@ footer .foot .f-connect .icons .icon {
   background-repeat: no-repeat;
   background-size: cover;
 }
-footer .foot .f-connect .link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+footer .foot .f-connect .links {
   padding-top: 12px;
 }
-footer .foot .f-connect .link a {
-  width: 100%;
+footer .foot .f-connect .links a {
   color: black;
   opacity: 60%;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  padding-left: 10px;
 }
-footer .foot .f-connect .link .terms {
+footer .foot .f-connect .links .terms {
   border-right: 2px solid gray;
-  padding-right: 12px;
+  padding-right: 10px;
 }
 
 .week {
@@ -3341,25 +3342,40 @@ footer .foot .f-connect .link .terms {
 }
 #catalogueCard .catalogueDetail .desc button {
   width: auto;
-  min-height: 43px;
-  height: 100%;
-  border: 1px solid #bf88ff;
-  background-color: white;
+  height: 43px;
+  position: relative;
+  padding: 10px 20px;
+  border: none;
   border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  font-weight: bold;
+  overflow: hidden;
+  cursor: default;
 }
 #catalogueCard .catalogueDetail .desc button p {
+  position: relative;
+  z-index: 1;
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 18px;
   font-weight: 500;
-  line-height: 27px;
-  margin-bottom: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#catalogueCard .catalogueDetail .desc button::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  right: 1px;
+  bottom: 1px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 50px;
+  /* Daxili rəngi sərhədlə uyğunlaşdırır */
+  z-index: 0;
 }
 #catalogueCard .catalogueDetail:hover {
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
@@ -3557,7 +3573,6 @@ footer .foot .f-connect .link .terms {
   opacity: 30%;
 }
 #messageForm form .threeInput button {
-  max-width: 420px;
   width: 100%;
   height: 50px;
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -3692,6 +3707,720 @@ footer .foot .f-connect .link .terms {
 }
 .works .smilarCards .smilar:hover {
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
+}
+
+.DesignButtons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.DesignButtons button {
+  width: auto;
+  height: 43px;
+  position: relative;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  overflow: hidden;
+  cursor: pointer;
+}
+.DesignButtons button p {
+  position: relative;
+  z-index: 1;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.DesignButtons button::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 50px;
+  z-index: 0;
+}
+.DesignButtons button:active {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.DesignButtons button:active p {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+.DesignButtons button.active {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  color: white;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.DesignButtons button.active p {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#websitePage {
+  max-width: 100%;
+  width: 67%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+#websitePage form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+#websitePage form .purpose {
+  width: 100%;
+  display: flex;
+  min-height: 130px;
+  gap: 30px;
+}
+#websitePage form .purpose .numberBtn {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  font-weight: bold;
+  overflow: hidden;
+  cursor: default;
+}
+#websitePage form .purpose .numberBtn p {
+  position: relative;
+  z-index: 1;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#websitePage form .purpose .numberBtn::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 50px;
+  /* Daxili rəngi sərhədlə uyğunlaşdırır */
+  z-index: 0;
+}
+#websitePage form .purpose .eleven {
+  padding: 10px 8px;
+}
+#websitePage form .purpose .head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+#websitePage form .purpose .head .name {
+  display: flex;
+  gap: 15px;
+  align-items: start;
+}
+#websitePage form .purpose .head .name h2 {
+  color: rgb(19, 19, 19);
+  opacity: 80%;
+  font-size: 28px;
+  line-height: 36px;
+}
+#websitePage form .purpose .head .name .star {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+}
+#websitePage form .purpose .head p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+#websitePage form .purpose .head .inputDesc {
+  width: 100%;
+  max-height: 163px;
+  outline: none;
+  padding: 0px 0px 95px 20px;
+  text-align: left;
+  border: 1px solid rgba(55, 55, 55, 0.5);
+  margin-top: 20px;
+  background-color: transparent;
+}
+#websitePage form .purpose .head .inputDesc::placeholder {
+  text-align: left;
+  font-size: 16px;
+}
+#websitePage form .purpose .head .typeBtns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+  gap: 17px;
+}
+#websitePage form .purpose .head .typeBtns .typeBtn {
+  width: auto;
+  height: 43px;
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: white;
+  background: none;
+  box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
+  outline: none;
+}
+#websitePage form .purpose .head .typeBtns .typeBtn p {
+  position: relative;
+  z-index: 1;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+#websitePage form .purpose .head .typeBtns .typeBtn::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 50px;
+  z-index: 0;
+}
+#websitePage form .purpose .head .typeBtns .typeBtn:active {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  box-shadow: 0px 4px 25px 0px rgba(99, 129, 160, 0.15);
+}
+#websitePage form .purpose .head .typeBtns .typeBtn:active p {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+#websitePage form .purpose .head .typeBtns .typeBtn.active {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  color: white;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#websitePage form .purpose .head .typeBtns .typeBtn.active p {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#websitePage form .purpose .head .funcBtns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 17px;
+  margin-top: 20px;
+}
+#websitePage form .purpose .head .funcBtns .funcBtn {
+  width: auto;
+  height: 43px;
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: white;
+  background: none;
+  box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
+}
+#websitePage form .purpose .head .funcBtns .funcBtn p {
+  position: relative;
+  z-index: 1;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+#websitePage form .purpose .head .funcBtns .funcBtn::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 50px;
+  z-index: 0;
+}
+#websitePage form .purpose .head .funcBtns .funcBtn:active {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  box-shadow: 0px 4px 25px 0px rgba(99, 129, 160, 0.15);
+}
+#websitePage form .purpose .head .funcBtns .funcBtn:active p {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+#websitePage form .purpose .head .funcBtns .funcBtn.active {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  color: white;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#websitePage form .purpose .head .funcBtns .funcBtn.active p {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#websitePage form .purpose .head .saytInputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+#websitePage form .purpose .head .saytInputs .inputDiv {
+  max-width: 420px;
+  min-height: 52px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border: 1px solid rgba(55, 55, 55, 0.5);
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+#websitePage form .purpose .head .saytInputs .inputDiv img {
+  width: 21px;
+  height: 18px;
+}
+#websitePage form .purpose .head .saytInputs .inputDiv .input {
+  width: 90%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+#websitePage form .purpose .head .privateInputs {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+#websitePage form .purpose .head .privateInputs input {
+  width: 100%;
+  min-height: 52px;
+  padding: 0px 20px 0px 20px;
+  text-align: left;
+  border: 1px solid rgba(55, 55, 55, 0.5);
+  outline: none;
+  background-color: transparent;
+}
+#websitePage form .contact {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+#websitePage form .contact .main {
+  width: 100%;
+  min-height: 81px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(55, 55, 55, 0.2);
+  padding: 10px 20px;
+  gap: 30px;
+  border-radius: 10px;
+}
+#websitePage form .contact .main img {
+  width: 31px;
+  height: 31px;
+}
+#websitePage form .contact .main .title {
+  line-height: 14px;
+}
+#websitePage form .contact .main .title p {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(55, 55, 55);
+}
+#websitePage form .contact .main .title .num {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(55, 55, 55);
+}
+#websitePage form button {
+  width: 100%;
+  height: 50px;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  border: none;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+#websitePage form button p {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+#brandingPage {
+  max-width: 100%;
+  width: 67%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+#brandingPage form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+#brandingPage form .purpose {
+  width: 100%;
+  display: flex;
+  min-height: 130px;
+  gap: 30px;
+}
+#brandingPage form .purpose .numberBtn {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  font-weight: bold;
+  overflow: hidden;
+  cursor: default;
+}
+#brandingPage form .purpose .numberBtn p {
+  position: relative;
+  z-index: 1;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#brandingPage form .purpose .numberBtn::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 50px;
+  /* Daxili rəngi sərhədlə uyğunlaşdırır */
+  z-index: 0;
+}
+#brandingPage form .purpose .eleven {
+  padding: 10px 8px;
+}
+#brandingPage form .purpose .head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+#brandingPage form .purpose .head .name {
+  display: flex;
+  gap: 15px;
+  align-items: start;
+}
+#brandingPage form .purpose .head .name h2 {
+  color: rgb(19, 19, 19);
+  opacity: 80%;
+  font-size: 28px;
+  line-height: 36px;
+}
+#brandingPage form .purpose .head .name .star {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+}
+#brandingPage form .purpose .head p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+#brandingPage form .purpose .head .inputDesc {
+  width: 100%;
+  max-height: 163px;
+  outline: none;
+  padding: 0px 0px 95px 20px;
+  text-align: left;
+  border: 1px solid rgba(55, 55, 55, 0.5);
+  margin-top: 20px;
+  background-color: transparent;
+}
+#brandingPage form .purpose .head .inputDesc::placeholder {
+  text-align: left;
+  font-size: 16px;
+}
+#brandingPage form .purpose .head .typeBtnss {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+  gap: 17px;
+}
+#brandingPage form .purpose .head .typeBtnss .typeBtnn {
+  width: auto;
+  height: 42px;
+  position: relative;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: white;
+  background: none;
+  box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
+  outline: none;
+}
+#brandingPage form .purpose .head .typeBtnss .typeBtnn p {
+  position: relative;
+  z-index: 1;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+#brandingPage form .purpose .head .typeBtnss .typeBtnn::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 50px;
+  z-index: 0;
+}
+#brandingPage form .purpose .head .typeBtnss .typeBtnn:active {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  box-shadow: 0px 4px 25px 0px rgba(99, 129, 160, 0.15);
+}
+#brandingPage form .purpose .head .typeBtnss .typeBtnn:active p {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+#brandingPage form .purpose .head .typeBtnss .typeBtnn.active {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  color: white;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#brandingPage form .purpose .head .typeBtnss .typeBtnn.active p {
+  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#brandingPage form .purpose .head .saytInputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+#brandingPage form .purpose .head .saytInputs .inputDiv {
+  max-width: 420px;
+  min-height: 52px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(55, 55, 55, 0.5);
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: transparent;
+}
+#brandingPage form .purpose .head .saytInputs .inputDiv img {
+  width: 21px;
+  height: 18px;
+}
+#brandingPage form .purpose .head .saytInputs .inputDiv .input {
+  width: 90%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+#brandingPage form .purpose .head .privateInputs {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+#brandingPage form .purpose .head .privateInputs input {
+  width: 100%;
+  min-height: 52px;
+  padding: 0px 20px 0px 20px;
+  text-align: left;
+  border: 1px solid rgba(55, 55, 55, 0.5);
+  outline: none;
+  background-color: transparent;
+}
+#brandingPage form .purpose .head .options {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+#brandingPage form .purpose .head .options .option {
+  max-width: 188px;
+  max-height: 163px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border: 1px solid rgb(174, 105, 255);
+  border-radius: 5px;
+  padding: 8px;
+  background-color: rgb(249, 249, 249);
+  gap: 10px;
+}
+#brandingPage form .purpose .head .options .option .checkbox {
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid rgb(174, 105, 255);
+  /* Default border rəngi */
+  border-radius: 30%;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  position: relative;
+  background-color: transparent;
+}
+#brandingPage form .purpose .head .options .option .checkbox:checked {
+  border-color: rgb(174, 105, 255); /* Seçildikdə sərhəd rəngi */
+}
+#brandingPage form .purpose .head .options .option .checkbox:checked::after {
+  content: "✔"; /* Checkbox-un daxilindəki işarə */
+  color: rgb(174, 105, 255);
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#brandingPage form .purpose .head .options .option .word {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 2px solid transparent;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+#brandingPage form .purpose .head .options .option .word img {
+  max-width: 100px;
+  min-height: 60px;
+  margin: 1px auto;
+}
+#brandingPage form .contact {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+#brandingPage form .contact .main {
+  width: 100%;
+  min-height: 81px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(55, 55, 55, 0.2);
+  padding: 10px 20px;
+  gap: 30px;
+  border-radius: 10px;
+}
+#brandingPage form .contact .main img {
+  width: 31px;
+  height: 31px;
+}
+#brandingPage form .contact .main .title {
+  line-height: 14px;
+}
+#brandingPage form .contact .main .title p {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(55, 55, 55);
+}
+#brandingPage form .contact .main .title .num {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(55, 55, 55);
+}
+#brandingPage form button {
+  width: 100%;
+  height: 50px;
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  border: none;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+#brandingPage form button p {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0px;
 }
 
 @media (min-width: 324px) and (max-width: 400px) {
@@ -4087,6 +4816,7 @@ footer .foot .f-connect .link .terms {
   }
   #detailSearch {
     width: 100%;
+    padding: 20px;
   }
   #detailSearch .blog {
     font-size: 35px;
@@ -5246,7 +5976,6 @@ footer .foot .f-connect .link .terms {
     font-size: 14px;
   }
   #messageForm {
-    padding: 20px;
     width: 90%;
   }
   #messageForm .info {
@@ -5329,6 +6058,214 @@ footer .foot .f-connect .link .terms {
   }
   .works .smilarCards .smilar h1 {
     font-size: 18px;
+  }
+  .DesignButtons button {
+    height: 40px;
+  }
+  .DesignButtons button p {
+    font-size: 15px;
+  }
+  #websitePage {
+    width: 100%;
+    padding: 20px;
+  }
+  #websitePage form {
+    width: 100%;
+    gap: 15px;
+  }
+  #websitePage form .purpose {
+    width: 100%;
+    gap: 20px;
+  }
+  #websitePage form .purpose .numberBtn {
+    width: 40px;
+    height: 40px;
+    padding: 10px 13px;
+  }
+  #websitePage form .purpose .numberBtn p {
+    font-size: 18px;
+  }
+  #websitePage form .purpose .eleven {
+    padding: 10px 0px 10px 5px;
+  }
+  #websitePage form .purpose .head .name {
+    gap: 10px;
+  }
+  #websitePage form .purpose .head .name h2 {
+    font-size: 15px;
+  }
+  #websitePage form .purpose .head .name .star {
+    font-size: 15px;
+  }
+  #websitePage form .purpose .head p {
+    font-size: 14px;
+  }
+  #websitePage form .purpose .head .inputDesc {
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    margin-top: 0px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  #websitePage form .purpose .head .inputDesc::placeholder {
+    font-size: 13px;
+  }
+  #websitePage form .purpose .head .typeBtns {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #websitePage form .purpose .head .typeBtns .typeBtn p {
+    font-size: 14px;
+  }
+  #websitePage form .purpose .head .funcBtns {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #websitePage form .purpose .head .funcBtns .funcBtn p {
+    font-size: 14px;
+  }
+  #websitePage form .purpose .head .saytInputs .inputDiv .input {
+    font-size: 13px;
+  }
+  #websitePage form .purpose .head .saytInputs .inputDiv .input::placeholder {
+    font-size: 13px;
+  }
+  #websitePage form .purpose .head .privateInputs {
+    font-size: 13px;
+  }
+  #websitePage form .purpose .head .privateInputs::placeholder {
+    font-size: 13px;
+  }
+  #websitePage form .contact .main img {
+    width: 25px;
+    height: 25px;
+  }
+  #websitePage form .contact .main .title p {
+    font-size: 15px;
+  }
+  #websitePage form .contact .main .title .num {
+    font-size: 14px;
+  }
+  #websitePage form button p {
+    font-size: 15px;
+  }
+  #brandingPage {
+    width: 100%;
+    padding: 20px;
+  }
+  #brandingPage form {
+    width: 100%;
+    gap: 15px;
+  }
+  #brandingPage form .purpose {
+    width: 100%;
+    gap: 20px;
+  }
+  #brandingPage form .purpose .numberBtn {
+    width: 40px;
+    height: 40px;
+    padding: 10px 13px;
+  }
+  #brandingPage form .purpose .numberBtn p {
+    font-size: 18px;
+  }
+  #brandingPage form .purpose .eleven {
+    padding: 10px 0px 10px 5px;
+  }
+  #brandingPage form .purpose .head .name {
+    gap: 10px;
+  }
+  #brandingPage form .purpose .head .name h2 {
+    font-size: 15px;
+  }
+  #brandingPage form .purpose .head .name .star {
+    font-size: 15px;
+  }
+  #brandingPage form .purpose .head p {
+    font-size: 14px;
+  }
+  #brandingPage form .purpose .head .inputDesc {
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    margin-top: 0px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  #brandingPage form .purpose .head .inputDesc::placeholder {
+    font-size: 13px;
+  }
+  #brandingPage form .purpose .head .typeBtnss {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #brandingPage form .purpose .head .typeBtnss .typeBtnn p {
+    font-size: 14px;
+  }
+  #brandingPage form .purpose .head .saytInputs .inputDiv .input {
+    font-size: 13px;
+  }
+  #brandingPage form .purpose .head .saytInputs .inputDiv .input::placeholder {
+    font-size: 13px;
+  }
+  #brandingPage form .purpose .head .privateInputs {
+    font-size: 13px;
+  }
+  #brandingPage form .purpose .head .privateInputs::placeholder {
+    font-size: 13px;
+  }
+  #brandingPage form .purpose .head .options {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  #brandingPage form .purpose .head .options .option {
+    max-width: 188px;
+    max-height: 163px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border: 1px solid rgb(174, 105, 255);
+    border-radius: 5px;
+    padding: 8px;
+    background-color: rgb(249, 249, 249);
+    gap: 10px;
+  }
+  #brandingPage form .purpose .head .options .option .word {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  #brandingPage form .purpose .head .options .option .word img {
+    max-width: 100px;
+    min-height: 60px;
+    margin: 1px auto;
+  }
+  #brandingPage form .contact .main img {
+    width: 25px;
+    height: 25px;
+  }
+  #brandingPage form .contact .main .title p {
+    font-size: 15px;
+  }
+  #brandingPage form .contact .main .title .num {
+    font-size: 14px;
+  }
+  #brandingPage form button p {
+    font-size: 15px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -5654,6 +6591,9 @@ footer .foot .f-connect .link .terms {
   }
   .filter #portfolioCards .card .portfolioCard .p {
     font-size: 14px;
+  }
+  .business .blog {
+    font-size: 60px;
   }
   .business h4 {
     width: 100%;
@@ -5994,5 +6934,206 @@ footer .foot .f-connect .link .terms {
     width: 100%;
     object-fit: cover;
     transform: translateY(0px);
+  }
+  .DesignButtons button {
+    height: 40px;
+  }
+  .DesignButtons button p {
+    font-size: 17px;
+  }
+  #websitePage {
+    width: 100%;
+    padding: 20px;
+  }
+  #websitePage form {
+    width: 100%;
+    gap: 15px;
+  }
+  #websitePage form .purpose {
+    width: 100%;
+    gap: 20px;
+  }
+  #websitePage form .purpose .numberBtn {
+    width: 45px;
+    height: 45px;
+    padding: 10px 15px;
+  }
+  #websitePage form .purpose .numberBtn p {
+    font-size: 20px;
+  }
+  #websitePage form .purpose .eleven {
+    padding: 10px 0px 10px 8px;
+  }
+  #websitePage form .purpose .head .name {
+    gap: 10px;
+  }
+  #websitePage form .purpose .head .name h2 {
+    font-size: 21px;
+  }
+  #websitePage form .purpose .head .name .star {
+    font-size: 21px;
+  }
+  #websitePage form .purpose .head p {
+    font-size: 16px;
+  }
+  #websitePage form .purpose .head .inputDesc {
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    margin-top: 0px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  #websitePage form .purpose .head .inputDesc::placeholder {
+    font-size: 16px;
+  }
+  #websitePage form .purpose .head .typeBtns {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #websitePage form .purpose .head .typeBtns .typeBtn p {
+    font-size: 17px;
+  }
+  #websitePage form .purpose .head .funcBtns {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #websitePage form .purpose .head .funcBtns .funcBtn p {
+    font-size: 17px;
+  }
+  #websitePage form .purpose .head .saytInputs .inputDiv .input {
+    font-size: 16px;
+  }
+  #websitePage form .purpose .head .saytInputs .inputDiv .input::placeholder {
+    font-size: 16px;
+  }
+  #websitePage form .purpose .head .privateInputs {
+    font-size: 16px;
+  }
+  #websitePage form .purpose .head .privateInputs::placeholder {
+    font-size: 16px;
+  }
+  #websitePage form .contact .main .title p {
+    font-size: 17px;
+  }
+  #websitePage form .contact .main .title .num {
+    font-size: 17px;
+  }
+  #websitePage form button p {
+    font-size: 18px;
+  }
+  #brandingPage {
+    width: 100%;
+    padding: 20px;
+  }
+  #brandingPage form {
+    width: 100%;
+    gap: 15px;
+  }
+  #brandingPage form .purpose {
+    width: 100%;
+    gap: 20px;
+  }
+  #brandingPage form .purpose .numberBtn {
+    width: 45px;
+    height: 45px;
+    padding: 10px 15px;
+  }
+  #brandingPage form .purpose .numberBtn p {
+    font-size: 20px;
+  }
+  #brandingPage form .purpose .eleven {
+    padding: 10px 0px 10px 8px;
+  }
+  #brandingPage form .purpose .head .name {
+    gap: 10px;
+  }
+  #brandingPage form .purpose .head .name h2 {
+    font-size: 21px;
+  }
+  #brandingPage form .purpose .head .name .star {
+    font-size: 21px;
+  }
+  #brandingPage form .purpose .head p {
+    font-size: 16px;
+  }
+  #brandingPage form .purpose .head .inputDesc {
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    margin-top: 0px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  #brandingPage form .purpose .head .inputDesc::placeholder {
+    font-size: 16px;
+  }
+  #brandingPage form .purpose .head .typeBtns {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #brandingPage form .purpose .head .typeBtns .typeBtn p {
+    font-size: 17px;
+  }
+  #brandingPage form .purpose .head .options {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 10px;
+  }
+  #brandingPage form .purpose .head .options .option {
+    max-width: 188px;
+    max-height: 163px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border: 1px solid rgb(174, 105, 255);
+    border-radius: 5px;
+    padding: 8px;
+    background-color: rgb(249, 249, 249);
+    gap: 10px;
+  }
+  #brandingPage form .purpose .head .options .option .word {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  #brandingPage form .purpose .head .options .option .word img {
+    max-width: 100px;
+    min-height: 60px;
+    margin: 1px auto;
+  }
+  #brandingPage form .purpose .head .saytInputs .inputDiv .input {
+    font-size: 16px;
+  }
+  #brandingPage form .purpose .head .saytInputs .inputDiv .input::placeholder {
+    font-size: 16px;
+  }
+  #brandingPage form .purpose .head .privateInputs {
+    font-size: 16px;
+  }
+  #brandingPage form .purpose .head .privateInputs::placeholder {
+    font-size: 16px;
+  }
+  #brandingPage form .contact .main .title p {
+    font-size: 17px;
+  }
+  #brandingPage form .contact .main .title .num {
+    font-size: 17px;
+  }
+  #brandingPage form button p {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */
