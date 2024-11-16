@@ -757,7 +757,7 @@ nav {
 
     #show {
         display: none;
-        width: 350px;
+        width: 380px;
         min-height: 630px;
         position: absolute;
         right: 57px;
@@ -794,15 +794,17 @@ nav {
             display: flex;
             flex-direction: column;
             padding: 60px 40px 0px 40px;
-            gap: 8px;
+            gap: 15px;
 
             li {
-                border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-                padding-bottom: 7px;
+                border-bottom: 1px solid rgba(55, 55, 55, 0.3);
+                display: flex;
+                align-items: center;
+                // padding-bottom: 7px;
 
                 a {
                     color: black;
-                    font-size: 23px;
+                    font-size: 28px;
                     font-weight: 800;
                     transition: 1s;
 
@@ -2315,6 +2317,8 @@ footer {
     width: 100%;
     min-height: 500px;
     display: flex;
+    display: block !important;
+
     flex-direction: column;
     padding: 100px 60px 0px 60px;
     gap: 60px;
