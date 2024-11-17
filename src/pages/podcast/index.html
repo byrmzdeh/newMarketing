@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/src/assets/sass/css/style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script type="module" defer src="/src/components/searchDetail/style.js"></script>
+  <script defer src="/src/pages/podcast/style.js"></script>
 
 </head>
 
@@ -37,7 +38,7 @@
 
 
           <div id="addCompanyContent" class="tab-content">
-            <form id="addCompanyForm"> 
+            <form id="addCompanyForm">
               <form class="form">
                 <div class="form-group">
                   <input type="text" placeholder="Şirkətin adı" required />
@@ -79,12 +80,12 @@
           </div>
 
           <div id="contactContent" class="tab-content" style="display: none;">
-            <form id="contactForm"> 
+            <form id="contactForm">
               <input type="text" placeholder="Ad" class="input-field" required />
               <input type="text" placeholder="Soyad" class="input-field" required />
               <input type="email" placeholder="E-poçt" class="input-field" required />
               <input type="text" placeholder="Mövzu" class="input-field" required />
-              <textarea  placeholder="Mesajınız" ></textarea>
+              <textarea placeholder="Mesajınız"></textarea>
               <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
             </form>
           </div>
@@ -149,7 +150,7 @@
         <div id="closeThankModal" class="close-modal">
           <img src="/src/assets/image/home/close.png" alt="">
         </div>
-       
+
       </div>
       <p>Thank your for reaching out to us! We will <br> contact you back as soon as possible!</p>
     </div>
@@ -160,9 +161,103 @@
     <h1 class="blog " data-aos="fade-up">PODCAST</h1>
   </div>
 
-  <div id="catalogueCard">
-
+  <div class="podcast">
+    <div class="main">
+      <h4>Səyyar podkastların yazılması</h4>
+      <p class="mainP">Studiyanızda, ofisinizdə, mənzilinizdə və ya başqa bir məkanda səyyar podkastların yazılmasını
+        təklif edirik.
+        Bütün zəruri avadanlıqla birlikdə sizin üçün münasib olan məkana gəlib audio və ya videopodkast yazmağa hazırıq.
+        Peşəkar Shure və Rode markalı mikrofonlarla 2-dən 10-a qədər spikerin iştirak etdiyi podkast yazmağa, Sony
+        markalı kameralarla isə FullHD və ya 4K formatında video çəkməyə Sizə kömək edəcəyik.</p>
+      <button>
+        <p>SORĞU GÖNDƏR</p>
+      </button>
+    </div>
+    <img src="/src/assets/image/podcast/computer.png" alt="">
   </div>
+
+
+
+
+  <form action='' id="podcastForm">
+    <h4>Studiya rezerv et</h4>
+
+    <div class="containerr">
+      <div class="step">
+        <div class="step-header"><button class="oneBtn">1</button></div>
+        <p>Studiyanı seçin</p>
+        <div class="step-content">
+          <label>
+            <input type="radio" name="studio" value="Bakı studiyası" checked> Bakı studiyası
+          </label>
+          <label>
+            <input type="radio" name="studio" value="Lorem ipsum dolor ist"> Lorem ipsum dolor ist
+          </label>
+        </div>
+      </div>
+
+      <!-- Step 2: Zonu seçin -->
+      <div class="step">
+        <div class="step-header"><div class="twoBtn">2</div></div>
+        <p> Zonu seçin</p>
+        <div class="step-content">
+          <label>
+            <input type="radio" name="zone" value="Kiçik zal, 20m²" checked> Kiçik zal, 20m²
+          </label>
+          <label>
+            <input type="radio" name="zone" value="Böyük zal, 40m²"> Böyük zal, 40m²
+          </label>
+        </div>
+      </div>
+
+      <!-- Step 3: Vaxtı seçin -->
+      <div class="step">
+        <div class="step-header "><button class="oneBtn">3</button></div>
+        <p>Vaxtı seçin</p>
+        <div class="step-contentTime">
+          <div class="start">
+            <label for="start">Başlanğıc:</label>
+            <input type="date" id="start" name="start">
+          </div>
+          <div class="end">
+            <label for="end">Son:</label>
+            <input type="date" id="end" name="end">
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Əlaqə məlumatları -->
+      <div class="step">
+        <div class="step-headerr"><div class="twoBtn">4</div></div>
+        <p>Əlaqə məlumatları</p>
+        <div class="contents">
+          <div class="summary">
+            <p><strong>Yazı növü:</strong> 21/06/24</p>
+            <p><strong>Ümumi vaxt:</strong> 1 saat</p>
+            <p><strong>Yekun məbləğ:</strong> 21/06/24</p>
+          </div>
+          <div class="step-content">
+            <input type="text" id="name" name="name" placeholder="Adınızı daxil edin">
+            <input type="tel" id="phone" name="phone" placeholder="(055) 123-45-67">
+            <label>
+              <input type="checkbox" id="terms" name="terms"> Razılaşmanın şərtlərini qəbul edirəm
+            </label>
+            <button type="button" class="btn">REZERV ET</button>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Rezervasiya məlumatları -->
+
+
+      <!-- Rezerv et Button -->
+    </div>
+  </form>
+
+
+
+
 
 
 
@@ -208,7 +303,7 @@
 
         <div class="links">
           <a class="terms" href="/src/pages/terms/index.html">TERMS OF USE</a>
-          <a  href="">PRIVACY POLICY</a>
+          <a href="">PRIVACY POLICY</a>
         </div>
 
       </div>

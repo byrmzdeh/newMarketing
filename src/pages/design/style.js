@@ -1,21 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // İlk səhifə yüklənəndə "websitePage" göstərilir və ilk buton aktiv olur
     const firstButton = document.querySelector('.DesignButtons button');
     showPage('websitePage', firstButton);
 
-    // Form-u göndərərkən inputları təmizləyirik
-    const form = document.querySelector('.webForm');
+    // Web formu və Branding formu
+    const webForm = document.querySelector('.webForm');
+    const brandingForm = document.querySelector('.brandingForm');
     const inputValues = document.querySelectorAll('input');
+    
     // Düymələr və input sahəsini seçirik
     const funcBtns = document.querySelectorAll('.funcBtn');
     const writeInput = document.getElementById('write');
-
+    
     // Düymələr üçün tək dəfə klik olunduğunu yoxlamaq üçün obyekt saxlayırıq
     const clickedBtns = new Set();
-
+    
     // İlk düyməni `active` edirik
     funcBtns[0].classList.add('active');
-
+    
     // Hər düymə üçün klik hadisəsini dinləyirik
     funcBtns.forEach(button => {
         button.addEventListener('click', function () {
@@ -64,33 +65,106 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
     // Formu göndərərkən input sahələrini təmizləyirik
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Səhifənin yenilənməsini dayandırırıq
-        inputValues.forEach(input => {
-            input.value = '';
+    function handleFormSubmit(form) {
+        const inputs = form.querySelectorAll('input');
+        let allFilled = true;
+        let firstEmptyInput = null;
+
+        // Bütün inputları yoxlayırıq
+        inputs.forEach(input => {
+            if (input.required && input.value.trim() === '') {
+                allFilled = false;
+                input.classList.add('error'); // Əgər boşdursa, error sinifi əlavə edirik
+                if (!firstEmptyInput) {
+                    firstEmptyInput = input; // İlk boş inputu tapırıq
+                }
+            } else {
+                input.classList.remove('error'); // Əgər doldurulubsa, error sinifini silirik
+            }
         });
+
+        if (!allFilled) {
+            // İlk boş inputa fokuslanırıq
+            if (firstEmptyInput) {
+                firstEmptyInput.focus();
+            }
+            return false;
+        }
+        return true;
+    }
+
+    // Web formu üçün submit hadisəsi
+    webForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Səhifənin yenilənməsini dayandırırıq
+        if (handleFormSubmit(webForm)) {
+            inputValues.forEach(input => input.value = ''); // Web formu doldurulduqdan sonra input sahələrini təmizləyirik
+        }
     });
 
-    // Seçilən səhifəni göstərmək üçün funksiya
+    // Branding formu üçün submit hadisəsi
+    brandingForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Səhifənin yenilənməsini dayandırırıq
+        if (handleFormSubmit(brandingForm)) {
+            inputValues.forEach(input => input.value = ''); // Branding formu doldurulduqdan sonra input sahələrini təmizləyirik
+        }
+    });
+
+    // Modal açmaq üçün düymələr
+    const sendBtnn = document.getElementById('sendBtnn');
+    const sendButton = document.getElementById('sendButton');
+    const thankModall = document.getElementById('thankModal');
+    const overlayThankk = document.getElementById('overlayThank');
+
+    // Modalın açılması - sendBtn
+    sendBtnn.addEventListener('click', function () {
+        if (handleFormSubmit(webForm)) { // WebForm-u yoxlayırıq
+            inputValues.forEach(input => input.value = ''); // Web formu göndərildikdən sonra inputları təmizləyirik
+            thankModall.style.display = 'block';
+            overlayThankk.style.display = 'block';
+        }
+    });
+
+    // Modalın açılması - sendButton
+    sendButton.addEventListener('click', function (event) {
+        event.preventDefault(); // Sayfa dəyişməsinin qarşısını alırıq
+        if (handleFormSubmit(brandingForm)) { // Branding formunu yoxlayırıq
+            inputValues.forEach(input => input.value = ''); // Branding formu göndərildikdən sonra inputları təmizləyirik
+            thankModall.style.display = 'block';
+            overlayThankk.style.display = 'block';
+        }
+    });
+
+    const closeThankModal = document.getElementById('closeThankModal');
+    closeThankModal.addEventListener('click', function () {
+        thankModall.style.display = 'none';
+        overlayThankk.style.display = 'none';
+        window.location.href='/index.html'
+    });
+
+    overlayThankk.addEventListener('click', function () {
+        thankModall.style.display = 'none';
+        overlayThankk.style.display = 'none';
+    });
+
+    // `showPage` funksiyası
     function showPage(pageId, button) {
         document.querySelectorAll('.page-content').forEach(page => {
             page.style.display = 'none';
         });
         document.getElementById(pageId).style.display = 'block';
 
-        // Aktiv olan butona "active" sinifi əlavə edirik
         document.querySelectorAll('.DesignButtons button').forEach(btn => {
             btn.classList.remove('active');
         });
 
-        // Seçilən butona "active" sinifi əlavə edirik
         button.classList.add('active');
     }
 
-    // Funksiyanı qlobal olaraq təyin edirik ki, düymələr onclick-də çağıranda işləsin
     window.showPage = showPage;
+
+    // Sayt yükləndikdə `websitePage` göstərilsin
+    showPage('websitePage', firstButton);
 
     // typeBtns üçün kod:
     const typeBtns = document.querySelectorAll('.typeBtn');
