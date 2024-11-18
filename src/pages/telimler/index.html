@@ -19,129 +19,130 @@
 </head>
 
 <body data-page="telim">
-    <nav>
-        <div class="view ">
-    
-          <button id="hireUsButton" class="hire-usColor" data-aos="fade-up">
-            <p>HIRE US</p>
-          </button>
-    
-          <div id="modal" class="modal">
-            <div class="modal-content">
-              <div id="closeModal" class="close-modal">
-                <img src="/src/assets/image/home/close.png" alt="err">
-              </div>
-              <h2 class="modal-title">HIRE US</h2>
-    
-              <div class="tabs">
-                <span id="tabAddCompany" class="tab active">ŞİRKƏT ƏLAVƏ ET</span>
-                <span id="tabContact" class="tab">ƏLAQƏ</span>
-              </div>
-    
-    
-              <div id="addCompanyContent" class="tab-content">
-                <form id="addCompanyForm"> 
-                  <form class="form">
-                    <div class="form-group">
-                      <input type="text" placeholder="Şirkətin adı" required />
-                      <input type="text" placeholder="Ünvan" required />
-                    </div>
-                    <div class="form-group">
-                      <input type="email" placeholder="E-poçt" required />
-                      <input type="tel" placeholder="Telefon" required />
-                    </div>
-                    <div class="form-group">
-                      <input type="tex" placeholder="Vebsayt" />
-                      <select required>
-                        <option value="">Kateqoriya seç</option>
-                        <option value="kategoriya1">Kategoriya 1</option>
-                        <option value="kategoriya2">Kategoriya 2</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <textarea placeholder="Məlumat" rows="3"></textarea>
-                      <div class="file-upload">
-                        <select required>
-                          <option value="">Alt Kateqoriya seç</option>
-                          <option value="alt_kategoriya1">Alt Kategoriya 1</option>
-                          <option value="alt_kategoriya2">Alt Kategoriya 2</option>
-                        </select>
-                        <label for="upload-logo" class="upload-label">
-                          <input type="file" id="upload-logo" style="display: none;" />
-                          <img src="/src/assets/image/home/png.png" alt="">
-                          <span>Şirkətin loqosu </span>
-                          <span class="png">(PNG)</span>
-                        </label>
-    
-                      </div>
-                    </div>
-    
-                    <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
-                  </form>
-                </form>
-              </div>
-    
-              <div id="contactContent" class="tab-content" style="display: none;">
-                <form id="contactForm"> 
-                  <input type="text" placeholder="Ad" class="input-field" required />
-                  <input type="text" placeholder="Soyad" class="input-field" required />
-                  <input type="email" placeholder="E-poçt" class="input-field" required />
-                  <input type="text" placeholder="Mövzu" class="input-field" required />
-                  <textarea  placeholder="Mesajınız" ></textarea>
-                  <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
-                </form>
-              </div>
-    
-    
-            </div>
-    
+  <nav>
+    <div class="view ">
+
+      <button id="hireUsButton" class="hire-usColor" data-aos="fade-up">
+        <p>HIRE US</p>
+      </button>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <div id="closeModal" class="close-modal">
+            <img src="/src/assets/image/home/close.png" alt="err">
           </div>
-    
-    
-    
-          <a data-aos="fade-up" href="/index.html"><img src="/src/assets/image/home/writeLogo.png" alt="err"></a>
-          <div class="search-menu" data-aos="fade-up">
-            <button id="search"><img src="/src/assets/image/home/search.png" alt="err"></button>
-            <button id="menu"><img src="/src/assets/image/home/menu.png" alt="err"></button>
+          <h2 class="modal-title">HIRE US</h2>
+
+          <div class="tabs">
+            <span id="tabAddCompany" class="tab active">ŞİRKƏT ƏLAVƏ ET</span>
+            <span id="tabContact" class="tab">ƏLAQƏ</span>
           </div>
-    
-          <div id="search-show">
-            <div class="axtar">
-              <button class="search-img "> <img src="/src/assets/image/home/search.png" alt=""></button>
-              <input id="search-input" type="text" placeholder="SEARCH">
-              <button id="inputClose"><img src="/src/assets/image/home/close.png" alt="err"></button>
-            </div>
-            <div id="value">Search result for :</div>
-            <div class="item-div"></div>
-            <div id="results" class="results">
-    
-            </div>
+
+
+          <div id="addCompanyContent" class="tab-content">
+            <form id="addCompanyForm"> 
+              <form class="form">
+                <div class="form-group">
+                  <input type="text" placeholder="Şirkətin adı" required />
+                  <input type="text" placeholder="Ünvan" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="E-poçt" required />
+                  <input type="tel" placeholder="Telefon" required />
+                </div>
+                <div class="form-group">
+                  <input type="tex" placeholder="Vebsayt" />
+                  <select required>
+                    <option value="">Kateqoriya seç</option>
+                    <option value="kategoriya1">Kategoriya 1</option>
+                    <option value="kategoriya2">Kategoriya 2</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea placeholder="Məlumat" rows="3"></textarea>
+                  <div class="file-upload">
+                    <select required>
+                      <option value="">Alt Kateqoriya seç</option>
+                      <option value="alt_kategoriya1">Alt Kategoriya 1</option>
+                      <option value="alt_kategoriya2">Alt Kategoriya 2</option>
+                    </select>
+                    <label for="upload-logo" class="upload-label">
+                      <input type="file" id="upload-logo" style="display: none;" />
+                      <img src="/src/assets/image/home/png.png" alt="">
+                      <span>Şirkətin loqosu </span>
+                      <span class="png">(PNG)</span>
+                    </label>
+
+                  </div>
+                </div>
+
+                <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
+              </form>
+            </form>
           </div>
-    
+
+          <div id="contactContent" class="tab-content" style="display: none;">
+            <form id="contactForm"> 
+              <input type="text" placeholder="Ad" class="input-field" required />
+              <input type="text" placeholder="Soyad" class="input-field" required />
+              <input type="email" placeholder="E-poçt" class="input-field" required />
+              <input type="text" placeholder="Mövzu" class="input-field" required />
+              <textarea  placeholder="Mesajınız" ></textarea>
+              <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
+            </form>
+          </div>
+
+
         </div>
-    
-    
-    
-        <div id="show">
-          <button id="close"><img src="/src/assets/image/home/close.png" alt="err"></button>
-          <ul>
-            <li><a href="/src/pages/about/index.html">HAQQIMIZDA</a></li>
-            <li><a href="/src/pages/business/index.html">BİZNES SAATI</a></li>
-            <li><a href="/src/pages/blog/index.html">BLOQ</a></li>
-            <li><a href="/src/pages/catalogueCategories/index.html">KATALOQ</a></li>
-            <li><a href="/src/pages/partners/index.html">PARTNYORLAR</a></li>
-            <li><a href="/src/pages/services/index.html">XİDMƏTLƏRİMİZ</a></li>
-            <li><a href="/src/pages/portfolio/index.html">PORTFOLİO</a></li>
-            <li><a href="/src/pages/telimler/index.html">TƏLİMLƏR</a></li>
-            <li><a href="/src/pages/podcast/index.html">PODKAST</a></li>
-            <li><a href="/src/pages/contact/index.html">ƏLAQƏ</a></li>
-          </ul>
-    
-    
-    
+
+      </div>
+
+
+
+      <a data-aos="fade-up" href="/index.html"><img src="/src/assets/image/home/writeLogo.png" alt="err"></a>
+      <div class="search-menu" data-aos="fade-up">
+        <button id="search"><img src="/src/assets/image/home/search.png" alt="err"></button>
+        <button id="menu"><img src="/src/assets/image/home/menu.png" alt="err"></button>
+      </div>
+
+      <div id="search-show">
+        <div class="axtar">
+          <button class="search-img "> <img src="/src/assets/image/home/search.png" alt=""></button>
+          <input id="search-input" type="text" placeholder="SEARCH">
+          <button id="inputClose"><img src="/src/assets/image/home/close.png" alt="err"></button>
         </div>
-    
-      </nav>
+        <div id="value">Search result for :</div>
+        <div class="item-div"></div>
+        <div id="results" class="results">
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div id="show">
+      <button id="close"><img src="/src/assets/image/home/close.png" alt="err"></button>
+      <ul>
+        <li><a href="/src/pages/about/index.html">HAQQIMIZDA</a></li>
+        <li><a href="/src/pages/business/index.html">BİZNES SAATI</a></li>
+        <li><a href="/src/pages/blog/index.html">BLOQ</a></li>
+        <li><a href="/src/pages/catalogueCategories/index.html">KATALOQ</a></li>
+        <li><a href="/src/pages/partners/index.html">PARTNYORLAR</a></li>
+        <li><a href="/src/pages/services/index.html">XİDMƏTLƏRİMİZ</a></li>
+        <li><a href="/src/pages/portfolio/index.html">PORTFOLİO</a></li>
+        <li><a href="/src/pages/telimler/index.html">TƏLİMLƏR</a></li>
+        <li><a href="/src/pages/team/index.html">TEAM</a></li>
+        <li><a href="/src/pages/podcast/index.html">PODKAST</a></li>
+        <li><a href="/src/pages/contact/index.html">ƏLAQƏ</a></li>
+      </ul>
+
+
+
+    </div>
+
+  </nav>
     
       <div id="overlayThank"></div>
     
