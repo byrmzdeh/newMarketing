@@ -377,4 +377,12 @@ if (currentPage === "home") {
     initModal();
     initTabs();
     initForms();
+}else if(currentPage==="result"){
+    initModal();
+    initTabs();
+    initForms();
+}else if(currentPage==="portfolioDetail"){
+    initModal();
+    initTabs();
+    initForms();
 }

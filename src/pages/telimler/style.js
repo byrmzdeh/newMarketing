@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const telimCards = document.getElementById("telimCards");
     const url = '/src/data/telim.json';
 
+
+
     fetch(url)
         .then(res => res.json())
         .then(data => {
@@ -19,11 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const messageForm = document.getElementById('messageForm');
             const closee = document.getElementById('closee');
             const overlay = document.getElementById('overlay');
-            const sendBtn = document.getElementById('sendBtnn');
             const telimForm = document.getElementById('telimForm');
-            
+
             Array.from(telimCardElements).forEach(card => {
-                card.addEventListener('click', function() {
+                card.addEventListener('click', function () {
                     messageForm.style.display = 'flex';
                     overlay.style.display = 'block';
                 });
@@ -37,14 +38,17 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             // Göndər düyməsinə kliklədikdə ana səhifəyə yönləndirir
-            sendBtn.addEventListener('click', function (e) {
-                window.location.href = '/index.html';
-            });
+
 
             // telimForm submit olunduqda funksiyanı işə salır
-            telimForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-                // Əlavə funksionallıq burada ola bilər
+
+            telimForm.addEventListener("submit", function (e) {
+                e.preventDefault(); // Standart davranışı dayandırır
+                const sendBtn = document.getElementById('sendBtnn');
+
+                sendBtn.addEventListener('click', function (e) {
+                    window.location.href = '/index.html';
+                });
             });
 
             // messageForm-un boş yerinə klik edildikdə də gizlənir
@@ -55,4 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         });
+
+
 });
