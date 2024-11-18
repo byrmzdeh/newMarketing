@@ -178,83 +178,110 @@
 
 
 
-
   <form action='' id="podcastForm">
     <h4>Studiya rezerv et</h4>
 
     <div class="containerr">
-      <div class="step">
-        <div class="step-header"><button class="oneBtn">1</button></div>
-        <p>Studiyanı seçin</p>
-        <div class="step-content">
-          <label>
-            <input type="radio" name="studio" value="Bakı studiyası" checked> Bakı studiyası
-          </label>
-          <label>
-            <input type="radio" name="studio" value="Lorem ipsum dolor ist"> Lorem ipsum dolor ist
-          </label>
-        </div>
-      </div>
-
-      <!-- Step 2: Zonu seçin -->
-      <div class="step">
-        <div class="step-header"><div class="twoBtn">2</div></div>
-        <p> Zonu seçin</p>
-        <div class="step-content">
-          <label>
-            <input type="radio" name="zone" value="Kiçik zal, 20m²" checked> Kiçik zal, 20m²
-          </label>
-          <label>
-            <input type="radio" name="zone" value="Böyük zal, 40m²"> Böyük zal, 40m²
-          </label>
-        </div>
-      </div>
-
-      <!-- Step 3: Vaxtı seçin -->
-      <div class="step">
-        <div class="step-header "><button class="oneBtn">3</button></div>
-        <p>Vaxtı seçin</p>
-        <div class="step-contentTime">
-          <div class="start">
-            <label for="start">Başlanğıc:</label>
-            <input type="date" id="start" name="start">
-          </div>
-          <div class="end">
-            <label for="end">Son:</label>
-            <input type="date" id="end" name="end">
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 4: Əlaqə məlumatları -->
-      <div class="step">
-        <div class="step-headerr"><div class="twoBtn">4</div></div>
-        <p>Əlaqə məlumatları</p>
-        <div class="contents">
-          <div class="summary">
-            <p><strong>Yazı növü:</strong> 21/06/24</p>
-            <p><strong>Ümumi vaxt:</strong> 1 saat</p>
-            <p><strong>Yekun məbləğ:</strong> 21/06/24</p>
-          </div>
-          <div class="step-content">
-            <input type="text" id="name" name="name" placeholder="Adınızı daxil edin">
-            <input type="tel" id="phone" name="phone" placeholder="(055) 123-45-67">
+      <div class="oneStep">
+        <!-- Step 1 -->
+        <div class="step">
+          <div class="step-header active"><span>1</span></div>
+          <p>Studiyanı seçin</p>
+          <div class="step-content active">
             <label>
-              <input type="checkbox" id="terms" name="terms"> Razılaşmanın şərtlərini qəbul edirəm
+              <input class="checkbox" type="checkbox" name="studio" value="Bakı studiyası" checked>
+              <p class="check"> Bakı studiyası</p>
             </label>
-            <button type="button" class="btn">REZERV ET</button>
+            <label>
+              <input class="checkbox" type="checkbox" name="studio" value="Lorem ipsum dolor ist">
+              <p class="check">Lorem ipsum dolor ist</p>
+            </label>
+          </div>
+        </div>
 
+        <!-- Step 2 -->
+        <div class="step">
+          <div class="step-header active"><span>2</span></div>
+          <p>Zona seçin</p>
+          <div class="step-content">
+            <label>
+              <input type="checkbox" class="checkbox" name="zone" value="Kiçik zal, 20m²" checked>
+              <p class="check"> Kiçik zal, 20m²</p>
+            </label>
+            <label>
+              <input type="checkbox" class="checkbox" name="zone" value="Böyük zal, 40m²">
+              <p class="check">Böyük zal, 40m²</p>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="twoStep">
+        <div class="step">
+          <div class="step-header"><span>3</span></div>
+          <p>Vaxtı seçin</p>
+          <div class="time">
+            <div class="calendar">
+              <img src="/src/assets/image/podcast/calendar.png" alt="err">
+              <h5>Təqvimi aç</h5>
+            </div>
+            <div class="step-contentTime">
+              <div class="start">
+                <label for="start">Başlanğıc:</label>
+                <input type="date" id="start" name="start" placeholder="sdfghj" required>
+              </div>
+              <p>-</p>
+              <div class="end">
+                <label for="end">Son:</label>
+                <input type="date" id="end" name="end" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step fourStep">
+          <div class="step-header"><span>4</span></div>
+          <p>Əlaqə məlumatları</p>
+          <div class="contents">
+            <div class="news">
+              <div class="type">
+                <div class="write">
+                  <img src="/src/assets/image/podcast/calendar.png" alt="err">
+                  <span>Yazı növü:</span>
+                </div>
+                <p class="clock">21/06/24</p>
+              </div>
+              <div class="type">
+                <div class="write">
+                  <img src="/src/assets/image/podcast/clock.png" alt="err">
+                  <span>Ümumi vaxt:</span>
+                </div>
+                <p class="clock">1 saat</p>
+              </div>
+              <div class="type">
+                <div class="write">
+                  <img src="/src/assets/image/podcast/dollar.png" alt="err">
+                  <span>Yekun məbləğ:</span>
+                </div>
+                <p class="clock">21/06/24</p>
+              </div>
+            </div>
+            <div class="connect">
+              <input class="name" type="text" id="name" name="name" placeholder="Ad" required>
+              <input class="name" type="tel" id="phone" name="phone" placeholder=" Telefon                 (__) __ ___ __ __" required>
+              <label>
+                <input type="checkbox" id="terms" name="terms" class="checkbox" required required>
+                <p class="check"> İstifadəçi Razılaşmasının şərtlərini qəbul edirəm</p>
+              </label>
+              <button type="submit" class="btnSubmit"><p>REZERV ET</p></button>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Rezervasiya məlumatları -->
-
-
-      <!-- Rezerv et Button -->
     </div>
   </form>
-
 
 
 
