@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
           card.setAttribute('data-aos', 'fade-up');
           card.innerHTML = `
               <div class="play" data-aos="fade-up">
-                  <img src="${item.img}" alt="err">
+                  <img class='cardImg' src="${item.img}" alt="err">
                   <a href="https://www.youtube.com/">
                       <img class="youtube" src="/src/assets/image/business/youtube.png" alt="err">
                   </a>

@@ -1142,56 +1142,10 @@ nav #show ul li a:hover {
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
 }
 
-.partners {
-  max-width: 100%;
-  width: 100%;
-  padding: 200px 60px 60px 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-}
-.partners .guestWeek {
-  padding: 0px;
-}
-.partners .blog {
-  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 84px;
-  font-weight: 700;
-  line-height: 110px;
-  font-family: sans-serif;
-}
-.partners p {
-  width: 36%;
-  text-align: center;
-  color: rgb(55, 55, 55);
-  opacity: 80%;
-  font-size: 16px;
-}
-.partners h1 {
-  max-width: 870px;
-  width: 100%;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 40px;
-  color: rgb(55, 55, 55);
-  opacity: 80%;
-}
-.partners .item-div {
-  width: 94px;
-  height: 4px;
-  background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
-}
-
 .business {
   max-width: 100%;
   width: 100%;
-  padding: 200px 60px 60px 60px;
+  padding: 170px 60px 60px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1212,7 +1166,7 @@ nav #show ul li a:hover {
   font-family: sans-serif;
 }
 .business p {
-  width: 36%;
+  width: 43%;
   text-align: center;
   color: rgba(55, 55, 55, 0.8);
   font-size: 24px;
@@ -1405,6 +1359,7 @@ nav #show ul li a:hover {
   padding: 24px;
   border-radius: 16px;
   background-color: white;
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   border: none;
   cursor: pointer;
   transition: 0.5s;
@@ -1431,13 +1386,15 @@ nav #show ul li a:hover {
   width: 100%;
   position: relative;
 }
-.filter #businessCards .card .play img {
+.filter #businessCards .card .play .cardImg {
   width: 100%;
   object-fit: cover;
 }
 .filter #businessCards .card .play .youtube {
-  width: 80px;
-  height: 80px;
+  max-width: 49px;
+  width: 100%;
+  max-height: 56px;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1504,7 +1461,7 @@ nav #show ul li a:hover {
   line-height: 38px;
 }
 .filter #blogCards .card .result-item .result-about .read {
-  max-width: 145px;
+  max-width: 164px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -1596,14 +1553,16 @@ nav #show ul li a:hover {
 .guest .guest-main .play {
   position: relative;
 }
-.guest .guest-main .play img {
+.guest .guest-main .play .cardImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 .guest .guest-main .play .youtube {
-  width: 80px;
-  height: 80px;
+  max-width: 78px;
+  width: 100%;
+  max-height: 78px;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2100,7 +2059,6 @@ footer .foot .f-connect .links .terms {
 }
 
 .guestWeek {
-  margin: 70px auto;
   padding: 60px;
 }
 @media (min-width: 324px) and (max-width: 768px) {
@@ -5398,31 +5356,17 @@ footer .foot .f-connect .links .terms {
   .enjoy #threeCards .threeCard .name {
     font-size: 14px;
   }
-  .partners {
-    width: 100%;
-    padding: 150px 20px 60px 20px;
-  }
-  .partners .blog {
-    font-size: 30px;
-    line-height: 60px;
-  }
-  .partners p {
-    width: 100%;
-  }
-  .partners h1 {
-    font-size: 20px;
-    line-height: 29px;
-  }
   .business {
     width: 100%;
-    padding: 150px 20px 60px 20px;
+    padding: 130px 20px 20px 20px;
   }
   .business .blog {
     font-size: 30px;
-    line-height: 60px;
+    line-height: 50px;
   }
   .business p {
     width: 100%;
+    font-size: 14px;
   }
   .business h1 {
     font-size: 20px;
@@ -5434,50 +5378,29 @@ footer .foot .f-connect .links .terms {
     line-height: 33px;
   }
   .guest {
-    max-width: 100%;
-    width: 100%;
-    min-height: 510px;
-    background-image: url("/src/assets/image/home/bgColor.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 20px;
   }
   .guest .guest-main {
     width: 100%;
-    min-height: 345px;
-    background-color: rgb(255, 255, 255);
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    border-radius: 10px;
   }
   .guest .guest-main .main {
     width: 100%;
     padding: 35px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
   }
   .guest .guest-main .main .month {
-    font-size: 16px;
-    font-weight: 600;
-    color: rgb(55, 55, 55);
-    opacity: 80%;
+    font-size: 15px;
   }
   .guest .guest-main .main h4 {
-    color: rgb(19, 19, 19);
-    opacity: 80%;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 52px;
+    font-size: 20px;
+    line-height: 32px;
   }
   .guest .guest-main .main .main-about {
     font-size: 14px;
-    font-weight: 400;
-    color: rgb(55, 55, 55);
-    opacity: 60%;
     line-height: 24px;
   }
   .one {
@@ -5511,6 +5434,7 @@ footer .foot .f-connect .links .terms {
   }
   .twoSlider {
     width: 100%;
+    padding: 20px;
   }
   .twoSlider .twoCard {
     padding: 40px;
@@ -5793,6 +5717,10 @@ footer .foot .f-connect .links .terms {
   .filter {
     width: 100%;
     padding: 20px;
+    gap: 30px;
+  }
+  .filter .sortBusiness {
+    padding-top: 40px;
   }
   .filter .buttons {
     gap: 7px;
@@ -5816,8 +5744,8 @@ footer .foot .f-connect .links .terms {
     font-size: 14px;
   }
   .filter #businessCards .card .play .youtube {
-    width: 60px;
-    height: 60px;
+    width: 90%;
+    height: 90%;
   }
   .filter #pagination ul li {
     width: 40px;
@@ -5856,7 +5784,7 @@ footer .foot .f-connect .links .terms {
     line-height: 25px;
   }
   .filter #blogCards .card .result-item .result-about .read {
-    width: 27%;
+    width: 42%;
   }
   .filter #blogCards .card .result-item .result-about .read span {
     font-size: 14px;
@@ -6098,7 +6026,6 @@ footer .foot .f-connect .links .terms {
     font-size: 14px;
   }
   .services #servicesCards .servicesCard .explore {
-    width: 28%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -6366,28 +6293,18 @@ footer .foot .f-connect .links .terms {
   }
   #catalogueCards .card .result-item .desc .web {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
   }
   #catalogueCards .card .result-item .desc .web .read {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    width: 42%;
   }
   #catalogueCards .card .result-item .desc .web .read span {
-    background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 15px;
-    line-height: 24px;
-    font-weight: 600;
+    font-size: 14px;
   }
   #catalogueCards .card .result-item .desc .web .read img {
-    max-width: 24px;
-    min-height: 24px;
+    max-width: 20px;
+    min-height: 20px;
   }
   #catalogueCards .card:hover {
     box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
@@ -6550,6 +6467,7 @@ footer .foot .f-connect .links .terms {
   }
   #categoryBtn {
     display: flex;
+    margin: 0px auto;
   }
   #categoryBtn button {
     height: 40px;
@@ -7206,7 +7124,6 @@ footer .foot .f-connect .links .terms {
   }
   .twoSlider {
     width: 100%;
-    padding: 20px;
   }
   .twoSlider .twoCard {
     padding: 40px;
@@ -7424,6 +7341,29 @@ footer .foot .f-connect .links .terms {
     width: 100%;
     font-size: 29px;
     line-height: 40px;
+  }
+  .guest .guest-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .guest .guest-main .main {
+    width: 100%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .guest .guest-main .main .month {
+    font-size: 15px;
+  }
+  .guest .guest-main .main h4 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .guest .guest-main .main .main-about {
+    font-size: 14px;
+    line-height: 24px;
   }
   .week .head {
     width: 100%;

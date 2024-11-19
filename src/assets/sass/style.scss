@@ -1465,70 +1465,11 @@ nav {
     }
 }
 
-.partners {
-    max-width: 100%;
-    width: 100%;
-    padding: 200px 60px 60px 60px;
-    // background-color: rgba(255, 255, 255, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-
-
-    .guestWeek {
-        padding: 0px;
-    }
-
-
-    .blog {
-        background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 84px;
-        font-weight: 700;
-        line-height: 110px;
-        font-family: sans-serif;
-    }
-
-    p {
-        width: 36%;
-        text-align: center;
-        color: rgba(55, 55, 55, 1);
-        opacity: 80%;
-        font-size: 16px;
-    }
-
-
-
-    h1 {
-        max-width: 870px;
-        width: 100%;
-        text-align: center;
-        font-size: 32px;
-        font-weight: 800;
-        line-height: 40px;
-        color: rgba(55, 55, 55, 1);
-        opacity: 80%;
-
-    }
-
-    .item-div {
-        width: 94px;
-        height: 4px;
-        background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
-
-    }
-
-
-}
 
 .business {
     max-width: 100%;
     width: 100%;
-    padding: 200px 60px 60px 60px;
+    padding: 170px 60px 60px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1554,7 +1495,7 @@ nav {
 
 
     p {
-        width: 36%;
+        width: 43%;
         text-align: center;
         color: rgba(55, 55, 55, 0.8);
         font-size: 24px;
@@ -1801,6 +1742,8 @@ nav {
             padding: 24px;
             border-radius: 16px;
             background-color: white;
+            box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
+
             border: none;
             cursor: pointer;
             transition: 0.5s;
@@ -1831,14 +1774,16 @@ nav {
                 width: 100%;
                 position: relative;
 
-                img {
+                .cardImg {
                     width: 100%;
                     object-fit: cover;
                 }
 
                 .youtube {
-                    width: 80px;
-                    height: 80px;
+                    max-width: 49px;
+                    width: 100%;
+                    max-height: 56px;
+                    height: 100%;
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -1847,6 +1792,7 @@ nav {
 
                 }
             }
+
 
             &:hover {
                 box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
@@ -1922,7 +1868,7 @@ nav {
                     }
 
                     .read {
-                        max-width: 145px;
+                        max-width: 164px;
                         width: 100%;
                         display: flex;
                         align-items: center;
@@ -2046,15 +1992,18 @@ nav {
         .play {
             position: relative;
 
-            img {
+            .cardImg {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
+            
 
             .youtube {
-                width: 80px;
-                height: 80px;
+                max-width: 78px;
+                width: 100%;
+                max-height: 78px;
+                height: 100%;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -2666,7 +2615,6 @@ footer {
 
 
 .guestWeek {
-    margin: 70px auto;
     padding: 60px;
 
     @media (min-width: 324px) and (max-width: 768px) {
@@ -6836,38 +6784,21 @@ footer {
         }
     }
 
-    .partners {
-        width: 100%;
-        padding: 150px 20px 60px 20px;
-
-
-        .blog {
-            font-size: 30px;
-            line-height: 60px;
-        }
-
-        p {
-            width: 100%;
-        }
-
-        h1 {
-            font-size: 20px;
-            line-height: 29px;
-        }
-    }
+  
 
     .business {
         width: 100%;
-        padding: 150px 20px 60px 20px;
+        padding: 130px 20px 20px 20px;
 
 
         .blog {
             font-size: 30px;
-            line-height: 60px;
+            line-height: 50px;
         }
 
         p {
             width: 100%;
+            font-size: 14px;
         }
 
         h1 {
@@ -6883,24 +6814,13 @@ footer {
     }
 
     .guest {
-        max-width: 100%;
-        width: 100%;
-        min-height: 510px;
-        background-image: url('/src/assets/image/home/bgColor.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
         padding: 20px;
 
         .guest-main {
             width: 100%;
-            min-height: 345px;
-            background-color: rgba(255, 255, 255, 1);
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            border-radius: 10px;
 
 
             .main {
@@ -6908,28 +6828,19 @@ footer {
                 padding: 35px;
                 display: flex;
                 flex-direction: column;
-                gap: 8px;
+                gap: 5px;
 
                 .month {
-                    font-size: 16px;
-                    font-weight: 600;
-                    color: rgba(55, 55, 55, 1);
-                    opacity: 80%;
+                    font-size: 15px;
                 }
 
                 h4 {
-                    color: rgba(19, 19, 19, 1);
-                    opacity: 80%;
-                    font-size: 22px;
-                    font-weight: 700;
-                    line-height: 52px;
+                    font-size: 20px;
+                    line-height: 32px;
                 }
 
                 .main-about {
                     font-size: 14px;
-                    font-weight: 400;
-                    color: rgba(55, 55, 55, 1);
-                    opacity: 60%;
                     line-height: 24px;
                 }
 
@@ -6980,6 +6891,7 @@ footer {
 
     .twoSlider {
         width: 100%;
+        padding: 20px;
 
         .twoCard {
             padding: 40px;
@@ -7374,6 +7286,11 @@ footer {
     .filter {
         width: 100%;
         padding: 20px;
+        gap: 30px;
+
+        .sortBusiness{
+            padding-top: 40px;
+        }
 
         .buttons {
             gap: 7px;
@@ -7408,8 +7325,8 @@ footer {
 
                 .play {
                     .youtube {
-                        width: 60px;
-                        height: 60px;
+                        width: 90%;
+                        height: 90%;
 
                     }
                 }
@@ -7470,7 +7387,7 @@ footer {
                         }
 
                         .read {
-                            width: 27%;
+                            width: 42%;
 
                             span {
                                 font-size: 14px;
@@ -7816,7 +7733,6 @@ footer {
 
 
                 .explore {
-                    width: 28%;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -8186,30 +8102,23 @@ footer {
 
                     .web {
                         display: flex;
-                        align-items: center;
-                        justify-content: space-between;
+                        flex-direction: column;
+                        align-items: start;
 
                         .read {
-                            width: 70%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            gap: 10px;
+                            width: 42%;
+
+
 
                             span {
-                                background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-                                -webkit-background-clip: text;
-                                background-clip: text;
-                                -webkit-text-fill-color: transparent;
-                                font-size: 15px;
-                                line-height: 24px;
-                                font-weight: 600;
+                                font-size: 14px;
+                              
 
                             }
 
                             img {
-                                max-width: 24px;
-                                min-height: 24px;
+                                max-width: 20px;
+                                min-height: 20px;
                             }
                         }
                     }
@@ -8441,6 +8350,7 @@ footer {
 
     #categoryBtn {
         display: flex;
+        margin: 0px auto;
 
         button {
             height: 40px;
@@ -9392,7 +9302,6 @@ footer {
 
     .twoSlider {
         width: 100%;
-        padding: 20px;
 
         .twoCard {
             padding: 40px;
@@ -9738,6 +9647,39 @@ footer {
             width: 100%;
             font-size: 29px;
             line-height: 40px;
+        }
+    }
+
+    .guest {
+        .guest-main {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+
+            .main {
+                width: 100%;
+                padding: 35px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .month {
+                    font-size: 15px;
+                }
+
+                h4 {
+                    font-size: 20px;
+                    line-height: 32px;
+                }
+
+                .main-about {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+
+            }
+
         }
     }
 
