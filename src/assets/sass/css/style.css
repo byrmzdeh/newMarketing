@@ -6749,8 +6749,8 @@ footer .foot .f-connect .links .terms {
     color: rgb(55, 55, 55);
     opacity: 60%;
   }
-  .podcast .main button p {
-    font-size: 15px;
+  .podcast .main button a {
+    font-size: 14px;
   }
   .podcast img {
     position: static;
@@ -7928,8 +7928,11 @@ footer .foot .f-connect .links .terms {
     color: rgb(55, 55, 55);
     opacity: 60%;
   }
-  .podcast .main button p {
-    font-size: 15px;
+  .podcast .main button {
+    width: 51px;
+  }
+  .podcast .main button a {
+    font-size: 14px;
   }
   .podcast img {
     width: 50%;
