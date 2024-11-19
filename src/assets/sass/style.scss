@@ -42,7 +42,7 @@ nav {
     position: absolute;
     top: 0px;
     padding: 30px 60px;
-    z-index: 10;
+    z-index: 20;
 
     .view {
         width: 100%;
@@ -73,7 +73,7 @@ nav {
             align-items: center;
             justify-content: center;
             transition: 0.5s;
-        
+
             p {
                 background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
                 -webkit-background-clip: text;
@@ -83,23 +83,27 @@ nav {
                 font-weight: 600;
                 margin-bottom: 0px;
             }
-        
+
             &:hover {
                 background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-        
+
                 p {
                     font-size: 18px;
                     font-weight: 600;
                     margin-bottom: 0px;
-                    background: none; /* Gradienti deaktiv edir */
-                    color: white !important; /* Ağ rəngə dəyişir */
-                    -webkit-text-fill-color: white; /* Rəngi düzgün tətbiq edir */
-                    -webkit-background-clip: none; /* Background-clip ləğv edilir */
+                    background: none;
+                    /* Gradienti deaktiv edir */
+                    color: white !important;
+                    /* Ağ rəngə dəyişir */
+                    -webkit-text-fill-color: white;
+                    /* Rəngi düzgün tətbiq edir */
+                    // -webkit-background-clip: none;
+                    /* Background-clip ləğv edilir */
 
                 }
             }
         }
-        
+
 
         .hire-usColor {
             max-width: 170px;
@@ -658,7 +662,7 @@ nav {
                 height: 65px;
                 font-size: 24px;
                 font-weight: 600;
-                margin: 1px auto;
+                margin-top: 10px;
                 line-height: 31px;
                 color: rgba(55, 55, 55, 1);
                 opacity: 80%;
@@ -668,12 +672,11 @@ nav {
 
             }
 
-            .item-div {
+            #item-divSearch {
                 width: 94px;
-                height: 4px;
+                height: 3px;
                 background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
-                margin: 1px auto;
-
+                margin: auto;
             }
 
             #results {
@@ -797,7 +800,7 @@ nav {
         position: absolute;
         right: 57px;
         top: 45px;
-        background-color: rgba(255, 255, 255, 0.55);
+        background-color: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(25px);
         border-radius: 25px;
 
@@ -832,7 +835,7 @@ nav {
             gap: 15px;
 
             li {
-                border-bottom: 1px solid rgba(55, 55, 55, 0.3);
+                border-bottom: 3px solid rgba(55, 55, 55, 0.3);
                 display: flex;
                 align-items: center;
                 // padding-bottom: 7px;
@@ -844,18 +847,20 @@ nav {
                     transition: 1s;
                     font-family: 'Inter'; // Başlıqlar üçün Inter
 
+                }
 
-                    &:hover {
+                &:hover {
+                    border-bottom: 3px solid #a55afc;
+
+                    a {
                         background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
                         -webkit-background-clip: text;
                         background-clip: text;
                         -webkit-text-fill-color: transparent;
                         transition: 1s;
-
                     }
 
                 }
-
 
             }
         }
@@ -963,7 +968,7 @@ nav {
 .one {
     max-width: 100%;
     width: 100%;
-    background: url('/src/assets/image/home/header.png') lightgray 0px 0px / 100% 100% no-repeat;
+    background: url("/src/assets/image/home/header.png") lightgray 0px 0px/100% 100% no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 110vh;
@@ -972,6 +977,9 @@ nav {
     padding: 60px;
     display: flex;
     align-items: center;
+    position: relative;
+    /* Bu əlavə edilib */
+    z-index: 10;
 
     .text {
         width: 100%;
@@ -982,28 +990,55 @@ nav {
         .smart {
             font-size: 100px;
             font-weight: 800;
-            color: #353535;
+            color: white;
             -webkit-text-fill-color: initial;
             margin-bottom: -20px;
             font-family: "Inter";
 
         }
 
-        .market {
-            font-size: 100px;
-            font-style: normal;
-            font-weight: 800;
-            line-height: 1.3em;
-            overflow: visible;
-            background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            font-family: "Inter";
+        #animatedText {
+            width: 100%;
+            overflow: hidden;
+            display: inline-block;
+            position: relative;
 
-
-
+            span {
+                font-size: 100px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 1.3em;
+                overflow: visible;
+                background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-family: "Inter";
+                display: inline-block;
+                // animation: slideDown 2s infinite;
+            }
         }
+
+        // @keyframes slideDown {
+        //     0% {
+        //         transform: translateY(-100%);
+        //         /* Yuxarıdan başlaması üçün */
+        //         opacity: 1;
+        //     }
+
+        //     50% {
+        //         transform: translateY(0);
+        //         /* Normal yerində */
+        //         opacity: 1;
+        //     }
+
+        //     100% {
+        //         transform: translateY(0%);
+        //         /* Aşağıya getməsi */
+        //         opacity: 1;
+        //         /* Gizlənməsi */
+        //     }
+        // }
 
         // .discover {
         //     max-width: 234px;
@@ -1083,11 +1118,11 @@ nav {
                 color: #fff;
 
                 button {
-                    color:  #7aafff
+                    color: #7aafff
                 }
 
                 svg path {
-                    fill:   #7aafff
+                    fill: #7aafff
                 }
 
                 &::before {
@@ -1103,14 +1138,14 @@ nav {
                 font-size: 18px;
                 font-weight: 600;
                 line-height: 22px;
-                letter-spacing: 1.3px;
-                color: #212529;
-                text-decoration: inherit;
+                // letter-spacing: 1.3px;
+                color: white;
+                // text-decoration: inherit;
                 background-color: transparent;
             }
 
             svg path {
-                fill: #000
+                fill: white
             }
         }
     }
@@ -1123,154 +1158,156 @@ nav {
 
 
 
-
-
-
-
-
-
-.twoSlider {
+.two {
+    max-width: 100%;
     width: 100%;
-    padding: 60px;
-    background-image: url('/src/assets/image/home/background.png');
+    background-image: url("/src/assets/image/home/background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 
-    .twoCard {
+    .twoSlider {
         width: 100%;
-        max-height: 305px;
-        height: 100%;
-        background-color: rgb(249, 249, 249);
-        transition: 0.5s;
-        border-radius: 24px;
-        padding: 40px;
-        margin-bottom: 65px;
-        cursor: pointer;
+        padding: 60px;
 
-
-        p {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            color: rgba(55, 55, 55, 1);
-            opacity: 60%;
-        }
-
-        .brand {
-            font-size: 24px;
-            font-weight: 600;
-            line-height: 31px;
-            color: rgba(19, 19, 19, 1);
-            opacity: 100%;
-        }
-
-
-
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 120px;
+        .twoCard {
+            max-width: 100%;
             width: 100%;
-            line-height: 25px;
-            padding-top: 25px;
+            max-height: 305px;
+            height: 100%;
+            background-color: rgb(249, 249, 249);
+            transition: 0.5s;
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 65px;
 
-            span {
-                font-size: 18px;
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                color: rgba(55, 55, 55, 1);
+                opacity: 60%;
+            }
+
+            .brand {
+                font-size: 24px;
                 font-weight: 600;
-                margin-bottom: 0px;
+                line-height: 31px;
                 background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
                 -webkit-background-clip: text;
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
+                opacity: 100%;
+            }
+
+
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 120px;
+                width: 100%;
+                line-height: 25px;
+                padding-top: 25px;
+
+                span {
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom: 0px;
+                    background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            &:hover {
+                background-color: white;
+                box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
+                transform: scale(1.02);
+
+            }
+        }
+
+
+
+
+    }
+
+    .counts {
+        width: 100%;
+        min-height: 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 120px;
+        position: relative;
+        padding: 60px;
+
+
+        .one-counts {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: end;
+            gap: 80px;
+
+            h4 {
+                font-size: 48px;
+                font-weight: 700;
+                background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                line-height: 52px;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 600;
+                color: rgba(55, 55, 55, 1);
+                opacity: 80%;
+                line-height: 22px;
+            }
+
+            .top {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+
+                p {
+                    text-align: end;
+                }
+
+            }
+
+            .very {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
 
             }
 
             img {
-                width: 24px;
-                height: 24px;
+                max-width: 420px;
+                width: 100%;
             }
         }
 
-        &:hover {
-            background-color: white;
-            box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
-            transform: scale(1.08);
 
-        }
     }
-
-
-
-
-}
-
-.counts {
-    width: 100%;
-    min-height: 100px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-content: center;
-    gap: 120px;
-    position: relative;
-    padding: 60px;
-    background-image: url('/src/assets/image/home/background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    .one-counts {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: end;
-        gap: 80px;
-
-        h4 {
-            font-size: 48px;
-            font-weight: 700;
-            background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 52px;
-        }
-
-        p {
-            font-size: 18px;
-            font-weight: 600;
-            color: rgba(55, 55, 55, 1);
-            opacity: 80%;
-            line-height: 22px;
-        }
-
-        .top {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-
-            p {
-                text-align: end;
-            }
-
-        }
-
-        .very {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-
-        }
-
-        img {
-            max-width: 420px;
-            width: 100%;
-        }
-    }
-
-
 }
 
 
@@ -1282,16 +1319,23 @@ nav {
     height: 50px;
     background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
     border: none;
-    font-family: 'Manrope', sans-serif;
+    font-family: "Manrope", sans-serif;
     font-weight: bold;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: sticky;
-    top: 250px;
-    left: 100%;
-    z-index: 5;
+    opacity: 0;
+    right: 0px;
+    position: fixed;
+    top: 25%;
+    right: 0;
+    z-index: 15;
+    opacity: 0;
+    /* Başlanğıcda gizlidir */
+    visibility: hidden;
+    /* Görünməz */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 
 
     p {
@@ -1301,6 +1345,11 @@ nav {
         margin-bottom: 0px;
     }
 
+}
+
+.stickyButtonShow {
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -1332,6 +1381,7 @@ nav {
             flex-direction: column;
             align-items: start;
             justify-content: start;
+
 
             h5 {
                 width: 73%;
@@ -1604,7 +1654,7 @@ nav {
 
     }
 
- 
+
 
     .blog {
         background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -1828,7 +1878,7 @@ nav {
     #businessCards {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
         margin: 10px auto;
 
@@ -1858,7 +1908,7 @@ nav {
             }
 
             h1 {
-                font-size: 24px;
+                font-size: 22px;
                 font-weight: 600;
                 // line-height: 30px;
                 color: rgba(19, 19, 19, 1);
@@ -1875,9 +1925,9 @@ nav {
                 }
 
                 .youtube {
-                    max-width: 49px;
+                    max-width: 43px;
                     width: 100%;
-                    max-height: 56px;
+                    max-height: 50px;
                     height: 100%;
                     position: absolute;
                     top: 50%;
@@ -2075,9 +2125,11 @@ nav {
     justify-content: center;
 
     .guest-main {
-        width: 76%;
-        min-height: 345px;
+        width: 60%;
+        min-height: 340px;
+        height: 100%;
         background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         border-radius: 10px;
@@ -2085,6 +2137,7 @@ nav {
         cursor: pointer;
 
         .play {
+            min-height: 300px;
             position: relative;
 
             .cardImg {
@@ -2095,9 +2148,9 @@ nav {
 
 
             .youtube {
-                max-width: 78px;
+                max-width: 50px;
                 width: 100%;
-                max-height: 78px;
+                max-height: 60px;
                 height: 100%;
                 position: absolute;
                 top: 50%;
@@ -2112,10 +2165,9 @@ nav {
             padding: 35px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
 
             .month {
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 600;
                 color: rgba(55, 55, 55, 1);
                 opacity: 80%;
@@ -2124,13 +2176,13 @@ nav {
             h4 {
                 color: rgba(19, 19, 19, 1);
                 opacity: 80%;
-                font-size: 48px;
+                font-size: 40px;
                 font-weight: 700;
                 line-height: 52px;
             }
 
             .main-about {
-                font-size: 16px;
+                font-size: 15px;
                 font-weight: 400;
                 color: rgba(55, 55, 55, 1);
                 opacity: 60%;
@@ -2190,9 +2242,19 @@ nav {
             max-width: 440px;
             width: 100%;
             object-fit: cover;
-            transform: translateY(-54px);
+            transform: translateY(40px);
+            transition: 0.5s;
 
 
+        }
+    }
+
+    &:hover {
+        .plane {
+            img {
+                transform: translateY(-55px);
+
+            }
         }
     }
 }
@@ -2201,9 +2263,6 @@ nav {
     margin-top: 150px;
 }
 
-.take-about {
-    margin-top: 0px;
-}
 
 
 
@@ -2940,7 +2999,10 @@ footer {
             cursor: pointer;
 
             h1 {
-                color: rgba(19, 19, 19, 1);
+                background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 31px;
@@ -3532,6 +3594,7 @@ footer {
 
     .fourSlider {
         width: 58%;
+        padding: 20px;
 
 
 
@@ -3539,7 +3602,7 @@ footer {
             width: 100%;
             max-height: 451px;
             height: 100%;
-            background-color: rgba(255, 255, 255, 1);
+            background-color: rgb(252, 252, 252);
             box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
             transition: 0.5s;
             border-radius: 16px;
@@ -3579,9 +3642,7 @@ footer {
 
             }
 
-            &:hover {
-                box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
-            }
+
 
 
 
@@ -3995,24 +4056,26 @@ footer {
 
 
 #catalogueCategories {
-    max-width: 100%;
-    width: 100%;
-    padding: 60px;
+    max-width: 76%;
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    gap: 25px;
+    gap: 15px;
+    margin: 1px auto;
 
     .catagoryName {
         width: 100%;
-        min-height: 71px;
+        max-height: 48px;
         background-color: rgba(255, 255, 255, 1);
         box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
-
         border-radius: 10px;
         padding: 20px;
         transition: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         a {
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -4020,7 +4083,7 @@ footer {
 
             p {
                 margin-bottom: 0px;
-                font-size: 23px;
+                font-size: 15px;
                 font-weight: 600;
                 line-height: 31px;
                 color: rgba(55, 55, 55, 1);
@@ -6959,9 +7022,13 @@ footer {
                 line-height: 60px;
             }
 
-            .market {
-                font-size: 40px;
+            #animatedText {
+                span {
+                    font-size: 40px;
+                    line-height: 60px;
+                }
             }
+
 
             .discover {
                 max-width: 180px;
@@ -8752,16 +8819,15 @@ footer {
                     }
 
                     .options {
-                        width: 100%;
+                        width: 90%;
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         align-items: center;
                         justify-content: center;
                         margin-top: 40px;
+                        gap: 10px;
 
                         .option {
-                            max-width: 188px;
-                            max-height: 163px;
                             width: 100%;
                             display: flex;
                             flex-direction: column;
@@ -8772,6 +8838,10 @@ footer {
                             padding: 8px;
                             background-color: rgb(249, 249, 249);
                             gap: 10px;
+
+                            span{
+                                font-size: 14px;
+                            }
 
 
 
@@ -8785,8 +8855,6 @@ footer {
                                 transition: all 0.3s ease;
 
                                 img {
-                                    max-width: 100px;
-                                    min-height: 60px;
                                     margin: 1px auto;
                                 }
                             }
@@ -9392,9 +9460,13 @@ footer {
                 line-height: 60px;
             }
 
-            .market {
-                font-size: 65px;
+            #animatedText {
+                span {
+                    font-size: 60px;
+                    line-height: 60px;
+                }
             }
+
 
 
         }
@@ -9700,6 +9772,8 @@ footer {
         }
 
         #businessCards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
 
             .card {
                 h1 {

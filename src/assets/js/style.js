@@ -12,8 +12,34 @@ closeBtn.addEventListener('click', function () {
 
 })
 
+//animation
+const words = ["Marketinq.", "Rəqamsal."]; // Dəyişən sözlər
+let index = 0;
+
+setInterval(() => {
+  const textElement = document.querySelector("#animatedText span");
+  index = (index + 1) % words.length; // Sözləri dövr etməyə imkan verir
+  textElement.textContent = words[index];
+}, 1500); // 2 saniyədən bir dəyişir
+
+//stickyButton
 
 
+
+document.addEventListener("scroll", function () {
+  const one = document.querySelector(".one");
+  const button = document.querySelector(".stickyButton");
+
+  // .one elementinin alt sərhədini tapırıq
+  const oneBottom = one.getBoundingClientRect().bottom;
+
+  // Əgər .one elementinin alt sərhədi ekranın yuxarı hissəsindən keçibsə
+  if (oneBottom < 0) {
+    button.classList.add("stickyButtonShow"); // Görünən vəziyyət
+  } else {
+    button.classList.remove("stickyButtonShow"); // Gizli vəziyyət
+  }
+});
 
 ///search
 const search = document.getElementById('search');
@@ -21,31 +47,36 @@ const searchShow = document.getElementById('search-show');
 const inputClose = document.getElementById('inputClose');
 const searchInput = document.getElementById('search-input');
 const result = document.getElementById('results');
-
 const value = document.getElementById('value');
+const itemDiv=document.getElementById("item-divSearch")
 
-searchInput.addEventListener('input', function () {
-    const inputValue = searchInput.value;
-    value.innerHTML = `Search result for : "${inputValue}"`;
-});
-
-
-
+value.style.display = 'none';
+itemDiv.style.display='none'
 const apiUrl = '/src/data/people.json';
 
+// Axtarış panelini göstər və input sahəsini fokusla
 search.addEventListener('click', function () {
     searchShow.style.display = 'block';
     searchInput.focus();
     result.innerHTML = '<img class="logo" src="/src/assets/image/home/showLogo.png" alt="No results">';
 });
 
+// Axtarış panelini bağla
 inputClose.addEventListener('click', function () {
     searchShow.style.display = 'none';
 });
 
+// Input dəyəri dəyişdikdə işləyən funksionallıq
 searchInput.addEventListener('input', function () {
-    const query = searchInput.value.trim().toLowerCase();
-    if (query) {
+    const inputValue = searchInput.value.trim(); // Input dəyərini oxu
+    if (inputValue) {
+        // Mesajı göstər
+        itemDiv.style.display='block';
+        value.style.display = 'block';
+        value.style.textAlign='center'
+        value.innerHTML = `Search result for : "${inputValue}"`;
+        
+        // Axtarış nəticələrini API-dən gətir
         fetch(apiUrl)
             .then(response => {
                 if (!response.ok) {
@@ -54,8 +85,9 @@ searchInput.addEventListener('input', function () {
                 return response.json();
             })
             .then(data => {
+                // Nəticələri süz
                 const filteredResults = data.filter(item =>
-                    item.name.toLowerCase().includes(query)
+                    item.name.toLowerCase().includes(inputValue.toLowerCase())
                 );
                 displayResults(filteredResults);
             })
@@ -64,15 +96,17 @@ searchInput.addEventListener('input', function () {
                 result.innerHTML = 'Axtarış zamanı xəta baş verdi';
             });
     } else {
+        // Mesajı və nəticələri gizlət
+        itemDiv.style.display='none'
+        value.style.display = 'none';
         result.innerHTML = '<img class="logo" src="/src/assets/image/home/showLogo.png" alt="No results">';
     }
 });
 
+// Nəticələri göstərən funksionallıq
 function displayResults(data) {
-    // Clear previous results
-    result.innerHTML = '';
+    result.innerHTML = ''; // Əvvəlki nəticələri təmizlə
 
-    // Create searchCards container
     const searchCards = document.createElement('div');
     searchCards.classList.add('searchCards');
 
@@ -81,7 +115,7 @@ function displayResults(data) {
         return;
     }
 
-    // Only show the first 3 results
+    // İlk 3 nəticəni göstər
     const limitedResults = data.slice(0, 3);
     let cardContent = '';
 
@@ -92,40 +126,22 @@ function displayResults(data) {
                 <p class='month'>${item.month}</p>
                 <h3 class='name'>${item.name}</h3>
                 <a class='read' href="/src/components/searchDetail/index.html?id=${item.id}">
-                <span>READ MORE</span>
+                    <span>READ MORE</span>
                     <img src="/src/assets/image/result/right.png" alt="">
                 </a>
             </div>
         `;
     });
 
-    searchCards.innerHTML = cardContent; // Add card content to cardContainer
-    result.appendChild(searchCards); // Append searchCards to results
+    searchCards.innerHTML = cardContent; // Kart məzmununu əlavə et
+    result.appendChild(searchCards); // Nəticələri göstər
 
-    // // Add click event to each result item
-    // const resultItems = document.querySelectorAll('.result-item');
-    // resultItems.forEach(item => {
-    //     item.addEventListener('click', () => {
-    //         const id = item.getAttribute('data-id');
-    //         window.location.href = `/src/pages/detail/index.html?id=${id}`;
-    //     });
-    // });
-
-    // Add click event only to the "Read more" link
-    const readMoreLinks = document.querySelectorAll('.read');
-    readMoreLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            // Prevents the click on the link from bubbling up to the card's event
-            event.stopPropagation();
-        });
-    });
-
-    // Check if there are more than 3 results and add "See All" button
+    // "See All" düyməsini əlavə et, əgər 3-dən çox nəticə varsa
     if (data.length > 3) {
         const seeAllButton = document.createElement('button');
         seeAllButton.textContent = 'SEE MORE';
         seeAllButton.id = 'see-all';
-        result.appendChild(seeAllButton); // Add button to results
+        result.appendChild(seeAllButton);
 
         seeAllButton.addEventListener('click', () => {
             window.location.href = '/src/pages/result/index.html';

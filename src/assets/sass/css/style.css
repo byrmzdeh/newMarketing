@@ -33,7 +33,7 @@ nav {
   position: absolute;
   top: 0px;
   padding: 30px 60px;
-  z-index: 10;
+  z-index: 20;
 }
 nav .view {
   width: 100%;
@@ -80,10 +80,13 @@ nav .view .hire-us:hover p {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0px;
-  background: none; /* Gradienti deaktiv edir */
-  color: white !important; /* Ağ rəngə dəyişir */
-  -webkit-text-fill-color: white; /* Rəngi düzgün tətbiq edir */
-  -webkit-background-clip: none; /* Background-clip ləğv edilir */
+  background: none;
+  /* Gradienti deaktiv edir */
+  color: white !important;
+  /* Ağ rəngə dəyişir */
+  -webkit-text-fill-color: white;
+  /* Rəngi düzgün tətbiq edir */
+  /* Background-clip ləğv edilir */
 }
 nav .view .hire-usColor {
   max-width: 170px;
@@ -515,7 +518,7 @@ nav .view #search-show #value {
   height: 65px;
   font-size: 24px;
   font-weight: 600;
-  margin: 1px auto;
+  margin-top: 10px;
   line-height: 31px;
   color: rgb(55, 55, 55);
   opacity: 80%;
@@ -523,11 +526,11 @@ nav .view #search-show #value {
   align-items: center;
   justify-content: center;
 }
-nav .view #search-show .item-div {
+nav .view #search-show #item-divSearch {
   width: 94px;
-  height: 4px;
+  height: 3px;
   background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
-  margin: 1px auto;
+  margin: auto;
 }
 nav .view #search-show #results {
   width: 100%;
@@ -624,7 +627,7 @@ nav #show {
   position: absolute;
   right: 57px;
   top: 45px;
-  background-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(25px);
   border-radius: 25px;
 }
@@ -654,7 +657,7 @@ nav #show ul {
   gap: 15px;
 }
 nav #show ul li {
-  border-bottom: 1px solid rgba(55, 55, 55, 0.3);
+  border-bottom: 3px solid rgba(55, 55, 55, 0.3);
   display: flex;
   align-items: center;
 }
@@ -665,7 +668,10 @@ nav #show ul li a {
   transition: 1s;
   font-family: "Inter";
 }
-nav #show ul li a:hover {
+nav #show ul li:hover {
+  border-bottom: 3px solid #a55afc;
+}
+nav #show ul li:hover a {
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
   -webkit-background-clip: text;
   background-clip: text;
@@ -762,6 +768,9 @@ nav #show ul li a:hover {
   padding: 60px;
   display: flex;
   align-items: center;
+  position: relative;
+  /* Bu əlavə edilib */
+  z-index: 10;
 }
 .one .text {
   width: 100%;
@@ -772,12 +781,18 @@ nav #show ul li a:hover {
 .one .text .smart {
   font-size: 100px;
   font-weight: 800;
-  color: #353535;
+  color: white;
   -webkit-text-fill-color: initial;
   margin-bottom: -20px;
   font-family: "Inter";
 }
-.one .text .market {
+.one .text #animatedText {
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+.one .text #animatedText span {
   font-size: 100px;
   font-style: normal;
   font-weight: 800;
@@ -788,6 +803,7 @@ nav #show ul li a:hover {
   background-clip: text;
   color: transparent;
   font-family: "Inter";
+  display: inline-block;
 }
 .one .text .discover {
   display: flex;
@@ -848,23 +864,28 @@ nav #show ul li a:hover {
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
-  letter-spacing: 1.3px;
-  color: #212529;
-  text-decoration: inherit;
+  color: white;
   background-color: transparent;
 }
 .one .text .discover svg path {
-  fill: #000;
+  fill: white;
 }
 
-.twoSlider {
+.two {
+  max-width: 100%;
   width: 100%;
-  padding: 60px;
   background-image: url("/src/assets/image/home/background.png");
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
-.twoSlider .twoCard {
+.two .twoSlider {
+  width: 100%;
+  padding: 60px;
+}
+.two .twoSlider .twoCard {
+  max-width: 100%;
   width: 100%;
   max-height: 305px;
   height: 100%;
@@ -873,23 +894,25 @@ nav #show ul li a:hover {
   border-radius: 24px;
   padding: 40px;
   margin-bottom: 65px;
-  cursor: pointer;
 }
-.twoSlider .twoCard p {
+.two .twoSlider .twoCard p {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: rgb(55, 55, 55);
   opacity: 60%;
 }
-.twoSlider .twoCard .brand {
+.two .twoSlider .twoCard .brand {
   font-size: 24px;
   font-weight: 600;
   line-height: 31px;
-  color: rgb(19, 19, 19);
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 100%;
 }
-.twoSlider .twoCard a {
+.two .twoSlider .twoCard a {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -898,7 +921,7 @@ nav #show ul li a:hover {
   line-height: 25px;
   padding-top: 25px;
 }
-.twoSlider .twoCard a span {
+.two .twoSlider .twoCard a span {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0px;
@@ -907,17 +930,16 @@ nav #show ul li a:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.twoSlider .twoCard a img {
+.two .twoSlider .twoCard a img {
   width: 24px;
   height: 24px;
 }
-.twoSlider .twoCard:hover {
+.two .twoSlider .twoCard:hover {
   background-color: white;
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
-  transform: scale(1.08);
+  transform: scale(1.02);
 }
-
-.counts {
+.two .counts {
   width: 100%;
   min-height: 100px;
   display: grid;
@@ -927,18 +949,15 @@ nav #show ul li a:hover {
   gap: 120px;
   position: relative;
   padding: 60px;
-  background-image: url("/src/assets/image/home/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-.counts .one-counts {
+.two .counts .one-counts {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: end;
   gap: 80px;
 }
-.counts .one-counts h4 {
+.two .counts .one-counts h4 {
   font-size: 48px;
   font-weight: 700;
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -947,29 +966,29 @@ nav #show ul li a:hover {
   -webkit-text-fill-color: transparent;
   line-height: 52px;
 }
-.counts .one-counts p {
+.two .counts .one-counts p {
   font-size: 18px;
   font-weight: 600;
   color: rgb(55, 55, 55);
   opacity: 80%;
   line-height: 22px;
 }
-.counts .one-counts .top {
+.two .counts .one-counts .top {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: end;
 }
-.counts .one-counts .top p {
+.two .counts .one-counts .top p {
   text-align: end;
 }
-.counts .one-counts .very {
+.two .counts .one-counts .very {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
 }
-.counts .one-counts img {
+.two .counts .one-counts img {
   max-width: 420px;
   width: 100%;
 }
@@ -986,16 +1005,28 @@ nav #show ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
-  top: 250px;
-  left: 100%;
-  z-index: 5;
+  opacity: 0;
+  right: 0px;
+  position: fixed;
+  top: 25%;
+  right: 0;
+  z-index: 15;
+  opacity: 0;
+  /* Başlanğıcda gizlidir */
+  visibility: hidden;
+  /* Görünməz */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .stickyButton p {
   color: white !important;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0px;
+}
+
+.stickyButtonShow {
+  opacity: 1;
+  visibility: visible;
 }
 
 .six {
@@ -1401,7 +1432,7 @@ nav #show ul li a:hover {
 .filter #businessCards {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin: 10px auto;
 }
@@ -1428,7 +1459,7 @@ nav #show ul li a:hover {
   opacity: 80%;
 }
 .filter #businessCards .card h1 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   color: rgb(19, 19, 19);
   opacity: 80%;
@@ -1442,9 +1473,9 @@ nav #show ul li a:hover {
   object-fit: cover;
 }
 .filter #businessCards .card .play .youtube {
-  max-width: 49px;
+  max-width: 43px;
   width: 100%;
-  max-height: 56px;
+  max-height: 50px;
   height: 100%;
   position: absolute;
   top: 50%;
@@ -1592,9 +1623,11 @@ nav #show ul li a:hover {
   justify-content: center;
 }
 .guest .guest-main {
-  width: 76%;
-  min-height: 345px;
+  width: 60%;
+  min-height: 340px;
+  height: 100%;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-radius: 10px;
@@ -1602,6 +1635,7 @@ nav #show ul li a:hover {
   cursor: pointer;
 }
 .guest .guest-main .play {
+  min-height: 300px;
   position: relative;
 }
 .guest .guest-main .play .cardImg {
@@ -1610,9 +1644,9 @@ nav #show ul li a:hover {
   object-fit: cover;
 }
 .guest .guest-main .play .youtube {
-  max-width: 78px;
+  max-width: 50px;
   width: 100%;
-  max-height: 78px;
+  max-height: 60px;
   height: 100%;
   position: absolute;
   top: 50%;
@@ -1624,10 +1658,9 @@ nav #show ul li a:hover {
   padding: 35px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 .guest .guest-main .main .month {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: rgb(55, 55, 55);
   opacity: 80%;
@@ -1635,12 +1668,12 @@ nav #show ul li a:hover {
 .guest .guest-main .main h4 {
   color: rgb(19, 19, 19);
   opacity: 80%;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 52px;
 }
 .guest .guest-main .main .main-about {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: rgb(55, 55, 55);
   opacity: 60%;
@@ -1687,15 +1720,15 @@ nav #show ul li a:hover {
   max-width: 440px;
   width: 100%;
   object-fit: cover;
-  transform: translateY(-54px);
+  transform: translateY(40px);
+  transition: 0.5s;
+}
+.take:hover .plane img {
+  transform: translateY(-55px);
 }
 
 .take-Home {
   margin-top: 150px;
-}
-
-.take-about {
-  margin-top: 0px;
 }
 
 .setting {
@@ -2305,7 +2338,10 @@ footer .foot .f-connect .links .terms {
   cursor: pointer;
 }
 .services #servicesCards .servicesCard h1 {
-  color: rgb(19, 19, 19);
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 24px;
   font-weight: 600;
   line-height: 31px;
@@ -2765,12 +2801,13 @@ footer .foot .f-connect .links .terms {
 }
 .four .fourSlider {
   width: 58%;
+  padding: 20px;
 }
 .four .fourSlider .fourCard {
   width: 100%;
   max-height: 451px;
   height: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(252, 252, 252);
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   transition: 0.5s;
   border-radius: 16px;
@@ -2799,9 +2836,6 @@ footer .foot .f-connect .links .terms {
   font-weight: 600;
   color: rgb(19, 19, 19);
   opacity: 80%;
-}
-.four .fourSlider .fourCard:hover {
-  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
 }
 
 .innovation {
@@ -3122,23 +3156,26 @@ footer .foot .f-connect .links .terms {
 }
 
 #catalogueCategories {
-  max-width: 100%;
-  width: 100%;
-  padding: 60px;
+  max-width: 76%;
   display: grid;
   grid-template-columns: repeat(2, 2fr);
-  gap: 25px;
+  gap: 15px;
+  margin: 1px auto;
 }
 #catalogueCategories .catagoryName {
   width: 100%;
-  min-height: 71px;
+  max-height: 48px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   border-radius: 10px;
   padding: 20px;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #catalogueCategories .catagoryName a {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3146,7 +3183,7 @@ footer .foot .f-connect .links .terms {
 }
 #catalogueCategories .catagoryName a p {
   margin-bottom: 0px;
-  font-size: 23px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 31px;
   color: rgb(55, 55, 55);
@@ -5467,8 +5504,9 @@ footer .foot .f-connect .links .terms {
     font-size: 40px;
     line-height: 60px;
   }
-  .one .text .market {
+  .one .text #animatedText span {
     font-size: 40px;
+    line-height: 60px;
   }
   .one .text .discover {
     max-width: 180px;
@@ -6726,16 +6764,15 @@ footer .foot .f-connect .links .terms {
     font-size: 13px;
   }
   #brandingPage form .purpose .head .options {
-    width: 100%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     margin-top: 40px;
+    gap: 10px;
   }
   #brandingPage form .purpose .head .options .option {
-    max-width: 188px;
-    max-height: 163px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6747,6 +6784,9 @@ footer .foot .f-connect .links .terms {
     background-color: rgb(249, 249, 249);
     gap: 10px;
   }
+  #brandingPage form .purpose .head .options .option span {
+    font-size: 14px;
+  }
   #brandingPage form .purpose .head .options .option .word {
     display: flex;
     flex-direction: column;
@@ -6757,8 +6797,6 @@ footer .foot .f-connect .links .terms {
     transition: all 0.3s ease;
   }
   #brandingPage form .purpose .head .options .option .word img {
-    max-width: 100px;
-    min-height: 60px;
     margin: 1px auto;
   }
   #brandingPage form .contact .main img {
@@ -7173,8 +7211,9 @@ footer .foot .f-connect .links .terms {
     font-size: 65px;
     line-height: 60px;
   }
-  .one .text .market {
-    font-size: 65px;
+  .one .text #animatedText span {
+    font-size: 60px;
+    line-height: 60px;
   }
   .twoSlider {
     width: 100%;
@@ -7371,6 +7410,10 @@ footer .foot .f-connect .links .terms {
   .filter .buttons button span {
     font-size: 13px;
     padding: 5px 15px;
+  }
+  .filter #businessCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .filter #businessCards .card h1 {
     font-size: 15px;
