@@ -832,10 +832,10 @@ nav #show ul li a:hover {
   color: #fff;
 }
 .one .text .discover:hover button {
-  color: #6198eb;
+  color: #7aafff;
 }
 .one .text .discover:hover svg path {
-  fill: #6198eb;
+  fill: #7aafff;
 }
 .one .text .discover:hover::before {
   width: 100%;
@@ -1216,16 +1216,6 @@ nav #show ul li a:hover {
 .business .guestWeek {
   padding: 0px;
 }
-.business .blog {
-  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 84px;
-  font-weight: 700;
-  line-height: 110px;
-  font-family: sans-serif;
-}
 .business p {
   width: 43%;
   text-align: center;
@@ -1237,15 +1227,15 @@ nav #show ul li a:hover {
   height: 4px;
   background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
 }
-.business h1 {
-  max-width: 870px;
-  width: 100%;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 42px;
-  color: rgb(55, 55, 55);
-  opacity: 80%;
+.business .blog {
+  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 84px;
+  font-weight: 700;
+  line-height: 110px;
+  font-family: sans-serif;
 }
 .business h4 {
   font-size: 48px;
