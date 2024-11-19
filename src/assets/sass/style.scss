@@ -1166,10 +1166,11 @@ nav {
     background-size: cover;
     display: flex;
     flex-direction: column;
+    padding: 60px;
+
 
     .twoSlider {
         width: 100%;
-        padding: 60px;
 
         .twoCard {
             max-width: 100%;
@@ -1252,7 +1253,6 @@ nav {
         justify-content: center;
         gap: 120px;
         position: relative;
-        padding: 60px;
 
 
         .one-counts {
@@ -7061,6 +7061,7 @@ footer {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    padding: 20px;
     .twoSlider {
         width: 100%;
 

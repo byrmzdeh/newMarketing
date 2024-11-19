@@ -879,10 +879,10 @@ nav #show ul li:hover a {
   background-size: cover;
   display: flex;
   flex-direction: column;
+  padding: 60px;
 }
 .two .twoSlider {
   width: 100%;
-  padding: 60px;
 }
 .two .twoSlider .twoCard {
   max-width: 100%;
@@ -948,7 +948,6 @@ nav #show ul li:hover a {
   justify-content: center;
   gap: 120px;
   position: relative;
-  padding: 60px;
 }
 .two .counts .one-counts {
   display: flex;
@@ -5529,6 +5528,7 @@ footer .foot .f-connect .links .terms {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    padding: 20px;
   }
   .two .twoSlider {
     width: 100%;
