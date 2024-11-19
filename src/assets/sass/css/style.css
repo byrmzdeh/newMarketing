@@ -832,10 +832,10 @@ nav #show ul li a:hover {
   color: #fff;
 }
 .one .text .discover:hover button {
-  color: #0d6efd;
+  color: #6198eb;
 }
 .one .text .discover:hover svg path {
-  fill: #0d6efd;
+  fill: #6198eb;
 }
 .one .text .discover:hover::before {
   width: 100%;
@@ -845,7 +845,7 @@ nav #show ul li a:hover {
   border: none;
   text-align: center;
   font-family: cera pro, Sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 22px;
   letter-spacing: 1.3px;
