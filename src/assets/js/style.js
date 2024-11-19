@@ -203,7 +203,7 @@ fetch('/src/data/business.json')
           <swiper-slide >
         <div class="swiperCard" >
           <div class="play" >
-            <img src="/src/assets/image/business/card.png" alt="err">
+            <img class='cardImg' src="/src/assets/image/business/card.png" alt="err">
             <a href="https://www.youtube.com/"> <img class="youtube" src="/src/assets/image/business/youtube.png"
                 alt="err"></a>
           </div>

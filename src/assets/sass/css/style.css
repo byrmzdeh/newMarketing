@@ -2675,7 +2675,7 @@ footer .foot .f-connect .links .terms {
   width: 100%;
   position: relative;
 }
-.three swiper-container swiper-slide .swiperCard .play img {
+.three swiper-container swiper-slide .swiperCard .play .cardImg {
   width: 100%;
   object-fit: cover;
 }
@@ -5515,7 +5515,7 @@ footer .foot .f-connect .links .terms {
     font-size: 18px;
   }
   .twoSlider .twoCard a {
-    padding-top: 15px;
+    padding-top: 10px;
   }
   .twoSlider .twoCard a span {
     font-size: 14px;
@@ -5990,7 +5990,6 @@ footer .foot .f-connect .links .terms {
     font-size: 28px;
   }
   .three .write a {
-    width: 26%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -5999,8 +5998,8 @@ footer .foot .f-connect .links .terms {
     font-size: 14px;
   }
   .three .write a img {
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
   }
   .three swiper-container {
     width: 100%;

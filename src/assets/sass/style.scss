@@ -3379,7 +3379,7 @@ footer {
                     width: 100%;
                     position: relative;
 
-                    img {
+                    .cardImg {
                         width: 100%;
                         object-fit: cover;
                     }
@@ -6986,7 +6986,7 @@ footer {
     
     
             a {
-                padding-top: 15px;
+                padding-top: 10px;
 
     
                 span {
@@ -7656,7 +7656,6 @@ footer {
             }
 
             a {
-                width: 26%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -7666,8 +7665,8 @@ footer {
                 }
 
                 img {
-                    width: 19px;
-                    height: 19px;
+                    width: 20px;
+                    height: 20px;
                 }
 
             }
