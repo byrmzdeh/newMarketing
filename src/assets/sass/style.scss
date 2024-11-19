@@ -659,7 +659,7 @@ nav {
 
             #value {
                 width: auto;
-                height: 65px;
+                height: 55px;
                 font-size: 24px;
                 font-weight: 600;
                 margin-top: 10px;
@@ -800,7 +800,7 @@ nav {
         position: absolute;
         right: 57px;
         top: 45px;
-        background-color: rgba(255, 255, 255, 0.15);
+        background-color: rgba(255, 255, 255, 0.28);
         backdrop-filter: blur(25px);
         border-radius: 25px;
 
@@ -835,7 +835,7 @@ nav {
             gap: 15px;
 
             li {
-                border-bottom: 3px solid rgba(55, 55, 55, 0.3);
+                border-bottom: 1px solid rgba(55, 55, 55, 0.1);
                 display: flex;
                 align-items: center;
                 // padding-bottom: 7px;
@@ -850,7 +850,7 @@ nav {
                 }
 
                 &:hover {
-                    border-bottom: 3px solid #a55afc;
+                    border-bottom: 1px solid #8c36ed;
 
                     a {
                         background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -6577,6 +6577,10 @@ footer {
 
                 }
 
+                #value{
+                    font-size: 16px;
+                }
+
                 #results {
                     .searchCards {
                         width: 100%;
@@ -7052,9 +7056,13 @@ footer {
     }
 
 
+.two{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     .twoSlider {
         width: 100%;
-        padding: 20px;
 
         .twoCard {
             padding: 40px;
@@ -7097,7 +7105,6 @@ footer {
 
     .counts {
         width: 100%;
-        padding: 20px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         align-items: center;
@@ -7137,6 +7144,7 @@ footer {
             }
         }
     }
+}
 
     .stickyButton {
         width: 25%;
@@ -8819,25 +8827,14 @@ footer {
                     }
 
                     .options {
-                        width: 90%;
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         align-items: center;
                         justify-content: center;
-                        margin-top: 40px;
                         gap: 10px;
 
                         .option {
-                            width: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: start;
-                            justify-content: center;
-                            border: 1px solid rgba(174, 105, 255, 1);
-                            border-radius: 5px;
-                            padding: 8px;
-                            background-color: rgb(249, 249, 249);
-                            gap: 10px;
+                   
 
                             span{
                                 font-size: 14px;
@@ -8846,13 +8843,7 @@ footer {
 
 
                             .word {
-                                display: flex;
-                                flex-direction: column;
-                                cursor: pointer;
-                                border: 2px solid transparent;
-                                padding: 10px;
-                                border-radius: 8px;
-                                transition: all 0.3s ease;
+                         
 
                                 img {
                                     margin: 1px auto;
@@ -9472,6 +9463,10 @@ footer {
         }
     }
 
+.two{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     .twoSlider {
         width: 100%;
 
@@ -9511,9 +9506,6 @@ footer {
 
 
     }
-
-
-
 
 
     .counts {
@@ -9557,6 +9549,7 @@ footer {
         }
     }
 
+}
 
     .three {
 

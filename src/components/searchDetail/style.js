@@ -18,14 +18,16 @@ const searchShow = document.getElementById('search-show');
 const inputClose = document.getElementById('inputClose');
 const searchInput = document.getElementById('search-input');
 const result = document.getElementById('results');
-
 const value = document.getElementById('value');
+const itemDiv=document.getElementById("item-divSearch")
+value.style.display = 'none';
+itemDiv.style.display='none'
 
-searchInput.addEventListener('input', function () {
-    const inputValue = searchInput.value;
-    value.innerHTML = `Search result for : "${inputValue}"`;
+
+
+inputClose.addEventListener('click', function () {
+    searchShow.style.display = 'none';
 });
-
 
 search.addEventListener('click', function () {
     searchShow.style.display = 'block';
@@ -33,13 +35,16 @@ search.addEventListener('click', function () {
     result.innerHTML = '<img class="logo" src="/src/assets/image/home/showLogo.png" alt="No results">';
 });
 
-inputClose.addEventListener('click', function () {
-    searchShow.style.display = 'none';
-});
-
 searchInput.addEventListener('input', function () {
-    const query = searchInput.value.trim().toLowerCase();
-    if (query) {
+    const inputValue = searchInput.value.trim(); // Input dəyərini oxu
+    if (inputValue) {
+        // Mesajı göstər
+        itemDiv.style.display='block';
+        value.style.display = 'block';
+        value.style.textAlign='center'
+        value.innerHTML = `Search result for : "${inputValue}"`;
+        
+        // Axtarış nəticələrini API-dən gətir
         fetch(apiUrl)
             .then(response => {
                 if (!response.ok) {
@@ -48,8 +53,9 @@ searchInput.addEventListener('input', function () {
                 return response.json();
             })
             .then(data => {
+                // Nəticələri süz
                 const filteredResults = data.filter(item =>
-                    item.name.toLowerCase().includes(query)
+                    item.name.toLowerCase().includes(inputValue.toLowerCase())
                 );
                 displayResults(filteredResults);
             })
@@ -58,6 +64,9 @@ searchInput.addEventListener('input', function () {
                 result.innerHTML = 'Axtarış zamanı xəta baş verdi';
             });
     } else {
+        // Mesajı və nəticələri gizlət
+        itemDiv.style.display='none'
+        value.style.display = 'none';
         result.innerHTML = '<img class="logo" src="/src/assets/image/home/showLogo.png" alt="No results">';
     }
 });
