@@ -12,6 +12,9 @@ closeBtn.addEventListener('click', function () {
 
 })
 
+
+
+
 ///search
 const search = document.getElementById('search');
 const searchShow = document.getElementById('search-show');

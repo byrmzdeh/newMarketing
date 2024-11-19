@@ -17,7 +17,7 @@
 
 body {
   font-family: "Manrope", sans-serif;
-  background-color: rgb(249, 249, 249);
+  background-color: white;
 }
 
 nav {
@@ -103,6 +103,7 @@ nav .view .modal {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
+  z-index: 20;
 }
 nav .view .modal .modal-content {
   background-color: white;
@@ -118,6 +119,7 @@ nav .view .modal .modal-content {
   flex-direction: column;
   gap: 10px;
   border: none;
+  z-index: 20;
 }
 nav .view .modal .modal-content h2 {
   margin: 0px auto;
@@ -395,6 +397,7 @@ nav .view .search-menu #search {
   border-radius: 50%;
   border: none;
   background-color: white;
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -410,6 +413,7 @@ nav .view .search-menu #menu {
   border-radius: 50%;
   border: none;
   background-color: white;
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -423,7 +427,7 @@ nav .view #search-show {
   width: 100%;
   min-height: 950px;
   padding: 30px 60px;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(249, 249, 249);
   position: absolute;
   top: 0px;
   left: 0px;
@@ -443,6 +447,7 @@ nav .view #search-show .axtar #inputClose {
   border-radius: 50%;
   border: none;
   background-color: white;
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
 }
 nav .view #search-show .axtar #inputClose img {
   width: 15px;
@@ -455,6 +460,7 @@ nav .view #search-show .axtar .search-img {
   border-radius: 50%;
   border: none;
   background-color: white;
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -790,53 +796,48 @@ nav #show ul li a:hover {
   object-fit: cover;
 }
 
-.two {
-  max-width: 100%;
+.twoSlider {
   width: 100%;
+  padding: 60px;
   background-image: url("/src/assets/image/home/background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 110px;
-  position: relative;
 }
-.two .twoSlider .twoCard {
-  max-width: 500px;
+.twoSlider .twoCard {
   width: 100%;
   max-height: 305px;
   height: 100%;
-  background-color: rgb(247, 247, 247);
-  margin: 10px;
+  background-color: rgb(249, 249, 249);
   transition: 0.5s;
   border-radius: 24px;
   padding: 40px;
   margin-bottom: 65px;
   cursor: pointer;
 }
-.two .twoSlider .twoCard .brand {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 32px;
-  color: rgb(145, 79, 224);
-}
-.two .twoSlider .twoCard p {
+.twoSlider .twoCard p {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: rgb(55, 55, 55);
   opacity: 60%;
 }
-.two .twoSlider .twoCard a {
+.twoSlider .twoCard .brand {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31px;
+  color: rgb(19, 19, 19);
+  opacity: 100%;
+}
+.twoSlider .twoCard a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 30%;
+  max-width: 120px;
+  width: 100%;
   line-height: 25px;
   padding-top: 25px;
 }
-.two .twoSlider .twoCard a span {
+.twoSlider .twoCard a span {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0px;
@@ -845,12 +846,17 @@ nav #show ul li a:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.two .twoSlider .twoCard:hover {
+.twoSlider .twoCard a img {
+  width: 24px;
+  height: 24px;
+}
+.twoSlider .twoCard:hover {
   background-color: white;
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   transform: scale(1.08);
 }
-.two .counts {
+
+.counts {
   width: 100%;
   min-height: 100px;
   display: grid;
@@ -859,15 +865,19 @@ nav #show ul li a:hover {
   justify-content: center;
   gap: 120px;
   position: relative;
+  padding: 60px;
+  background-image: url("/src/assets/image/home/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.two .counts .one-counts {
+.counts .one-counts {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: end;
   gap: 80px;
 }
-.two .counts .one-counts h4 {
+.counts .one-counts h4 {
   font-size: 48px;
   font-weight: 700;
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -876,33 +886,34 @@ nav #show ul li a:hover {
   -webkit-text-fill-color: transparent;
   line-height: 52px;
 }
-.two .counts .one-counts p {
+.counts .one-counts p {
   font-size: 18px;
   font-weight: 600;
   color: rgb(55, 55, 55);
   opacity: 80%;
   line-height: 22px;
 }
-.two .counts .one-counts .top {
+.counts .one-counts .top {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: end;
 }
-.two .counts .one-counts .top p {
+.counts .one-counts .top p {
   text-align: end;
 }
-.two .counts .one-counts .very {
+.counts .one-counts .very {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
 }
-.two .counts .one-counts img {
+.counts .one-counts img {
   max-width: 420px;
   width: 100%;
 }
-.two .hire-usColor {
+
+.stickyButton {
   max-width: 170px;
   width: 100%;
   height: 50px;
@@ -914,13 +925,12 @@ nav #show ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 50%;
-  right: 0px;
-  transform: translate(-50%, -50%);
+  position: sticky;
+  top: 250px;
+  left: 100%;
   z-index: 5;
 }
-.two .hire-usColor p {
+.stickyButton p {
   color: white !important;
   font-size: 18px;
   font-weight: 600;
@@ -1045,15 +1055,16 @@ nav #show ul li a:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#detailSearch .enjoy {
+
+.enjoy {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 70px auto;
+  padding: 60px 60px 0px 60px;
 }
-#detailSearch .enjoy h4 {
+.enjoy h4 {
   font-size: 48px;
   font-weight: 700;
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -1061,7 +1072,7 @@ nav #show ul li a:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#detailSearch .enjoy #threeCards {
+.enjoy #threeCards {
   width: 100%;
   display: grid;
   align-items: center;
@@ -1069,22 +1080,22 @@ nav #show ul li a:hover {
   margin: 50px auto;
   gap: 30px;
 }
-#detailSearch .enjoy #threeCards .threeCard {
+.enjoy #threeCards .threeCard {
   width: 100%;
-  height: 100%;
+  min-height: 521px;
   margin: 10px auto;
   display: flex;
   flex-direction: column;
   align-items: start;
-  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   background-color: white;
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   border: none;
   gap: 10px;
   padding: 30px;
   transition: 0.5s;
   cursor: pointer;
 }
-#detailSearch .enjoy #threeCards .threeCard .month {
+.enjoy #threeCards .threeCard .month {
   font-size: 16px;
   font-weight: 400;
   font-size: 16px;
@@ -1092,21 +1103,22 @@ nav #show ul li a:hover {
   color: rgb(55, 55, 55);
   opacity: 60%;
 }
-#detailSearch .enjoy #threeCards .threeCard .name {
+.enjoy #threeCards .threeCard .name {
   font-size: 18px;
   font-weight: 600;
   color: rgb(55, 55, 55);
   opacity: 80%;
   line-height: 21.6px;
 }
-#detailSearch .enjoy #threeCards .threeCard .read {
+.enjoy #threeCards .threeCard .read {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 45%;
+  max-width: 155px;
+  width: 100%;
   line-height: 25px;
 }
-#detailSearch .enjoy #threeCards .threeCard .read span {
+.enjoy #threeCards .threeCard .read span {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0px;
@@ -1115,18 +1127,18 @@ nav #show ul li a:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#detailSearch .enjoy #threeCards .threeCard .read img {
+.enjoy #threeCards .threeCard .read img {
   width: 24px;
   height: 24px;
   object-fit: cover;
 }
-#detailSearch .enjoy #threeCards .threeCard .image {
+.enjoy #threeCards .threeCard .image {
   width: 100%;
-  max-height: 285px;
+  min-height: 285px;
   height: 100%;
   padding-bottom: 5px;
 }
-#detailSearch .enjoy #threeCards .threeCard:hover {
+.enjoy #threeCards .threeCard:hover {
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
 }
 
@@ -1305,6 +1317,7 @@ nav #show ul li a:hover {
   width: 50px;
   height: 50px;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1450,6 +1463,7 @@ nav #show ul li a:hover {
   padding: 30px;
   border-radius: 16px;
   background-color: white;
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   border: none;
   display: flex;
   transition: 0.5s;
@@ -1533,6 +1547,7 @@ nav #show ul li a:hover {
   border: none;
   gap: 5px;
   background-color: white;
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   transition: 0.5s;
 }
 .filter #portfolioCards .card .portfolioCard .cardImg {
@@ -1705,7 +1720,7 @@ nav #show ul li a:hover {
   font-weight: 600;
   color: rgba(55, 55, 55, 0.6);
   padding-top: 20px;
-  line-height: 22px;
+  line-height: 27px;
 }
 .setting .text .modal {
   border: none;
@@ -2044,6 +2059,7 @@ footer .foot .f-connect .links .terms {
   line-height: 23px;
   text-align: right;
   color: rgba(55, 55, 55, 0.8);
+  opacity: 80%;
 }
 .week .title .sit .left {
   font-size: 18px;
@@ -2269,13 +2285,14 @@ footer .foot .f-connect .links .terms {
   width: 100%;
   min-height: 281px;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   padding: 40px;
   border-radius: 20px;
   transition: 0.5;
   cursor: pointer;
 }
 .services #servicesCards .servicesCard h1 {
-  color: rgb(145, 79, 224);
+  color: rgb(19, 19, 19);
   font-size: 24px;
   font-weight: 600;
   line-height: 31px;
@@ -2352,7 +2369,7 @@ footer .foot .f-connect .links .terms {
   opacity: 60%;
 }
 #servicesDetail .detail-asset {
-  width: 41%;
+  width: 45%;
   padding: 50px;
   background: linear-gradient(149.24deg, #FFFFFF 0%, #AE69FF 625.43%);
   display: flex;
@@ -2616,9 +2633,6 @@ footer .foot .f-connect .links .terms {
 }
 .three swiper-container {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .three swiper-container .swiper-pagination-bullet {
   background: gray;
@@ -2632,13 +2646,13 @@ footer .foot .f-connect .links .terms {
   width: calc(100% / var(--swiper-slides-per-view));
 }
 .three swiper-container swiper-slide .swiperCard {
-  max-height: 370px;
-  width: 93%;
+  width: 100%;
   padding: 24px;
   border-radius: 16px;
   background-color: white;
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   border: none;
-  margin-bottom: 65px;
+  margin-bottom: 70px;
 }
 .three swiper-container swiper-slide .swiperCard .month {
   font-size: 16px;
@@ -2666,9 +2680,9 @@ footer .foot .f-connect .links .terms {
   object-fit: cover;
 }
 .three swiper-container swiper-slide .swiperCard .play .youtube {
-  max-width: 80px;
+  max-width: 38px;
   width: 100%;
-  max-height: 80px;
+  max-height: 50px;
   height: 100%;
   position: absolute;
   top: 50%;
@@ -2733,25 +2747,24 @@ footer .foot .f-connect .links .terms {
   opacity: 100%;
 }
 .four .fourSlider {
-  width: 60%;
+  width: 58%;
 }
 .four .fourSlider .fourCard {
-  max-width: 420px;
   width: 100%;
-  max-height: 451px;
+  min-height: 451px;
   height: 100%;
   background-color: rgb(255, 255, 255);
-  margin: 10px;
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   transition: 0.5s;
   border-radius: 16px;
   padding: 24px;
-  margin-bottom: 65px;
+  margin-bottom: 70px;
   display: flex;
   flex-direction: column;
   transition: 0.5s;
 }
 .four .fourSlider .fourCard img {
-  max-width: 371px;
+  width: 100%;
   min-height: 300px;
   width: 100%;
   object-fit: cover;
@@ -2781,7 +2794,7 @@ footer .foot .f-connect .links .terms {
   flex-direction: column;
   min-height: 810px;
   position: relative;
-  margin: 30px auto;
+  margin-top: 30px auto;
 }
 .innovation img {
   width: 57%;
@@ -2823,13 +2836,13 @@ footer .foot .f-connect .links .terms {
   padding: 60px;
   display: flex;
   flex-direction: column;
-  gap: 110px;
 }
 .about .about-cards {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 120px;
+  padding: 60px 0px;
 }
 .about .about-cards .card {
   width: 100%;
@@ -2866,7 +2879,7 @@ footer .foot .f-connect .links .terms {
   color: rgb(55, 55, 55);
   opacity: 60%;
 }
-.about .counts {
+.about .counts-about {
   width: 100%;
   min-height: 100px;
   display: grid;
@@ -2875,15 +2888,16 @@ footer .foot .f-connect .links .terms {
   justify-content: center;
   gap: 120px;
   position: relative;
+  padding: 70px 0px;
 }
-.about .counts .one-counts {
+.about .counts-about .one-counts {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: end;
   gap: 80px;
 }
-.about .counts .one-counts h4 {
+.about .counts-about .one-counts h4 {
   font-size: 48px;
   font-weight: 700;
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -2892,29 +2906,29 @@ footer .foot .f-connect .links .terms {
   -webkit-text-fill-color: transparent;
   line-height: 52px;
 }
-.about .counts .one-counts p {
+.about .counts-about .one-counts p {
   font-size: 18px;
   font-weight: 600;
   color: rgb(55, 55, 55);
   opacity: 80%;
   line-height: 22px;
 }
-.about .counts .one-counts .top {
+.about .counts-about .one-counts .top {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: end;
 }
-.about .counts .one-counts .top p {
+.about .counts-about .one-counts .top p {
   text-align: end;
 }
-.about .counts .one-counts .very {
+.about .counts-about .one-counts .very {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
 }
-.about .counts .one-counts img {
+.about .counts-about .one-counts img {
   max-width: 420px;
   width: 100%;
 }
@@ -3102,6 +3116,7 @@ footer .foot .f-connect .links .terms {
   width: 100%;
   min-height: 71px;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   border-radius: 10px;
   padding: 20px;
   transition: 0.5s;
@@ -3140,6 +3155,7 @@ footer .foot .f-connect .links .terms {
   min-height: 335px;
   border-radius: 10px;
   border-color: rgb(255, 255, 255);
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   border: none;
   transition: 0.5s;
 }
@@ -3241,6 +3257,7 @@ footer .foot .f-connect .links .terms {
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   transition: 0.5s;
 }
 #catalogueCard .catalogueDetail .result-item {
@@ -3422,6 +3439,7 @@ footer .foot .f-connect .links .terms {
   width: 100%;
   min-height: 207px;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -3680,6 +3698,7 @@ footer .foot .f-connect .links .terms {
 .works .smilarCards .smilar {
   width: 100%;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
   border-radius: 16px;
   padding: 24px;
   transition: 0.5s;
@@ -4429,13 +4448,15 @@ footer .foot .f-connect .links .terms {
 .podcast {
   max-width: 100%;
   width: 100%;
-  min-height: 470px;
+  min-height: 460px;
+  height: 100%;
   background: linear-gradient(86.76deg, #c7f0f8 -12.48%, #eadcfc 41.01%, #cbccf6 104.49%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px 150px;
   gap: 60px;
+  position: relative;
 }
 .podcast .main {
   width: 47%;
@@ -4471,17 +4492,16 @@ footer .foot .f-connect .links .terms {
   align-items: center;
   justify-content: center;
 }
-.podcast .main button p {
+.podcast .main button a {
   color: white !important;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0px;
 }
 .podcast img {
-  max-height: 505px;
+  max-height: 491px;
   max-width: 533px;
   width: 100%;
-  height: 100%;
   position: absolute;
   right: 150px;
 }
@@ -5337,34 +5357,37 @@ footer .foot .f-connect .links .terms {
   #detailSearch .d-search p {
     font-size: 14px;
   }
-  #detailSearch .enjoy h4 {
+  .enjoy {
+    padding: 20px;
+  }
+  .enjoy h4 {
     font-size: 20px;
   }
-  #detailSearch .enjoy #threeCards {
+  .enjoy #threeCards {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
     margin: 20px auto;
   }
-  #detailSearch .enjoy #threeCards .threeCard {
+  .enjoy #threeCards .threeCard {
     width: 100%;
     padding: 20px;
     gap: 2px;
   }
-  #detailSearch .enjoy #threeCards .threeCard .read {
+  .enjoy #threeCards .threeCard .read {
     width: 35%;
   }
-  #detailSearch .enjoy #threeCards .threeCard .read span {
+  .enjoy #threeCards .threeCard .read span {
     font-size: 14px;
   }
-  #detailSearch .enjoy #threeCards .threeCard .read img {
+  .enjoy #threeCards .threeCard .read img {
     width: 20px;
     height: 20px;
   }
-  #detailSearch .enjoy #threeCards .threeCard .month {
+  .enjoy #threeCards .threeCard .month {
     font-size: 14px;
   }
-  #detailSearch .enjoy #threeCards .threeCard .name {
+  .enjoy #threeCards .threeCard .name {
     font-size: 14px;
   }
   .partners {
@@ -5478,73 +5501,69 @@ footer .foot .f-connect .links .terms {
     width: 20px;
     height: 20px;
   }
-  .two {
+  .twoSlider {
     width: 100%;
     padding: 20px;
   }
-  .two .twoSlider .twoCard {
-    padding: 12px;
+  .twoSlider .twoCard {
+    padding: 40px;
   }
-  .two .twoSlider .twoCard .brand {
-    display: block;
+  .twoSlider .twoCard p {
     font-size: 14px;
   }
-  .two .twoSlider .twoCard p {
-    font-size: 10px;
+  .twoSlider .twoCard .brand {
+    font-size: 18px;
   }
-  .two .twoSlider .twoCard .title {
-    display: none;
+  .twoSlider .twoCard a {
+    padding-top: 15px;
   }
-  .two .twoSlider .twoCard a {
-    display: flex;
-    gap: 10px;
-    padding-top: 5px;
+  .twoSlider .twoCard a span {
+    font-size: 14px;
   }
-  .two .twoSlider .twoCard a span {
-    font-size: 13px;
+  .twoSlider .twoCard a img {
+    width: 20px;
+    height: 20px;
   }
-  .two .twoSlider .twoCard a img {
-    width: 17px;
-    height: 17px;
-  }
-  .two .counts {
+  .counts {
+    width: 100%;
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
     justify-content: center;
     gap: 40px;
   }
-  .two .counts img {
+  .counts img {
     width: 40%;
     margin: 1px auto;
   }
-  .two .counts .one-counts {
+  .counts .one-counts {
     width: 100%;
     gap: 10px;
   }
-  .two .counts .one-counts h4 {
+  .counts .one-counts h4 {
     font-size: 33px;
   }
-  .two .counts .one-counts p {
+  .counts .one-counts p {
     font-size: 14px;
   }
-  .two .counts .one-counts .top {
+  .counts .one-counts .top {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .two .counts .one-counts .very {
+  .counts .one-counts .very {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .two .hire-usColor {
+  .stickyButton {
     width: 20%;
     height: 40px;
   }
-  .two .hire-usColor p {
+  .stickyButton p {
     font-size: 13px;
   }
   .six {
@@ -6142,34 +6161,34 @@ footer .foot .f-connect .links .terms {
     width: 87%;
     font-size: 14px;
   }
-  .about .counts {
+  .about .counts-about {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
     justify-content: center;
     gap: 40px;
   }
-  .about .counts img {
+  .about .counts-about img {
     width: 40%;
     margin: 1px auto;
   }
-  .about .counts .one-counts {
+  .about .counts-about .one-counts {
     width: 100%;
     gap: 10px;
   }
-  .about .counts .one-counts h4 {
+  .about .counts-about .one-counts h4 {
     font-size: 33px;
   }
-  .about .counts .one-counts p {
+  .about .counts-about .one-counts p {
     font-size: 14px;
   }
-  .about .counts .one-counts .top {
+  .about .counts-about .one-counts .top {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .about .counts .one-counts .very {
+  .about .counts-about .one-counts .very {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7171,38 +7190,57 @@ footer .foot .f-connect .links .terms {
   .one .text .market {
     font-size: 65px;
   }
-  .two .twoSlider .twoCard {
-    margin-bottom: 80px;
-    min-height: 430px;
+  .twoSlider {
+    width: 100%;
+    padding: 20px;
   }
-  .two .counts {
+  .twoSlider .twoCard {
+    padding: 40px;
+  }
+  .twoSlider .twoCard p {
+    font-size: 14px;
+  }
+  .twoSlider .twoCard .brand {
+    font-size: 18px;
+  }
+  .twoSlider .twoCard a {
+    padding-top: 15px;
+  }
+  .twoSlider .twoCard a span {
+    font-size: 14px;
+  }
+  .twoSlider .twoCard a img {
+    width: 20px;
+    height: 20px;
+  }
+  .counts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     gap: 20px;
   }
-  .two .counts img {
+  .counts img {
     width: 70%;
     margin: 1px auto;
   }
-  .two .counts .one-counts {
+  .counts .one-counts {
     width: 100%;
     gap: 10px;
   }
-  .two .counts .one-counts h4 {
-    font-size: 40px;
+  .counts .one-counts h4 {
+    font-size: 30px;
   }
-  .two .counts .one-counts p {
-    font-size: 17px;
+  .counts .one-counts p {
+    font-size: 14px;
   }
-  .two .counts .one-counts .top {
+  .counts .one-counts .top {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .two .counts .one-counts .very {
+  .counts .one-counts .very {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7267,15 +7305,15 @@ footer .foot .f-connect .links .terms {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  #detailSearch .enjoy #threeCards {
+  #detailSearch p {
+    width: 100%;
+  }
+  .enjoy #threeCards {
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
-  #detailSearch .enjoy #threeCards .threeCard {
-    width: 100%;
-  }
-  #detailSearch p {
+  .enjoy #threeCards .threeCard {
     width: 100%;
   }
   .partners p {
@@ -7525,34 +7563,34 @@ footer .foot .f-connect .links .terms {
     width: 87%;
     font-size: 14px;
   }
-  .about .counts {
+  .about .counts-about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     gap: 20px;
   }
-  .about .counts img {
+  .about .counts-about img {
     width: 70%;
     margin: 1px auto;
   }
-  .about .counts .one-counts {
+  .about .counts-about .one-counts {
     width: 100%;
     gap: 10px;
   }
-  .about .counts .one-counts h4 {
+  .about .counts-about .one-counts h4 {
     font-size: 40px;
   }
-  .about .counts .one-counts p {
+  .about .counts-about .one-counts p {
     font-size: 17px;
   }
-  .about .counts .one-counts .top {
+  .about .counts-about .one-counts .top {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .about .counts .one-counts .very {
+  .about .counts-about .one-counts .very {
     display: flex;
     flex-direction: column;
     align-items: center;
