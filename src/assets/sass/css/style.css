@@ -603,9 +603,8 @@ nav .view #search-show #results .searchCards .card .read {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 25px;
-  margin-top: auto;
+  justify-content: space-between;
+  padding: 0px 0px;
 }
 nav .view #search-show #results .searchCards .card .read span {
   font-size: 18px;
@@ -5281,8 +5280,12 @@ footer .foot .f-connect .links .terms {
   nav .view #search-show #results .searchCards .card .name {
     font-size: 15px;
   }
+  nav .view #search-show #results .searchCards .card .read {
+    padding: 0px;
+  }
   nav .view #search-show #results .searchCards .card .read span {
     font-size: 14px;
+    padding: 0px;
   }
   nav .view #search-show #results #see-all {
     font-size: 16px;
