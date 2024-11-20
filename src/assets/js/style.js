@@ -13,14 +13,26 @@ closeBtn.addEventListener('click', function () {
 })
 
 //animation
-const words = ["Marketinq.", "Rəqamsal."]; // Dəyişən sözlər
+const words = ["Marketinq.", "Rəqəmsal."]; // Dəyişən sözlər
 let index = 0;
 
+// Başlangıcda sözlərin görünüşünü göstərmək
+const textElements = document.querySelectorAll("#animatedText span");
+textElements[index].classList.add("visible");
+
 setInterval(() => {
-  const textElement = document.querySelector("#animatedText span");
-  index = (index + 1) % words.length; // Sözləri dövr etməyə imkan verir
-  textElement.textContent = words[index];
-}, 2000); // 2 saniyədən bir dəyişir
+  const textElement = textElements[index]; // Cari aktiv element
+  index = (index + 1) % words.length; // Yeni sözə keçid
+
+  // Köhnə sözü gizlət
+  textElement.classList.remove("visible");
+
+  // Yeni sözü göstər
+  const nextElement = textElements[index];
+  nextElement.classList.add("visible");
+  
+}, 1955); // 2 saniyə intervalla dəyişir\
+
 
 //stickyButton
 

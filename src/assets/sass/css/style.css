@@ -194,6 +194,7 @@ nav .view .modal .modal-content .tabs span.active {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
+  opacity: 100%;
 }
 nav .view .modal .modal-content .tabs span.active::after {
   content: "";
@@ -232,7 +233,6 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm {
   display: flex;
   flex-direction: column;
   margin: 1px auto;
-  gap: 10px;
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group {
   width: 100%;
@@ -241,7 +241,7 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group {
   padding-top: 15px;
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .file-upload {
-  width: 50%;
+  width: 49%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -250,6 +250,10 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .file-upload select {
   width: 100%;
   color: rgba(55, 55, 55, 0.5);
+  -webkit-appearance: none; /* Chrome, Safari və digər WebKit brauzerləri üçün */
+  -moz-appearance: none; /* Firefox üçün */
+  appearance: none; /* Ümumi stil */
+  background: none;
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group input,
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group select {
@@ -261,6 +265,10 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group s
   font-size: 16px;
   outline: none;
   max-height: 52px;
+  -webkit-appearance: none; /* Chrome, Safari və digər WebKit brauzerləri üçün */
+  -moz-appearance: none; /* Firefox üçün */
+  appearance: none; /* Ümumi stil */
+  background: none;
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group input::placeholder,
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group select::placeholder {
@@ -274,7 +282,7 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group s
   width: 90%;
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group textarea {
-  width: 50%;
+  width: 100%;
   min-height: 121px;
   flex: 1;
   padding: 12px;
@@ -315,6 +323,9 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .upload-label::placeholder {
   color: rgb(55, 55, 55);
   opacity: 30%;
+}
+nav .view .modal .modal-content #addCompanyContent #addCompanyForm .information {
+  display: flex;
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .submit-button {
   padding: 10px 20px;
@@ -786,6 +797,7 @@ nav #show ul li:hover a {
   max-width: 100%;
   width: 100%;
   background: url("/src/assets/image/home/header.png") lightgray 0px 0px/100% 100% no-repeat;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   min-height: 110vh;
@@ -813,42 +825,36 @@ nav #show ul li:hover a {
   font-family: "Inter";
 }
 .one .text #animatedText {
-  width: 100%;
-  overflow: hidden;
-  display: inline-block;
   position: relative;
-}
-.one .text #animatedText span {
+  display: inline-block;
   font-size: 100px;
-  font-style: normal;
   font-weight: 800;
   line-height: 1.3em;
-  overflow: visible;
-  background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-  -webkit-background-clip: text;
-  background-clip: text;
   color: transparent;
   font-family: "Inter";
-  display: inline-block;
-  animation: slideDown 2s infinite;
+  overflow: hidden;
+  height: 140px; /* Hündürlük */
 }
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-    /* Yuxarıdan başlaması üçün */
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(0);
-    /* Normal yerində */
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0%);
-    /* Aşağıya getməsi */
-    opacity: 1;
-    /* Gizlənməsi */
-  }
+.one .text #animatedText span {
+  position: absolute;
+  font-size: 100px;
+  font-weight: 800;
+  line-height: 1.3em;
+  color: transparent;
+  font-family: "Inter";
+  background: linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out; /* Yavaşca yox olma */
+  visibility: hidden;
+  transform: translateY(-100%); /* Yuxarıda gizli başlanğıc */
+  transition: opacity 0.1s ease-in-out, transform 0.5s ease-in-out;
+}
+.one .text #animatedText .visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0);
 }
 .one .text .discover {
   display: flex;
@@ -1137,7 +1143,7 @@ nav #show ul li:hover a {
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  margin: 40px auto;
+  margin: 10px auto;
   gap: 15px;
 }
 #detailSearch .d-search .az {
@@ -1325,12 +1331,13 @@ nav #show ul li:hover a {
   padding-top: 30px;
 }
 .business #item-name {
-  width: 76%;
+  width: 74.5%;
   text-align: center;
   font-size: 32px;
   color: rgb(55, 55, 55);
   opacity: 80%;
-  line-height: 42px;
+  font-weight: 800;
+  line-height: 43px;
 }
 
 .filter {
@@ -5428,6 +5435,10 @@ footer .foot .f-connect .links .terms {
     align-items: center;
     gap: 15px;
   }
+  nav .view .modal .modal-content #addCompanyContent #addCompanyForm .information {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   nav .view .modal .modal-content #addCompanyContent #addCompanyForm .submit-button {
     padding: 10px 20px;
     background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -5489,15 +5500,18 @@ footer .foot .f-connect .links .terms {
     font-size: 35px;
     line-height: 60px;
   }
-  #detailSearch p {
-    width: 100%;
-  }
   #detailSearch h1 {
     font-size: 18px;
     line-height: 29px;
   }
-  #detailSearch .d-search p {
-    font-size: 14px;
+  #detailSearch .d-search {
+    width: 100%;
+  }
+  #detailSearch .d-search .az {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .enjoy {
     padding: 20px;
@@ -7440,9 +7454,6 @@ footer .foot .f-connect .links .terms {
   .six .branding .brand ul li {
     list-style: none;
     font-size: 14px;
-  }
-  #detailSearch p {
-    width: 100%;
   }
   .enjoy #threeCards {
     width: 100%;
