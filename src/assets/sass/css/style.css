@@ -253,7 +253,7 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group input,
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group select {
-  width: 50%;
+  width: 100%;
   flex: 1;
   padding: 12px;
   border: 1px solid rgba(55, 55, 55, 0.5);
@@ -261,12 +261,14 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group s
   font-size: 16px;
   outline: none;
   max-height: 52px;
-  color: rgba(55, 55, 55, 0.5);
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group input::placeholder,
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group select::placeholder {
   color: rgb(55, 55, 55);
   opacity: 30%;
+}
+nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group select {
+  color: rgba(55, 55, 55, 0.5);
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group select option {
   width: 90%;

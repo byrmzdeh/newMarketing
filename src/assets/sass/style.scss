@@ -301,7 +301,7 @@ nav {
 
                             input,
                             select {
-                                width: 50%;
+                                width: 100%;
                                 flex: 1;
                                 padding: 12px;
                                 border: 1px solid rgba(55, 55, 55, 0.5);
@@ -309,16 +309,16 @@ nav {
                                 font-size: 16px;
                                 outline: none;
                                 max-height: 52px;
-                                color: rgba(55, 55, 55, 0.5);
 
+    
                                 &::placeholder {
                                     color: rgba(55, 55, 55, 1);
                                     opacity: 30%;
                                 }
-
                             }
 
                             select {
+                                color:  rgba(55, 55, 55, 0.5);
                                 option {
                                     width: 90%;
                                 }
