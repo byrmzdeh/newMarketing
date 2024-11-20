@@ -249,6 +249,7 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .file-upload select {
   width: 100%;
+  color: rgba(55, 55, 55, 0.5);
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group input,
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group select {
@@ -260,6 +261,7 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group s
   font-size: 16px;
   outline: none;
   max-height: 52px;
+  color: rgba(55, 55, 55, 0.5);
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group input::placeholder,
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group select::placeholder {
@@ -341,7 +343,7 @@ nav .view .modal .modal-content #contactContent #contactForm select {
   width: 100%;
   flex: 1;
   padding: 12px;
-  border: 1px solid rgb(55, 55, 55);
+  border: 1px solid rgba(55, 55, 55, 0.5);
   border-radius: 5px;
   font-size: 16px;
   outline: none;
@@ -357,7 +359,7 @@ nav .view .modal .modal-content #contactContent #contactForm textarea {
   min-height: 100px;
   flex: 1;
   padding: 12px;
-  border: 1px solid rgb(55, 55, 55);
+  border: 1px solid rgba(55, 55, 55, 0.5);
   border-radius: 5px;
   font-size: 16px;
   outline: none;
