@@ -20,7 +20,7 @@ setInterval(() => {
   const textElement = document.querySelector("#animatedText span");
   index = (index + 1) % words.length; // Sözləri dövr etməyə imkan verir
   textElement.textContent = words[index];
-}, 1500); // 2 saniyədən bir dəyişir
+}, 2000); // 2 saniyədən bir dəyişir
 
 //stickyButton
 
@@ -218,13 +218,15 @@ fetch('/src/data/business.json')
         SliderCards.innerHTML = data.map(item => `
           <swiper-slide >
         <div class="swiperCard" >
+        <a href="https://www.youtube.com/">
           <div class="play" >
             <img class='cardImg' src="/src/assets/image/business/card.png" alt="err">
-            <a href="https://www.youtube.com/"> <img class="youtube" src="/src/assets/image/business/youtube.png"
-                alt="err"></a>
+             <img class="youtube" src="/src/assets/image/business/youtube.png"
+                alt="err">
           </div>
           <p class='month'>${item.month}</p>
           <h1>${item.name}</h1>
+          </a>
         </div>
       </swiper-slide>
 
@@ -296,9 +298,9 @@ fetch('/src/data/portfolio.json')
         fourSliderCards.innerHTML = data.map(item => `
 
         <swiper-slide class="fourCard" >
-             <img src="${item.img}" alt="err">
+            <a href="/src/components/portfolioDetail/index.html?id=${item.id}"> <img src="${item.img}" alt="err">
         <p>${item.name}</p>
-        <p class='title'>${item.title}</p>
+        <p class='title'>${item.title}</p></a>
       </swiper-slide>
     
     `).join('')

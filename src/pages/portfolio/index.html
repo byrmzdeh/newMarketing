@@ -38,7 +38,7 @@
 
 
           <div id="addCompanyContent" class="tab-content">
-            <form id="addCompanyForm"> 
+            <form id="addCompanyForm">
               <form class="form">
                 <div class="form-group">
                   <input type="text" placeholder="Şirkətin adı" required />
@@ -80,12 +80,12 @@
           </div>
 
           <div id="contactContent" class="tab-content" style="display: none;">
-            <form id="contactForm"> 
+            <form id="contactForm">
               <input type="text" placeholder="Ad" class="input-field" required />
               <input type="text" placeholder="Soyad" class="input-field" required />
               <input type="email" placeholder="E-poçt" class="input-field" required />
               <input type="text" placeholder="Mövzu" class="input-field" required />
-              <textarea  placeholder="Mesajınız" ></textarea>
+              <textarea placeholder="Mesajınız"></textarea>
               <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
             </form>
           </div>
@@ -97,7 +97,7 @@
 
 
 
-      <a data-aos="fade-up" href="/index.html"><img src="/src/assets/image/home/writeLogo.png" alt="err"></a>
+      <a class="logoImgP" data-aos="fade-up" href="/index.html"><img src="/src/assets/image/home/writeLogo.png" alt="err"></a>
       <div class="search-menu" data-aos="fade-up">
         <button id="search"><img src="/src/assets/image/home/search.png" alt="err"></button>
         <button id="menu"><img src="/src/assets/image/home/menu.png" alt="err"></button>
@@ -109,6 +109,7 @@
           <input id="search-input" type="text" placeholder="SEARCH">
           <button id="inputClose"><img src="/src/assets/image/home/close.png" alt="err"></button>
         </div>
+
         <div id="value">Search result for :</div>
         <div id="item-divSearch"></div>
         <div id="results" class="results">
@@ -118,6 +119,8 @@
 
     </div>
 
+
+   
 
 
     <div id="show">
@@ -141,6 +144,7 @@
     </div>
 
   </nav>
+  
   <div id="overlayThank"></div>
 
   <div id="thankModal" class="thank-modal">
@@ -188,7 +192,27 @@
   </div>
   
 
-  
+  <select class="category-select" onchange="handleCategoryChange(this.value)">
+    <option value="All">All</option>
+    <option value="Awards">Awards</option>
+    <option value="Website design">Website design</option>
+    <option value="Branding">Branding</option>
+    <option value="Business">Business</option>
+    <option value="Content strategy">Content strategy</option>
+    <option value="Design">Design</option>
+    <option value="Digital marketing">Digital marketing</option>
+    <option value="eCommerce Marketing">eCommerce Marketing</option>
+    <option value="E-mail marketing">E-mail marketing</option>
+    <option value="Fashion">Fashion</option>
+    <option value="Social media marketing">Social media marketing</option>
+    <option value="SEO">SEO</option>
+    <option value="SMM">SMM</option>
+    <option value="Media">Media</option>
+    <option value="UX/UI">UX/UI</option>
+    <option value="Graphic Design">Graphic Design</option>
+    <option value="Psychology">Psychology</option>
+    <option value="Website development">Website development</option>
+  </select>
   
 
   <div id="portfolioCards" data-aos="fade-up">
