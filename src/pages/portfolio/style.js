@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardsPerPage = 6; // Bir səhifədə göstəriləcək kart sayı
     let currentPage = 1;
     let pages; // Ümumi səhifələr
-    let allData = []; // Bütün kart məlumatları
+    let allData = []; // All kart məlumatları
     let filteredData = []; // Seçilmiş kateqoriyaya əsasən filtrlenmiş məlumat
-    let selectedCategory = 'Bütün'; // Başlanğıcda 'Bütün' kateqoriyası seçilib
+    let selectedCategory = 'All'; // Başlanğıcda 'All' kateqoriyası seçilib
 
     // Seçilmiş kateqoriya və səhifəyə əsasən kartları göstərmək
     function displayCards(data, page) {
@@ -87,14 +87,14 @@ document.addEventListener("DOMContentLoaded", function () {
         selectedCategory = category;
         currentPage = 1; // Kateqoriya dəyişəndə ilk səhifəyə qayıt
 
-        // Bütün düymələrdən aktiv sinifi silirik
+        // All düymələrdən aktiv sinifi silirik
         const buttons = document.querySelectorAll('.category-button');
         buttons.forEach(button => {
             button.classList.remove('active');
         });
 
         // Seçilmiş kateqoriyanı aktiv edirik
-        if (category === 'Bütün') {
+        if (category === 'All') {
             buttons[0].classList.add('active');
         } else {
             buttons.forEach(button => {
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Məlumatları seçilmiş kateqoriyaya əsasən filtrləyirik
-        if (category === 'Bütün') {
+        if (category === 'All') {
             filteredData = allData;
         } else {
             filteredData = allData.filter(item => item.category === category);
@@ -127,8 +127,8 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch('/src/data/portfolio.json')
             .then(res => res.json())
             .then(data => {
-                allData = data; // Bütün məlumatları saxlayırıq
-                filterCards(selectedCategory); // Başlanğıcda 'Bütün' kateqoriyasına görə göstəririk
+                allData = data; // All məlumatları saxlayırıq
+                filterCards(selectedCategory); // Başlanğıcda 'All' kateqoriyasına görə göstəririk
             })
             .catch(error => console.error('Məlumatları götürərkən səhv baş verdi:', error));
     }

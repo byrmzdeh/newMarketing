@@ -309,6 +309,8 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .
   display: inline-block;
   padding: 10px;
   border: 2px dashed rgb(174, 105, 255);
+  background-color: white;
+  background-color: transparent;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
@@ -382,6 +384,7 @@ nav .view .modal .modal-content #contactContent #contactForm textarea {
   border-radius: 5px;
   font-size: 16px;
   outline: none;
+  background-color: white;
 }
 nav .view .modal .modal-content #contactContent #contactForm textarea::placeholder {
   color: rgb(55, 55, 55);
@@ -817,6 +820,7 @@ nav #show ul li:hover a {
   z-index: 10;
 }
 .one .text {
+  margin-top: 30px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1508,7 +1512,7 @@ nav #show ul li:hover a {
   display: none;
 }
 .filter .selectDiv #categorySelect {
-  width: 100%;
+  max-width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -5648,7 +5652,7 @@ footer .foot .f-connect .links .terms {
     line-height: 60px;
   }
   .one .text #animatedText {
-    height: 70px;
+    height: 50px;
   }
   .one .text #animatedText span {
     font-size: 40px;
@@ -5976,7 +5980,14 @@ footer .foot .f-connect .links .terms {
     padding: 5px 15px;
   }
   .filter .selectDiv {
+    width: 100%;
     display: block;
+  }
+  .filter .selectDiv #categorySelect {
+    width: 100%;
+  }
+  .filter .selectDiv #categorySelect option {
+    width: 100%;
   }
   .filter #businessCards {
     width: 100%;

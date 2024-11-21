@@ -370,6 +370,8 @@ nav {
                                 display: inline-block;
                                 padding: 10px;
                                 border: 2px dashed rgba(174, 105, 255, 1);
+                                background-color: white;
+                                background-color: transparent;
                                 border-radius: 5px;
                                 cursor: pointer;
                                 text-align: center;
@@ -460,6 +462,7 @@ nav {
                             border-radius: 5px;
                             font-size: 16px;
                             outline: none;
+                            background-color: white;
 
                             &::placeholder {
                                 color: rgba(55, 55, 55, 1);
@@ -1033,6 +1036,7 @@ nav {
     z-index: 10;
 
     .text {
+        margin-top: 30px;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1962,7 +1966,7 @@ nav {
         display: none;
 
         #categorySelect {
-            width: 100%;
+            max-width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -7190,7 +7194,8 @@ footer {
             }
 
             #animatedText {
-                height: 70px;
+                height: 50px;
+
                 span {
                     font-size: 40px;
                     line-height: 60px;
@@ -7653,7 +7658,16 @@ footer {
         }
 
         .selectDiv {
+            width: 100%;
             display: block;
+
+            #categorySelect {
+                width: 100%;
+               option{
+                width: 100%;
+               }
+            }
+
 
         }
 
@@ -9632,6 +9646,7 @@ footer {
 
             #animatedText {
                 height: 55px;
+
                 span {
                     font-size: 50px;
                     line-height: 60px;
