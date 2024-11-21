@@ -276,7 +276,7 @@ nav {
                         display: flex;
                         flex-direction: column;
                         margin: 1px auto;
-                      
+
 
                         .form-group {
                             width: 100%;
@@ -290,15 +290,18 @@ nav {
                                 flex-direction: column;
                                 align-items: center;
                                 gap: 10px;
-                              
+
 
                                 select {
                                     width: 100%;
                                     color: rgba(55, 55, 55, 0.5);
-                                    -webkit-appearance: none; /* Chrome, Safari və digər WebKit brauzerləri üçün */
-                                    -moz-appearance: none;    /* Firefox üçün */
-                                    appearance: none;         /* Ümumi stil */
-                                    background: none; 
+                                    -webkit-appearance: none;
+                                    /* Chrome, Safari və digər WebKit brauzerləri üçün */
+                                    -moz-appearance: none;
+                                    /* Firefox üçün */
+                                    appearance: none;
+                                    /* Ümumi stil */
+                                    background: none;
 
 
                                 }
@@ -314,12 +317,15 @@ nav {
                                 font-size: 16px;
                                 outline: none;
                                 max-height: 52px;
-                                -webkit-appearance: none; /* Chrome, Safari və digər WebKit brauzerləri üçün */
-                                -moz-appearance: none;    /* Firefox üçün */
-                                appearance: none;         /* Ümumi stil */
-                                background: none; 
+                                -webkit-appearance: none;
+                                /* Chrome, Safari və digər WebKit brauzerləri üçün */
+                                -moz-appearance: none;
+                                /* Firefox üçün */
+                                appearance: none;
+                                /* Ümumi stil */
+                                background: none;
 
-    
+
                                 &::placeholder {
                                     color: rgba(55, 55, 55, 1);
                                     opacity: 30%;
@@ -327,7 +333,8 @@ nav {
                             }
 
                             select {
-                                color:  rgba(55, 55, 55, 0.5);
+                                color: rgba(55, 55, 55, 0.5);
+
                                 option {
                                     width: 90%;
                                 }
@@ -389,7 +396,7 @@ nav {
                             }
                         }
 
-                        .information{
+                        .information {
                             display: flex;
                         }
 
@@ -1050,7 +1057,8 @@ nav {
             color: transparent;
             font-family: "Inter";
             overflow: hidden;
-            height: 140px; /* Hündürlük */
+            height: 140px;
+            /* Hündürlük */
 
             span {
                 position: absolute;
@@ -1063,16 +1071,19 @@ nav {
                 -webkit-background-clip: text;
                 background-clip: text;
                 opacity: 1;
-                transition: opacity 0.1s ease-in-out; /* Yavaşca yox olma */
+                transition: opacity 0.1s ease-in-out;
+                /* Yavaşca yox olma */
                 visibility: hidden;
-                transform: translateY(-100%); /* Yuxarıda gizli başlanğıc */
+                transform: translateY(-100%);
+                /* Yuxarıda gizli başlanğıc */
                 transition: opacity 0.1s ease-in-out, transform 0.5s ease-in-out;
             }
+
             .visible {
                 opacity: 1;
                 visibility: visible;
                 transform: translate(0);
-              }
+            }
         }
 
         // @keyframes slideDown {
@@ -1887,6 +1898,7 @@ nav {
         flex-wrap: wrap;
         gap: 20px;
 
+
         button {
             width: auto;
             height: 43px;
@@ -1939,6 +1951,38 @@ nav {
         }
     }
 
+    .selectDiv {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(55, 55, 55, 0.5);
+        padding: 5px 15px 5px 0px;
+        display: none;
+
+        #categorySelect {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            outline: none;
+            border: none;
+            font-size: 15px;
+
+            color: rgba(55, 55, 55, 1);
+            opacity: 80%;
+
+            option {
+                background-color: #fff;
+                font-size: 14px;
+
+
+            }
+
+        }
+
+    }
 
     #businessCards {
         width: 100%;
@@ -6876,7 +6920,8 @@ footer {
                                     gap: 15px;
                                 }
                             }
-                            .information{
+
+                            .information {
                                 display: flex;
                                 flex-direction: column-reverse;
                             }
@@ -7002,13 +7047,14 @@ footer {
 
         .d-search {
             width: 100%;
-            .az{
+
+            .az {
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
             }
-           
+
         }
     }
 
@@ -7592,6 +7638,7 @@ footer {
             gap: 7px;
             align-items: center;
             justify-content: center;
+            display: none;
 
             button {
                 span {
@@ -7601,6 +7648,11 @@ footer {
                 }
 
             }
+        }
+
+        .selectDiv {
+            display: block;
+
         }
 
         #businessCards {
@@ -8367,7 +8419,7 @@ footer {
                     border-left: none;
                     display: flex;
                     flex-direction: column;
-                    gap: 10px;
+                    gap: 15px;
                     padding-top: 15px;
 
 
@@ -8400,6 +8452,8 @@ footer {
                         display: flex;
                         flex-direction: column;
                         align-items: start;
+                        gap: 10px;
+
 
                         .read {
                             width: 42%;
@@ -9808,7 +9862,7 @@ footer {
         }
     }
 
-    
+
 
     .enjoy {
         #threeCards {

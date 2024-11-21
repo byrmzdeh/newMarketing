@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardsPerPage = 6; // Səhifə başına kart sayı
     let currentPage = 1;
     let pages; // Ümumi səhifə sayı
-    let allData = []; // Bütün kart məlumatlarını saxlayır
-    let filteredData = []; // Kateqoriyaya görə süzülmüş məlumatları saxlayır
-    let selectedCategory = 'All'; // Defolt kateqoriya
+    let allData = []; // Bütün kart məlumatları
+    let filteredData = []; // Süzülmüş kart məlumatları
+    let selectedCategory = 'All'; // Default kateqoriya
 
-    // Seçilmiş kateqoriyaya və səhifəyə əsasən kartları göstərin
+    // Kartları göstərmək funksiyası
     function displayCards(data, page) {
         businessCards.innerHTML = ""; // Mövcud kartları təmizlə
         const start = (page - 1) * cardsPerPage;
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             card.classList.add('card');
             card.setAttribute('data-aos', 'fade-up');
             card.innerHTML = `
-                  <div class="result-item" data-id="${item.id}">
+                <div class="result-item" data-id="${item.id}">
                     <img class='image' src="${item.img}" alt="err">
                     <div class='result-about'>
                         <p class='month'>${item.month}</p>
@@ -31,13 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         </a>
                     </div>
                 </div>
-                </div>
-        `;
+            `;
             businessCards.appendChild(card);
         });
     }
 
-    // Səhifələmə yaratma
+    // Səhifələmə yaratmaq funksiyası
     function createPagination(pages, page) {
         let str = "<ul>";
         let active;
@@ -80,66 +79,95 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("pagination").innerHTML = str;
     }
 
-// Səhifəni dəyiş və ekranı yenilə
-window.changePage = function (page) {
-    currentPage = page;
-    displayCards(filteredData, currentPage);
-    createPagination(pages, currentPage);
-};
+    // Səhifəni dəyişmək funksiyası
+    window.changePage = function (page) {
+        currentPage = page;
+        displayCards(filteredData, currentPage);
+        createPagination(pages, currentPage);
+    };
 
+    // Kateqoriya üzrə kartları süzmək funksiyası
+    function filterCards() {
+        const category = document.querySelector('#categorySelect').value; // Dropdown-dan seçilən kateqoriya
+        currentPage = 1; // Kateqoriya dəyişildikdə səhifəni sıfırlamaq
 
-    // Seçilmiş kateqoriyaya görə kartları süz
-    function filterCards(category) {
-        selectedCategory = category;
-        currentPage = 1; // Kateqoriya dəyişikliyində ilk səhifəyə sıfırla
-
-        // Bütün düymələrin aktivlik sinifini təmizlə
-        const buttons = document.querySelectorAll('.buttons button');
-        buttons.forEach(button => {
-            button.classList.remove('active'); // Bütün düymələrdən 'active' sinifini sil
-        });
-
-        // Seçilmiş kateqoriyaya görə 'active' sinfini əlavə et
-        if (category === 'All') {
-            buttons[0].classList.add('active'); // 'All' düyməsi aktivdir
-        } else {
-            buttons.forEach(button => {
-                if (button.textContent === category) {
-                    button.classList.add('active'); // Seçilmiş kateqoriya üçün aktiv sinifi əlavə et
-                }
-            });
-        }
-
+        // Seçilən kateqoriyaya əsasən məlumatları süz
         if (category === 'All') {
             filteredData = allData;
         } else {
             filteredData = allData.filter(item => item.category === category);
         }
 
-        pages = Math.ceil(filteredData.length / cardsPerPage); // Səhifə sayını yenilə
-        displayCards(filteredData, currentPage); // Süzülmüş kartları göstər
-        createPagination(pages, currentPage); // Səhifələmə yenilə
+        // Səhifə sayını yenilə
+        pages = Math.ceil(filteredData.length / cardsPerPage);
+        displayCards(filteredData, currentPage);
+        createPagination(pages, currentPage);
+
+        // Active sinfi dəyişdir
+        updateActiveButton(category);
     }
 
-    // Məlumatları gətir və ekranı başlat
+    // Kateqoriya düymələrinə kliklədikdə filtr tətbiq etmək funksiyası
+    function filterByButton(category) {
+        selectedCategory = category;
+        currentPage = 1; // Kateqoriya dəyişildikdə səhifəni sıfırlamaq
+
+        // Seçilən kateqoriyaya əsasən məlumatları süz
+        if (category === 'All') {
+            filteredData = allData;
+        } else {
+            filteredData = allData.filter(item => item.category === category);
+        }
+
+        // Səhifə sayını yenilə
+        pages = Math.ceil(filteredData.length / cardsPerPage);
+        displayCards(filteredData, currentPage);
+        createPagination(pages, currentPage);
+
+        // Active sinfi dəyişdir
+        updateActiveButton(category);
+    }
+
+    // Active sinfini dəyişdirmək üçün funksiyanı yazırıq
+    function updateActiveButton(category) {
+        const buttons = document.querySelectorAll('.buttons button');
+        buttons.forEach(button => {
+            if (button.textContent.trim() === category) {
+                button.classList.add('active'); // Seçilən kateqoriya üçün active sinfini əlavə et
+            } else {
+                button.classList.remove('active'); // Digər düymələrdən active sinfini sil
+            }
+        });
+    }
+
+    // Başlanğıcda məlumatları yükləyib göstərmək funksiyası
     function fetchDataAndDisplay() {
         fetch('/src/data/people.json')
             .then(res => res.json())
             .then(data => {
-                allData = data; // Gələcək süzgə üçün bütün məlumatları saxla
-                filterCards(selectedCategory); // Defolt kateqoriya ilə ilkin ekran
+                allData = data; // Bütün məlumatları saxla
+                filteredData = data; // Başlanğıcda "All" kateqoriya ilə kartları göstər
+                pages = Math.ceil(filteredData.length / cardsPerPage); // Səhifə sayını hesabla
+                displayCards(filteredData, currentPage); // Kartları göstər
+                createPagination(pages, currentPage); // Pagination-u göstər
+
+                // İlk başlamaqda All kateqoriyasına active sinfi əlavə et
+                updateActiveButton('All');
             })
             .catch(error => console.error('Məlumatları əldə edərkən səhv:', error));
     }
 
-    // Məlumatları ilkin olaraq gətir və göstər
+    // Məlumatları ilk dəfə yükləyib göstərmək
     fetchDataAndDisplay();
 
-    // Düymələrə kliklə funksionallıq qoş
+    // Dropdown-da kateqoriya dəyişildikdə filtr tətbiq etmək
+    document.querySelector('#categorySelect').addEventListener('change', filterCards);
+
+    // Kateqoriya düymələrinə kliklədikdə filtr tətbiq etmək
     document.querySelectorAll('.buttons button').forEach(button => {
         button.addEventListener('click', function () {
             const category = button.textContent.trim();
-            filterCards(category);
+            filterByButton(category);
         });
     });
 });

@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     const businessCards = document.getElementById('portfolioCards');
-    const cardsPerPage = 6; // Səhifə başına kart sayı
+    const cardsPerPage = 6; // Bir səhifədə göstəriləcək kart sayı
     let currentPage = 1;
-    let pages; // Ümumi səhifə sayı
-    let allData = []; // Bütün kart məlumatlarını saxlayır
-    let filteredData = []; // Kateqoriyaya görə süzülmüş məlumatları saxlayır
-    let selectedCategory = 'All'; // Defolt kateqoriya
+    let pages; // Ümumi səhifələr
+    let allData = []; // Bütün kart məlumatları
+    let filteredData = []; // Seçilmiş kateqoriyaya əsasən filtrlenmiş məlumat
+    let selectedCategory = 'Bütün'; // Başlanğıcda 'Bütün' kateqoriyası seçilib
 
-    // Seçilmiş kateqoriya və səhifəyə əsasən kartları göstərin
+    // Seçilmiş kateqoriya və səhifəyə əsasən kartları göstərmək
     function displayCards(data, page) {
-        businessCards.innerHTML = ""; // Mövcud kartları təmizlə
+        businessCards.innerHTML = ""; // Mövcud kartları təmizləyirik
         const start = (page - 1) * cardsPerPage;
         const end = start + cardsPerPage;
         const currentCards = data.slice(start, end);
@@ -19,34 +19,34 @@ document.addEventListener("DOMContentLoaded", function () {
             card.classList.add('card');
             card.setAttribute('data-aos', 'fade-up');
             card.innerHTML = `
-            <div  data-id=${item.id} data-aos='fade-up'>
-                     <a class='portfolioCard'  href="/src/components/portfolioDetail/index.html?id=${item.id}">
-                           <img class='cardImg' src="${item.img}" alt="err">
-                <p>${item.name}</p>
-                <h1>${item.title}</h1>
-                    </a>
-                </div>
+            <div data-id="${item.id}" data-aos="fade-up">
+                <a class="portfolioCard" href="/src/components/portfolioDetail/index.html?id=${item.id}">
+                    <img class="cardImg" src="${item.img}" alt="err">
+                    <p>${item.name}</p>
+                    <h1>${item.title}</h1>
+                </a>
+            </div>
             `;
             businessCards.appendChild(card);
         });
     }
 
-    // Səhifələmə yaratma
+    // Səhifələmə bağlantılarını yaratmaq
     function createPagination(pages, page) {
-        let str = "<ul>";
+        let str = "<ul class='pagination'>";
         let active;
         let pageCutLow = page - 1;
         let pageCutHigh = page + 1;
 
         if (pages < 5) {
             for (let p = 1; p <= pages; p++) {
-                active = page == p ? "active" : "no";
-                str += `<li class="${active}"><a onclick="changePage(${p})">${p}</a></li>`;
+                active = page === p ? "active" : "";
+                str += `<li class="page-item ${active}"><a href="javascript:void(0)" onclick="changePage(${p})">${p}</a></li>`;
             }
         } else {
             if (page > 2) {
-                str += `<li class="no page-item"><a onclick="changePage(1)">1</a></li>`;
-                if (page > 3) str += `<li class="out-of-range">...</li>`;
+                str += `<li class="page-item"><a href="javascript:void(0)" onclick="changePage(1)">1</a></li>`;
+                if (page > 3) str += `<li class="page-item disabled"><span>...</span></li>`;
             }
 
             if (page === 1) pageCutHigh += 2;
@@ -55,46 +55,46 @@ document.addEventListener("DOMContentLoaded", function () {
             else if (page === pages - 1) pageCutLow -= 1;
 
             for (let p = pageCutLow; p <= pageCutHigh; p++) {
-                if (p === 0) p += 1;
+                if (p <= 0) p = 1;
                 if (p > pages) continue;
-                active = page == p ? "active" : "no";
-                str += `<li class="page-item ${active}"><a onclick="changePage(${p})">${p}</a></li>`;
+                active = page === p ? "active" : "";
+                str += `<li class="page-item ${active}"><a href="javascript:void(0)" onclick="changePage(${p})">${p}</a></li>`;
             }
 
             if (page < pages - 1) {
-                if (page < pages - 2) str += `<li class="out-of-range">...</li>`;
-                str += `<li class="page-item no"><a onclick="changePage(${pages})">${pages}</a></li>`;
+                if (page < pages - 2) str += `<li class="page-item disabled"><span>...</span></li>`;
+                str += `<li class="page-item"><a href="javascript:void(0)" onclick="changePage(${pages})">${pages}</a></li>`;
             }
         }
 
         if (page < pages) {
-            str += `<li class="page-item next no"><a onclick="changePage(${page + 1})"><img src="/src/assets/image/business/right.png"/></a></li>`;
+            str += `<li class="page-item next"><a href="javascript:void(0)" onclick="changePage(${page + 1})">&raquo;</a></li>`;
         }
         str += "</ul>";
         document.getElementById("pagination").innerHTML = str;
     }
 
-    // Səhifəni dəyiş və ekranı yenilə
+    // Cari səhifəni dəyişmək və göstərilən məlumatları yeniləmək
     window.changePage = function (page) {
+        if (page < 1 || page > pages) return; // Keçərli səhifəni yoxlayırıq
         currentPage = page;
         displayCards(filteredData, currentPage);
         createPagination(pages, currentPage);
     };
 
-
-    // Seçilmiş kateqoriyaya görə kartları süz
+    // Seçilmiş kateqoriya üzrə kartları filtrləmək
     window.filterCards = function (category) {
         selectedCategory = category;
-        currentPage = 1; // Kateqoriya dəyişikliyində ilk səhifəyə sıfırla
+        currentPage = 1; // Kateqoriya dəyişəndə ilk səhifəyə qayıt
 
-        // Bütün düymələrin aktivlik sinifini təmizlə
-        const buttons = document.querySelectorAll('.buttons button');
+        // Bütün düymələrdən aktiv sinifi silirik
+        const buttons = document.querySelectorAll('.category-button');
         buttons.forEach(button => {
-            button.classList.remove('active'); // Bütün düymələrdən 'active' sinifini sil
+            button.classList.remove('active');
         });
 
-        // Seçilmiş kateqoriya üçün 'active' sinfini əlavə et
-        if (category === 'All') {
+        // Seçilmiş kateqoriyanı aktiv edirik
+        if (category === 'Bütün') {
             buttons[0].classList.add('active');
         } else {
             buttons.forEach(button => {
@@ -104,37 +104,43 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        if (category === 'All') {
+        // Məlumatları seçilmiş kateqoriyaya əsasən filtrləyirik
+        if (category === 'Bütün') {
             filteredData = allData;
         } else {
             filteredData = allData.filter(item => item.category === category);
         }
 
-        pages = Math.ceil(filteredData.length / cardsPerPage); // Səhifə sayını yenilə
-        displayCards(filteredData, currentPage); // Süzülmüş kartları göstər
-        createPagination(pages, currentPage); // Səhifələmə yenilə
+        pages = Math.ceil(filteredData.length / cardsPerPage); // Səhifə sayını yeniləyirik
+        displayCards(filteredData, currentPage); // Filtrlenmiş kartları göstəririk
+        createPagination(pages, currentPage); // Səhifələməni yeniləyirik
     }
 
-    // Məlumatları gətir və ekranı başlat
+    // Select elementinə əsasən filtrləmə funksiyası
+    document.getElementById('categorySelect').addEventListener('change', function () {
+        const selectedCategory = this.value;
+        filterCards(selectedCategory); // Seçilmiş kateqoriyaya görə filtrasiya edirik
+    });
+
+    // JSON faylından məlumatları götürüb səhifəni başlatmaq
     function fetchDataAndDisplay() {
         fetch('/src/data/portfolio.json')
             .then(res => res.json())
             .then(data => {
-                allData = data; // Gələcək süzgə üçün bütün məlumatları saxla
-                filterCards(selectedCategory); // Defolt kateqoriya ilə ilkin ekran
+                allData = data; // Bütün məlumatları saxlayırıq
+                filterCards(selectedCategory); // Başlanğıcda 'Bütün' kateqoriyasına görə göstəririk
             })
-            .catch(error => console.error('Məlumatları əldə edərkən səhv:', error));
+            .catch(error => console.error('Məlumatları götürərkən səhv baş verdi:', error));
     }
 
-    // Məlumatları ilkin olaraq gətir və göstər
+    // Səhifə yüklənəndə məlumatları götürüb göstəririk
     fetchDataAndDisplay();
 
-    // Kateqoriya düymələrinə klik hadisəsi əlavə et
+    // Kateqoriya düymələrinə hadisə dinləyiciləri əlavə edirik
     document.querySelectorAll('.category-button').forEach(button => {
         button.addEventListener('click', function () {
             const category = button.getAttribute('data-category');
-            filterCards(category); // Seçilmiş kateqoriyanı filterCards funksiyasına ötür
+            filterCards(category); // Seçilmiş kateqoriyanı filterCards funksiyasına göndəririk
         });
     });
-
 });

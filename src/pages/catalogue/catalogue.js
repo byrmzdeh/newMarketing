@@ -139,7 +139,13 @@ document.addEventListener('DOMContentLoaded', function () {
         pages = Math.ceil(filteredData.length / cardsPerPage); // Səhifə sayını yenilə
         displayCards(filteredData, currentPage); // Süzülmüş kartları göstər
         createPagination(pages, currentPage); // Səhifələmə yenilə
-    }
+    };
+
+    // Select menyusuna əsasən filtrasiya funksiyası
+    document.getElementById('categorySelect').addEventListener('change', function () {
+        const selectedCategory = this.value;
+        filterCards(selectedCategory); // Seçilmiş kateqoriyaya görə filtrasiya edirik
+    });
 
     // Məlumatları gətir və ekranı başlat
     function fetchDataAndDisplay() {

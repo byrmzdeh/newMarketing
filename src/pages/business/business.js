@@ -19,14 +19,16 @@ document.addEventListener("DOMContentLoaded", function () {
           card.classList.add('card');
           card.setAttribute('data-aos', 'fade-up');
           card.innerHTML = `
+          <a href="https://www.youtube.com/">
               <div class="play" data-aos="fade-up">
                   <img class='cardImg' src="${item.img}" alt="err">
-                  <a href="https://www.youtube.com/">
+                  
                       <img class="youtube" src="/src/assets/image/business/youtube.png" alt="err">
-                  </a>
               </div>
               <p class='month'>${item.month}</p>
               <h1>${item.name}</h1>
+                                </a>
+
           `;
           businessCards.appendChild(card);
       });
@@ -82,6 +84,32 @@ window.changePage = function (page) {
   createPagination(pages, currentPage);
 };
 
+
+window.filterCards = function () {
+    const category = document.querySelector('#categorySelect').value; // Seçilmiş kateqoriya
+    currentPage = 1; // Kateqoriya dəyişildikdə səhifəni sıfırlamaq
+  
+    // Bütün kateqoriyaların aktivlik sinifini təmizləyirik
+    const select = document.querySelector('#categorySelect');
+    
+    // Seçimə uyğun kartları süz
+    if (category === 'All') {
+        filteredData = allData;
+    } else {
+        filteredData = allData.filter(item => item.category === category);
+    }
+  
+    pages = Math.ceil(filteredData.length / cardsPerPage); // Səhifə sayını yenilə
+    displayCards(filteredData, currentPage); // Kartları göstər
+    createPagination(pages, currentPage); // Səhifələməni yenilə
+  };
+  
+  // `#categorySelect` elementində dəyişiklik baş verdikdə `filterCards` funksiyasını işə salırıq
+  document.querySelector('#categorySelect').addEventListener('change', filterCards);
+  
+  // Başlanğıcda ilk dəfə filterCards funksiyasını çağırmaq
+  filterCards();
+  
 
   // Seçilmiş kateqoriyaya görə kartları süz
   window.filterCards = function (category) {

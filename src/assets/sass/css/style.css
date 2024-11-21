@@ -250,9 +250,12 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .file-upload select {
   width: 100%;
   color: rgba(55, 55, 55, 0.5);
-  -webkit-appearance: none; /* Chrome, Safari və digər WebKit brauzerləri üçün */
-  -moz-appearance: none; /* Firefox üçün */
-  appearance: none; /* Ümumi stil */
+  -webkit-appearance: none;
+  /* Chrome, Safari və digər WebKit brauzerləri üçün */
+  -moz-appearance: none;
+  /* Firefox üçün */
+  appearance: none;
+  /* Ümumi stil */
   background: none;
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group input,
@@ -265,9 +268,12 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group s
   font-size: 16px;
   outline: none;
   max-height: 52px;
-  -webkit-appearance: none; /* Chrome, Safari və digər WebKit brauzerləri üçün */
-  -moz-appearance: none; /* Firefox üçün */
-  appearance: none; /* Ümumi stil */
+  -webkit-appearance: none;
+  /* Chrome, Safari və digər WebKit brauzerləri üçün */
+  -moz-appearance: none;
+  /* Firefox üçün */
+  appearance: none;
+  /* Ümumi stil */
   background: none;
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group input::placeholder,
@@ -833,7 +839,8 @@ nav #show ul li:hover a {
   color: transparent;
   font-family: "Inter";
   overflow: hidden;
-  height: 140px; /* Hündürlük */
+  height: 140px;
+  /* Hündürlük */
 }
 .one .text #animatedText span {
   position: absolute;
@@ -846,9 +853,11 @@ nav #show ul li:hover a {
   -webkit-background-clip: text;
   background-clip: text;
   opacity: 1;
-  transition: opacity 0.1s ease-in-out; /* Yavaşca yox olma */
+  transition: opacity 0.1s ease-in-out;
+  /* Yavaşca yox olma */
   visibility: hidden;
-  transform: translateY(-100%); /* Yuxarıda gizli başlanğıc */
+  transform: translateY(-100%);
+  /* Yuxarıda gizli başlanğıc */
   transition: opacity 0.1s ease-in-out, transform 0.5s ease-in-out;
 }
 .one .text #animatedText .visible {
@@ -1487,6 +1496,31 @@ nav #show ul li:hover a {
   /* Sərhədin gradienti */
   z-index: -1;
   /* Z-indexi aşağı salaraq düymənin arxasında görünsün */
+}
+.filter .selectDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(55, 55, 55, 0.5);
+  padding: 5px 15px 5px 0px;
+  display: none;
+}
+.filter .selectDiv #categorySelect {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  color: rgb(55, 55, 55);
+  opacity: 80%;
+}
+.filter .selectDiv #categorySelect option {
+  background-color: #fff;
+  font-size: 14px;
 }
 .filter #businessCards {
   width: 100%;
@@ -5931,10 +5965,14 @@ footer .foot .f-connect .links .terms {
     gap: 7px;
     align-items: center;
     justify-content: center;
+    display: none;
   }
   .filter .buttons button span {
     font-size: 12px;
     padding: 5px 15px;
+  }
+  .filter .selectDiv {
+    display: block;
   }
   .filter #businessCards {
     width: 100%;
@@ -6470,7 +6508,7 @@ footer .foot .f-connect .links .terms {
     border-left: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     padding-top: 15px;
   }
   #catalogueCards .card .result-item .desc .location {
@@ -6497,6 +6535,7 @@ footer .foot .f-connect .links .terms {
     display: flex;
     flex-direction: column;
     align-items: start;
+    gap: 10px;
   }
   #catalogueCards .card .result-item .desc .web .read {
     width: 42%;
