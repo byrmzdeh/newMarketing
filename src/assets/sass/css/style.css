@@ -5244,7 +5244,7 @@ footer .foot .f-connect .links .terms {
     max-width: 110px;
     width: 100%;
     height: 50%;
-    left: 38%;
+    left: 37%;
     top: 50%;
     transform: translate(-50%, -50%);
     background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -5706,9 +5706,10 @@ footer .foot .f-connect .links .terms {
     align-items: center;
     justify-content: center;
     gap: 40px;
+    margin-top: 35px;
   }
   .two .counts img {
-    width: 80%;
+    width: 75%;
     margin: 1px auto;
   }
   .two .counts .one-counts {
