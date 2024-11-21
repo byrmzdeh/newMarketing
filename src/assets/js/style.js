@@ -53,6 +53,18 @@ document.addEventListener("scroll", function () {
   }
 });
 
+
+
+// İkona tıklandığında sayfanın başına git
+document.getElementById('scrollToTop').addEventListener('click', function () {
+    window.scrollTo({
+        top: 0, // Dinamik uzunluk yerine 0 ile sayfanın başı hedeflenir
+        behavior: 'smooth' // Yumuşak geçiş
+    });
+});
+
+
+
 ///search
 const search = document.getElementById('search');
 const searchShow = document.getElementById('search-show');

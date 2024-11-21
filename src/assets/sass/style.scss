@@ -1024,8 +1024,8 @@ nav {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    min-height: 110vh;
-    height: 100%;
+   
+    height: 100vh;
     flex-shrink: 0;
     padding: 60px;
     display: flex;
@@ -1043,7 +1043,7 @@ nav {
         gap: 15px;
 
         .smart {
-            font-size: 100px;
+            font-size: 115px;
             font-weight: 800;
             color: white;
             -webkit-text-fill-color: initial;
@@ -1055,7 +1055,7 @@ nav {
         #animatedText {
             position: relative;
             display: inline-block;
-            font-size: 100px;
+            font-size: 115px;
             font-weight: 800;
             line-height: 40px;
             color: transparent;
@@ -1417,6 +1417,41 @@ nav {
     }
 
 }
+
+
+/* Sayfanın en altına yapışık ikon için stil */
+#scrollToTop {
+    width: 45px;
+    height: 45px;
+    position: fixed; /* Sayfanın belli bir noktasına yapışık olmasını sağlar */
+    bottom: 30px; /* Alt kenardan uzaklık */
+    right: 30px; /* Sağ kenardan uzaklık */
+    background-color: white; /* Arka plan rengi */
+    color: white; /* Yazı rengi */
+    border: none; /* Kenarlık kaldır */
+    border-radius: 50%; /* Daire şekli */
+    padding: 15px; /* Boyutlar */
+    font-size: 18px; /* Yazı boyutu */
+    cursor: pointer; /* İşaretçinin tıklanabilir olduğunu göster */
+    border-radius: 7px;
+    box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
+    transition: background-color 0.3s ease; /* Hover efekti için geçiş */
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i{
+        background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform: rotate(270deg);
+    }
+}
+
+
+
+
 
 .stickyButtonShow {
     opacity: 1;
@@ -3713,7 +3748,7 @@ footer {
 
         .fourCard {
             width: 100%;
-            max-height: 451px;
+            max-height: 460px;
             height: 100%;
             background-color: rgb(252, 252, 252);
             box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
@@ -3727,8 +3762,7 @@ footer {
 
             img {
                 width: 100%;
-                min-height: 300px;
-                width: 100%;
+                height: 90%;
                 object-fit: cover;
             }
 
@@ -7188,16 +7222,16 @@ footer {
             justify-content: center;
 
             .smart {
-                font-size: 40px;
-                line-height: 60px;
+                font-size: 55px;
+                line-height: 70px;
             }
 
             #animatedText {
-                height: 50px;
+                height: 70px;
 
                 span {
-                    font-size: 40px;
-                    line-height: 60px;
+                    font-size: 55px;
+                    line-height: 70px;
                 }
             }
 
@@ -8057,6 +8091,9 @@ footer {
 
             .fourCard {
                 width: 100%;
+                img{
+                    height: 90%;
+                }
 
                 p {
                     font-size: 14px;
@@ -9640,16 +9677,16 @@ footer {
             gap: 15px;
 
             .smart {
-                font-size: 55px;
-                line-height: 60px;
+                font-size: 85px;
+                line-height: 95px;
             }
 
             #animatedText {
-                height: 55px;
+                height: 130px;
 
                 span {
-                    font-size: 50px;
-                    line-height: 60px;
+                    font-size: 85px;
+                    line-height: 95px;
                 }
             }
 
