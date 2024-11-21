@@ -820,7 +820,8 @@ nav #show ul li:hover a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  justify-content: center;
+  gap: 15px;
 }
 .one .text .smart {
   font-size: 100px;
@@ -835,7 +836,7 @@ nav #show ul li:hover a {
   display: inline-block;
   font-size: 100px;
   font-weight: 800;
-  line-height: 1.3em;
+  line-height: 40px;
   color: transparent;
   font-family: "Inter";
   overflow: hidden;
@@ -5640,11 +5641,14 @@ footer .foot .f-connect .links .terms {
   .one .text {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: center;
   }
   .one .text .smart {
     font-size: 40px;
     line-height: 60px;
+  }
+  .one .text #animatedText {
+    height: 70px;
   }
   .one .text #animatedText span {
     font-size: 40px;
@@ -7337,11 +7341,14 @@ footer .foot .f-connect .links .terms {
     gap: 15px;
   }
   .one .text .smart {
-    font-size: 65px;
+    font-size: 55px;
     line-height: 60px;
   }
+  .one .text #animatedText {
+    height: 55px;
+  }
   .one .text #animatedText span {
-    font-size: 60px;
+    font-size: 50px;
     line-height: 60px;
   }
   .two {
