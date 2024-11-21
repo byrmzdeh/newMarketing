@@ -808,7 +808,7 @@ nav #show ul li:hover a {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  min-height: 106vh;
   flex-shrink: 0;
   padding: 60px;
   display: flex;
@@ -1088,15 +1088,14 @@ nav #show ul li:hover a {
 
 /* Sayfanın en altına yapışık ikon için stil */
 #scrollToTop {
-  width: 45px;
-  height: 45px;
+  width: 20px;
+  height: 20px;
   position: fixed; /* Sayfanın belli bir noktasına yapışık olmasını sağlar */
   bottom: 30px; /* Alt kenardan uzaklık */
   right: 30px; /* Sağ kenardan uzaklık */
   background-color: white; /* Arka plan rengi */
   color: white; /* Yazı rengi */
   border: none; /* Kenarlık kaldır */
-  border-radius: 50%; /* Daire şekli */
   padding: 15px; /* Boyutlar */
   font-size: 18px; /* Yazı boyutu */
   cursor: pointer; /* İşaretçinin tıklanabilir olduğunu göster */
@@ -1107,6 +1106,8 @@ nav #show ul li:hover a {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 43px;
+  height: 43px;
 }
 #scrollToTop i {
   background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
@@ -6966,7 +6967,9 @@ footer .foot .f-connect .links .terms {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
-    gap: 10px;
+  }
+  #brandingPage form .purpose .head .options .option {
+    width: 60%;
   }
   #brandingPage form .purpose .head .options .option span {
     font-size: 14px;
