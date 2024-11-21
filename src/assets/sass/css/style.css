@@ -826,7 +826,7 @@ nav #show ul li:hover a {
   gap: 15px;
 }
 .one .text .smart {
-  font-size: 115px;
+  font-size: 120px;
   font-weight: 800;
   color: white;
   -webkit-text-fill-color: initial;
@@ -836,7 +836,7 @@ nav #show ul li:hover a {
 .one .text #animatedText {
   position: relative;
   display: inline-block;
-  font-size: 115px;
+  font-size: 120px;
   font-weight: 800;
   line-height: 40px;
   color: transparent;
@@ -847,9 +847,9 @@ nav #show ul li:hover a {
 }
 .one .text #animatedText span {
   position: absolute;
-  font-size: 100px;
+  font-size: 120px;
   font-weight: 800;
-  line-height: 1.3em;
+  line-height: 1.2em;
   color: transparent;
   font-family: "Inter";
   background: linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%);
@@ -1090,18 +1090,28 @@ nav #show ul li:hover a {
 #scrollToTop {
   width: 20px;
   height: 20px;
-  position: fixed; /* Sayfanın belli bir noktasına yapışık olmasını sağlar */
-  bottom: 30px; /* Alt kenardan uzaklık */
-  right: 30px; /* Sağ kenardan uzaklık */
-  background-color: white; /* Arka plan rengi */
-  color: white; /* Yazı rengi */
-  border: none; /* Kenarlık kaldır */
-  padding: 15px; /* Boyutlar */
-  font-size: 18px; /* Yazı boyutu */
-  cursor: pointer; /* İşaretçinin tıklanabilir olduğunu göster */
+  position: fixed;
+  /* Sayfanın belli bir noktasına yapışık olmasını sağlar */
+  bottom: 30px;
+  /* Alt kenardan uzaklık */
+  right: 30px;
+  /* Sağ kenardan uzaklık */
+  background-color: white;
+  /* Arka plan rengi */
+  color: white;
+  /* Yazı rengi */
+  border: none;
+  /* Kenarlık kaldır */
+  padding: 15px;
+  /* Boyutlar */
+  font-size: 18px;
+  /* Yazı boyutu */
+  cursor: pointer;
+  /* İşaretçinin tıklanabilir olduğunu göster */
   border-radius: 7px;
   box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
-  transition: background-color 0.3s ease; /* Hover efekti için geçiş */
+  transition: background-color 0.3s ease;
+  /* Hover efekti için geçiş */
   z-index: 9;
   display: flex;
   align-items: center;

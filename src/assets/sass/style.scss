@@ -301,7 +301,7 @@ nav {
                                     /* Firefox üçün */
                                     appearance: none;
                                     /* Ümumi stil */
-                                   background-color: white;
+                                    background-color: white;
 
 
                                 }
@@ -1024,7 +1024,7 @@ nav {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-   
+
     height: 105vh;
     flex-shrink: 0;
     padding: 60px;
@@ -1043,7 +1043,7 @@ nav {
         gap: 15px;
 
         .smart {
-            font-size: 115px;
+            font-size: 120px;
             font-weight: 800;
             color: white;
             -webkit-text-fill-color: initial;
@@ -1055,7 +1055,7 @@ nav {
         #animatedText {
             position: relative;
             display: inline-block;
-            font-size: 115px;
+            font-size: 120px;
             font-weight: 800;
             line-height: 40px;
             color: transparent;
@@ -1066,9 +1066,9 @@ nav {
 
             span {
                 position: absolute;
-                font-size: 100px;
+                font-size: 120px;
                 font-weight: 800;
-                line-height: 1.3em;
+                line-height: 1.2em;
                 color: transparent;
                 font-family: "Inter";
                 background: linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%);
@@ -1423,30 +1423,41 @@ nav {
 #scrollToTop {
     width: 20px;
     height: 20px;
-    position: fixed; /* Sayfanın belli bir noktasına yapışık olmasını sağlar */
-    bottom: 30px; /* Alt kenardan uzaklık */
-    right: 30px; /* Sağ kenardan uzaklık */
-    background-color: white; /* Arka plan rengi */
-    color: white; /* Yazı rengi */
-    border: none; /* Kenarlık kaldır */
-    padding: 15px; /* Boyutlar */
-    font-size: 18px; /* Yazı boyutu */
-    cursor: pointer; /* İşaretçinin tıklanabilir olduğunu göster */
+    position: fixed;
+    /* Sayfanın belli bir noktasına yapışık olmasını sağlar */
+    bottom: 30px;
+    /* Alt kenardan uzaklık */
+    right: 30px;
+    /* Sağ kenardan uzaklık */
+    background-color: white;
+    /* Arka plan rengi */
+    color: white;
+    /* Yazı rengi */
+    border: none;
+    /* Kenarlık kaldır */
+    padding: 15px;
+    /* Boyutlar */
+    font-size: 18px;
+    /* Yazı boyutu */
+    cursor: pointer;
+    /* İşaretçinin tıklanabilir olduğunu göster */
     border-radius: 7px;
     box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
-    transition: background-color 0.3s ease; /* Hover efekti için geçiş */
+    transition: background-color 0.3s ease;
+    /* Hover efekti için geçiş */
     z-index: 9;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 43px;
     height: 43px;
-    i{
+
+    i {
         background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    transform: rotate(270deg);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transform: rotate(270deg);
     }
 }
 
@@ -7698,9 +7709,10 @@ footer {
 
             #categorySelect {
                 width: 100%;
-               option{
-                width: 100%;
-               }
+
+                option {
+                    width: 100%;
+                }
             }
 
 
@@ -8092,7 +8104,8 @@ footer {
 
             .fourCard {
                 width: 100%;
-                img{
+
+                img {
                     height: 90%;
                 }
 
@@ -9065,7 +9078,8 @@ footer {
 
                         .option {
 
-width: 95%;
+                            width: 95%;
+
                             span {
                                 font-size: 14px;
                             }
