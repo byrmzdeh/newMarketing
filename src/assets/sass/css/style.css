@@ -256,7 +256,7 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .
   /* Firefox üçün */
   appearance: none;
   /* Ümumi stil */
-  background: none;
+  background-color: white;
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group input,
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group select {
@@ -274,7 +274,7 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group s
   /* Firefox üçün */
   appearance: none;
   /* Ümumi stil */
-  background: none;
+  background-color: white;
 }
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group input::placeholder,
 nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group select::placeholder {
@@ -310,7 +310,6 @@ nav .view .modal .modal-content #addCompanyContent #addCompanyForm .form-group .
   padding: 10px;
   border: 2px dashed rgb(174, 105, 255);
   background-color: white;
-  background-color: transparent;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
