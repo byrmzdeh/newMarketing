@@ -668,7 +668,7 @@ nav .view #search-show #results .logo {
 nav #show {
   display: none;
   width: 380px;
-  min-height: 630px;
+  height: 100vh;
   position: absolute;
   right: 59px;
   top: 41px;
@@ -808,7 +808,7 @@ nav #show ul li:hover a {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  height: 105vh;
+  height: 106vh;
   flex-shrink: 0;
   padding: 60px;
   display: flex;
