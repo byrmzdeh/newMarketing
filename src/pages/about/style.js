@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll('.counter');
     counters.forEach(counter => {
         const targetNumber = parseInt(counter.getAttribute('data-target'));
-        const duration = 2000; // Adjust duration as needed
+        const duration = 2000; 
         animateCounter(counter, targetNumber, duration);
     });
 });

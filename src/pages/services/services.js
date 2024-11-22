@@ -8,7 +8,7 @@ fetch("/src/data/services.json")
         data.forEach(item => {
             const card = document.createElement('div')
             card.classList.add('servicesCard')
-            card.setAttribute('data-aos', 'fade-up'); // Set data-aos attribute here
+            card.setAttribute('data-aos', 'fade-up');
             card.innerHTML = `
              <div data-id=${item.id} >
                 <h1>${item.name}</h1>

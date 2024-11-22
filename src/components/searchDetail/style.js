@@ -11,7 +11,7 @@ closeBtn.addEventListener('click', function () {
     show.style.display = 'none'
 
 })
-    
+
 ///search
 const search = document.getElementById('search');
 const searchShow = document.getElementById('search-show');
@@ -19,9 +19,9 @@ const inputClose = document.getElementById('inputClose');
 const searchInput = document.getElementById('search-input');
 const result = document.getElementById('results');
 const value = document.getElementById('value');
-const itemDiv=document.getElementById("item-divSearch")
+const itemDiv = document.getElementById("item-divSearch")
 value.style.display = 'none';
-itemDiv.style.display='none'
+itemDiv.style.display = 'none'
 
 
 
@@ -36,15 +36,13 @@ search.addEventListener('click', function () {
 });
 
 searchInput.addEventListener('input', function () {
-    const inputValue = searchInput.value.trim(); // Input dəyərini oxu
+    const inputValue = searchInput.value.trim(); 
     if (inputValue) {
-        // Mesajı göstər
-        itemDiv.style.display='block';
+        itemDiv.style.display = 'block';
         value.style.display = 'block';
-        value.style.textAlign='center'
+        value.style.textAlign = 'center'
         value.innerHTML = `Search result for : "${inputValue}"`;
-        
-        // Axtarış nəticələrini API-dən gətir
+
         fetch(apiUrl)
             .then(response => {
                 if (!response.ok) {
@@ -53,7 +51,6 @@ searchInput.addEventListener('input', function () {
                 return response.json();
             })
             .then(data => {
-                // Nəticələri süz
                 const filteredResults = data.filter(item =>
                     item.name.toLowerCase().includes(inputValue.toLowerCase())
                 );
@@ -64,18 +61,14 @@ searchInput.addEventListener('input', function () {
                 result.innerHTML = 'Axtarış zamanı xəta baş verdi';
             });
     } else {
-        // Mesajı və nəticələri gizlət
-        itemDiv.style.display='none'
+        itemDiv.style.display = 'none'
         value.style.display = 'none';
         result.innerHTML = '<img class="logo" src="/src/assets/image/home/showLogo.png" alt="No results">';
     }
 });
 
 function displayResults(data) {
-    // Clear previous results
     result.innerHTML = '';
-
-    // Create searchCards container
     const searchCards = document.createElement('div');
     searchCards.classList.add('searchCards');
 
@@ -85,7 +78,6 @@ function displayResults(data) {
         return;
     }
 
-    // Only show the first 3 results
     const limitedResults = data.slice(0, 3);
     let cardContent = '';
 
@@ -103,33 +95,20 @@ function displayResults(data) {
         `;
     });
 
-    searchCards.innerHTML = cardContent; // Add card content to cardContainer
-    result.appendChild(searchCards); // Append searchCards to results
-
-    // // Add click event to each result item
-    // const resultItems = document.querySelectorAll('.result-item');
-    // resultItems.forEach(item => {
-    //     item.addEventListener('click', () => {
-    //         const id = item.getAttribute('data-id');
-    //         window.location.href = `/src/pages/detail/index.html?id=${id}`;
-    //     });
-    // });
-
-    // Add click event only to the "Read more" link
+    searchCards.innerHTML = cardContent; 
+    result.appendChild(searchCards); 
     const readMoreLinks = document.querySelectorAll('.read');
     readMoreLinks.forEach(link => {
         link.addEventListener('click', (event) => {
-            // Prevents the click on the link from bubbling up to the card's event
             event.stopPropagation();
         });
     });
 
-    // Check if there are more than 3 results and add "See All" button
     if (data.length > 3) {
         const seeAllButton = document.createElement('button');
         seeAllButton.textContent = 'SEE MORE';
         seeAllButton.id = 'see-all';
-        result.appendChild(seeAllButton); // Add button to results
+        result.appendChild(seeAllButton); 
 
         seeAllButton.addEventListener('click', () => {
             window.location.href = '/src/pages/result/index.html';
@@ -156,7 +135,7 @@ const itemAddImg = document.getElementById('item-addImage');
 
 const apiUrl = '/src/data/people.json';
 
-// URL-dən ID-ni oxuyur
+// URL-dən id-ni oxuyur
 const params = new URLSearchParams(window.location.search);
 let id = params.get('id');
 
@@ -175,13 +154,10 @@ function displayItemDetails(item) {
     itemAddImg.setAttribute('src', item.img1);
 }
 
-// ID URL-də yoxdursa, `localStorage`-dən yoxla
 if (!id) {
-    // Əvvəl saxlanmış ID-ni `localStorage`-dən oxu
     id = localStorage.getItem('lastViewedId');
 }
 
-// Əgər hələ də ID varsa, məlumatı çək
 if (id) {
     fetch(apiUrl)
         .then(response => {
@@ -191,12 +167,9 @@ if (id) {
             return response.json();
         })
         .then(data => {
-            // Müvafiq məlumatları tap
             const item = data.find(person => person.id === id);
             if (item) {
-                // Məlumatları göstər
                 displayItemDetails(item);
-                // `localStorage`-də son baxılan ID-ni saxla
                 localStorage.setItem('lastViewedId', id);
             } else {
                 itemName.textContent = 'Heç bir məlumat tapılmadı';
@@ -216,7 +189,6 @@ if (id) {
 // Səhifə məlumatını müəyyən edir
 const currentPage = document.body.getAttribute('data-page');
 
-// Modal və Tab idarə funksiyaları
 function initModal() {
     const modal = document.getElementById("modal");
     const hireUsButton = document.getElementById("hireUsButton");
@@ -225,37 +197,33 @@ function initModal() {
     const closeThankModal = document.getElementById("closeThankModal");
 
     if (hireUsButton) {
-        // "HIRE US" düyməsinə basıldıqda modalın açılması
         hireUsButton.onclick = function () {
             modal.style.display = "flex";
         };
     }
 
     if (closeModal) {
-        // Modalı bağlama düyməsinə basıldıqda modalı bağlama
         closeModal.onclick = function () {
             modal.style.display = "none";
         };
     }
 
-    // Pəncərənin xaricinə basıldıqda modalı bağlama
     window.onclick = function (event) {
         if (event.target === modal) {
             modal.style.display = "none";
         }
     };
 
-    // Teşekkür modalını bağlama funksiyası
     if (closeThankModal) {
         closeThankModal.onclick = function () {
             thankModal.style.display = "none";
-            window.location.href='/index.html'
+            window.location.href = '/index.html'
         };
     }
 
     window.onload = function () {
         if (thankModal) {
-            thankModal.style.display = "none"; // Səhifə yüklənərkən təşəkkür modalını gizlədin
+            thankModal.style.display = "none";
         }
     };
 }
@@ -268,7 +236,6 @@ function initTabs() {
     const contactContent = document.getElementById("contactContent");
 
     if (tabAddCompany && tabContact) {
-        // "Şirkət Əlavə Et" tabına keçid
         tabAddCompany.onclick = function () {
             addCompanyContent.style.display = "block";
             contactContent.style.display = "none";
@@ -276,7 +243,6 @@ function initTabs() {
             tabContact.classList.remove("active");
         };
 
-        // "Əlaqə" tabına keçid
         tabContact.onclick = function () {
             addCompanyContent.style.display = "none";
             contactContent.style.display = "block";
@@ -296,19 +262,19 @@ function initForms() {
 
     if (addCompanyForm) {
         addCompanyForm.onsubmit = function (event) {
-            event.preventDefault(); // Formun yenilənməsini qarşısını alır
+            event.preventDefault(); 
             document.getElementById("modal").style.display = "none";
             overlayThank.style.display = 'block';
-            thankModal.style.display = "flex"; // Teşekkür modalını açır
+            thankModal.style.display = "flex";
         };
     }
 
     if (contactForm) {
         contactForm.onsubmit = function (event) {
-            event.preventDefault(); // Formun yenilənməsini qarşısını alır
+            event.preventDefault(); 
             document.getElementById("modal").style.display = "none";
             overlayThank.style.display = 'block';
-            thankModal.style.display = "flex"; // Teşekkür modalını açır
+            thankModal.style.display = "flex"; 
         };
     }
 }
@@ -322,75 +288,75 @@ if (currentPage === "home") {
     initModal();
     initTabs();
     initForms();
-} else if(currentPage==="blog"){
+} else if (currentPage === "blog") {
     initModal();
     initTabs();
     initForms();
-} else if(currentPage==="business"){
+} else if (currentPage === "business") {
     initModal();
     initTabs();
     initForms();
-} else if(currentPage==="catalogue"){
+} else if (currentPage === "catalogue") {
     initModal();
     initTabs();
     initForms();
-} else if(currentPage==="contact"){
+} else if (currentPage === "contact") {
     initModal();
     initTabs();
     initForms();
-} else if(currentPage==="partners"){
+} else if (currentPage === "partners") {
     initModal();
     initTabs();
     initForms();
-} else if(currentPage==="podcast"){
+} else if (currentPage === "podcast") {
     initModal();
     initTabs();
     initForms();
-} else if(currentPage==="portfolio"){
+} else if (currentPage === "portfolio") {
     initModal();
     initTabs();
     initForms();
-} else if(currentPage==="services"){
+} else if (currentPage === "services") {
     initModal();
     initTabs();
     initForms();
-} else if(currentPage==="telim"){
+} else if (currentPage === "telim") {
     initModal();
     initTabs();
     initForms();
-} else if(currentPage==="terms"){
+} else if (currentPage === "terms") {
     initModal();
     initTabs();
     initForms();
-}else if(currentPage==="searchDetail"){
+} else if (currentPage === "searchDetail") {
     initModal();
     initTabs();
     initForms();
-}else if(currentPage==="catalogueDetail"){
+} else if (currentPage === "catalogueDetail") {
     initModal();
     initTabs();
     initForms();
-}else if(currentPage==="servicesDetail"){
+} else if (currentPage === "servicesDetail") {
     initModal();
     initTabs();
     initForms();
-}else if(currentPage==="catalogueCategories"){
+} else if (currentPage === "catalogueCategories") {
     initModal();
     initTabs();
     initForms();
-}else if(currentPage==="servicesDetail"){
+} else if (currentPage === "servicesDetail") {
     initModal();
     initTabs();
     initForms();
-}else if(currentPage==="design"){
+} else if (currentPage === "design") {
     initModal();
     initTabs();
     initForms();
-}else if(currentPage==="result"){
+} else if (currentPage === "result") {
     initModal();
     initTabs();
     initForms();
-}else if(currentPage==="portfolioDetail"){
+} else if (currentPage === "portfolioDetail") {
     initModal();
     initTabs();
     initForms();

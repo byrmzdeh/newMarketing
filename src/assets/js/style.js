@@ -13,43 +13,36 @@ closeBtn.addEventListener('click', function () {
 })
 
 //animation
-const words = ["Marketinq.", "Rəqəmsal."]; // Dəyişən sözlər
+const words = ["Marketinq.", "Rəqəmsal."]; 
 let index = 0;
 
-// Başlangıcda sözlərin görünüşünü göstərmək
 const textElements = document.querySelectorAll("#animatedText span");
 textElements[index].classList.add("visible");
 
 setInterval(() => {
-  const textElement = textElements[index]; // Cari aktiv element
+  const textElement = textElements[index]; 
   index = (index + 1) % words.length; // Yeni sözə keçid
 
   // Köhnə sözü gizlət
   textElement.classList.remove("visible");
 
-  // Yeni sözü göstər
   const nextElement = textElements[index];
   nextElement.classList.add("visible");
   
-}, 1955); // 2 saniyə intervalla dəyişir\
+}, 1955); 
 
 
 //stickyButton
-
-
-
 document.addEventListener("scroll", function () {
   const one = document.querySelector(".one");
   const button = document.querySelector(".stickyButton");
 
-  // .one elementinin alt sərhədini tapırıq
   const oneBottom = one.getBoundingClientRect().bottom;
 
-  // Əgər .one elementinin alt sərhədi ekranın yuxarı hissəsindən keçibsə
   if (oneBottom < 0) {
-    button.classList.add("stickyButtonShow"); // Görünən vəziyyət
+    button.classList.add("stickyButtonShow"); 
   } else {
-    button.classList.remove("stickyButtonShow"); // Gizli vəziyyət
+    button.classList.remove("stickyButtonShow"); 
   }
 });
 
@@ -58,8 +51,8 @@ document.addEventListener("scroll", function () {
 // İkona tıklandığında sayfanın başına git
 document.getElementById('scrollToTop').addEventListener('click', function () {
     window.scrollTo({
-        top: 0, // Dinamik uzunluk yerine 0 ile sayfanın başı hedeflenir
-        behavior: 'smooth' // Yumuşak geçiş
+        top: 0, 
+        behavior: 'smooth'
     });
 });
 
@@ -85,22 +78,18 @@ search.addEventListener('click', function () {
     result.innerHTML = '<img class="logo" src="/src/assets/image/home/showLogo.png" alt="No results">';
 });
 
-// Axtarış panelini bağla
 inputClose.addEventListener('click', function () {
     searchShow.style.display = 'none';
 });
 
-// Input dəyəri dəyişdikdə işləyən funksionallıq
 searchInput.addEventListener('input', function () {
-    const inputValue = searchInput.value.trim(); // Input dəyərini oxu
+    const inputValue = searchInput.value.trim(); 
     if (inputValue) {
-        // Mesajı göstər
         itemDiv.style.display='block';
         value.style.display = 'block';
         value.style.textAlign='center'
         value.innerHTML = `Search result for : "${inputValue}"`;
         
-        // Axtarış nəticələrini API-dən gətir
         fetch(apiUrl)
             .then(response => {
                 if (!response.ok) {
@@ -109,7 +98,6 @@ searchInput.addEventListener('input', function () {
                 return response.json();
             })
             .then(data => {
-                // Nəticələri süz
                 const filteredResults = data.filter(item =>
                     item.name.toLowerCase().includes(inputValue.toLowerCase())
                 );
@@ -120,16 +108,14 @@ searchInput.addEventListener('input', function () {
                 result.innerHTML = 'Axtarış zamanı xəta baş verdi';
             });
     } else {
-        // Mesajı və nəticələri gizlət
         itemDiv.style.display='none'
         value.style.display = 'none';
         result.innerHTML = '<img class="logo" src="/src/assets/image/home/showLogo.png" alt="No results">';
     }
 });
 
-// Nəticələri göstərən funksionallıq
 function displayResults(data) {
-    result.innerHTML = ''; // Əvvəlki nəticələri təmizlə
+    result.innerHTML = ''; 
 
     const searchCards = document.createElement('div');
     searchCards.classList.add('searchCards');
@@ -157,10 +143,9 @@ function displayResults(data) {
         `;
     });
 
-    searchCards.innerHTML = cardContent; // Kart məzmununu əlavə et
-    result.appendChild(searchCards); // Nəticələri göstər
+    searchCards.innerHTML = cardContent; 
+    result.appendChild(searchCards); 
 
-    // "See All" düyməsini əlavə et, əgər 3-dən çox nəticə varsa
     if (data.length > 3) {
         const seeAllButton = document.createElement('button');
         seeAllButton.textContent = 'SEE MORE';
@@ -176,60 +161,49 @@ function displayResults(data) {
 
 //Modall
 document.addEventListener("DOMContentLoaded", () => {
-    // Modal ve form elemanları
     const modal = document.getElementById("exampleModal");
     const openModalButton = document.getElementById("gradButton");
     const closeModalButton = document.getElementById("btnClose");
-    const form = document.getElementById("myForm"); // Formu seç
+    const form = document.getElementById("myForm");
     const sifarisBtn = document.getElementById('sifarisBtn')
 
-    // Modalı aç
     openModalButton.addEventListener("click", () => {
-        modal.style.display = "flex"; // Modalı açmak için display: flex kullanılıyor
+        modal.style.display = "flex"; 
     });
 
-    // Modalı kapatma
     closeModalButton.addEventListener("click", () => {
-        modal.style.display = "none"; // Modalı kapatmak için display: none kullanılıyor
+        modal.style.display = "none";
     });
 
-    // Modal dışına tıklanması durumunda modalı kapatma
     window.addEventListener("click", (event) => {
-        if (event.target === modal) { // Eğer tıklanan modalın kendisi ise
-            modal.style.display = "none"; // Modalı kapat
+        if (event.target === modal) { 
+            modal.style.display = "none"; 
         }
     });
 
 
 
-    // Formun gönderilmesini engellemek için
     form.addEventListener("submit", function (e) {
-        e.preventDefault(); // Form gönderiminde sayfanın yenilenmesini engelle
+        e.preventDefault(); 
 
-        // Tüm input alanlarının doluluğunu kontrol et
-        const inputs = form.querySelectorAll('input'); // Tüm input elemanlarını seç
-        let allFilled = true; // Tüm alanların dolu olduğunu varsayıyoruz
-
+        const inputs = form.querySelectorAll('input'); 
+        let allFilled = true; 
         inputs.forEach(input => {
-            if (!input.value) { // Eğer bir alan boşsa
-                allFilled = false; // Tüm alanlar dolu değil
+            if (!input.value) { 
+                allFilled = false;
             }
         });
 
         if (allFilled) {
-            // Tüm alanlar doluysa işlemleri gerçekleştirin
-            this.classList.add('was-validated'); // Bootstrap validasyon sınıfını ekleyin
-            console.log("Form gönderildi!"); // Form gönderim işlemi burada yapılabilir
-            // Burada verileri gönderme işlemleri yapılabilir
+            this.classList.add('was-validated'); 
+            console.log("Form gönderildi!"); 
         } else {
-            alert("Lütfen tüm alanları doldurun."); // Boş alan uyarısı
+            alert("Lütfen tüm alanları doldurun."); 
         }
     });
 
-    // Telefon numarası inputuna yalnızca rakam girişi için
     document.getElementById("validationCustom02").addEventListener("input", function () {
-        // Sadece rakamları kabul et
-        this.value = this.value.replace(/[^0-9]/g, ''); // Tüm harfleri ve özel karakterleri kaldır
+        this.value = this.value.replace(/[^0-9]/g, ''); 
     });
 });
 
@@ -307,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll('.counter');
     counters.forEach(counter => {
         const targetNumber = parseInt(counter.getAttribute('data-target'));
-        const duration = 2000; // Adjust duration as needed
+        const duration = 2000;
         animateCounter(counter, targetNumber, duration);
     });
 });
@@ -337,7 +311,6 @@ fetch('/src/data/portfolio.json')
 
 
 //modal hireUs
-// HTML elementləri seçirik
 const hireUsButton = document.getElementById("hireUsButton");
 const hireUsButtonn = document.getElementById("hireUsButtonn");
 const modal = document.getElementById("modal");
@@ -346,15 +319,14 @@ const tabAddCompany = document.getElementById("tabAddCompany");
 const tabContact = document.getElementById("tabContact");
 const addCompanyContent = document.getElementById("addCompanyContent");
 const contactContent = document.getElementById("contactContent");
-const addCompanyForm = document.getElementById("addCompanyForm"); // `id` əlavə olundu
-const contactForm = document.getElementById("contactForm"); // `id` əlavə olundu
+const addCompanyForm = document.getElementById("addCompanyForm");
+const contactForm = document.getElementById("contactForm"); 
 
 const send = document.getElementById('send')
 const thankModal = document.getElementById("thankModal");
 const overlayThank = document.getElementById("overlayThank");
 const closeThankModal = document.getElementById("closeThankModal");
 
-// "HIRE US" düyməsinə basıldıqda modalın açılması
 hireUsButton.onclick = function () {
     modal.style.display = "flex";
 };
@@ -364,12 +336,10 @@ hireUsButtonn.onclick = function () {
 };
 
 
-// Modalı bağlama düyməsinə basıldıqda modalı bağlama
 closeModal.onclick = function () {
     modal.style.display = "none";
 };
 
-// Pəncərənin xaricinə basıldıqda modalı bağlama
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -395,29 +365,29 @@ const tabs = document.querySelectorAll('.tabs span');
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active')); // Əvvəlki aktiv sinifləri silir
-    tab.classList.add('active'); // Klik edilən span-a .active sinifi əlavə edir
+    tabs.forEach(t => t.classList.remove('active')); 
+    tab.classList.add('active');
   });
 })
 
 // Formların göndərilmə funksiyası
 addCompanyForm.onsubmit = function (event) {
-    event.preventDefault(); // Formun yenilənməsini qarşısını alır
+    event.preventDefault();
     modal.style.display = "none";
-    thankModal.style.display = "flex"; // Teşekkür modalını açır
+    thankModal.style.display = "flex"; 
     overlayThank.style.display='block'
 };
 
 contactForm.onsubmit = function (event) {
-    event.preventDefault(); // Formun yenilənməsini qarşısını alır
+    event.preventDefault(); 
     modal.style.display = "none";
-    thankModal.style.display = "flex"; // Teşekkür modalını açır
+    thankModal.style.display = "flex";
     overlayThank.style.display='block'
 
 };
 
 window.onload = function () {
-    thankModal.style.display = "none"; // Səhifə yüklənərkən teşekkür modalını gizlət
+    thankModal.style.display = "none"; 
 };
 
 
@@ -425,7 +395,7 @@ window.onload = function () {
 
 // Teşekkür modaldaki "X" düyməsi
 closeThankModal.onclick = function () {
-    thankModal.style.display = "none"; // Teşekkür modalını bağlayır
+    thankModal.style.display = "none";
     overlayThank.style.display='none'
 
 };
@@ -433,13 +403,8 @@ closeThankModal.onclick = function () {
 
 //podcast
 function selectOption(currentStep, nextStepId) {
-    // Mövcud addımı tamamlayır
     document.getElementById(`step-${currentStep}`).classList.add("active");
-
-    // Növbəti addımı aktiv edir
     document.getElementById(nextStepId).classList.add("active");
-
-    // Yalnız bir checkbox seçimi etmək üçün digər seçimləri təmizləyir
     const checkboxes = document.querySelectorAll(`#step-${currentStep} .option input[type="checkbox"]`);
     checkboxes.forEach((checkbox) => {
         checkbox.checked = false;

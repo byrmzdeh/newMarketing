@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     const businessCards = document.getElementById('catalogueCards');
-    const cardsPerPage = 6; // Səhifə başına kart sayı
+    const cardsPerPage = 6; 
     let currentPage = 1;
-    let pages; // Ümumi səhifə sayı
-    let allData = []; // Bütün kart məlumatlarını saxlayır
-    let filteredData = []; // Kateqoriyaya görə süzülmüş məlumatları saxlayır
-    let selectedCategory = 'All'; // Defolt kateqoriya
+    let pages; 
+    let allData = []; 
+    let filteredData = []; 
+    let selectedCategory = 'All'; 
 
-    // Seçilmiş kateqoriya və səhifəyə əsasən kartları göstərin
     function displayCards(data, page) {
-        businessCards.innerHTML = ""; // Mövcud kartları təmizlə
+        businessCards.innerHTML = "";
         const start = (page - 1) * cardsPerPage;
         const end = start + cardsPerPage;
         const currentCards = data.slice(start, end);
@@ -56,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Səhifələmə yaratma
     function createPagination(pages, page) {
         let str = "<ul>";
         let active;
@@ -100,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    // Səhifəni dəyiş və ekranı yenilə
     window.changePage = function (page) {
         currentPage = page;
         displayCards(filteredData, currentPage);
@@ -111,15 +108,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Seçilmiş kateqoriyaya görə kartları süz
     window.filterCards = function (category) {
         selectedCategory = category;
-        currentPage = 1; // Kateqoriya dəyişikliyində ilk səhifəyə sıfırla
+        currentPage = 1; 
 
-        // Bütün düymələrin aktivlik sinifini təmizlə
         const buttons = document.querySelectorAll('.buttons button');
         buttons.forEach(button => {
-            button.classList.remove('active'); // Bütün düymələrdən 'active' sinifini sil
+            button.classList.remove('active'); 
         });
 
-        // Seçilmiş kateqoriya üçün 'active' sinfini əlavə et
         if (category === 'All') {
             buttons[0].classList.add('active');
         } else {
@@ -136,36 +131,34 @@ document.addEventListener('DOMContentLoaded', function () {
             filteredData = allData.filter(item => item.category === category);
         }
 
-        pages = Math.ceil(filteredData.length / cardsPerPage); // Səhifə sayını yenilə
-        displayCards(filteredData, currentPage); // Süzülmüş kartları göstər
-        createPagination(pages, currentPage); // Səhifələmə yenilə
+        pages = Math.ceil(filteredData.length / cardsPerPage); 
+        displayCards(filteredData, currentPage); 
+        createPagination(pages, currentPage); 
     };
 
     // Select menyusuna əsasən filtrasiya funksiyası
     document.getElementById('categorySelect').addEventListener('change', function () {
         const selectedCategory = this.value;
-        filterCards(selectedCategory); // Seçilmiş kateqoriyaya görə filtrasiya edirik
+        filterCards(selectedCategory); 
     });
 
-    // Məlumatları gətir və ekranı başlat
     function fetchDataAndDisplay() {
         fetch('/src/data/catalogue.json')
             .then(res => res.json())
             .then(data => {
-                allData = data; // Gələcək süzgə üçün bütün məlumatları saxla
-                filterCards(selectedCategory); // Defolt kateqoriya ilə ilkin ekran
+                allData = data;
+                filterCards(selectedCategory); 
             })
             .catch(error => console.error('Məlumatları əldə edərkən səhv:', error));
     }
 
-    // Məlumatları ilkin olaraq gətir və göstər
     fetchDataAndDisplay();
 
     // Kateqoriya düymələrinə klik hadisəsi əlavə et
     document.querySelectorAll('.category-button').forEach(button => {
         button.addEventListener('click', function () {
             const category = button.getAttribute('data-category');
-            filterCards(category); // Seçilmiş kateqoriyanı filterCards funksiyasına ötür
+            filterCards(category); 
         });
     });
 

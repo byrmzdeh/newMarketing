@@ -39,12 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    // URL-də id parametri yoxdursa, localStorage-də olan id-ni yoxla
     if (!id) {
         id = localStorage.getItem('lastViewedIdForCatalogue');
     }
 
-    // Əgər id varsa, məlumatı çək
     if (id) {
         console.log("Axtarılan ID:", id);
         fetch(apiUrl)
@@ -56,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(data => {
                 console.log("Yüklənmiş JSON məlumatları:", data);
-                // `id` dəyərini `Number` formatında müqayisə edin
                 const item = data.find(person => person.id === Number(id));
                 if (item) {
                     console.log("Tapılan məlumat:", item);

@@ -30,20 +30,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
 
-            // close düyməsinə kliklədikdə popup gizlənir
+            // close düyməsinə click
             closee.addEventListener('click', function (event) {
-                event.stopPropagation(); // hadisənin yayılmasını dayandırır
+                event.stopPropagation();
                 messageForm.style.display = 'none';
                 overlay.style.display = 'none';
             });
 
-            // Göndər düyməsinə kliklədikdə ana səhifəyə yönləndirir
 
 
             // telimForm submit olunduqda funksiyanı işə salır
 
             telimForm.addEventListener("submit", function (e) {
-                e.preventDefault(); // Standart davranışı dayandırır
+                e.preventDefault(); 
                 const sendBtn = document.getElementById('sendBtnn');
 
                 sendBtn.addEventListener('click', function (e) {
@@ -51,9 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
 
-            // messageForm-un boş yerinə klik edildikdə də gizlənir
             messageForm.addEventListener('click', function (event) {
-                if (event.target === messageForm) { // yalnız xarici divə klik edilərsə
+                if (event.target === messageForm) {
                     messageForm.style.display = 'none';
                     overlay.style.display = 'none';
                 }

@@ -56,7 +56,7 @@ if (id) {
             const item = data.find(service => service.id === Number(id));
             if (item) {
                 console.log("Tapılan məlumat:", item);
-                displayItemDetails(item); // Məlumatı göstər
+                displayItemDetails(item); 
             } else {
                 console.warn("Müvafiq məlumat tapılmadı");
             }
@@ -130,10 +130,7 @@ searchInput.addEventListener('input', function () {
 });
 
 function displayResults(data) {
-    // Clear previous results
     result.innerHTML = '';
-
-    // Create searchCards container
     const searchCards = document.createElement('div');
     searchCards.classList.add('searchCards');
 
@@ -141,8 +138,6 @@ function displayResults(data) {
         result.innerHTML = '<img class="logo" src="/src/assets/image/home/showLogo.png" alt="No results">';
         return;
     }
-
-    // Only show the first 3 results
     const limitedResults = data.slice(0, 3);
     let cardContent = '';
 
@@ -160,33 +155,20 @@ function displayResults(data) {
         `;
     });
 
-    searchCards.innerHTML = cardContent; // Add card content to cardContainer
-    result.appendChild(searchCards); // Append searchCards to results
-
-    // // Add click event to each result item
-    // const resultItems = document.querySelectorAll('.result-item');
-    // resultItems.forEach(item => {
-    //     item.addEventListener('click', () => {
-    //         const id = item.getAttribute('data-id');
-    //         window.location.href = `/src/pages/detail/index.html?id=${id}`;
-    //     });
-    // });
-
-    // Add click event only to the "Read more" link
+    searchCards.innerHTML = cardContent;
+    result.appendChild(searchCards);
     const readMoreLinks = document.querySelectorAll('.read');
     readMoreLinks.forEach(link => {
         link.addEventListener('click', (event) => {
-            // Prevents the click on the link from bubbling up to the card's event
             event.stopPropagation();
         });
     });
 
-    // Check if there are more than 3 results and add "See All" button
     if (data.length > 3) {
         const seeAllButton = document.createElement('button');
         seeAllButton.textContent = 'SEE MORE';
         seeAllButton.id = 'see-all';
-        result.appendChild(seeAllButton); // Add button to results
+        result.appendChild(seeAllButton); 
 
         seeAllButton.addEventListener('click', () => {
             window.location.href = '/src/pages/result/index.html';

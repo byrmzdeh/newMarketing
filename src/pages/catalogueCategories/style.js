@@ -13,6 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         <img src="${item.img}" alt="">
                     </a>
                 </div>`;
-            }).join(''); // Use join('') to convert array to string
+            }).join('');
         });
 });

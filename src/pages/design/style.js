@@ -2,13 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const firstButton = document.querySelector('.DesignButtons button');
     showPage('websitePage', firstButton);
 
-    // Web formu və Branding formu
     const webForm = document.querySelector('.webForm');
     const brandingForm = document.querySelector('.brandingForm');
     const inputValues = document.querySelectorAll('input');
-    
-    // Düymələr və input sahəsini seçirik
-    const funcBtns = document.querySelectorAll('.funcBtn');
+        const funcBtns = document.querySelectorAll('.funcBtn');
     const writeInput = document.getElementById('write');
     
     // Düymələr üçün tək dəfə klik olunduğunu yoxlamaq üçün obyekt saxlayırıq
@@ -17,43 +14,31 @@ document.addEventListener('DOMContentLoaded', function () {
     // İlk düyməni `active` edirik
     funcBtns[0].classList.add('active');
     
-    // Hər düymə üçün klik hadisəsini dinləyirik
     funcBtns.forEach(button => {
         button.addEventListener('click', function () {
-            const value = this.querySelector('p').textContent.trim(); // Düymənin məzmununu alırıq
-            let currentValue = writeInput.value.trim(); // Mövcud input dəyərini alırıq
-
-            // Əgər düyməyə klik olunubsa
+            const value = this.querySelector('p').textContent.trim(); 
+            let currentValue = writeInput.value.trim();
             if (!clickedBtns.has(value)) {
-                // Bütün düymələrdən `active` sinifini silirik
                 funcBtns.forEach(btn => btn.classList.remove('active'));
 
-                // Seçilən düyməyə `active` sinifi əlavə edirik
                 this.classList.add('active');
 
-                // Əgər input boş deyilsə, vergül və boşluq əlavə edirik
                 if (currentValue) {
                     currentValue += ', ';
                 }
 
-                // Yeni mətni input-a əlavə edirik
                 writeInput.value = currentValue + value;
 
-                // Düyməni `clickedBtns` set-ə əlavə edirik
                 clickedBtns.add(value);
             } else {
-                // Əgər düymə artıq kliklənibsə, mətn input sahəsindən silinir
-                currentValue = currentValue.replace(new RegExp(value + ','), '').trim();
+       currentValue = currentValue.replace(new RegExp(value + ','), '').trim();
                 writeInput.value = currentValue;
 
-                // Düyməni `clickedBtns` set-dən silirik
                 clickedBtns.delete(value);
 
-                // Aktiv olan düymənin `active` sinifini silirik
                 this.classList.remove('active');
             }
 
-            // Input sahəsindəki mətnə görə düymələrin `active` siniflərini yeniləyirik
             funcBtns.forEach(btn => {
                 const btnText = btn.querySelector('p').textContent.trim();
                 if (writeInput.value.includes(btnText)) {
@@ -65,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Formu göndərərkən input sahələrini təmizləyirik
     function handleFormSubmit(form) {
         const inputs = form.querySelectorAll('input');
         let allFilled = true;
@@ -75,17 +59,16 @@ document.addEventListener('DOMContentLoaded', function () {
         inputs.forEach(input => {
             if (input.required && input.value.trim() === '') {
                 allFilled = false;
-                input.classList.add('error'); // Əgər boşdursa, error sinifi əlavə edirik
+                input.classList.add('error');
                 if (!firstEmptyInput) {
-                    firstEmptyInput = input; // İlk boş inputu tapırıq
+                    firstEmptyInput = input;
                 }
             } else {
-                input.classList.remove('error'); // Əgər doldurulubsa, error sinifini silirik
+                input.classList.remove('error'); 
             }
         });
 
         if (!allFilled) {
-            // İlk boş inputa fokuslanırıq
             if (firstEmptyInput) {
                 firstEmptyInput.focus();
             }
@@ -96,40 +79,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Web formu üçün submit hadisəsi
     webForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Səhifənin yenilənməsini dayandırırıq
+        event.preventDefault(); 
         if (handleFormSubmit(webForm)) {
-            inputValues.forEach(input => input.value = ''); // Web formu doldurulduqdan sonra input sahələrini təmizləyirik
+            inputValues.forEach(input => input.value = ''); 
         }
     });
 
     // Branding formu üçün submit hadisəsi
     brandingForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Səhifənin yenilənməsini dayandırırıq
+        event.preventDefault();
         if (handleFormSubmit(brandingForm)) {
-            inputValues.forEach(input => input.value = ''); // Branding formu doldurulduqdan sonra input sahələrini təmizləyirik
+            inputValues.forEach(input => input.value = '');
         }
     });
 
-    // Modal açmaq üçün düymələr
+    // Modal açilmasi
     const sendBtnn = document.getElementById('sendBtnn');
     const sendButton = document.getElementById('sendButton');
     const thankModall = document.getElementById('thankModal');
     const overlayThankk = document.getElementById('overlayThank');
 
-    // Modalın açılması - sendBtn
     sendBtnn.addEventListener('click', function () {
-        if (handleFormSubmit(webForm)) { // WebForm-u yoxlayırıq
-            inputValues.forEach(input => input.value = ''); // Web formu göndərildikdən sonra inputları təmizləyirik
+        if (handleFormSubmit(webForm)) { 
+            inputValues.forEach(input => input.value = ''); 
             thankModall.style.display = 'block';
             overlayThankk.style.display = 'block';
         }
     });
 
-    // Modalın açılması - sendButton
     sendButton.addEventListener('click', function (event) {
-        event.preventDefault(); // Sayfa dəyişməsinin qarşısını alırıq
-        if (handleFormSubmit(brandingForm)) { // Branding formunu yoxlayırıq
-            inputValues.forEach(input => input.value = ''); // Branding formu göndərildikdən sonra inputları təmizləyirik
+        event.preventDefault(); 
+        if (handleFormSubmit(brandingForm)) { 
+            inputValues.forEach(input => input.value = ''); 
             thankModall.style.display = 'block';
             overlayThankk.style.display = 'block';
         }

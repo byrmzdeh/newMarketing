@@ -32,7 +32,7 @@
 
 body {
     background-color: white;
-    font-family: 'Manrope', sans-serif; // Əsas şrift
+    font-family: 'Manrope', sans-serif; 
 }
 
 
@@ -104,14 +104,8 @@ nav {
                     font-weight: 600;
                     margin-bottom: 0px;
                     background: none;
-                    /* Gradienti deaktiv edir */
                     color: white !important;
-                    /* Ağ rəngə dəyişir */
                     -webkit-text-fill-color: white;
-                    /* Rəngi düzgün tətbiq edir */
-                    // -webkit-background-clip: none;
-                    /* Background-clip ləğv edilir */
-
                 }
             }
         }
@@ -187,7 +181,7 @@ nav {
                 gap: 10px;
                 border: none;
                 z-index: 20;
-                font-family: 'Inter'; // Başlıqlar üçün Inter
+                font-family: 'Inter'; 
 
                 h2 {
                     margin: 0px auto;
@@ -228,15 +222,14 @@ nav {
                             position: relative;
                             opacity: 100%;
 
-                            // Xətti `::after` pseudo-element ilə yaratmaq
                             &::after {
                                 content: '';
                                 position: absolute;
-                                bottom: -24px; // Yaxınlıq yazıdan
+                                bottom: -24px;
                                 left: 0;
                                 width: 100%;
-                                height: 4px; // Xəttin qalınlığı
-                                background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%); // Gradient rəng xətti
+                                height: 4px; 
+                                background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
                             }
                         }
                     }
@@ -890,14 +883,13 @@ nav {
                 border-bottom: 1px solid rgba(55, 55, 55, 0.1);
                 display: flex;
                 align-items: center;
-                // padding-bottom: 7px;
 
                 a {
                     color: black;
                     font-size: 28px;
                     font-weight: 700;
                     transition: 1s;
-                    font-family: 'Inter'; // Başlıqlar üçün Inter
+                    font-family: 'Inter';
 
                 }
 
@@ -1090,58 +1082,6 @@ nav {
             }
         }
 
-        // @keyframes slideDown {
-        //     0% {
-        //         transform: translateY(-100%);
-        //         /* Yuxarıdan başlaması üçün */
-        //         opacity: 1;
-        //     }
-
-        //     50% {
-        //         transform: translateY(0);
-        //         /* Normal yerində */
-        //         opacity: 1;
-        //     }
-
-        //     100% {
-        //         transform: translateY(0%);
-        //         /* Aşağıya getməsi */
-        //         opacity: 1;
-        //         /* Gizlənməsi */
-        //     }
-        // }
-
-        // .discover {
-        //     max-width: 234px;
-        //     width: 100%;
-        //     max-height: 50px;
-        //     height: 100%;
-        //     border: none;
-        //     border-radius: 50px;
-        //     padding: 16px 40px 16px 40px;
-        //     background-color: rgba(255, 255, 255, 1);
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: space-around;
-
-        //     p {
-        //         font-size: 18px;
-        //         font-weight: 600;
-        //         background: var(--Grad, linear-gradient(87deg, #53e6ff -12.48%, #ae69ff 41.01%, #474aff 104.49%));
-        //         -webkit-background-clip: text;
-        //         background-clip: text;
-        //         -webkit-text-fill-color: transparent;
-        //         margin: 0px;
-
-        //     }
-
-        //     img {
-        //         width: 24px;
-        //         height: 24px;
-        //         object-fit: cover;
-        //     }
-
-        // }
 
 
         .discover {
@@ -1209,9 +1149,7 @@ nav {
                 font-size: 18px;
                 font-weight: 600;
                 line-height: 22px;
-                // letter-spacing: 1.3px;
                 color: white;
-                // text-decoration: inherit;
                 background-color: transparent;
             }
 
@@ -1382,7 +1320,7 @@ nav {
 }
 
 
-// }
+
 
 .stickyButton {
     max-width: 170px;
@@ -1532,7 +1470,6 @@ nav {
 
 #detailSearch {
     width: 67%;
-    // background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2070,7 +2007,6 @@ nav {
             h1 {
                 font-size: 22px;
                 font-weight: 600;
-                // line-height: 30px;
                 color: rgba(19, 19, 19, 1);
                 opacity: 80%;
             }
@@ -2092,7 +2028,7 @@ nav {
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%, -50%); // Elementi tam mərkəzə çəkir
+                    transform: translate(-50%, -50%); 
 
 
                 }
@@ -2237,7 +2173,6 @@ nav {
                 transition: 0.5s;
 
                 .cardImg {
-                    // max-height: 314px;
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
@@ -2315,7 +2250,7 @@ nav {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%); // Elementi tam mərkəzə çəkir
+                transform: translate(-50%, -50%);
 
             }
         }
@@ -3593,17 +3528,13 @@ footer {
 
     swiper-container {
         width: 100%;
-
-        // padding: 40px 0px;
-
-        // Swiper.js pagination bullet-ları üçün stil
         .swiper-pagination-bullet {
-            background: gray; // Normal halda
-            opacity: 0.7; // İstəyə bağlı: opacity ilə daha gözəl görünüş
+            background: gray; 
+            opacity: 0.7; 
 
             &:active {
-                background: red !important; // Aktiv bullet üçün
-                opacity: 1; // Aktiv olduğu zaman tam görünür
+                background: red !important; 
+                opacity: 1;
             }
         }
 
@@ -3642,7 +3573,6 @@ footer {
                 h1 {
                     font-size: 24px;
                     font-weight: 600;
-                    // line-height: 30px;
                     color: rgba(19, 19, 19, 1);
                     opacity: 80%;
                 }
@@ -3664,7 +3594,7 @@ footer {
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%, -50%); // Elementi tam mərkəzə çəkir
+                        transform: translate(-50%, -50%);
 
 
                     }
@@ -4005,7 +3935,6 @@ footer {
     width: 63%;
     margin: auto;
 
-    // padding: 0px 280px;
     p {
         font-size: 16px;
         font-weight: 400;
@@ -4993,7 +4922,7 @@ footer {
         border-radius: 50px;
         font-weight: bold;
         overflow: hidden;
-        cursor: pointer; // default deyil, pointer olmalı ki, istifadəçiyə kliklənə bilən olduğunu göstərə bilsin
+        cursor: pointer; 
 
         p {
             position: relative;
@@ -5022,7 +4951,7 @@ footer {
 
         &:active {
             background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); // Kliklənmə effekti əlavə etmək üçün
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); 
 
             p {
                 -webkit-background-clip: text;
@@ -5034,8 +4963,8 @@ footer {
 
         &.active {
             background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
-            color: white; // Aktiv butonun mətnini ağ edir
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); // Aktiv butonun içindəki kölgə effekti
+            color: white; 
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); 
 
             p {
                 background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
@@ -5159,14 +5088,14 @@ footer {
                     width: 100%;
                     max-height: 163px;
                     outline: none;
-                    padding: 0px 0px 95px 20px; // Placeholder-i yuxarıya gətirmək üçün padding əlavə et
-                    text-align: left; // Placeholder-ı sola, başa yerləşdirir
+                    padding: 0px 0px 95px 20px; 
+                    text-align: left; 
                     border: 1px solid rgba(55, 55, 55, 0.5);
                     margin-top: 20px;
                     background-color: transparent;
 
                     &::placeholder {
-                        text-align: left; // Placeholder mətni sola yerləşir
+                        text-align: left;
                         font-size: 16px;
                     }
                 }
@@ -5186,7 +5115,7 @@ footer {
                         border-radius: 50px;
                         font-weight: bold;
                         overflow: hidden;
-                        cursor: pointer; // default deyil, pointer olmalı ki, istifadəçiyə kliklənə bilən olduğunu göstərə bilsin
+                        cursor: pointer; 
                         background-color: white;
                         background: none;
                         box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
@@ -5230,8 +5159,8 @@ footer {
 
                         &.active {
                             background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
-                            color: white; // Aktiv butonun mətnini ağ edir
-                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); // Aktiv butonun içindəki kölgə effekti
+                            color: white;
+                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); 
 
                             p {
                                 background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
@@ -5260,7 +5189,7 @@ footer {
                         font-weight: bold;
                         border: none;
                         overflow: hidden;
-                        cursor: pointer; // default deyil, pointer olmalı ki, istifadəçiyə kliklənə bilən olduğunu göstərə bilsin
+                        cursor: pointer;
                         background-color: white;
                         background: none;
                         box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
@@ -5304,8 +5233,8 @@ footer {
 
                         &.active {
                             background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
-                            color: white; // Aktiv butonun mətnini ağ edir
-                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); // Aktiv butonun içindəki kölgə effekti
+                            color: white;
+                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); 
 
                             p {
                                 background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
@@ -5553,14 +5482,14 @@ footer {
                     width: 100%;
                     max-height: 163px;
                     outline: none;
-                    padding: 0px 0px 95px 20px; // Placeholder-i yuxarıya gətirmək üçün padding əlavə et
-                    text-align: left; // Placeholder-ı sola, başa yerləşdirir
+                    padding: 0px 0px 95px 20px; 
+                    text-align: left; 
                     border: 1px solid rgba(55, 55, 55, 0.5);
                     margin-top: 20px;
                     background-color: transparent;
 
                     &::placeholder {
-                        text-align: left; // Placeholder mətni sola yerləşir
+                        text-align: left;
                         font-size: 16px;
                     }
                 }
@@ -5580,7 +5509,7 @@ footer {
                         border-radius: 50px;
                         font-weight: bold;
                         overflow: hidden;
-                        cursor: pointer; // default deyil, pointer olmalı ki, istifadəçiyə kliklənə bilən olduğunu göstərə bilsin
+                        cursor: pointer;
                         background-color: white;
                         background: none;
                         box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
@@ -5624,8 +5553,8 @@ footer {
 
                         &.active {
                             background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
-                            color: white; // Aktiv butonun mətnini ağ edir
-                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); // Aktiv butonun içindəki kölgə effekti
+                            color: white; 
+                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 
                             p {
                                 background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
@@ -6857,15 +6786,14 @@ footer {
                                 -webkit-text-fill-color: transparent;
                                 position: relative;
 
-                                // Xətti `::after` pseudo-element ilə yaratmaq
                                 &::after {
                                     content: '';
                                     position: absolute;
-                                    bottom: -24px; // Yaxınlıq yazıdan
+                                    bottom: -24px; 
                                     left: 0;
                                     width: 100%;
-                                    height: 4px; // Xəttin qalınlığı
-                                    background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%); // Gradient rəng xətti
+                                    height: 4px; 
+                                    background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%); 
                                 }
                             }
                         }
@@ -7086,10 +7014,7 @@ footer {
             line-height: 60px;
         }
 
-        // p {
-        //     width: 100%;
-        // }
-
+    
         h1 {
             font-size: 18px;
             line-height: 29px;
@@ -9528,15 +9453,14 @@ footer {
                                 -webkit-text-fill-color: transparent;
                                 position: relative;
 
-                                // Xətti `::after` pseudo-element ilə yaratmaq
                                 &::after {
                                     content: '';
                                     position: absolute;
-                                    bottom: -24px; // Yaxınlıq yazıdan
+                                    bottom: -24px; 
                                     left: 0;
                                     width: 100%;
-                                    height: 4px; // Xəttin qalınlığı
-                                    background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%); // Gradient rəng xətti
+                                    height: 4px; 
+                                    background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
                                 }
                             }
                         }

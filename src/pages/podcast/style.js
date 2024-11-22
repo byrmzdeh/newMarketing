@@ -43,18 +43,15 @@ checkboxesZone.forEach((checkboxZone) => {
 
 
     
-    // Funksiya: Addımların keçidini idarə etmək
     steps.forEach((step, index) => {
         const inputs = step.querySelectorAll('input');
         
         inputs.forEach(input => {
             input.addEventListener('change', () => {
-                // Hər hansı inputun seçildiyini yoxlayırıq
                 const allChecked = Array.from(inputs).some(input => input.checked || input.value);
                 if (allChecked) {
                     step.querySelector('.step-header').classList.add('active');
                     
-                    // Növbəti addımı aktiv et
                     const nextStep = steps[index + 1];
                     if (nextStep) {
                         nextStep.querySelector('.step-header').classList.add('active');
@@ -66,9 +63,7 @@ checkboxesZone.forEach((checkboxZone) => {
         });
     });
 
-    // Razılaşma şərtini yoxlama
     termsCheckbox.addEventListener('change', () => {
-        // `REZERV ET` düyməsini aktiv etmək üçün şərti yoxlayırıq
         if (termsCheckbox.checked) {
             submitBtn.disabled = false;
             submitBtn.classList.add('active');
@@ -78,17 +73,14 @@ checkboxesZone.forEach((checkboxZone) => {
         }
     });
 
-    // Form göndərildikdə səhifənin yenilənməsinin qarşısını alırıq
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         
         
-        // Formu təmizləyirik
         form.reset();
 
-        // Bütün addımları təmizləyirik
         steps.forEach((step, index) => {
-            if (index > 0) { // İlk addımda heç nəyi dəyişmirik
+            if (index > 0) { 
                 step.querySelector('.step-header').classList.remove('active');
                 const inputs = step.querySelectorAll('input');
                 inputs.forEach(input => {
@@ -100,7 +92,6 @@ checkboxesZone.forEach((checkboxZone) => {
             }
         });
         
-        // İlk addımı yenidən aktiv edirik
         const firstStep = steps[0];
         firstStep.querySelector('.step-header').classList.add('active');
         const firstInputs = firstStep.querySelectorAll('input');
@@ -108,7 +99,6 @@ checkboxesZone.forEach((checkboxZone) => {
         const firstStepContent = firstStep.querySelector('.step-content');
         firstStepContent.classList.add('active');
         
-        // `REZERV ET` düyməsini yenidən deaktiv edirik
         submitBtn.disabled = true;
         submitBtn.classList.remove('active');
         window.location.href='/index.html'
