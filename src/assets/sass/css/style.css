@@ -500,6 +500,7 @@ nav .view .search-menu .dropdown .dropdown-menu li {
   color: rgba(55, 55, 55, 0.95);
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
 }
 nav .view .search-menu .open .dropdown-menu {
   display: flex;
