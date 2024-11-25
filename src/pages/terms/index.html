@@ -2,17 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Şərtlər</title>
-    <link rel="icon" type="image/png" href="/src/assets/image/home/colorLogo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./src/assets/sass/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/assets/sass/css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script type="module" defer src="/src/components/searchDetail/style.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Şərtlər</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="/src/assets/image/home/colorLogo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/src/assets/sass/css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script type="module" defer src="/src/components/searchDetail/style.js"></script>
 
 </head>
 
@@ -99,6 +111,16 @@
 
       <a class="logoImgP" data-aos="fade-up" href="/index.html"><img src="/src/assets/image/home/writeLogo.png" alt="err"></a>
       <div class="search-menu" data-aos="fade-up">
+        <div class="dropdown">
+          <button class="dropdown-button">
+            <p class="dropdown-text">En</p>
+            <img src="/src/assets/image/home/select.png" alt="">
+          </button>
+          <ul class="dropdown-menu">
+            <li data-value="Az">Az</li>
+            <li data-value="Ru">Ru</li>
+          </ul>
+        </div>
         <button id="search"><img src="/src/assets/image/home/search.png" alt="err"></button>
         <button id="menu"><img src="/src/assets/image/home/menu.png" alt="err"></button>
       </div>
@@ -139,105 +161,147 @@
         <li><a href="/src/pages/contact/index.html">ƏLAQƏ</a></li>
       </ul>
 
+      <div id="select-buttons">
+        <button class="active">
+          <p>En</p>
+        </button>
+        <button>
+          <p>Az</p>
+        </button>
+        <button>
+          <p>Ru</p>
+        </button>
+      </div>
+
 
 
     </div>
 
   </nav>
-    
-      <div id="overlayThank"></div>
-    
-      <div id="thankModal" class="thank-modal">
-        <div class="thank-modal-content">
-          <div class="head">
-            <h5>THANK YOU!</h5>
-            <div id="closeThankModal" class="close-modal">
-              <img src="/src/assets/image/home/close.png" alt="">
-            </div>
-           
-          </div>
-          <p>Thank your for reaching out to us! We will <br> contact you back as soon as possible!</p>
+
+  <div id="overlayThank"></div>
+
+  <div id="thankModal" class="thank-modal">
+    <div class="thank-modal-content">
+      <div class="head">
+        <h5>THANK YOU!</h5>
+        <div id="closeThankModal" class="close-modal">
+          <img src="/src/assets/image/home/close.png" alt="">
+        </div>
+
+      </div>
+      <p>Thank your for reaching out to us! We will <br> contact you back as soon as possible!</p>
+    </div>
+  </div>
+
+
+  <div class="business" data-aos="fade-up">
+    <h1 class="blog " data-aos="fade-up">TERMS OF USE</h1>
+  </div>
+
+  <div class="terms">
+    <p data-aos="fade-up">For more than a decade, UpCity’s mission has been—and continues to be—to help businesses find
+      B2B service providers they can trust. Each year, UpCity analyzes and scores more than 50,000 service providers
+      based on their UpCity Recommendability Rating and acknowledges the top national and local providers with an UpCity
+      Excellence Award. The results are in, and we won!</p>
+    <p data-aos="fade-up">Storm Brain was founded in 2007, and the company has since grown into a full-service team of
+      multi-disciplinary specialists that serves clients internationally. We are a leading, full-service digital agency
+      specializing in the development and implementation of digital marketing campaigns, brand strategy, UI/UX design,
+      web, and ecommerce development. Our award-winning team finds unique ways to grab attention and communicate your
+      brand.</p>
+    <p data-aos="fade-up">This recognition has been driven in large part by our 5.0-star review rating on UpCity. Here
+      are a few of the glowing reviews we’ve received from our incredible customers:</p>
+    <p data-aos="fade-up">“We worked on branding, search optimization, and website ideas. I’ve never worked with a more
+      thoughtful team where each person was somehow more amazing than the next! I’ve been wanting to vamp up my online
+      presence, after years of success on my own in the comfort of my strictly analog world, but I was lost on how to do
+      so. To feel like I instantly had a brilliant and patient PARTNER in doing all this was invaluable.” —Staci Eddy,
+      January 2023</p>
+    <p data-aos="fade-up">“Storm Brain was the ideal partner to overhaul the company’s website. They provided
+      high-quality work, accommodating to very high demands, and were highly responsive to website design changes.”
+      —Brian Vincent, July 2022</p>
+    <p data-aos="fade-up">“Working with Storm Brain has been an incredible experience from onboarding to delivery and
+      everything in the middle. They offer a wide variety of services, from web development to website design, SEO,
+      content, pay-per-click ads, and more—which is super useful when looking for one agency to take care of most
+      digital marketing challenges. Both Blake and Leah are awesome people and they just ‘get it’, so you can have peace
+      of mind that everything will go according to plan AND BETTER! Thanks for the awesome work and communication guys
+      :”—Vlad Herescu, June 2022</p>
+    <p data-aos="fade-up">The Storm Brain team considers this award a significant achievement and sees it as a
+      recognition of our hard work and expertise. Without our loyal and trusting clients, Storm Brain would have never
+      received this honor, and we are grateful for their ongoing support. Storm Brain looks forward to growing and
+      strengthening these relationships with new and old clients in the coming year and beyond.</p>
+    <p data-aos="fade-up">“Working with Storm Brain has been an incredible experience from onboarding to delivery and
+      everything in the middle. They offer a wide variety of services, from web development to website design, SEO,
+      content, pay-per-click ads, and more—which is super useful when looking for one agency to take care of most
+      digital marketing challenges. Both Blake and Leah are awesome people and they just ‘get it’, so you can have peace
+      of mind that everything will go according to plan AND BETTER! Thanks for the awesome work and communication guys
+      :”—Vlad Herescu, June 2022</p>
+    <p data-aos="fade-up">The Storm Brain team considers this award a significant achievement and sees it as a
+      recognition of our hard work and expertise. Without our loyal and trusting clients, Storm Brain would have never
+      received this honor, and we are grateful for their ongoing support. Storm Brain looks forward to growing and
+      strengthening these relationships with new and old clients in the coming year and beyond.</p>
+  </div>
+
+
+  <div class="take" data-aos="fade-up">
+    <div class="go">
+      <h1 data-aos="fade-up">GO!</h1>
+      <h4 data-aos="fade-up">Take your industry by storm!</h4>
+    </div>
+    <div class="plane" data-aos="fade-up">
+      <img src="/src/assets/image/home/plane.png" alt="">
+    </div>
+  </div>
+
+
+
+  <footer data-aos="fade-up">
+    <div class="head" data-aos="fade-up">
+      <p>City Name . City Name . City Name</p>
+      <h2>Smarter Digital</h2>
+    </div>
+    <div class="foot" data-aos="fade-up">
+      <div class="f-logo">
+        <img src="/src/assets/image/home/marketingLogo.png" alt="">
+        <p>© Copyright 2023. Marketinq.az</p>
+      </div>
+      <div class="f-form">
+        <h3>Get updates and resources</h3>
+        <div class="input">
+          <input type="email" placeholder="YOUR E-MAIL">
+          <img src="/src/assets/image/home/right.png" alt="">
         </div>
       </div>
 
 
-      <div class="business" data-aos="fade-up">
-        <h1 class="blog " data-aos="fade-up">TERMS OF USE</h1>      
-    </div>
-
-    <div class="terms">
-        <p data-aos="fade-up">For more than a decade, UpCity’s mission has been—and continues to be—to help businesses find B2B service providers they can trust. Each year, UpCity analyzes and scores more than 50,000 service providers based on their UpCity Recommendability Rating and acknowledges the top national and local providers with an UpCity Excellence Award. The results are in, and we won!</p>
-        <p data-aos="fade-up">Storm Brain was founded in 2007, and the company has since grown into a full-service team of multi-disciplinary specialists that serves clients internationally. We are a leading, full-service digital agency specializing in the development and implementation of digital marketing campaigns, brand strategy, UI/UX design, web, and ecommerce development. Our award-winning team finds unique ways to grab attention and communicate your brand.</p>
-        <p data-aos="fade-up">This recognition has been driven in large part by our 5.0-star review rating on UpCity. Here are a few of the glowing reviews we’ve received from our incredible customers:</p>
-        <p data-aos="fade-up">“We worked on branding, search optimization, and website ideas. I’ve never worked with a more thoughtful team where each person was somehow more amazing than the next! I’ve been wanting to vamp up my online presence, after years of success on my own in the comfort of my strictly analog world, but I was lost on how to do so. To feel like I instantly had a brilliant and patient PARTNER in doing all this was invaluable.” —Staci Eddy, January 2023</p>
-        <p data-aos="fade-up">“Storm Brain was the ideal partner to overhaul the company’s website. They provided high-quality work, accommodating to very high demands, and were highly responsive to website design changes.” —Brian Vincent, July 2022</p>
-        <p data-aos="fade-up">“Working with Storm Brain has been an incredible experience from onboarding to delivery and everything in the middle. They offer a wide variety of services, from web development to website design, SEO, content, pay-per-click ads, and more—which is super useful when looking for one agency to take care of most digital marketing challenges. Both Blake and Leah are awesome people and they just ‘get it’, so you can have peace of mind that everything will go according to plan AND BETTER! Thanks for the awesome work and communication guys :”—Vlad Herescu, June 2022</p>
-        <p data-aos="fade-up">The Storm Brain team considers this award a significant achievement and sees it as a recognition of our hard work and expertise. Without our loyal and trusting clients, Storm Brain would have never received this honor, and we are grateful for their ongoing support. Storm Brain looks forward to growing and strengthening these relationships with new and old clients in the coming year and beyond.</p>
-        <p data-aos="fade-up">“Working with Storm Brain has been an incredible experience from onboarding to delivery and everything in the middle. They offer a wide variety of services, from web development to website design, SEO, content, pay-per-click ads, and more—which is super useful when looking for one agency to take care of most digital marketing challenges. Both Blake and Leah are awesome people and they just ‘get it’, so you can have peace of mind that everything will go according to plan AND BETTER! Thanks for the awesome work and communication guys :”—Vlad Herescu, June 2022</p>
-        <p data-aos="fade-up">The Storm Brain team considers this award a significant achievement and sees it as a recognition of our hard work and expertise. Without our loyal and trusting clients, Storm Brain would have never received this honor, and we are grateful for their ongoing support. Storm Brain looks forward to growing and strengthening these relationships with new and old clients in the coming year and beyond.</p>
-    </div>
-      
-
-    <div class="take" data-aos="fade-up">
-        <div class="go">
-            <h1 data-aos="fade-up">GO!</h1>
-            <h4 data-aos="fade-up">Take your industry by storm!</h4>
+      <div class="f-connect">
+        <p>CONNECT WITH US</p>
+        <div class="icons">
+          <a href="https://www.facebook.com/" class="icon"><img src="/src/assets/image/home/facebook.png" alt=""></a>
+          <a href="https://www.twitter.com/" class="icon"><img src="/src/assets/image/home/twitter.png" alt=""></a>
+          <a href="https://www.instagram.com/" class="icon"><img src="/src/assets/image/home/instagram.png" alt=""></a>
+          <a href="https://www.linkedin.com/" class="icon"><img src="/src/assets/image/home/in.png" alt=""></a>
         </div>
-        <div class="plane" data-aos="fade-up">
-            <img src="/src/assets/image/home/plane.png" alt="">
+
+        <div class="links">
+          <a class="terms" href="/src/pages/terms/index.html">TERMS OF USE</a>
+          <a href="">PRIVACY POLICY</a>
         </div>
-    </div>
 
-
- 
-    <footer data-aos="fade-up">
-      <div class="head" data-aos="fade-up">
-        <p>City Name . City Name . City Name</p>
-        <h2>Smarter Digital</h2>
       </div>
-      <div class="foot" data-aos="fade-up">
-        <div class="f-logo">
-          <img src="/src/assets/image/home/marketingLogo.png" alt="">
-          <p>© Copyright 2023. Marketinq.az</p>
-        </div>
-        <div class="f-form">
-          <h3>Get updates and resources</h3>
-          <div class="input">
-            <input type="email" placeholder="YOUR E-MAIL">
-            <img src="/src/assets/image/home/right.png" alt="">
-          </div>
-        </div>
-  
-  
-        <div class="f-connect">
-          <p>CONNECT WITH US</p>
-          <div class="icons">
-            <a href="https://www.facebook.com/" class="icon"><img src="/src/assets/image/home/facebook.png" alt=""></a>
-            <a href="https://www.twitter.com/" class="icon"><img src="/src/assets/image/home/twitter.png" alt=""></a>
-            <a href="https://www.instagram.com/" class="icon"><img src="/src/assets/image/home/instagram.png" alt=""></a>
-            <a href="https://www.linkedin.com/" class="icon"><img src="/src/assets/image/home/in.png" alt=""></a>
-          </div>
-  
-          <div class="links">
-            <a class="terms" href="/src/pages/terms/index.html">TERMS OF USE</a>
-            <a  href="">PRIVACY POLICY</a>
-          </div>
-  
-        </div>
-  
-      </div>
-    </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </div>
+  </footer>
 
-    <script>
-        AOS.init();
-    </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -12,6 +12,60 @@ closeBtn.addEventListener('click', function () {
 
 })
 
+
+//language Button
+const selectButtons=document.querySelectorAll('#select-buttons button')
+let activeButton = document.querySelector('#select-buttons button.active')
+selectButtons.forEach(button=>{
+    button.addEventListener('click', function () {
+        if (activeButton) {
+            activeButton.classList.remove('active')  
+        }
+
+        button.classList.add('active')
+        activeButton=button
+        
+    })
+})
+
+//select option
+const dropdown = document.querySelector(".dropdown");
+const dropdownButton = document.querySelector(".dropdown-button");
+const dropdownText = document.querySelector(".dropdown-text");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+let currentText = "En"; 
+
+dropdownButton.addEventListener("click", () => {
+  dropdown.classList.toggle("open");
+});
+
+dropdownMenu.addEventListener("click", (event) => {
+  const clickedItem = event.target;
+
+  if (clickedItem.tagName === "LI") {
+    const newText = clickedItem.textContent;
+    dropdownText.textContent = newText;
+
+    const newListItem = document.createElement("li");
+    newListItem.textContent = currentText;
+    newListItem.setAttribute("data-value", currentText);
+
+    currentText = newText;
+    clickedItem.remove();
+    dropdownMenu.appendChild(newListItem);
+    dropdown.classList.remove("open");
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!dropdown.contains(event.target)) {
+    dropdown.classList.remove("open");
+  }
+});
+
+
+
 ///search
 const search = document.getElementById('search');
 const searchShow = document.getElementById('search-show');
@@ -278,6 +332,69 @@ function initForms() {
         };
     }
 }
+
+
+// Fontları təyin edirik
+const fonts = [
+    {
+      family: 'Inter',
+      weight: '300 900', // Çəkilər aralığında
+    },
+    {
+      family: 'Manrope',
+      weight: '300 900', // Çəkilər aralığında
+    },
+  ];
+  
+  // URL-i yazdığınız formata uyğun istifadə edirik
+  const fontUrl =
+    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800;900&display=swap';
+  
+  // Fontları yükləmək və cache-ləmək funksiyası
+  function loadAndCacheFonts(url, fonts) {
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to fetch font CSS: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then((cssText) => {
+        // CSS fontunu yükləmək üçün <style> elementi yaradılır
+        const style = document.createElement('style');
+        style.textContent = cssText;
+        document.head.appendChild(style);
+  
+        console.log('Font CSS loaded and applied to document');
+  
+        // FontFace API ilə hər bir font üçün işləyirik
+        fonts.forEach((font) => {
+          const fontFace = new FontFace(
+            font.family,
+            `url(${url})`, // URL font mənbəsi olaraq qeyd edilir
+            { weight: font.weight } // Çəkilər aralığı təyin edilir
+          );
+  
+          fontFace
+            .load()
+            .then(() => {
+              document.fonts.add(fontFace);
+              console.log(`${font.family} font successfully loaded and cached`);
+            })
+            .catch((error) => {
+              console.error(`Failed to load font: ${font.family}`, error);
+            });
+        });
+      })
+      .catch((error) => {
+        console.error('Error loading font CSS:', error);
+      });
+  }
+  
+  // Yükləməni başladırıq
+  loadAndCacheFonts(fontUrl, fonts);
+  
+  
 
 // Hər səhifə üçün funksiyaları yalnız lazım olduğu səhifədə çağırırıq
 if (currentPage === "home") {
