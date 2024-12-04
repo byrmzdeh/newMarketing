@@ -2453,8 +2453,18 @@ nav {
     justify-content: space-evenly;
     border: none;
 
-    img {
+    .animation{
         width: 28%;
+        animation: upAndDown 3s infinite ease-in-out;
+
+        @keyframes upAndDown {
+            0%, 100% {
+              transform: translateY(-45px);
+            }
+            50% {
+              transform: translateY(45px);
+            }
+          }
 
     }
 
@@ -2529,8 +2539,19 @@ nav {
                     align-items: center;
                     justify-content: space-between;
 
-                    img {
+                    .animationModal{
                         width: 40%;
+                        animation: upAndDown 3s infinite ease-in-out;
+                
+                        @keyframes upAndDown {
+                            0%, 100% {
+                              transform: translateY(-20px);
+                            }
+                            50% {
+                              transform: translateY(20px);
+                            }
+                          }
+                
                     }
 
 
@@ -7493,7 +7514,7 @@ footer {
         top: 20px;
         width: 100%;
 
-        img {
+        .animation {
             width: 78%;
         }
 
@@ -10307,6 +10328,11 @@ footer {
         width: 100%;
         align-items: center;
         justify-content: space-around;
+
+      
+
+      
+          
 
 
 

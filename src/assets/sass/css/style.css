@@ -1936,8 +1936,17 @@ nav #show #select-buttons {
   justify-content: space-evenly;
   border: none;
 }
-.setting img {
+.setting .animation {
   width: 28%;
+  animation: upAndDown 3s infinite ease-in-out;
+}
+@keyframes upAndDown {
+  0%, 100% {
+    transform: translateY(-45px);
+  }
+  50% {
+    transform: translateY(45px);
+  }
 }
 .setting .text {
   width: 37%;
@@ -2000,8 +2009,17 @@ nav #show #select-buttons {
   align-items: center;
   justify-content: space-between;
 }
-.setting .text .modal .modal-dialog .modal-body img {
+.setting .text .modal .modal-dialog .modal-body .animationModal {
   width: 40%;
+  animation: upAndDown 3s infinite ease-in-out;
+}
+@keyframes upAndDown {
+  0%, 100% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
 }
 .setting .text .modal .modal-dialog .calendar {
   max-width: 100%;
@@ -5312,7 +5330,7 @@ footer .foot .f-connect .links .terms {
   nav #show #select-buttons button p {
     position: relative;
     z-index: 1;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     top: 50%;
     left: 50%;
@@ -5929,7 +5947,7 @@ footer .foot .f-connect .links .terms {
     top: 20px;
     width: 100%;
   }
-  .setting img {
+  .setting .animation {
     width: 78%;
   }
   .setting .text {
