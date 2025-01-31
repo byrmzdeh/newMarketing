@@ -14,17 +14,17 @@ closeBtn.addEventListener('click', function () {
 
 
 //language Button
-const selectButtons=document.querySelectorAll('#select-buttons button')
+const selectButtons = document.querySelectorAll('#select-buttons button')
 let activeButton = document.querySelector('#select-buttons button.active')
-selectButtons.forEach(button=>{
+selectButtons.forEach(button => {
     button.addEventListener('click', function () {
         if (activeButton) {
-            activeButton.classList.remove('active')  
+            activeButton.classList.remove('active')
         }
 
         button.classList.add('active')
-        activeButton=button
-        
+        activeButton = button
+
     })
 })
 
@@ -34,70 +34,70 @@ const dropdownButton = document.querySelector(".dropdown-button");
 const dropdownText = document.querySelector(".dropdown-text");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 
-let currentText = "En"; 
+let currentText = "En";
 
 dropdownButton.addEventListener("click", () => {
-  dropdown.classList.toggle("open");
+    dropdown.classList.toggle("open");
 });
 
 dropdownMenu.addEventListener("click", (event) => {
-  const clickedItem = event.target;
+    const clickedItem = event.target;
 
-  if (clickedItem.tagName === "LI") {
-    const newText = clickedItem.textContent;
-    dropdownText.textContent = newText;
+    if (clickedItem.tagName === "LI") {
+        const newText = clickedItem.textContent;
+        dropdownText.textContent = newText;
 
-    const newListItem = document.createElement("li");
-    newListItem.textContent = currentText;
-    newListItem.setAttribute("data-value", currentText);
+        const newListItem = document.createElement("li");
+        newListItem.textContent = currentText;
+        newListItem.setAttribute("data-value", currentText);
 
-    currentText = newText;
-    clickedItem.remove();
-    dropdownMenu.appendChild(newListItem);
-    dropdown.classList.remove("open");
-  }
+        currentText = newText;
+        clickedItem.remove();
+        dropdownMenu.appendChild(newListItem);
+        dropdown.classList.remove("open");
+    }
 });
 
 document.addEventListener("click", (event) => {
-  if (!dropdown.contains(event.target)) {
-    dropdown.classList.remove("open");
-  }
+    if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove("open");
+    }
 });
 
 
 
 //animation
-const words = ["Marketinq.", "Rəqəmsal."]; 
+const words = ["Marketinq.", "Rəqəmsal."];
 let index = 0;
 
 const textElements = document.querySelectorAll("#animatedText span");
 textElements[index].classList.add("visible");
 
 setInterval(() => {
-  const textElement = textElements[index]; 
-  index = (index + 1) % words.length; // Yeni sözə keçid
+    const textElement = textElements[index];
+    index = (index + 1) % words.length; // Yeni sözə keçid
 
-  // Köhnə sözü gizlət
-  textElement.classList.remove("visible");
+    // Köhnə sözü gizlət
+    textElement.classList.remove("visible");
 
-  const nextElement = textElements[index];
-  nextElement.classList.add("visible");
-  
-}, 1955); 
+    const nextElement = textElements[index];
+    nextElement.classList.add("visible");
+
+}, 1955);
 
 
 //stickyButton
 document.addEventListener("scroll", function () {
-  const one = document.querySelector(".one");
-  const button = document.querySelector(".stickyButton");
+    const one = document.querySelector(".one");
+    const button = document.querySelector(".stickyButton");
 
-  const oneBottom = one.getBoundingClientRect().bottom;
+    const oneBottom = one.getBoundingClientRect().bottom;
 
-  if (oneBottom < 0) {
-    button.classList.add("stickyButtonShow"); 
-  } else {
-    button.classList.remove("stickyButtonShow"); 
-  }
+    if (oneBottom < 0) {
+        button.classList.add("stickyButtonShow");
+    } else {
+        button.classList.remove("stickyButtonShow");
+    }
 });
 
 
@@ -105,7 +105,7 @@ document.addEventListener("scroll", function () {
 // İkona tıklandığında sayfanın başına git
 document.getElementById('scrollToTop').addEventListener('click', function () {
     window.scrollTo({
-        top: 0, 
+        top: 0,
         behavior: 'smooth'
     });
 });
@@ -119,10 +119,10 @@ const inputClose = document.getElementById('inputClose');
 const searchInput = document.getElementById('search-input');
 const result = document.getElementById('results');
 const value = document.getElementById('value');
-const itemDiv=document.getElementById("item-divSearch")
+const itemDiv = document.getElementById("item-divSearch")
 
 value.style.display = 'none';
-itemDiv.style.display='none'
+itemDiv.style.display = 'none'
 const apiUrl = '/src/data/people.json';
 
 // Axtarış panelini göstər və input sahəsini fokusla
@@ -137,13 +137,13 @@ inputClose.addEventListener('click', function () {
 });
 
 searchInput.addEventListener('input', function () {
-    const inputValue = searchInput.value.trim(); 
+    const inputValue = searchInput.value.trim();
     if (inputValue) {
-        itemDiv.style.display='block';
+        itemDiv.style.display = 'block';
         value.style.display = 'block';
-        value.style.textAlign='center'
+        value.style.textAlign = 'center'
         value.innerHTML = `Search result for : "${inputValue}"`;
-        
+
         fetch(apiUrl)
             .then(response => {
                 if (!response.ok) {
@@ -162,14 +162,14 @@ searchInput.addEventListener('input', function () {
                 result.innerHTML = 'Axtarış zamanı xəta baş verdi';
             });
     } else {
-        itemDiv.style.display='none'
+        itemDiv.style.display = 'none'
         value.style.display = 'none';
         result.innerHTML = '<img class="logo" src="/src/assets/image/home/showLogo.png" alt="No results">';
     }
 });
 
 function displayResults(data) {
-    result.innerHTML = ''; 
+    result.innerHTML = '';
 
     const searchCards = document.createElement('div');
     searchCards.classList.add('searchCards');
@@ -197,8 +197,8 @@ function displayResults(data) {
         `;
     });
 
-    searchCards.innerHTML = cardContent; 
-    result.appendChild(searchCards); 
+    searchCards.innerHTML = cardContent;
+    result.appendChild(searchCards);
 
     if (data.length > 3) {
         const seeAllButton = document.createElement('button');
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sifarisBtn = document.getElementById('sifarisBtn')
 
     openModalButton.addEventListener("click", () => {
-        modal.style.display = "flex"; 
+        modal.style.display = "flex";
     });
 
     closeModalButton.addEventListener("click", () => {
@@ -230,34 +230,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener("click", (event) => {
-        if (event.target === modal) { 
-            modal.style.display = "none"; 
+        if (event.target === modal) {
+            modal.style.display = "none";
         }
     });
 
 
 
     form.addEventListener("submit", function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
 
-        const inputs = form.querySelectorAll('input'); 
-        let allFilled = true; 
+        const inputs = form.querySelectorAll('input');
+        let allFilled = true;
         inputs.forEach(input => {
-            if (!input.value) { 
+            if (!input.value) {
                 allFilled = false;
             }
         });
 
         if (allFilled) {
-            this.classList.add('was-validated'); 
-            console.log("Form gönderildi!"); 
+            this.classList.add('was-validated');
+            console.log("Form gönderildi!");
         } else {
-            alert("Lütfen tüm alanları doldurun."); 
+            alert("Lütfen tüm alanları doldurun.");
         }
     });
 
     document.getElementById("validationCustom02").addEventListener("input", function () {
-        this.value = this.value.replace(/[^0-9]/g, ''); 
+        this.value = this.value.replace(/[^0-9]/g, '');
     });
 });
 
@@ -272,12 +272,14 @@ fetch('/src/data/business.json')
         <div class="swiperCard" >
         <a href="https://www.youtube.com/">
           <div class="play" >
-            <img class='cardImg' src="/src/assets/image/business/card.png" alt="err">
+            <img class='cardImg' src="${item.img}" alt="err">
              <img class="youtube" src="/src/assets/image/business/youtube.png"
                 alt="err">
           </div>
+          <div class="text">
           <p class='month'>${item.month}</p>
           <h1>${item.name}</h1>
+          </div>
           </a>
         </div>
       </swiper-slide>
@@ -374,7 +376,7 @@ const tabContact = document.getElementById("tabContact");
 const addCompanyContent = document.getElementById("addCompanyContent");
 const contactContent = document.getElementById("contactContent");
 const addCompanyForm = document.getElementById("addCompanyForm");
-const contactForm = document.getElementById("contactForm"); 
+const contactForm = document.getElementById("contactForm");
 
 const send = document.getElementById('send')
 const thankModal = document.getElementById("thankModal");
@@ -418,30 +420,30 @@ tabContact.onclick = function () {
 const tabs = document.querySelectorAll('.tabs span');
 
 tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active')); 
-    tab.classList.add('active');
-  });
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+    });
 })
 
 // Formların göndərilmə funksiyası
 addCompanyForm.onsubmit = function (event) {
     event.preventDefault();
     modal.style.display = "none";
-    thankModal.style.display = "flex"; 
-    overlayThank.style.display='block'
+    thankModal.style.display = "flex";
+    overlayThank.style.display = 'block'
 };
 
 contactForm.onsubmit = function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
     modal.style.display = "none";
     thankModal.style.display = "flex";
-    overlayThank.style.display='block'
+    overlayThank.style.display = 'block'
 
 };
 
 window.onload = function () {
-    thankModal.style.display = "none"; 
+    thankModal.style.display = "none";
 };
 
 
@@ -450,7 +452,7 @@ window.onload = function () {
 // Teşekkür modaldaki "X" düyməsi
 closeThankModal.onclick = function () {
     thankModal.style.display = "none";
-    overlayThank.style.display='none'
+    overlayThank.style.display = 'none'
 
 };
 

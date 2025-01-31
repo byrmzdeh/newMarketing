@@ -2272,6 +2272,7 @@ nav {
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
+
                     p {
                         font-size: 16px;
                         color: Black;
@@ -3679,46 +3680,61 @@ footer {
                 border: none;
                 margin-bottom: 70px;
 
-                .month {
-                    font-size: 16px;
-                    font-weight: 400;
-                    color: rgba(55, 55, 55, 1);
-                    opacity: 60%;
-                    padding-top: 10px;
-                }
 
-                p {
-                    font-size: 15px;
-                    opacity: 80%;
-                }
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
 
-                h1 {
-                    font-size: 24px;
-                    font-weight: 600;
-                    color: rgba(19, 19, 19, 1);
-                    opacity: 80%;
-                }
+                    .text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
 
-                .play {
-                    width: 100%;
-                    position: relative;
+                        .month {
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: rgba(55, 55, 55, 1);
+                            opacity: 60%;
+                            margin-bottom: 0px;
+                        }
 
-                    .cardImg {
-                        width: 100%;
-                        object-fit: cover;
+                        p {
+                            font-size: 15px;
+                            opacity: 80%;
+                        }
+
+                        h1 {
+                            font-size: 24px;
+                            font-weight: 600;
+                            color: rgba(19, 19, 19, 1);
+                            opacity: 80%;
+                        }
                     }
 
-                    .youtube {
-                        max-width: 38px;
+                    .play {
                         width: 100%;
-                        max-height: 50px;
-                        height: 100%;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
+                        position: relative;
+
+                        .cardImg {
+                            width: 100%;
+                            height: 255px;
+                            border-radius: 8px;
+                            object-fit: cover;
+                        }
+
+                        .youtube {
+                            max-width: 38px;
+                            width: 100%;
+                            max-height: 50px;
+                            height: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
 
 
+                        }
                     }
                 }
 
