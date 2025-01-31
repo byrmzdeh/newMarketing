@@ -720,7 +720,7 @@ nav #show {
   font-family: "Inter";
   display: none;
   width: 380px;
-  height: 100vh;
+  height: auto;
   position: absolute;
   right: 59px;
   top: 41px;
@@ -3085,31 +3085,27 @@ footer .foot .f-connect .links .terms {
   width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 810px;
   position: relative;
-  margin-top: 30px auto;
+  height: auto;
 }
 .innovation img {
-  width: 57%;
-  max-height: 480px;
-  position: absolute;
-  top: 26%;
+  position: relative;
+  z-index: 1;
+  top: 0px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
+  transform: translateX(-50%);
+  margin-bottom: -180px;
 }
 .innovation .for {
   max-width: 100%;
+  height: auto;
   width: 100%;
-  padding: 60px 0px;
-  max-height: 570px;
-  height: 100%;
+  padding: 220px 0px 60px 0px;
   background: linear-gradient(86.76deg, #efe7f9 -12.48%, #eadef8 41.01%, #d3d4fd 104.49%);
   display: flex;
   flex-direction: column;
   align-items: end;
   justify-content: end;
-  position: absolute;
   bottom: 0px;
 }
 .innovation .for p {
@@ -5251,81 +5247,6 @@ footer .foot .f-connect .links .terms {
   height: 72%;
 }
 
-@media (min-width: 324px) and (max-width: 400px) {
-  .innovation {
-    max-width: 100%;
-    width: 100%;
-    padding: 0px;
-    min-height: 780px;
-  }
-  .innovation h4 {
-    padding: 0px 0px;
-    font-size: 25px;
-    line-height: 33px;
-  }
-  .innovation img {
-    width: 100%;
-    padding: 0px 0px;
-    top: 6%;
-    padding: 0px 20px;
-  }
-  .innovation .for {
-    max-height: 710px;
-  }
-  .innovation .for p {
-    width: 100%;
-    font-size: 14px;
-    padding: 0px 20px;
-  }
-}
-@media (min-width: 401px) and (max-width: 600px) {
-  .innovation {
-    max-width: 100%;
-    width: 100%;
-    padding: 0px;
-    min-height: 750px;
-  }
-  .innovation h4 {
-    padding: 0px 0px;
-    font-size: 25px;
-    line-height: 33px;
-  }
-  .innovation img {
-    width: 100%;
-    padding: 0px 0px;
-    top: 13%;
-    padding: 0px 20px;
-  }
-  .innovation .for p {
-    width: 100%;
-    font-size: 14px;
-    padding: 0px 20px;
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  .innovation {
-    max-width: 100%;
-    width: 100%;
-    padding: 0px;
-    min-height: 750px;
-  }
-  .innovation h4 {
-    padding: 0px 0px;
-    font-size: 25px;
-    line-height: 33px;
-  }
-  .innovation img {
-    width: 100%;
-    padding: 0px 0px;
-    top: 20%;
-    padding: 0px 20px;
-  }
-  .innovation .for p {
-    width: 100%;
-    font-size: 14px;
-    padding: 0px 20px;
-  }
-}
 @media (min-width: 324px) and (max-width: 768px) {
   nav {
     width: 100%;
@@ -6592,6 +6513,24 @@ footer .foot .f-connect .links .terms {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .innovation {
+    max-width: 100%;
+    width: 100%;
+  }
+  .innovation .for {
+    width: 100%;
+    padding: 200px 20px;
+  }
+  .innovation .for p {
+    width: 100%;
+  }
+  .innovation .img {
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .innovation .img img {
+    width: 100%;
   }
   .terms {
     max-width: 100%;
@@ -8072,7 +8011,6 @@ footer .foot .f-connect .links .terms {
     max-width: 100%;
     width: 100%;
     padding: 0px;
-    min-height: 740px;
   }
   .innovation h4 {
     padding: 0px 0px;
