@@ -5,57 +5,40 @@ document.addEventListener('DOMContentLoaded', function () {
     const webForm = document.querySelector('.webForm');
     const brandingForm = document.querySelector('.brandingForm');
     const inputValues = document.querySelectorAll('input');
-        const funcBtns = document.querySelectorAll('.funcBtn');
-    const writeInput = document.getElementById('write');
     
-    // Düymələr üçün tək dəfə klik olunduğunu yoxlamaq üçün obyekt saxlayırıq
-    const clickedBtns = new Set();
     
-    // İlk düyməni `active` edirik
-    funcBtns[0].classList.add('active');
+    // İlk düyməni active
     
-    funcBtns.forEach(button => {
-        button.addEventListener('click', function () {
-            const value = this.querySelector('p').textContent.trim(); 
-            let currentValue = writeInput.value.trim();
-            if (!clickedBtns.has(value)) {
-                funcBtns.forEach(btn => btn.classList.remove('active'));
-
-                this.classList.add('active');
-
-                if (currentValue) {
-                    currentValue += ', ';
-                }
-
-                writeInput.value = currentValue + value;
-
-                clickedBtns.add(value);
-            } else {
-       currentValue = currentValue.replace(new RegExp(value + ','), '').trim();
-                writeInput.value = currentValue;
-
-                clickedBtns.delete(value);
-
-                this.classList.remove('active');
-            }
-
-            funcBtns.forEach(btn => {
-                const btnText = btn.querySelector('p').textContent.trim();
-                if (writeInput.value.includes(btnText)) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-        });
+    const checkboxes = document.querySelectorAll(".funcBtn input[type='checkbox']");
+    const writeInput = document.getElementById("writeInput");
+    
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener("click", () => {
+        const value = checkbox.value;
+        const label = checkbox.closest(".funcBtn"); 
+        let currentText = writeInput.value.split(", ").filter((item) => item); 
+    
+        if (checkbox.checked) {
+          if (!currentText.includes(value)) {
+            currentText.push(value);
+          }
+          label.classList.add("active");
+        } else {
+          currentText = currentText.filter((item) => item !== value);
+          label.classList.remove("active"); 
+        }
+    
+        writeInput.value = currentText.join(", "); 
+      });
     });
+    
 
+    
     function handleFormSubmit(form) {
         const inputs = form.querySelectorAll('input');
         let allFilled = true;
         let firstEmptyInput = null;
 
-        // Bütün inputları yoxlayırıq
         inputs.forEach(input => {
             if (input.required && input.value.trim() === '') {
                 allFilled = false;
@@ -144,16 +127,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.showPage = showPage;
 
-    // Sayt yükləndikdə `websitePage` göstərilsin
     showPage('websitePage', firstButton);
 
-    // typeBtns üçün kod:
     const typeBtns = document.querySelectorAll('.typeBtn');
     typeBtns[0].classList.add('active');
 
     typeBtns.forEach(button => {
         button.addEventListener('click', function () {
             typeBtns.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+
+    const typeBtnss = document.querySelectorAll('.typeBtnn');
+    typeBtnss[0].classList.add('active');
+
+    typeBtnss.forEach(button => {
+        button.addEventListener('click', function () {
+            typeBtnss.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
         });
     });

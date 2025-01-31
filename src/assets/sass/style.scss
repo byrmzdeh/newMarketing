@@ -599,7 +599,8 @@ nav {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    p{
+
+                    p {
                         margin-bottom: 0px;
                         color: rgba(55, 55, 55, 0.95);
                         font-size: 18px;
@@ -619,15 +620,16 @@ nav {
                     min-width: 100px;
                     z-index: 1000;
                     margin-top: 1px;
-                    li{
-                          margin-bottom: 0px;
+
+                    li {
+                        margin-bottom: 0px;
                         color: rgba(55, 55, 55, 0.95);
                         font-size: 18px;
                         font-weight: 600;
                         cursor: pointer;
                     }
 
-                  
+
                 }
 
             }
@@ -2061,34 +2063,36 @@ nav {
 
         .card {
             width: 100%;
+            max-height: 330px;
+            height: 100%;
             padding: 24px;
             border-radius: 16px;
             background-color: white;
             box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
-
             border: none;
             cursor: pointer;
             transition: 0.5s;
-            gap: 5px;
 
-            .month {
-                font-size: 16px;
-                font-weight: 400;
-                color: rgba(55, 55, 55, 1);
-                opacity: 60%;
-                margin-bottom: 0px;
-            }
+            .write {
+                display: flex;
+                flex-direction: column;
+                padding-top: 10px;
+                gap: 5px;
 
-            p {
-                font-size: 15px;
-                opacity: 80%;
-            }
+                .month {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: rgba(55, 55, 55, 1);
+                    opacity: 60%;
+                    margin-bottom: 0px;
+                }
 
-            h1 {
-                font-size: 22px;
-                font-weight: 600;
-                color: rgba(19, 19, 19, 1);
-                opacity: 80%;
+                h1 {
+                    font-size: 22px;
+                    font-weight: 600;
+                    color: rgba(19, 19, 19, 1);
+                    opacity: 80%;
+                }
             }
 
             .play {
@@ -2097,7 +2101,9 @@ nav {
 
                 .cardImg {
                     width: 100%;
+                    height: 220px;
                     object-fit: cover;
+                    border-radius: 8px;
                 }
 
                 .youtube {
@@ -2239,6 +2245,9 @@ nav {
         .card {
             width: 100%;
             border: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
 
             .portfolioCard {
                 width: 100%;
@@ -2253,25 +2262,30 @@ nav {
                 transition: 0.5s;
 
                 .cardImg {
-                    height: 100%;
-                    width: 100%;
+                    border-radius: 8px;
+                    height: 300px;
                     object-fit: cover;
 
                 }
 
-                p {
-                    font-size: 16px;
-                    color: Black;
-                    opacity: 80%;
-                    margin-bottom: 0px;
-                    font-weight: 400;
-                }
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    p {
+                        font-size: 16px;
+                        color: Black;
+                        opacity: 80%;
+                        margin-bottom: 0px;
+                        font-weight: 400;
+                    }
 
-                h1 {
-                    font-size: 24px;
-                    font-weight: 600;
-                    color: rgba(19, 19, 19, 1);
-                    opacity: 80%;
+                    h1 {
+                        font-size: 24px;
+                        font-weight: 600;
+                        color: rgba(19, 19, 19, 1);
+                        opacity: 80%;
+                    }
                 }
 
                 &:hover {
@@ -2453,18 +2467,21 @@ nav {
     justify-content: space-evenly;
     border: none;
 
-    .animation{
+    .animation {
         width: 28%;
         animation: upAndDown 3s infinite ease-in-out;
 
         @keyframes upAndDown {
-            0%, 100% {
-              transform: translateY(-45px);
+
+            0%,
+            100% {
+                transform: translateY(-45px);
             }
+
             50% {
-              transform: translateY(45px);
+                transform: translateY(45px);
             }
-          }
+        }
 
     }
 
@@ -2539,19 +2556,22 @@ nav {
                     align-items: center;
                     justify-content: space-between;
 
-                    .animationModal{
+                    .animationModal {
                         width: 40%;
                         animation: upAndDown 3s infinite ease-in-out;
-                
+
                         @keyframes upAndDown {
-                            0%, 100% {
-                              transform: translateY(-20px);
+
+                            0%,
+                            100% {
+                                transform: translateY(-20px);
                             }
+
                             50% {
-                              transform: translateY(20px);
+                                transform: translateY(20px);
                             }
-                          }
-                
+                        }
+
                     }
 
 
@@ -3792,7 +3812,7 @@ footer {
 
         .fourCard {
             width: 100%;
-            max-height: 460px;
+            min-height: 300px;
             height: 100%;
             background-color: rgb(252, 252, 252);
             box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
@@ -3802,17 +3822,13 @@ footer {
             margin-bottom: 70px;
             display: flex;
             flex-direction: column;
-            transition: 0.5s;
 
             img {
                 width: 100%;
-                height: 90%;
+                height: 230px;
                 object-fit: cover;
+                border-radius: 12px;
             }
-
-
-
-
 
             p {
                 font-size: 16px;
@@ -3823,21 +3839,14 @@ footer {
                 margin-bottom: 0px;
             }
 
-
-
             .title {
                 font-size: 24px;
                 font-weight: 600;
                 color: rgba(19, 19, 19, 1);
                 opacity: 80%;
-
             }
-
-
-
-
-
         }
+
     }
 
 }
@@ -5202,6 +5211,7 @@ footer {
                 }
 
                 .typeBtns {
+                    width: 100%;
                     display: grid;
                     grid-template-columns: repeat(5, 1fr);
                     justify-content: space-between;
@@ -5209,9 +5219,9 @@ footer {
 
                     .typeBtn {
                         width: auto;
-                        height: 43px;
+                        min-height: 43px;
                         position: relative;
-                        padding: 10px 20px;
+                        padding: 10px 10px;
                         border: none;
                         border-radius: 50px;
                         font-weight: bold;
@@ -5220,17 +5230,25 @@ footer {
                         background-color: white;
                         background: none;
                         box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
-                        outline: none;
+                        box-sizing: border-box;
+
+                        input[type="checkbox"] {
+                            display: none;
+                        }
+
 
                         p {
-                            position: relative;
-                            z-index: 1;
+                            position: absolute;
+                            z-index: 10;
                             color: rgba(55, 55, 55, 1);
                             opacity: 80%;
                             font-family: sans-serif;
-                            font-size: 18px;
+                            font-size: 16px;
                             font-weight: 500;
-
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            text-align: center;
                         }
 
                         &::before {
@@ -5248,7 +5266,6 @@ footer {
                         &:active {
                             background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
                             box-shadow: 0px 4px 25px 0px rgba(99, 129, 160, 0.15);
-
 
                             p {
                                 -webkit-background-clip: text;
@@ -5274,6 +5291,7 @@ footer {
                 }
 
                 .funcBtns {
+                    width: 100%;
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     justify-content: space-between;
@@ -5282,29 +5300,31 @@ footer {
 
                     .funcBtn {
                         width: auto;
-                        height: 43px;
+                        min-height: 43px;
                         position: relative;
-                        padding: 10px 20px;
+                        padding: 10px 10px;
                         border: none;
                         border-radius: 50px;
                         font-weight: bold;
-                        border: none;
                         overflow: hidden;
                         cursor: pointer;
                         background-color: white;
                         background: none;
                         box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
-
+                        box-sizing: border-box;
 
                         p {
-                            position: relative;
-                            z-index: 1;
+                            position: absolute;
+                            z-index: 10;
                             color: rgba(55, 55, 55, 1);
                             opacity: 80%;
                             font-family: sans-serif;
-                            font-size: 18px;
+                            font-size: 16px;
                             font-weight: 500;
-
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            text-align: center;
                         }
 
                         &::before {
@@ -5322,7 +5342,6 @@ footer {
                         &:active {
                             background: linear-gradient(86.76deg, #53E6FF -12.48%, #AE69FF 41.01%, #474AFF 104.49%);
                             box-shadow: 0px 4px 25px 0px rgba(99, 129, 160, 0.15);
-
 
                             p {
                                 -webkit-background-clip: text;
@@ -5345,6 +5364,7 @@ footer {
                             }
                         }
                     }
+
                 }
 
                 .saytInputs {
@@ -5470,8 +5490,6 @@ footer {
 
 }
 
-
-
 #brandingPage {
     max-width: 100%;
     width: 67%;
@@ -5596,6 +5614,7 @@ footer {
                 }
 
                 .typeBtnss {
+                    width: 100%;
                     display: grid;
                     grid-template-columns: repeat(5, 1fr);
                     justify-content: space-between;
@@ -5616,6 +5635,11 @@ footer {
                         box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
                         outline: none;
 
+                        input[type="checkbox"] {
+                            display: none;
+                        }
+
+
                         p {
                             position: relative;
                             z-index: 1;
@@ -5624,6 +5648,7 @@ footer {
                             font-family: sans-serif;
                             font-size: 18px;
                             font-weight: 500;
+                            text-align: center;
 
                         }
 
@@ -5731,11 +5756,11 @@ footer {
                     align-items: center;
                     justify-content: center;
                     margin-top: 40px;
+                    gap: 30px;
 
                     .option {
-                        max-width: 188px;
-                        max-height: 163px;
                         width: 100%;
+                        height: 100%;
                         display: flex;
                         flex-direction: column;
                         align-items: start;
@@ -5753,22 +5778,19 @@ footer {
                             -moz-appearance: none;
                             appearance: none;
                             border: 1px solid rgba(174, 105, 255, 1);
-                            /* Default border rəngi */
                             border-radius: 30%;
                             cursor: pointer;
                             outline: none;
                             transition: all 0.3s ease;
                             position: relative;
                             background-color: transparent;
+                            display: inline-block;
 
                             &:checked {
                                 border-color: rgba(174, 105, 255, 1);
-                                /* Seçildikdə sərhəd rəngi */
-
 
                                 &::after {
                                     content: "✔";
-                                    /* Checkbox-un daxilindəki işarə */
                                     color: rgba(174, 105, 255, 1);
                                     font-size: 14px;
                                     position: absolute;
@@ -5777,26 +5799,17 @@ footer {
                                     transform: translate(-50%, -50%);
                                 }
                             }
-
-
                         }
 
 
-                        .word {
-                            display: flex;
-                            flex-direction: column;
-                            cursor: pointer;
-                            border: 2px solid transparent;
-                            padding: 10px;
-                            border-radius: 8px;
-                            transition: all 0.3s ease;
 
-                            img {
-                                max-width: 100px;
-                                min-height: 60px;
-                                margin: 1px auto;
-                            }
+
+                        img {
+                            max-width: 100px;
+                            min-height: 60px;
+                            margin: 1px auto;
                         }
+
 
                     }
                 }
@@ -10328,10 +10341,10 @@ footer {
         align-items: center;
         justify-content: space-around;
 
-      
 
-      
-          
+
+
+
 
 
 

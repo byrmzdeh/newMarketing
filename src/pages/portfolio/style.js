@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const businessCards = document.getElementById('portfolioCards');
-    const cardsPerPage = 6; 
+    const cardsPerPage = 6;
     let currentPage = 1;
-    let pages; 
-    let allData = []; 
-    let filteredData = []; 
-    let selectedCategory = 'All'; 
+    let pages;
+    let allData = [];
+    let filteredData = [];
+    let selectedCategory = 'All';
 
     // Seçilmiş kateqoriya və səhifəyə əsasən kartları göstərmək
     function displayCards(data, page) {
@@ -22,8 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <div data-id="${item.id}" data-aos="fade-up">
                 <a class="portfolioCard" href="/src/components/portfolioDetail/index.html?id=${item.id}">
                     <img class="cardImg" src="${item.img}" alt="err">
+                    <div class="text"> 
                     <p>${item.name}</p>
                     <h1>${item.title}</h1>
+                    </div>
                 </a>
             </div>
             `;
@@ -76,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Cari səhifəni dəyişmək və göstərilən məlumatları yeniləmək
     window.changePage = function (page) {
-        if (page < 1 || page > pages) return; 
+        if (page < 1 || page > pages) return;
         currentPage = page;
         displayCards(filteredData, currentPage);
         createPagination(pages, currentPage);
@@ -85,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Seçilmiş kateqoriya üzrə kartları filtrləmək
     window.filterCards = function (category) {
         selectedCategory = category;
-        currentPage = 1; 
+        currentPage = 1;
 
         const buttons = document.querySelectorAll('.category-button');
         buttons.forEach(button => {
@@ -108,8 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
             filteredData = allData.filter(item => item.category === category);
         }
 
-        pages = Math.ceil(filteredData.length / cardsPerPage); 
-        displayCards(filteredData, currentPage); 
+        pages = Math.ceil(filteredData.length / cardsPerPage);
+        displayCards(filteredData, currentPage);
         createPagination(pages, currentPage);
     }
 
@@ -125,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(res => res.json())
             .then(data => {
                 allData = data;
-                filterCards(selectedCategory); 
+                filterCards(selectedCategory);
             })
             .catch(error => console.error('Məlumatları götürərkən səhv baş verdi:', error));
     }
@@ -135,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.category-button').forEach(button => {
         button.addEventListener('click', function () {
             const category = button.getAttribute('data-category');
-            filterCards(category); 
+            filterCards(category);
         });
     });
 });

@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" href="/src/assets/image/home/colorLogo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/src/assets/sass/css/style.css">
+    <link rel="stylesheet" href="/src/assets/css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -33,153 +33,154 @@
 <body data-page="design">
     <nav>
         <div class="view ">
-    
-          <button id="hireUsButton" class="hire-usColor" data-aos="fade-up">
-            <p>HIRE US</p>
-          </button>
-    
-          <div id="modal" class="modal">
-            <div class="modal-content">
-              <div id="closeModal" class="close-modal">
-                <img src="/src/assets/image/home/close.png" alt="err">
-              </div>
-              <h2 class="modal-title">HIRE US</h2>
-    
-              <div class="tabs">
-                <span id="tabAddCompany" class="tab active">ŞİRKƏT ƏLAVƏ ET</span>
-                <span id="tabContact" class="tab">ƏLAQƏ</span>
-              </div>
-    
-    
-              <div id="addCompanyContent" class="tab-content">
-                <form id="addCompanyForm">
-                  <form class="form">
-                    <div class="form-group">
-                      <input type="text" placeholder="Şirkətin adı" required />
-                      <input type="text" placeholder="Ünvan" required />
+
+            <button id="hireUsButton" class="hire-usColor" data-aos="fade-up">
+                <p>HIRE US</p>
+            </button>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <div id="closeModal" class="close-modal">
+                        <img src="/src/assets/image/home/close.png" alt="err">
                     </div>
-                    <div class="form-group">
-                      <input type="email" placeholder="E-poçt" required />
-                      <input type="tel" placeholder="Telefon" required />
+                    <h2 class="modal-title">HIRE US</h2>
+
+                    <div class="tabs">
+                        <span id="tabAddCompany" class="tab active">ŞİRKƏT ƏLAVƏ ET</span>
+                        <span id="tabContact" class="tab">ƏLAQƏ</span>
                     </div>
-                    <div class="form-group">
-                      <input type="tex" placeholder="Vebsayt" />
-                      <select required>
-                        <option value="">Kateqoriya seç</option>
-                        <option value="kategoriya1">Kategoriya 1</option>
-                        <option value="kategoriya2">Kategoriya 2</option>
-                      </select>
+
+
+                    <div id="addCompanyContent" class="tab-content">
+                        <form id="addCompanyForm">
+                            <form class="form">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Şirkətin adı" required />
+                                    <input type="text" placeholder="Ünvan" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="E-poçt" required />
+                                    <input type="tel" placeholder="Telefon" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="tex" placeholder="Vebsayt" />
+                                    <select required>
+                                        <option value="">Kateqoriya seç</option>
+                                        <option value="kategoriya1">Kategoriya 1</option>
+                                        <option value="kategoriya2">Kategoriya 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group information">
+                                    <textarea placeholder="Məlumat" rows="3"></textarea>
+                                    <div class="file-upload">
+                                        <select required>
+                                            <option value="">Alt Kateqoriya seç</option>
+                                            <option value="alt_kategoriya1">Alt Kategoriya 1</option>
+                                            <option value="alt_kategoriya2">Alt Kategoriya 2</option>
+                                        </select>
+                                        <label for="upload-logo" class="upload-label">
+                                            <input type="file" id="upload-logo" style="display: none;" />
+                                            <img src="/src/assets/image/home/png.png" alt="">
+                                            <span>Şirkətin loqosu </span>
+                                            <span class="png">(PNG)</span>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
+                            </form>
+                        </form>
                     </div>
-                    <div class="form-group information">
-                      <textarea placeholder="Məlumat" rows="3"></textarea>
-                      <div class="file-upload">
-                        <select required>
-                          <option value="">Alt Kateqoriya seç</option>
-                          <option value="alt_kategoriya1">Alt Kategoriya 1</option>
-                          <option value="alt_kategoriya2">Alt Kategoriya 2</option>
-                        </select>
-                        <label for="upload-logo" class="upload-label">
-                          <input type="file" id="upload-logo" style="display: none;" />
-                          <img src="/src/assets/image/home/png.png" alt="">
-                          <span>Şirkətin loqosu </span>
-                          <span class="png">(PNG)</span>
-                        </label>
-    
-                      </div>
+
+                    <div id="contactContent" class="tab-content" style="display: none;">
+                        <form id="contactForm">
+                            <input type="text" placeholder="Ad" class="input-field" required />
+                            <input type="text" placeholder="Soyad" class="input-field" required />
+                            <input type="email" placeholder="E-poçt" class="input-field" required />
+                            <input type="text" placeholder="Mövzu" class="input-field" required />
+                            <textarea placeholder="Mesajınız"></textarea>
+                            <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
+                        </form>
                     </div>
-    
-                    <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
-                  </form>
-                </form>
-              </div>
-    
-              <div id="contactContent" class="tab-content" style="display: none;">
-                <form id="contactForm">
-                  <input type="text" placeholder="Ad" class="input-field" required />
-                  <input type="text" placeholder="Soyad" class="input-field" required />
-                  <input type="email" placeholder="E-poçt" class="input-field" required />
-                  <input type="text" placeholder="Mövzu" class="input-field" required />
-                  <textarea placeholder="Mesajınız"></textarea>
-                  <button id="send" type="submit" class="submit-button">GÖNDƏR</button>
-                </form>
-              </div>
-    
-    
+
+
+                </div>
+
             </div>
-    
-          </div>
-    
-    
-    
-          <a class="logoImgP" data-aos="fade-up" href="/index.html"><img src="/src/assets/image/home/writeLogo.png" alt="err"></a>
-          <div class="search-menu" data-aos="fade-up">
-            <div class="dropdown">
-              <button class="dropdown-button">
-                <p class="dropdown-text">En</p>
-                <img src="/src/assets/image/home/select.png" alt="">
-              </button>
-              <ul class="dropdown-menu">
-                <li data-value="Az">Az</li>
-                <li data-value="Ru">Ru</li>
-              </ul>
+
+
+
+            <a class="logoImgP" data-aos="fade-up" href="/index.html"><img src="/src/assets/image/home/writeLogo.png"
+                    alt="err"></a>
+            <div class="search-menu" data-aos="fade-up">
+                <div class="dropdown">
+                    <button class="dropdown-button">
+                        <p class="dropdown-text">En</p>
+                        <img src="/src/assets/image/home/select.png" alt="">
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li data-value="Az">Az</li>
+                        <li data-value="Ru">Ru</li>
+                    </ul>
+                </div>
+                <button id="search"><img src="/src/assets/image/home/search.png" alt="err"></button>
+                <button id="menu"><img src="/src/assets/image/home/menu.png" alt="err"></button>
             </div>
-            <button id="search"><img src="/src/assets/image/home/search.png" alt="err"></button>
-            <button id="menu"><img src="/src/assets/image/home/menu.png" alt="err"></button>
-          </div>
-    
-          <div id="search-show">
-            <div class="axtar">
-              <button class="search-img "> <img src="/src/assets/image/home/search.png" alt=""></button>
-              <input id="search-input" type="text" placeholder="SEARCH">
-              <button id="inputClose"><img src="/src/assets/image/home/close.png" alt="err"></button>
+
+            <div id="search-show">
+                <div class="axtar">
+                    <button class="search-img "> <img src="/src/assets/image/home/search.png" alt=""></button>
+                    <input id="search-input" type="text" placeholder="SEARCH">
+                    <button id="inputClose"><img src="/src/assets/image/home/close.png" alt="err"></button>
+                </div>
+
+                <div id="value">Search result for :</div>
+                <div id="item-divSearch"></div>
+                <div id="results" class="results">
+
+                </div>
             </div>
-    
-            <div id="value">Search result for :</div>
-            <div id="item-divSearch"></div>
-            <div id="results" class="results">
-    
-            </div>
-          </div>
-    
+
         </div>
-    
-    
-       
-    
-    
+
+
+
+
+
         <div id="show">
-          <button id="close"><img src="/src/assets/image/home/close.png" alt="err"></button>
-          <ul>
-            <li><a href="/src/pages/about/index.html">HAQQIMIZDA</a></li>
-            <li><a href="/src/pages/business/index.html">BİZNES SAATI</a></li>
-            <li><a href="/src/pages/blog/index.html">BLOQ</a></li>
-            <li><a href="/src/pages/catalogueCategories/index.html">KATALOQ</a></li>
-            <li><a href="/src/pages/partners/index.html">PARTNYORLAR</a></li>
-            <li><a href="/src/pages/services/index.html">XİDMƏTLƏRİMİZ</a></li>
-            <li><a href="/src/pages/portfolio/index.html">PORTFOLİO</a></li>
-            <li><a href="/src/pages/telimler/index.html">TƏLİMLƏR</a></li>
-            <li><a href="/src/pages/team/index.html">TEAM</a></li>
-            <li><a href="/src/pages/podcast/index.html">PODKAST</a></li>
-            <li><a href="/src/pages/contact/index.html">ƏLAQƏ</a></li>
-          </ul>
-    
-          <div id="select-buttons">
-            <button class="active">
-              <p>En</p>
-            </button>
-            <button>
-              <p>Az</p>
-            </button>
-            <button>
-              <p>Ru</p>
-            </button>
-          </div>
-    
-    
-    
+            <button id="close"><img src="/src/assets/image/home/close.png" alt="err"></button>
+            <ul>
+                <li><a href="/src/pages/about/index.html">HAQQIMIZDA</a></li>
+                <li><a href="/src/pages/business/index.html">BİZNES SAATI</a></li>
+                <li><a href="/src/pages/blog/index.html">BLOQ</a></li>
+                <li><a href="/src/pages/catalogueCategories/index.html">KATALOQ</a></li>
+                <li><a href="/src/pages/partners/index.html">PARTNYORLAR</a></li>
+                <li><a href="/src/pages/services/index.html">XİDMƏTLƏRİMİZ</a></li>
+                <li><a href="/src/pages/portfolio/index.html">PORTFOLİO</a></li>
+                <li><a href="/src/pages/telimler/index.html">TƏLİMLƏR</a></li>
+                <li><a href="/src/pages/team/index.html">TEAM</a></li>
+                <li><a href="/src/pages/podcast/index.html">PODKAST</a></li>
+                <li><a href="/src/pages/contact/index.html">ƏLAQƏ</a></li>
+            </ul>
+
+            <div id="select-buttons">
+                <button class="active">
+                    <p>En</p>
+                </button>
+                <button>
+                    <p>Az</p>
+                </button>
+                <button>
+                    <p>Ru</p>
+                </button>
+            </div>
+
+
+
         </div>
-    
-      </nav>
+
+    </nav>
     <div id="overlayThank"></div>
 
     <div id="thankModal" class="thank-modal">
@@ -258,27 +259,41 @@
                         <p class="star">*</p>
                     </div>
                     <div class="typeBtns">
-                        <button type="button" class="typeBtn">
+                        <label class="typeBtn">
+                            <input type="checkbox" />
                             <p>One page</p>
-                        </button>
-                        <button type="button" class="typeBtn">
+                        </label>
+
+                        <label class="typeBtn">
+                            <input type="checkbox" />
                             <p>Portfolio</p>
-                        </button>
-                        <button type="button" class="typeBtn">
+                        </label>
+
+                        <label class="typeBtn">
+                            <input type="checkbox" />
                             <p>Korporativ</p>
-                        </button>
-                        <button type="button" class="typeBtn">
+                        </label>
+
+                        <label class="typeBtn">
+                            <input type="checkbox" />
                             <p>Elan</p>
-                        </button>
-                        <button type="button" class="typeBtn">
+                        </label>
+
+                        <label class="typeBtn">
+                            <input type="checkbox" />
                             <p>Şəxsi/Fərdi</p>
-                        </button>
-                        <button type="button" class="typeBtn">
+                        </label>
+
+                        <label class="typeBtn">
+                            <input type="checkbox" />
                             <p>Digər</p>
-                        </button>
-                        <button type="button" class="typeBtn">
+                        </label>
+
+                        <label class="typeBtn">
+                            <input type="checkbox" />
                             <p>E-commerce</p>
-                        </button>
+                        </label>
+
                     </div>
 
                 </div>
@@ -341,24 +356,28 @@
                     <p>1-dən artıq funksiya qeyd edə bilərsiz. Əlavə funksiyalar vars qeyd hissəsində qeyd edə bilərsiz.
                     </p>
                     <div class="funcBtns">
-                        <button type="button" class="funcBtn">
+                        <label class="funcBtn">
+                            <input type="checkbox" value="Axtarış sistemi" />
                             <p>Axtarış sistemi</p>
-                        </button>
-                        <button type="button" class="funcBtn">
+                        </label>
+                        <label class="funcBtn">
+                            <input type="checkbox" value="Dil seçimi" />
                             <p>Dil seçimi</p>
-                        </button>
-                        <button type="button" class="funcBtn">
+                        </label>
+                        <label class="funcBtn">
+                            <input type="checkbox" value="Qeydiyyat/Profil" />
                             <p>Qeydiyyat/Profil</p>
-                        </button>
-                        <button type="button" class="funcBtn">
+                        </label>
+                        <label class="funcBtn">
+                            <input type="checkbox" value="Müraciət etmə imkanı" />
                             <p>Müraciət etmə imkanı</p>
-                        </button>
-                        <button type="button" class="funcBtn">
+                        </label>
+                        <label class="funcBtn">
+                            <input type="checkbox" value="Məhsul alma imkanı" />
                             <p>Məhsul alma imkanı</p>
-                        </button>
+                        </label>
                     </div>
-                    <input id="write" class="inputDesc" placeholder="Description" type="text" required>
-
+                    <input id="writeInput" class="inputDesc" placeholder="Description" type="text" readonly />
 
                 </div>
             </div>
@@ -544,38 +563,30 @@
                     <p>Ən azı 2 tip seçməyiniz tövsiyyə olunur</p>
 
                     <div class="options">
-                        <div class="option" data-type="Wordmark">
+                        <label class="option" data-type="Wordmark">
                             <input type="checkbox" class="checkbox" id="wordmark">
-                            <label class="word" for="wordmark">
-                                <img src="/src/assets/image/design/geogle.png" alt="Google">
-                            </label>
+                            <img src="/src/assets/image/design/geogle.png" alt="Google">
                             <span>Wordmark</span>
 
-                        </div>
-                        <div class="option" data-type="Lettermark">
+                        </label>
+                        <label class="option" data-type="Lettermark">
                             <input type="checkbox" class="checkbox" id="lettermark">
-                            <label class="word" for="lettermark">
-                                <img src="/src/assets/image/design/hbo.png">
-                            </label>
+                            <img src="/src/assets/image/design/hbo.png">
                             <span>Lettermark</span>
 
-                        </div>
-                        <div class="option" data-type="Emblem">
+                        </label>
+                        <label class="option" data-type="Emblem">
                             <input type="checkbox" class="checkbox" id="emblem">
-                            <label class="word" for="emblem">
-                                <img src="/src/assets/image/design/harley.png">
-                            </label>
+                            <img src="/src/assets/image/design/harley.png">
                             <span>Emblem</span>
 
-                        </div>
-                        <div class="option" data-type="Combination mark">
+                        </label>
+                        <label class="option" data-type="Combination mark">
                             <input type="checkbox" class="checkbox" id="combination">
-                            <label class="word" for="combination">
-                                <img src="/src/assets/image/design/adidas.png" alt="Adidas">
-                            </label>
+                            <img src="/src/assets/image/design/adidas.png" alt="Adidas">
                             <span>Combination mark</span>
 
-                        </div>
+                        </label>
                     </div>
 
                 </div>
@@ -667,13 +678,18 @@
                         <h2>Vebsaytın tipi</h2>
                         <p class="star">*</p>
                     </div>
+
+
                     <div class="typeBtnss">
-                        <button type="button" class="typeBtnn">
+                        <label for="" class="typeBtnn">
+                            <input type="checkbox">
                             <p>Çapda</p>
-                        </button>
-                        <button type="button" class="typeBtnn">
+                        </label>
+                        <label for="" class="typeBtnn">
+                            <input type="checkbox">
                             <p>Vebdə</p>
-                        </button>
+                        </label>
+
                     </div>
 
                 </div>

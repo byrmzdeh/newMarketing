@@ -1631,6 +1631,8 @@ nav #show #select-buttons {
 }
 .filter #businessCards .card {
   width: 100%;
+  max-height: 330px;
+  height: 100%;
   padding: 24px;
   border-radius: 16px;
   background-color: white;
@@ -1638,20 +1640,21 @@ nav #show #select-buttons {
   border: none;
   cursor: pointer;
   transition: 0.5s;
+}
+.filter #businessCards .card .write {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
   gap: 5px;
 }
-.filter #businessCards .card .month {
+.filter #businessCards .card .write .month {
   font-size: 16px;
   font-weight: 400;
   color: rgb(55, 55, 55);
   opacity: 60%;
   margin-bottom: 0px;
 }
-.filter #businessCards .card p {
-  font-size: 15px;
-  opacity: 80%;
-}
-.filter #businessCards .card h1 {
+.filter #businessCards .card .write h1 {
   font-size: 22px;
   font-weight: 600;
   color: rgb(19, 19, 19);
@@ -1663,7 +1666,9 @@ nav #show #select-buttons {
 }
 .filter #businessCards .card .play .cardImg {
   width: 100%;
+  height: 220px;
   object-fit: cover;
+  border-radius: 8px;
 }
 .filter #businessCards .card .play .youtube {
   max-width: 43px;
@@ -1769,6 +1774,9 @@ nav #show #select-buttons {
 .filter #portfolioCards .card {
   width: 100%;
   border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .filter #portfolioCards .card .portfolioCard {
   width: 100%;
@@ -1783,18 +1791,23 @@ nav #show #select-buttons {
   transition: 0.5s;
 }
 .filter #portfolioCards .card .portfolioCard .cardImg {
-  height: 100%;
-  width: 100%;
+  border-radius: 8px;
+  height: 300px;
   object-fit: cover;
 }
-.filter #portfolioCards .card .portfolioCard p {
+.filter #portfolioCards .card .portfolioCard .text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.filter #portfolioCards .card .portfolioCard .text p {
   font-size: 16px;
   color: Black;
   opacity: 80%;
   margin-bottom: 0px;
   font-weight: 400;
 }
-.filter #portfolioCards .card .portfolioCard h1 {
+.filter #portfolioCards .card .portfolioCard .text h1 {
   font-size: 24px;
   font-weight: 600;
   color: rgb(19, 19, 19);
@@ -3016,7 +3029,7 @@ footer .foot .f-connect .links .terms {
 }
 .four .fourSlider .fourCard {
   width: 100%;
-  max-height: 460px;
+  min-height: 300px;
   height: 100%;
   background-color: rgb(252, 252, 252);
   box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
@@ -3026,12 +3039,12 @@ footer .foot .f-connect .links .terms {
   margin-bottom: 70px;
   display: flex;
   flex-direction: column;
-  transition: 0.5s;
 }
 .four .fourSlider .fourCard img {
   width: 100%;
-  height: 90%;
+  height: 230px;
   object-fit: cover;
+  border-radius: 12px;
 }
 .four .fourSlider .fourCard p {
   font-size: 16px;
@@ -4160,6 +4173,7 @@ footer .foot .f-connect .links .terms {
   font-size: 16px;
 }
 #websitePage form .purpose .head .typeBtns {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: space-between;
@@ -4167,9 +4181,9 @@ footer .foot .f-connect .links .terms {
 }
 #websitePage form .purpose .head .typeBtns .typeBtn {
   width: auto;
-  height: 43px;
+  min-height: 43px;
   position: relative;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
   border-radius: 50px;
   font-weight: bold;
@@ -4178,16 +4192,23 @@ footer .foot .f-connect .links .terms {
   background-color: white;
   background: none;
   box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
-  outline: none;
+  box-sizing: border-box;
+}
+#websitePage form .purpose .head .typeBtns .typeBtn input[type=checkbox] {
+  display: none;
 }
 #websitePage form .purpose .head .typeBtns .typeBtn p {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 10;
   color: rgb(55, 55, 55);
   opacity: 80%;
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 #websitePage form .purpose .head .typeBtns .typeBtn::before {
   content: "";
@@ -4222,6 +4243,7 @@ footer .foot .f-connect .links .terms {
   -webkit-text-fill-color: transparent;
 }
 #websitePage form .purpose .head .funcBtns {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
@@ -4230,27 +4252,31 @@ footer .foot .f-connect .links .terms {
 }
 #websitePage form .purpose .head .funcBtns .funcBtn {
   width: auto;
-  height: 43px;
+  min-height: 43px;
   position: relative;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
   border-radius: 50px;
   font-weight: bold;
-  border: none;
   overflow: hidden;
   cursor: pointer;
   background-color: white;
   background: none;
   box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
+  box-sizing: border-box;
 }
 #websitePage form .purpose .head .funcBtns .funcBtn p {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 10;
   color: rgb(55, 55, 55);
   opacity: 80%;
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 #websitePage form .purpose .head .funcBtns .funcBtn::before {
   content: "";
@@ -4485,6 +4511,7 @@ footer .foot .f-connect .links .terms {
   font-size: 16px;
 }
 #brandingPage form .purpose .head .typeBtnss {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: space-between;
@@ -4505,6 +4532,9 @@ footer .foot .f-connect .links .terms {
   box-shadow: 0px 4px 16px 0px rgba(99, 129, 160, 0.15);
   outline: none;
 }
+#brandingPage form .purpose .head .typeBtnss .typeBtnn input[type=checkbox] {
+  display: none;
+}
 #brandingPage form .purpose .head .typeBtnss .typeBtnn p {
   position: relative;
   z-index: 1;
@@ -4513,6 +4543,7 @@ footer .foot .f-connect .links .terms {
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 500;
+  text-align: center;
 }
 #brandingPage form .purpose .head .typeBtnss .typeBtnn::before {
   content: "";
@@ -4598,11 +4629,11 @@ footer .foot .f-connect .links .terms {
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+  gap: 30px;
 }
 #brandingPage form .purpose .head .options .option {
-  max-width: 188px;
-  max-height: 163px;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -4620,21 +4651,19 @@ footer .foot .f-connect .links .terms {
   -moz-appearance: none;
   appearance: none;
   border: 1px solid rgb(174, 105, 255);
-  /* Default border rəngi */
   border-radius: 30%;
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease;
   position: relative;
   background-color: transparent;
+  display: inline-block;
 }
 #brandingPage form .purpose .head .options .option .checkbox:checked {
   border-color: rgb(174, 105, 255);
-  /* Seçildikdə sərhəd rəngi */
 }
 #brandingPage form .purpose .head .options .option .checkbox:checked::after {
   content: "✔";
-  /* Checkbox-un daxilindəki işarə */
   color: rgb(174, 105, 255);
   font-size: 14px;
   position: absolute;
@@ -4642,16 +4671,7 @@ footer .foot .f-connect .links .terms {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#brandingPage form .purpose .head .options .option .word {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  border: 2px solid transparent;
-  padding: 10px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-#brandingPage form .purpose .head .options .option .word img {
+#brandingPage form .purpose .head .options .option img {
   max-width: 100px;
   min-height: 60px;
   margin: 1px auto;
