@@ -2063,7 +2063,7 @@ nav {
 
         .card {
             width: 100%;
-            max-height: 330px;
+            min-height: 360px;
             height: 100%;
             padding: 24px;
             border-radius: 16px;
@@ -2101,7 +2101,7 @@ nav {
 
                 .cardImg {
                     width: 100%;
-                    height: 220px;
+                    height: 230px;
                     object-fit: cover;
                     border-radius: 8px;
                 }
@@ -3672,11 +3672,11 @@ footer {
             .swiperCard {
 
                 width: 100%;
+                min-height: 370px;
                 padding: 24px;
                 border-radius: 16px;
                 background-color: white;
                 box-shadow: 0px 16px 40px 0px rgba(99, 129, 160, 0.15);
-
                 border: none;
                 margin-bottom: 70px;
 
@@ -3685,6 +3685,7 @@ footer {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
+                    height: 100%;
 
                     .text {
                         display: flex;
@@ -3715,10 +3716,12 @@ footer {
                     .play {
                         width: 100%;
                         position: relative;
+                        height: 100%;
 
                         .cardImg {
                             width: 100%;
-                            height: 255px;
+                            min-height: 225px;
+                            max-height: 255px;
                             border-radius: 8px;
                             object-fit: cover;
                         }
@@ -4950,7 +4953,6 @@ footer {
 
         img {
             width: 100%;
-            min-height: 335px;
             height: 100%;
             object-fit: cover;
         }
