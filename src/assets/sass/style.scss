@@ -2063,7 +2063,7 @@ nav {
 
         .card {
             width: 100%;
-            min-height: 360px;
+            min-height: 350px;
             height: 100%;
             padding: 24px;
             border-radius: 16px;
@@ -2076,8 +2076,8 @@ nav {
             .write {
                 display: flex;
                 flex-direction: column;
-                padding-top: 10px;
                 gap: 5px;
+                padding-top: 10px;
 
                 .month {
                     font-size: 16px;
@@ -2101,7 +2101,7 @@ nav {
 
                 .cardImg {
                     width: 100%;
-                    height: 230px;
+                   aspect-ratio: 4/3;
                     object-fit: cover;
                     border-radius: 8px;
                 }
@@ -2251,6 +2251,7 @@ nav {
 
             .portfolioCard {
                 width: 100%;
+                min-height: 280px;
                 display: flex;
                 flex-direction: column;
                 padding: 24px;
@@ -2263,7 +2264,7 @@ nav {
 
                 .cardImg {
                     border-radius: 8px;
-                    height: 300px;
+                    aspect-ratio: 4/2.6;
                     object-fit: cover;
 
                 }
@@ -2272,6 +2273,7 @@ nav {
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
+                    padding-top: 10px;
 
                     p {
                         font-size: 16px;
@@ -3670,9 +3672,9 @@ footer {
 
 
             .swiperCard {
-
                 width: 100%;
                 min-height: 370px;
+                height: 100%;
                 padding: 24px;
                 border-radius: 16px;
                 background-color: white;
@@ -3720,10 +3722,10 @@ footer {
 
                         .cardImg {
                             width: 100%;
-                            min-height: 225px;
-                            max-height: 255px;
                             border-radius: 8px;
                             object-fit: cover;
+                            width: 100%;
+                            aspect-ratio: 4 / 3;
                         }
 
                         .youtube {
@@ -3844,7 +3846,7 @@ footer {
 
             img {
                 width: 100%;
-                height: 230px;
+                aspect-ratio: 4 / 3;
                 object-fit: cover;
                 border-radius: 12px;
             }
@@ -4954,6 +4956,8 @@ footer {
         img {
             width: 100%;
             height: 100%;
+            aspect-ratio: 4/2.5;
+            border-radius: 8px;
             object-fit: cover;
         }
 
