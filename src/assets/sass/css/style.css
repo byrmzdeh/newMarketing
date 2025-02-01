@@ -2922,7 +2922,7 @@ footer .foot .f-connect .links .terms {
 }
 .three swiper-container swiper-slide .swiperCard {
   width: 100%;
-  min-height: 370px;
+  min-height: 350px;
   height: 100%;
   padding: 24px;
   border-radius: 16px;
@@ -2965,7 +2965,6 @@ footer .foot .f-connect .links .terms {
   height: 100%;
 }
 .three swiper-container swiper-slide .swiperCard a .play .cardImg {
-  width: 100%;
   border-radius: 8px;
   object-fit: cover;
   width: 100%;
