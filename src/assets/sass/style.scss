@@ -915,7 +915,7 @@ nav {
         font-family: 'Inter';
         display: none;
         width: 380px;
-        height: auto;
+        height: 100vh;
         position: absolute;
         right: 59px;
         top: 41px;
@@ -8313,7 +8313,7 @@ footer {
 
         .for{
             width: 100%;
-            padding: 200px 20px;
+            padding: 200px 20px 60px 20px;
             p{
                 width: 100%;
             }

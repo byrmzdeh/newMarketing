@@ -720,7 +720,7 @@ nav #show {
   font-family: "Inter";
   display: none;
   width: 380px;
-  height: auto;
+  height: 100vh;
   position: absolute;
   right: 59px;
   top: 41px;
@@ -6520,7 +6520,7 @@ footer .foot .f-connect .links .terms {
   }
   .innovation .for {
     width: 100%;
-    padding: 200px 20px;
+    padding: 200px 20px 60px 20px;
   }
   .innovation .for p {
     width: 100%;
